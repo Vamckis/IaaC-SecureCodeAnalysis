@@ -6,4 +6,6 @@
 - export KICS_QUERIES_PATH=/opt/homebrew/opt/kics/share/kics/assets/queries
 
 ### If QueryPath (-q) is not provided, tool will use default path ./assets/queries
-- kics scan -p . -q /Users/vamsisukla/assets/queries --report-formats "all" -o ./Report
+
+echo 'export KICS_QUERIES_PATH=/usr/local/opt/kics/share/kics/assets/queries' >> ~/.zshrc
+- kics scan -p <code path> -q <queries path if above command fails> --report-formats "all" -o ./Report
