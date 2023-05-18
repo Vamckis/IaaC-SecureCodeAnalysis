@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="KICS v1.5.1" time="13.098359s" failures="191">
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[AD Admin Not Configured For SQL Server]: The Active Directory Administrator is not configured for a SQL server">
+			<failure type="AD Admin Not Configured For SQL Server" message="A problem was found on &#39;azure/sql.tf&#39; file in line 9, A &#39;azurerm_sql_active_directory_administrator&#39; is defined for &#39;azurerm_sql_server[example]&#39;, but A &#39;azurerm_sql_active_directory_administrator&#39; is not defined for &#39;azurerm_sql_server[example]&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="2" tests="2">
+		<testcase name="[App Service Managed Identity Disabled]: Azure App Service should have managed identity enabled">
+			<failure type="App Service Managed Identity Disabled" message="A problem was found on &#39;azure/app_service.tf&#39; file in line 22, &#39;azurerm_app_service[app-service1].identity&#39; is defined and not null, but &#39;azurerm_app_service[app-service1].identity&#39; is undefined or null."></failure>
+			<failure type="App Service Managed Identity Disabled" message="A problem was found on &#39;azure/app_service.tf&#39; file in line 43, &#39;azurerm_app_service[app-service2].identity&#39; is defined and not null, but &#39;azurerm_app_service[app-service2].identity&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[App Service Not Using Latest TLS Encryption Version]: Ensure App Service is using the latest version of TLS encryption">
+			<failure type="App Service Not Using Latest TLS Encryption Version" message="A problem was found on &#39;azure/app_service.tf&#39; file in line 29, &#39;azurerm_app_service[app-service1].site_config.min_tls_version&#39; is set to &#39;1.2&#39;, but &#39;azurerm_app_service[app-service1].site_config.min_tls_version&#39; is not set to &#39;1.2&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Authentication Without MFA]: Multi-Factor Authentication (MFA) adds an extra layer of authentication assurance beyond traditional credentials. With MFA enabled, when a user signs in to the AWS Console, they will be prompted for their user name and password as well as for an authentication code from their physical or virtual MFA token. It is recommended that MFA be enabled for all accounts that have a console password.&#xA;Enabling MFA provides increased security for console access as it requires the authenticating principal to possess a device that displays a time-sensitive key and have knowledge of a credential.">
+			<failure type="Authentication Without MFA" message="A problem was found on &#39;aws/iam.tf&#39; file in line 29, The attributes &#39;policy.Statement.Condition&#39;, &#39;policy.Statement.Condition.BoolIfExists&#39;, and &#39;policy.Statement.Condition.BoolIfExists.aws:MultiFactorAuthPresent&#39; are defined and not null, but The attribute(s) &#39;policy.Statement.Condition&#39; or/and &#39;policy.Statement.Condition.BoolIfExists&#39; or/and &#39;policy.Statement.Condition.BoolIfExists.aws:MultiFactorAuthPresent&#39; is/are undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="2" tests="2">
+		<testcase name="[Azure App Service Client Certificate Disabled]: Azure App Service client certificate should be enabled">
+			<failure type="Azure App Service Client Certificate Disabled" message="A problem was found on &#39;azure/app_service.tf&#39; file in line 43, &#39;azurerm_app_service[app-service2].client_cert_enabled&#39; is defined, but &#39;azurerm_app_service[app-service2].client_cert_enabeld&#39; is undefined."></failure>
+			<failure type="Azure App Service Client Certificate Disabled" message="A problem was found on &#39;azure/app_service.tf&#39; file in line 22, &#39;azurerm_app_service[app-service1].client_cert_enabled&#39; is defined, but &#39;azurerm_app_service[app-service1].client_cert_enabeld&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[BigQuery Dataset Is Public]: BigQuery dataset is anonymously or publicly accessible">
+			<failure type="BigQuery Dataset Is Public" message="A problem was found on &#39;gcp/big_data.tf&#39; file in line 24, &#39;access.special_group&#39; is not equal to &#39;allAuthenticatedUsers&#39;, but &#39;access.special_group&#39; is equal to &#39;allAuthenticatedUsers&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[CMK Rotation Disabled]: AWS Key Management Service (KMS) allows customers to rotate the backing key which is key material stored within the KMS which is tied to the key ID of the Customer Created customer master key (CMK). It is the backing key that is used to perform cryptographic operations such as encryption and decryption. Automated key rotation currently retains all prior backing keys so that decryption of encrypted data can take place transparently. It is recommended that CMK key rotation be enabled.&#xA;Rotating encryption keys helps reduce the potential impact of a compromised key as data encrypted with a new key cannot be accessed with a previous key that may have been exposed.">
+			<failure type="CMK Rotation Disabled" message="A problem was found on &#39;aws/kms.tf&#39; file in line 1, aws_kms_key[logs_key].enable_key_rotation is set to true, but aws_kms_key[logs_key].enable_key_rotation is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[COS Node Image Not Used]: The node image should be Container-Optimized OS(COS)">
+			<failure type="COS Node Image Not Used" message="A problem was found on &#39;gcp/gke.tf&#39; file in line 29, &#39;node_config.image_type&#39; should start with &#39;COS&#39;, but &#39;node_config.image_type&#39; does not start with &#39;COS&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Client Certificate Disabled]: Kubernetes Clusters must be created with Client Certificate enabled, which means &#39;master_auth&#39; must have &#39;client_certificate_config&#39; with the attribute &#39;issue_client_certificate&#39; equal to true">
+			<failure type="Client Certificate Disabled" message="A problem was found on &#39;gcp/gke.tf&#39; file in line 6, Attribute &#39;master_auth&#39; is defined, but Attribute &#39;master_auth&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Cloud Storage Bucket Logging Not Enabled]: Cloud storage bucket with logging not enabled">
+			<failure type="Cloud Storage Bucket Logging Not Enabled" message="A problem was found on &#39;gcp/gcs.tf&#39; file in line 1, &#39;google_storage_bucket.logging&#39; is set, but &#39;google_storage_bucket.logging&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Cloud Storage Bucket Versioning Disabled]: Object Versioning Not Enabled on Cloud Storage Bucket">
+			<failure type="Cloud Storage Bucket Versioning Disabled" message="A problem was found on &#39;gcp/gcs.tf&#39; file in line 1, &#39;versioning&#39; is defined and not null, but &#39;versioning&#39; it undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Cluster Labels Disabled]: Kubernetes Clusters must be configured with labels, which means the attribute &#39;resource_labels&#39; must be defined">
+			<failure type="Cluster Labels Disabled" message="A problem was found on &#39;gcp/gke.tf&#39; file in line 6, Attribute &#39;resource_labels&#39; is defined, but Attribute &#39;resource_labels&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Cluster Master Authentication Disabled]: Kubernetes Engine Clusters must have Master Authentication set to enabled, which means the attribute &#39;master_auth&#39; must have the subattributes &#39;username&#39; and &#39;password&#39; defined and not empty">
+			<failure type="Cluster Master Authentication Disabled" message="A problem was found on &#39;gcp/gke.tf&#39; file in line 6, Attribute &#39;master_auth&#39; is defined, but Attribute &#39;master_auth&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[DB Instance Publicly Accessible]: The field &#39;publicly_accessible&#39; should not be set to &#39;true&#39; (default is &#39;false&#39;).">
+			<failure type="DB Instance Publicly Accessible" message="A problem was found on &#39;aws/db-app.tf&#39; file in line 21, &#39;publicly_accessible&#39; is set to false or undefined, but &#39;publicly_accessible&#39; is set to true."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[DB Instance Storage Not Encrypted]: The parameter storage_encrypted in aws_db_instance must be set to &#39;true&#39; (the default is &#39;false&#39;).">
+			<failure type="DB Instance Storage Not Encrypted" message="A problem was found on &#39;aws/db-app.tf&#39; file in line 18, &#39;storage_encrypted&#39; is set to true, but &#39;storage_encrypted&#39; is set to false."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[EBS Volume Snapshot Not Encrypted]: The value on AWS EBS Volume Snapshot Encryptation must be true">
+			<failure type="EBS Volume Snapshot Not Encrypted" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 53, &#39;aws_ebs_volume[web_host_storage].encrypted&#39; associated with aws_ebs_snapshot[example_snapshot] is set, but &#39;aws_ebs_volume[web_host_storage].encrypted&#39; associated with aws_ebs_snapshot[example_snapshot] is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="2" tests="2">
+		<testcase name="[EC2 Instance Has Public IP]: EC2 Instance should not have a public IP address.">
+			<failure type="EC2 Instance Has Public IP" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 1, &#39;associate_public_ip_address&#39; is defined and not null, but &#39;associate_public_ip_address&#39; is undefined or null."></failure>
+			<failure type="EC2 Instance Has Public IP" message="A problem was found on &#39;aws/db-app.tf&#39; file in line 242, &#39;associate_public_ip_address&#39; is defined and not null, but &#39;associate_public_ip_address&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[EKS Cluster Encryption Disabled]: EKS Cluster should be encrypted">
+			<failure type="EKS Cluster Encryption Disabled" message="A problem was found on &#39;aws/eks.tf&#39; file in line 117, &#39;encryption_config&#39; is defined and not null, but &#39;encryption_config&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[GKE Basic Authentication Enabled]: GCP - Google Kubernetes Engine (GKE) Basic Authentication must be disabled, which means the username and password provided in the master_auth block must be empty">
+			<failure type="GKE Basic Authentication Enabled" message="A problem was found on &#39;gcp/gke.tf&#39; file in line 6, Attribute &#39;master_auth&#39; is defined, but Attribute &#39;master_auth&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[GKE Legacy Authorization Enabled]: Kubernetes Engine Clusters must have Legacy Authorization set to disabled, which means the attribute &#39;enable_legacy_abac&#39; must not be true">
+			<failure type="GKE Legacy Authorization Enabled" message="A problem was found on &#39;gcp/gke.tf&#39; file in line 12, Attribute &#39;enable_legacy_abac&#39; is false, but Attribute &#39;enable_legacy_abac&#39; is true."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Geo Redundancy Is Disabled]: Make sure that on PostgreSQL Geo Redundant Backups is enabled">
+			<failure type="Geo Redundancy Is Disabled" message="A problem was found on &#39;azure/sql.tf&#39; file in line 80, &#39;azurerm_postgresql_server.example.geo_redundant_backup_enabled&#39; is true, but &#39;azurerm_postgresql_server.example.geo_redundant_backup_enabled&#39; is false."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[HTTP Port Open]: The security group ingress rules provide filtering of ingress network traffic to AWS resources. It is recommended that no security group ingress rule allows unrestricted ingress access to remote server HTTP port 80.&#xA;Public access to remote server ports, such as 80, increases the resource attack surface and unnecessarily raises the risk of resource compromise.">
+			<failure type="HTTP Port Open" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 77, aws_security_group.ingress doesn&#39;t open the HTTP port (80), but aws_security_group.ingress opens the HTTP port (80)."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[IAM Database Auth Not Enabled]: IAM Database Auth Enabled must be configured to true">
+			<failure type="IAM Database Auth Not Enabled" message="A problem was found on &#39;aws/db-app.tf&#39; file in line 1, &#39;iam_database_authentication_enabled&#39; is set to true, but &#39;iam_database_authentication_enabled&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[IP Aliasing Disabled]: Kubernetes Clusters must be created with Alias IP ranges enabled, which means the attribut &#39;ip_allocation_policy&#39; must be defined and, if defined, the attribute &#39;networking_mode&#39; must be VPC_NATIVE ">
+			<failure type="IP Aliasing Disabled" message="A problem was found on &#39;gcp/gke.tf&#39; file in line 6, Attributes &#39;ip_allocation_policy&#39; and &#39;networking_mode&#39; are defined, but Attributes &#39;ip_allocation_policy&#39; and &#39;networking_mode&#39; are undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Key Expiration Not Set]: Make sure that for all keys the expiration date is set">
+			<failure type="Key Expiration Not Set" message="A problem was found on &#39;azure/key_vault.tf&#39; file in line 33, &#39;expiration_date&#39; exists, but &#39;expiration_date&#39; is missing."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Dockerfile]" failures="1" tests="1">
+		<testcase name="[Missing User Instruction]: A user should be specified in the dockerfile, otherwise the image will run as root">
+			<failure type="Missing User Instruction" message="A problem was found on &#39;aws/resources/Dockerfile&#39; file in line 1, The &#39;Dockerfile&#39; contains the &#39;USER&#39; instruction, but The &#39;Dockerfile&#39; does not contain any &#39;USER&#39; instruction."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[MySQL SSL Connection Disabled]: Make sure that for MySQL Database Server, &#39;Enforce SSL connection&#39; is enabled">
+			<failure type="MySQL SSL Connection Disabled" message="A problem was found on &#39;azure/sql.tf&#39; file in line 60, &#39;azurerm_mysql_server.example.ssl_enforcement_enabled&#39; is equal &#39;true&#39;, but &#39;azurerm_mysql_server.example.ssl_enforcement_enabled&#39; is equal &#39;false&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[MySQL Server Public Access Enabled]: MySQL Server public access should be disabled">
+			<failure type="MySQL Server Public Access Enabled" message="A problem was found on &#39;azure/sql.tf&#39; file in line 59, &#39;azurerm_mysql_server[example].public_network_access_enabled&#39; is set to false, but &#39;azurerm_mysql_server[example].public_network_access_enabled&#39; is set to true."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Network Policy Disabled]: Kubernetes Engine Clusters must have Network Policy enabled, meaning that the attribute &#39;network_policy.enabled&#39; must be true and the attribute &#39;addons_config.network_policy_config.disabled&#39; must be false ">
+			<failure type="Network Policy Disabled" message="A problem was found on &#39;gcp/gke.tf&#39; file in line 6, Attribute &#39;network_policy&#39; is defined and Attribute &#39;addons_config&#39; is defined, but Attribute &#39;network_policy&#39; is undefined or Attribute &#39;addons_config&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Network Watcher Flow Disabled]: Check if enable field in the resource azurerm_network_watcher_flow_log is false.">
+			<failure type="Network Watcher Flow Disabled" message="A problem was found on &#39;azure/networking.tf&#39; file in line 126, azurerm_network_watcher_flow_log.enabled is true, but azurerm_network_watcher_flow_log.enabled is false."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Node Auto Upgrade Disabled]: Node &#39;auto_upgrade&#39; should be enabled for Kubernetes Clusters">
+			<failure type="Node Auto Upgrade Disabled" message="A problem was found on &#39;gcp/gke.tf&#39; file in line 24, google_container_node_pool.management is defined and not null, but google_container_node_pool.management is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Common]" failures="3" tests="3">
+		<testcase name="[Passwords And Secrets - AWS Access Key]: Query to find passwords and secrets in infrastructure code.">
+			<failure type="Passwords And Secrets - AWS Access Key" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 15, Hardcoded secret key should not appear in source, but &#39;export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMAAA&#39; contains a secret."></failure>
+			<failure type="Passwords And Secrets - AWS Access Key" message="A problem was found on &#39;aws/lambda.tf&#39; file in line 44, Hardcoded secret key should not appear in source, but &#39;      access_key = &#34;AKIAIOSFODNN7EXAMPLE&#34;&#39; contains a secret."></failure>
+			<failure type="Passwords And Secrets - AWS Access Key" message="A problem was found on &#39;aws/providers.tf&#39; file in line 10, Hardcoded secret key should not appear in source, but &#39;  access_key = &#34;AKIAIOSFODNN7EXAMPLE&#34;&#39; contains a secret."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Common]" failures="1" tests="1">
+		<testcase name="[Passwords And Secrets - AWS Secret Key]: Query to find passwords and secrets in infrastructure code.">
+			<failure type="Passwords And Secrets - AWS Secret Key" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 16, Hardcoded secret key should not appear in source, but &#39;export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMAAAKEY&#39; contains a secret."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Common]" failures="2" tests="2">
+		<testcase name="[Passwords And Secrets - Generic Password]: Query to find passwords and secrets in infrastructure code.">
+			<failure type="Passwords And Secrets - Generic Password" message="A problem was found on &#39;azure/sql.tf&#39; file in line 83, Hardcoded secret key should not appear in source, but &#39;  administrator_login_password = &#34;Aa12345678&#34;&#39; contains a secret."></failure>
+			<failure type="Passwords And Secrets - Generic Password" message="A problem was found on &#39;azure/sql.tf&#39; file in line 15, Hardcoded secret key should not appear in source, but &#39;  administrator_login_password = &#34;Aa12345678&#34;&#39; contains a secret."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Common]" failures="2" tests="2">
+		<testcase name="[Passwords And Secrets - Generic Secret]: Query to find passwords and secrets in infrastructure code.">
+			<failure type="Passwords And Secrets - Generic Secret" message="A problem was found on &#39;aws/lambda.tf&#39; file in line 45, Hardcoded secret key should not appear in source, but &#39;      secret_key = &#34;wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY&#34;&#39; contains a secret."></failure>
+			<failure type="Passwords And Secrets - Generic Secret" message="A problem was found on &#39;aws/providers.tf&#39; file in line 11, Hardcoded secret key should not appear in source, but &#39;  secret_key = &#34;wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY&#34;&#39; contains a secret."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Pod Security Policy Disabled]: Kubernetes Clusters must have Pod Security Policy controller enabled, which means there must be a &#39;pod_security_policy_config&#39; with the &#39;enabled&#39; attribute equal to true">
+			<failure type="Pod Security Policy Disabled" message="A problem was found on &#39;gcp/gke.tf&#39; file in line 6, Attribute &#39;pod_security_policy_config&#39; is defined, but Attribute &#39;pod_security_policy_config&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[PostgreSQL Server Threat Detection Policy Disabled]: PostgreSQL Server Threat Detection Policy should be enabled">
+			<failure type="PostgreSQL Server Threat Detection Policy Disabled" message="A problem was found on &#39;azure/sql.tf&#39; file in line 73, &#39;azurerm_postgresql_server[example].threat_detection_policy&#39; is a defined object, but &#39;azurerm_postgresql_server[example].threat_detection_policy&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Private Cluster Disabled]: Kubernetes Clusters must be created with Private Clusters enabled, meaning the &#39;private_cluster_config&#39; must be defined and the attributes &#39;enable_private_nodes&#39; and &#39;enable_private_endpoint&#39; must be true">
+			<failure type="Private Cluster Disabled" message="A problem was found on &#39;gcp/gke.tf&#39; file in line 6, Attribute &#39;private_cluster_config&#39; is defined and not null, but Attribute &#39;private_cluster_config&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[S3 Bucket ACL Allows Read Or Write to All Users]: S3 bucket with public READ/WRITE access">
+			<failure type="S3 Bucket ACL Allows Read Or Write to All Users" message="A problem was found on &#39;aws/s3.tf&#39; file in line 7, &#39;acl&#39; is equal &#39;private&#39;, but &#39;acl&#39; is equal &#39;public-read&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[S3 Bucket Object Not Encrypted]: Amazon S3 provides a variety of no, or low, cost encryption options to protect data at rest.&#xA;Encrypting data at rest reduces the likelihood that it is unintentionally exposed and can nullify the impact of disclosure if the encryption remains unbroken.">
+			<failure type="S3 Bucket Object Not Encrypted" message="A problem was found on &#39;aws/s3.tf&#39; file in line 24, aws_s3_bucket_object.server_side_encryption is defined and not null, but aws_s3_bucket_object.server_side_encryption is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="5" tests="5">
+		<testcase name="[S3 Bucket SSE Disabled]: If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required">
+			<failure type="S3 Bucket SSE Disabled" message="A problem was found on &#39;aws/s3.tf&#39; file in line 66, &#39;server_side_encryption_configuration&#39; is defined and not null, but &#39;server_side_encryption_configuration&#39; is undefined or null."></failure>
+			<failure type="S3 Bucket SSE Disabled" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 271, &#39;server_side_encryption_configuration&#39; is defined and not null, but &#39;server_side_encryption_configuration&#39; is undefined or null."></failure>
+			<failure type="S3 Bucket SSE Disabled" message="A problem was found on &#39;aws/s3.tf&#39; file in line 91, &#39;server_side_encryption_configuration&#39; is defined and not null, but &#39;server_side_encryption_configuration&#39; is undefined or null."></failure>
+			<failure type="S3 Bucket SSE Disabled" message="A problem was found on &#39;aws/s3.tf&#39; file in line 1, &#39;server_side_encryption_configuration&#39; is defined and not null, but &#39;server_side_encryption_configuration&#39; is undefined or null."></failure>
+			<failure type="S3 Bucket SSE Disabled" message="A problem was found on &#39;aws/s3.tf&#39; file in line 43, &#39;server_side_encryption_configuration&#39; is defined and not null, but &#39;server_side_encryption_configuration&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="6" tests="6">
+		<testcase name="[S3 Bucket Without Enabled MFA Delete]: Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.&#xA;Adding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.">
+			<failure type="S3 Bucket Without Enabled MFA Delete" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 271, aws_s3_bucket[flowbucket].versioning is defined and not null, but aws_s3_bucket[flowbucket].versioning is undefined or null."></failure>
+			<failure type="S3 Bucket Without Enabled MFA Delete" message="A problem was found on &#39;aws/s3.tf&#39; file in line 71, &#39;mfa_delete&#39; is set to true, but &#39;mfa_delete&#39; is undefined or null."></failure>
+			<failure type="S3 Bucket Without Enabled MFA Delete" message="A problem was found on &#39;aws/s3.tf&#39; file in line 43, aws_s3_bucket[financials].versioning is defined and not null, but aws_s3_bucket[financials].versioning is undefined or null."></failure>
+			<failure type="S3 Bucket Without Enabled MFA Delete" message="A problem was found on &#39;aws/s3.tf&#39; file in line 118, &#39;mfa_delete&#39; is set to true, but &#39;mfa_delete&#39; is undefined or null."></failure>
+			<failure type="S3 Bucket Without Enabled MFA Delete" message="A problem was found on &#39;aws/s3.tf&#39; file in line 95, &#39;mfa_delete&#39; is set to true, but &#39;mfa_delete&#39; is undefined or null."></failure>
+			<failure type="S3 Bucket Without Enabled MFA Delete" message="A problem was found on &#39;aws/s3.tf&#39; file in line 1, aws_s3_bucket[data].versioning is defined and not null, but aws_s3_bucket[data].versioning is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[SQL DB Instance Backup Disabled]: Checks if backup configuration is enabled for all Cloud SQL Database instances">
+			<failure type="SQL DB Instance Backup Disabled" message="A problem was found on &#39;gcp/big_data.tf&#39; file in line 16, settings.backup_configuration.enabled is true, but settings.backup_configuration.enabled is false."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[SQL DB Instance Is Publicly Accessible]: Check if any Cloud SQL instances are publicly accessible.">
+			<failure type="SQL DB Instance Is Publicly Accessible" message="A problem was found on &#39;gcp/big_data.tf&#39; file in line 12, &#39;authorized_network&#39; address is trusted, but &#39;authorized_network&#39; address is not restricted: &#39;0.0.0.0/0&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[SQL DB Instance With SSL Disabled]: Cloud SQL Database Instance should have SLL enabled">
+			<failure type="SQL DB Instance With SSL Disabled" message="A problem was found on &#39;gcp/big_data.tf&#39; file in line 8, &#39;settings.ip_configuration.require_ssl&#39; is defined and not null, but &#39;settings.ip_configuration.require_ssl&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[SSL Enforce Disabled]: Make sure that for PosgreSQL, the &#39;Enforce SSL connection&#39; is set to &#39;ENABLED&#39;">
+			<failure type="SSL Enforce Disabled" message="A problem was found on &#39;azure/sql.tf&#39; file in line 85, &#39;azurerm_postgresql_server.example.ssl_enforcement_enabled&#39; is equal &#39;true&#39;, but &#39;azurerm_postgresql_server.example.ssl_enforcement_enabled&#39; is equal &#39;false&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Secret Expiration Not Set]: Make sure that for all secrets the expiration date is set">
+			<failure type="Secret Expiration Not Set" message="A problem was found on &#39;azure/key_vault.tf&#39; file in line 58, &#39;expiration_date&#39; exists, but &#39;expiration_date&#39; is missing."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Security Group With Unrestricted Access To SSH]: &#39;SSH&#39; (TCP:22) should not be public in AWS Security Group">
+			<failure type="Security Group With Unrestricted Access To SSH" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 87, aws_security_group[web-node] &#39;SSH&#39; (Port:22) is not public, but aws_security_group[web-node] &#39;SSH&#39; (Port:22) is public."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Stackdriver Logging Disabled]: Kubernetes Engine Clusters must have Stackdriver Logging enabled, which means the attribute &#39;logging_service&#39; must be defined and different from &#39;none&#39;">
+			<failure type="Stackdriver Logging Disabled" message="A problem was found on &#39;gcp/gke.tf&#39; file in line 6, Attribute &#39;logging_service&#39; is not &#39;none&#39;, but Attribute &#39;logging_service&#39; is &#39;none&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Stackdriver Monitoring Disabled]: Kubernetes Engine Clusters must have Stackdriver Monitoring enabled, which means the attribute &#39;monitoring_service&#39; must be defined and different than &#39;none&#39;">
+			<failure type="Stackdriver Monitoring Disabled" message="A problem was found on &#39;gcp/gke.tf&#39; file in line 6, Attribute &#39;monitoring_service&#39; is not &#39;none&#39;, but Attribute &#39;monitoring_service&#39; is &#39;none&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Storage Account Not Forcing HTTPS]: See that Storage Accounts forces the use of HTTPS">
+			<failure type="Storage Account Not Forcing HTTPS" message="A problem was found on &#39;azure/storage.tf&#39; file in line 23, &#39;azurerm_storage_account.example.enable_https_traffic_only&#39; equals &#39;true&#39;, but &#39;azurerm_storage_account.example.enable_https_traffic_only&#39; does not exist."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="2" tests="2">
+		<testcase name="[Trusted Microsoft Services Not Enabled]: Trusted MIcrosoft Services are not enabled for Storage Account access">
+			<failure type="Trusted Microsoft Services Not Enabled" message="A problem was found on &#39;azure/storage.tf&#39; file in line 23, &#39;network_rules&#39; is defined and not null, but &#39;network_rules&#39; is undefined or null."></failure>
+			<failure type="Trusted Microsoft Services Not Enabled" message="A problem was found on &#39;azure/storage.tf&#39; file in line 68, &#39;bypass&#39; contains &#39;AzureServices&#39;, but &#39;bypass&#39; does not contain &#39;AzureServices&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Unknown Port Exposed To Internet]: AWS Security Group should not have an unknown port exposed to the entire Internet">
+			<failure type="Unknown Port Exposed To Internet" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 87, aws_security_group[web-node].ingress.from_port is known, but aws_security_group[web-node].ingress.from_port is unknown and is exposed to the entire Internet."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="2" tests="2">
+		<testcase name="[Unrestricted Security Group Ingress]: Security groups should restrict ingress only to well-known and allowed origins: IP addresses or ranges. Unrestricted access may expose security groups associated resources to the Internet, allowing, for example, access to remote server open ports.&#xA;Public access to remote servers increases the resource attack surface and unnecessarily raises the risk of resource compromise.">
+			<failure type="Unrestricted Security Group Ingress" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 88, One of &#39;ingress.cidr_blocks&#39; not equal &#39;0.0.0.0/0&#39;, but One of &#39;ingress.cidr_blocks&#39; equal &#39;0.0.0.0/0&#39;."></failure>
+			<failure type="Unrestricted Security Group Ingress" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 95, One of &#39;ingress.cidr_blocks&#39; not equal &#39;0.0.0.0/0&#39;, but One of &#39;ingress.cidr_blocks&#39; equal &#39;0.0.0.0/0&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Vault Auditing Disabled]: Ensure that logging for Azure KeyVault is &#39;Enabled&#39;">
+			<failure type="Vault Auditing Disabled" message="A problem was found on &#39;azure/key_vault.tf&#39; file in line 1, &#39;azurerm_key_vault&#39; is associated with &#39;azurerm_monitor_diagnostic_setting&#39;, but &#39;azurerm_key_vault&#39; is not associated with &#39;azurerm_monitor_diagnostic_setting&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Web App Accepting Traffic Other Than HTTPS]: Web app should only accept HTTPS traffic in Azure Web App Service.">
+			<failure type="Web App Accepting Traffic Other Than HTTPS" message="A problem was found on &#39;azure/app_service.tf&#39; file in line 27, &#39;azurerm_app_service[app-service1].https_only&#39; is set to true, but &#39;azurerm_app_service[app-service1].https_only&#39; is not set to true."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[AKS Disk Encryption Set ID Undefined]: Azure Container Service (AKS) should use Disk Encryption Set ID">
+			<failure type="AKS Disk Encryption Set ID Undefined" message="A problem was found on &#39;azure/aks.tf&#39; file in line 1, &#39;azurerm_kubernetes_cluster[k8s_cluster].disk_encryption_set_id&#39; is defined and not null, but &#39;azurerm_kubernetes_cluster[k8s_cluster].disk_encryption_set_id&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[AKS Network Policy Misconfigured]: Check if the Azure Kubernetes Service doesn&#39;t have the proper network policy configuration.">
+			<failure type="AKS Network Policy Misconfigured" message="A problem was found on &#39;azure/aks.tf&#39; file in line 1, &#39;azurerm_kubernetes_cluster[k8s_cluster].network_profile&#39; is set, but &#39;azurerm_kubernetes_cluster[k8s_cluster].network_profile&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[AKS RBAC Disabled]: Azure Container Service (AKS) instance should have role-based access control (RBAC) enabled">
+			<failure type="AKS RBAC Disabled" message="A problem was found on &#39;azure/aks.tf&#39; file in line 23, &#39;azurerm_kubernetes_cluster[k8s_cluster].role_based_access_control.enabled&#39; is set to true, but &#39;azurerm_kubernetes_cluster[k8s_cluster].role_based_access_control.enabled&#39; is not set to true."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Cloud Storage Anonymous or Publicly Accessible]: Cloud Storage Buckets must not be anonymously or publicly accessible, which means the attribute &#39;members&#39; must not possess &#39;allUsers&#39; or &#39;allAuthenticatedUsers&#39;">
+			<failure type="Cloud Storage Anonymous or Publicly Accessible" message="A problem was found on &#39;gcp/gcs.tf&#39; file in line 18, &#39;google_storage_bucket_iam_binding[allow_public_read].members&#39; does not have &#39;allUsers&#39;, but &#39;google_storage_bucket_iam_binding[allow_public_read].members&#39; has &#39;allUsers&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Disk Encryption Disabled]: VM disks for critical VMs must be encrypted with Customer Supplied Encryption Keys (CSEK) or with Customer-managed encryption keys (CMEK), which means the attribute &#39;disk_encryption_key&#39; must be defined and its sub attributes &#39;raw_key&#39; or &#39;kms_key_self_link&#39; must also be defined">
+			<failure type="Disk Encryption Disabled" message="A problem was found on &#39;gcp/instances.tf&#39; file in line 36, &#39;google_compute_disk[unencrypted_disk].disk_encryption_key&#39; is defined and not null, but &#39;google_compute_disk[unencrypted_disk].disk_encryption_key&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[EBS Volume Encryption Disabled]: Elastic Compute Cloud (EC2) supports encryption at rest when using the Elastic Block Store (EBS) service. While disabled by default, forcing encryption at EBS volume creation is supported.&#xA;Encrypting data at rest reduces the likelihood that it is unintentionally exposed and can nullify the impact of disclosure if the encryption remains unbroken.">
+			<failure type="EBS Volume Encryption Disabled" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 34, One of &#39;aws_ebs_volume.encrypted&#39; is defined, but One of &#39;aws_ebs_volume.encrypted&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[ECR Image Tag Not Immutable]: ECR should have an image tag be immutable">
+			<failure type="ECR Image Tag Not Immutable" message="A problem was found on &#39;aws/ecr.tf&#39; file in line 3, aws_ecr_repository.repository.image_tag_mutability is &#39;IMMUTABLE&#39;, but aws_ecr_repository.repository.image_tag_mutability is &#39;MUTABLE&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[ECR Repository Not Encrypted]: ECR (Elastic Container Registry) Repository encryption should be set">
+			<failure type="ECR Repository Not Encrypted" message="A problem was found on &#39;aws/ecr.tf&#39; file in line 1, The attribute &#39;encryption_configuration&#39; is defined and not null, but The attribute &#39;encryption_configuration&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[ElasticSearch Not Encrypted At Rest]: Check if ElasticSearch encryption is disabled at Rest">
+			<failure type="ElasticSearch Not Encrypted At Rest" message="A problem was found on &#39;aws/es.tf&#39; file in line 1, &#39;encrypt_at_rest&#39; is set and enabled, but &#39;encrypt_at_rest&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Elasticsearch Domain Not Encrypted Node To Node]: Elasticsearch Domain encryption should be enabled node to node">
+			<failure type="Elasticsearch Domain Not Encrypted Node To Node" message="A problem was found on &#39;aws/es.tf&#39; file in line 1, The attribute &#39;node_to_node_encryption&#39; is set to true, but The attribute &#39;node_to_node_encryption&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Elasticsearch Domain With Vulnerable Policy]: Elasticsearch Domain policy should avoid wildcard in &#39;Action&#39; and &#39;Principal&#39;.">
+			<failure type="Elasticsearch Domain With Vulnerable Policy" message="A problem was found on &#39;aws/es.tf&#39; file in line 42, aws_elasticsearch_domain_policy[monitoring-framework-policy].access_policies does not have wildcard in &#39;Action&#39; and &#39;Principal&#39;, but aws_elasticsearch_domain_policy[monitoring-framework-policy].access_policies has wildcard in &#39;Action&#39; or &#39;Principal&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Elasticsearch Log is disabled]: AWS Elasticsearch should have logs enabled">
+			<failure type="Elasticsearch Log is disabled" message="A problem was found on &#39;aws/es.tf&#39; file in line 1, &#39;log_publishing_options&#39; is defined and not null, but &#39;log_publishing_options&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Email Alerts Disabled]: Make sure that alerts notifications are set to &#39;On&#39; in the Azure Security Center Contact">
+			<failure type="Email Alerts Disabled" message="A problem was found on &#39;azure/security_center.tf&#39; file in line 6, &#39;azurerm_security_center_contact.contact.alert_notifications&#39; is true, but &#39;azurerm_security_center_contact.contact.alert_notifications&#39; is false."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Encryption On Managed Disk Disabled]: Ensure that the encryption is active on the disk">
+			<failure type="Encryption On Managed Disk Disabled" message="A problem was found on &#39;azure/storage.tf&#39; file in line 9, azurerm_managed_disk[example].encryption_settings.enabled is true , but azurerm_managed_disk[example].encryption_settings.enabled is false."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Google Compute Network Using Firewall Rule that Allows All Ports]: Google Compute Network should not use a firewall rule that allows all ports">
+			<failure type="Google Compute Network Using Firewall Rule that Allows All Ports" message="A problem was found on &#39;gcp/networks.tf&#39; file in line 1, &#39;google_compute_network[vpc]&#39; is not using a firewall rule that allows access to all ports, but &#39;google_compute_network[vpc]&#39; is using a firewall rule that allows access to all ports."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Google Compute Subnetwork Logging Disabled]: This query checks if logs are enabled for a Google Compute Subnetwork resource.">
+			<failure type="Google Compute Subnetwork Logging Disabled" message="A problem was found on &#39;gcp/networks.tf&#39; file in line 7, &#39;google_compute_subnetwork[public-subnetwork].log_config&#39; is defined and not null, but &#39;google_compute_subnetwork[public-subnetwork].log_config&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Google Container Node Pool Auto Repair Disabled]: Verifies if Google Container Node Pool Auto Repair is Enabled">
+			<failure type="Google Container Node Pool Auto Repair Disabled" message="A problem was found on &#39;gcp/gke.tf&#39; file in line 24, google_container_node_pool[custom_node_pool].management.auto_repair is defined and not null, but google_container_node_pool[custom_node_pool].management.auto_repair is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Google Storage Bucket Level Access Disabled]: Google Storage Bucket Level Access should be enabled">
+			<failure type="Google Storage Bucket Level Access Disabled" message="A problem was found on &#39;gcp/gcs.tf&#39; file in line 1, google_storage_bucket[terragoat_website].uniform_bucket_level_access is defined and not null, but google_storage_bucket[terragoat_website].uniform_bucket_level_access is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[IAM Access Analyzer Undefined]: IAM Access Analyzer should be defined to identify unintentional access">
+			<failure type="IAM Access Analyzer Undefined" message="A problem was found on &#39;aws/db-app.tf&#39; file in line 1, &#39;aws_accessanalyzer_analyzer&#39; is set, but &#39;aws_accessanalyzer_analyzer&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[IAM Access Key Is Exposed]: AWS console defaults to no check boxes selected when creating a new IAM user. When cerating the IAM User credentials you have to determine what type of access they require. Programmatic access: The IAM user might need to make API calls, use the AWS CLI, or use the Tools for Windows PowerShell. In that case, create an access key (access key ID and a secret access key) for that user. AWS Management Console access: If the user needs to access the AWS Management Console, create a password for the user.&#xA;Requiring the additional steps be taken by the user for programmatic access after their profile has been created will give a stronger indication of intent that access keys are [a] necessary for their work and [b] once the access key is established on an account that the keys may be in use somewhere in the organization. Note : Even if it is known the user will need access keys, require them to create the keys themselves or put in a support ticket to have them created as a separate step from user creation.">
+			<failure type="IAM Access Key Is Exposed" message="A problem was found on &#39;aws/iam.tf&#39; file in line 21, &#39;aws_iam_access_key[user].user&#39; is &#39;root&#39; for an active access key, but &#39;aws_iam_access_key[user].user&#39; is &#39;${aws_iam_user.user.name}&#39; for an active access key."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="2" tests="2">
+		<testcase name="[IAM Policy Grants Full Permissions]: IAM policies allow all (&#39;*&#39;) in a statement action">
+			<failure type="IAM Policy Grants Full Permissions" message="A problem was found on &#39;aws/iam.tf&#39; file in line 29, &#39;policy.Statement.Resource&#39; not equal &#39;*&#39;, but &#39;policy.Statement.Resource&#39; equal &#39;*&#39;."></failure>
+			<failure type="IAM Policy Grants Full Permissions" message="A problem was found on &#39;aws/db-app.tf&#39; file in line 209, &#39;policy.Statement.Resource&#39; not equal &#39;*&#39;, but &#39;policy.Statement.Resource&#39; equal &#39;*&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Neptune Cluster With IAM Database Authentication Disabled]: Neptune Cluster should have IAM Database Authentication enabled">
+			<failure type="Neptune Cluster With IAM Database Authentication Disabled" message="A problem was found on &#39;aws/neptune.tf&#39; file in line 7, &#39;iam_database_authentication_enabled&#39; is set to true, but &#39;iam_database_authentication_enabled&#39; is set to false."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Neptune Database Cluster Encryption Disabled]: Check if Neptune Cluster Storage is securely encrypted">
+			<failure type="Neptune Database Cluster Encryption Disabled" message="A problem was found on &#39;aws/neptune.tf&#39; file in line 9, &#39;storage_encrypted&#39; should be true, but &#39;storage_encrypted&#39; is false."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[OSLogin Is Disabled For VM Instance]: Check if any VM instance disables OSLogin">
+			<failure type="OSLogin Is Disabled For VM Instance" message="A problem was found on &#39;gcp/instances.tf&#39; file in line 21, google_compute_instance[server].metadata.enable-oslogin is true or undefined, but google_compute_instance[server].metadata.enable-oslogin is false."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[PostgreSQL Log Checkpoints Disabled]: Make sure that for Postgre SQL Database Server, parameter &#39;log_checkpoints&#39; is set to &#39;ON&#39;">
+			<failure type="PostgreSQL Log Checkpoints Disabled" message="A problem was found on &#39;azure/sql.tf&#39; file in line 109, &#39;azurerm_postgresql_configuration.example.value&#39; should be &#39;ON&#39;, but &#39;azurerm_postgresql_configuration.example.value&#39; is &#39;OFF&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[PostgreSQL Server Without Connection Throttling]: Ensure that Connection Throttling is set for the PostgreSQL server">
+			<failure type="PostgreSQL Server Without Connection Throttling" message="A problem was found on &#39;azure/sql.tf&#39; file in line 102, &#39;azurerm_postgresql_configuration.thrtottling_config.value&#39; should be &#39;ON&#39;, but &#39;azurerm_postgresql_configuration.thrtottling_config.value&#39; is &#39;OFF&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Project-wide SSH Keys Are Enabled In VM Instances]: VM Instance should block project-wide SSH keys">
+			<failure type="Project-wide SSH Keys Are Enabled In VM Instances" message="A problem was found on &#39;gcp/instances.tf&#39; file in line 20, google_compute_instance[server].metadata.block-project-ssh-keys is true, but google_compute_instance[server].metadata.block-project-ssh-keys is false."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[RDP Access Is Not Restricted]: Check if Google Firewall ingress allows RDP access (port 3389)">
+			<failure type="RDP Access Is Not Restricted" message="A problem was found on &#39;gcp/networks.tf&#39; file in line 25, &#39;google_compute_firewall[allow_all].allow.ports&#39; does not include RDP port 3389, but &#39;google_compute_firewall[allow_all].allow.ports&#39; includes RDP port 3389."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[RDS With Backup Disabled]: RDS configured without backup">
+			<failure type="RDS With Backup Disabled" message="A problem was found on &#39;aws/db-app.tf&#39; file in line 17, &#39;backup_retention_period&#39; is not equal &#39;0&#39;, but &#39;backup_retention_period&#39; is equal &#39;0&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Role Definition Allows Custom Role Creation]: Role Definition should not allow custom role creation">
+			<failure type="Role Definition Allows Custom Role Creation" message="A problem was found on &#39;azure/roles.tf&#39; file in line 9, azurerm_role_definition[example].permissions.actions does not allow custom role creation, but azurerm_role_definition[example].permissions.actions allows custom role creation."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="3" tests="3">
+		<testcase name="[S3 Bucket Without Versioning]: S3 bucket should have versioning enabled">
+			<failure type="S3 Bucket Without Versioning" message="A problem was found on &#39;aws/s3.tf&#39; file in line 1, &#39;versioning&#39; is set to true, but &#39;versioning&#39; is undefined or null."></failure>
+			<failure type="S3 Bucket Without Versioning" message="A problem was found on &#39;aws/s3.tf&#39; file in line 43, &#39;versioning&#39; is set to true, but &#39;versioning&#39; is undefined or null."></failure>
+			<failure type="S3 Bucket Without Versioning" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 271, &#39;versioning&#39; is set to true, but &#39;versioning&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[SQL Server Auditing Disabled]: Make sure that for SQL Servers, &#39;Auditing&#39; is set to &#39;On&#39;">
+			<failure type="SQL Server Auditing Disabled" message="A problem was found on &#39;azure/sql.tf&#39; file in line 9, &#39;azurerm_sql_server.example.extended_auditing_policy&#39; exists, but &#39;azurerm_sql_server.example.extended_auditing_policy&#39; does not exist."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[SSH Access Is Not Restricted]: Check if Google Firewall allows SSH access (port 22) from the Internet (public CIDR block)">
+			<failure type="SSH Access Is Not Restricted" message="A problem was found on &#39;gcp/networks.tf&#39; file in line 25, &#39;google_compute_firewall[allow_all].allow.ports&#39; does not include SSH port 22, but &#39;google_compute_firewall[allow_all].allow.ports&#39; includes SSH port 22."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Security Center Pricing Tier Is Not Standard]: Make sure that the &#39;Standard&#39; pricing tiers were selected.">
+			<failure type="Security Center Pricing Tier Is Not Standard" message="A problem was found on &#39;azure/security_center.tf&#39; file in line 2, &#39;azurerm_security_center_subscription_pricing.pricing.tier&#39; is &#39;Standard&#39;, but &#39;azurerm_security_center_subscription_pricing.pricing.tier&#39; is &#39;Free&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Serial Ports Are Enabled For VM Instances]: Check if VM instance enables serial ports">
+			<failure type="Serial Ports Are Enabled For VM Instances" message="A problem was found on &#39;gcp/instances.tf&#39; file in line 22, google_compute_instance[server].metadata.serial-port-enable is false or undefined, but google_compute_instance[server].metadata.serial-port-enable is true."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Small Activity Log Retention Period]: Ensure that Activity Log Retention is set 365 days or greater">
+			<failure type="Small Activity Log Retention Period" message="A problem was found on &#39;azure/logging.tf&#39; file in line 8, &#39;azurerm_monitor_log_profile[logging_profile].retention_policy.days&#39; is greater than or equal to 365 days or 0 (indefinitely), but &#39;azurerm_monitor_log_profile[logging_profile].retention_policy.days&#39; is lesser than 365 days or different than 0 (indefinitely)."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="2" tests="2">
+		<testcase name="[Small Flow Logs Retention Period]: Flow logs enable capturing information about IP traffic flowing in and out of the network security groups. Network Security Group Flow Logs must be enabled with retention period greater than or equal to 90 days. This is important, because these logs are used to check for anomalies and give information of suspected breaches">
+			<failure type="Small Flow Logs Retention Period" message="A problem was found on &#39;azure/networking.tf&#39; file in line 133, &#39;flow_log.retention_policy.days&#39; is bigger than 90), but &#39;retention_policy.days&#39; is bigger than 90 [10])."></failure>
+			<failure type="Small Flow Logs Retention Period" message="A problem was found on &#39;azure/networking.tf&#39; file in line 132, &#39;flow_log.retention_policy&#39; should be enabled), but &#39;flow_log.retention_policy&#39; is disabled)."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Storage Account Not Using Latest TLS Encryption Version]: Ensure Storage Account is using the latest version of TLS encryption">
+			<failure type="Storage Account Not Using Latest TLS Encryption Version" message="A problem was found on &#39;azure/storage.tf&#39; file in line 23, &#39;azurerm_storage_account[example].min_tls_version&#39; is defined and not null, but &#39;azurerm_storage_account[example].min_tls_version&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Unscanned ECR Image]: Checks if the ECR Image has been scanned">
+			<failure type="Unscanned ECR Image" message="A problem was found on &#39;aws/ecr.tf&#39; file in line 1, aws_ecr_repository[repository].image_scanning_configuration is defined, but aws_ecr_repository[repository].image_scanning_configuration is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Using Default Service Account]: Instances must not be configured to use the Default Service Account, that has full access to all Cloud APIs, which means the attribute &#39;service_account&#39; and its sub attribute &#39;email&#39; must be defined. Additionally, &#39;email&#39; must not be empty and must also not be a default Google Compute Engine service account.">
+			<failure type="Using Default Service Account" message="A problem was found on &#39;gcp/instances.tf&#39; file in line 3, &#39;google_compute_instance[server].service_account&#39; is defined and not null, but &#39;google_compute_instance[server].service_account&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[VPC FlowLogs Disabled]: VPC hasn&#39;t got any FlowLog associated">
+			<failure type="VPC FlowLogs Disabled" message="A problem was found on &#39;aws/eks.tf&#39; file in line 43, aws_vpc[eks_vpc] is the same as Flow Logs VPC id, but aws_vpc[eks_vpc] is not the same as Flow Logs VPC id."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="4" tests="4">
+		<testcase name="[VPC Subnet Assigns Public IP]: VPC Subnet should not assign public IP">
+			<failure type="VPC Subnet Assigns Public IP" message="A problem was found on &#39;aws/eks.tf&#39; file in line 93, aws_subnet[eks_subnet2].map_public_ip_on_launch is set to false or undefined, but aws_subnet[eks_subnet2].map_public_ip_on_launch is set to true."></failure>
+			<failure type="VPC Subnet Assigns Public IP" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 139, aws_subnet[web_subnet].map_public_ip_on_launch is set to false or undefined, but aws_subnet[web_subnet].map_public_ip_on_launch is set to true."></failure>
+			<failure type="VPC Subnet Assigns Public IP" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 159, aws_subnet[web_subnet2].map_public_ip_on_launch is set to false or undefined, but aws_subnet[web_subnet2].map_public_ip_on_launch is set to true."></failure>
+			<failure type="VPC Subnet Assigns Public IP" message="A problem was found on &#39;aws/eks.tf&#39; file in line 65, aws_subnet[eks_subnet1].map_public_ip_on_launch is set to false or undefined, but aws_subnet[eks_subnet1].map_public_ip_on_launch is set to true."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="2" tests="2">
+		<testcase name="[VPC Without Network Firewall]: VPC should have a Network Firewall associated">
+			<failure type="VPC Without Network Firewall" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 117, aws_vpc[web_vpc] has an &#39;aws_networkfirewall_firewall&#39; associated, but aws_vpc[web_vpc] does not have an &#39;aws_networkfirewall_firewall&#39; associated."></failure>
+			<failure type="VPC Without Network Firewall" message="A problem was found on &#39;aws/eks.tf&#39; file in line 43, aws_vpc[eks_vpc] has an &#39;aws_networkfirewall_firewall&#39; associated, but aws_vpc[eks_vpc] does not have an &#39;aws_networkfirewall_firewall&#39; associated."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Virtual Network with DDoS Protection Plan disabled]: Virtual Network should have DDoS Protection Plan enabled">
+			<failure type="Virtual Network with DDoS Protection Plan disabled" message="A problem was found on &#39;azure/networking.tf&#39; file in line 1, &#39;azurerm_virtual_network[example].ddos_protection_plan&#39; is defined and not null, but &#39;azurerm_virtual_network[example].ddos_protection_plan&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[WAF Is Disabled For Azure Application Gateway]: Check if Web Application Firewall is disabled or not configured for Azure&#39;s Application Gateway.">
+			<failure type="WAF Is Disabled For Azure Application Gateway" message="A problem was found on &#39;azure/application_gateway.tf&#39; file in line 1, &#39;azurerm_application_gateway[network]&#39; is set, but &#39;azurerm_application_gateway[network]&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[AKS Private Cluster Disabled]: Azure Kubernetes Service (AKS) API should not be exposed to the internet">
+			<failure type="AKS Private Cluster Disabled" message="A problem was found on &#39;azure/aks.tf&#39; file in line 1, &#39;azurerm_kubernetes_cluster[k8s_cluster].private_cluster_enabled&#39; is defined and set to true, but &#39;azurerm_kubernetes_cluster[k8s_cluster].private_cluster_enabled&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[AKS Uses Azure Policies Add-On Disabled]: Azure Container Service (AKS) should use Azure Policies Add-On">
+			<failure type="AKS Uses Azure Policies Add-On Disabled" message="A problem was found on &#39;azure/aks.tf&#39; file in line 14, &#39;azurerm_kubernetes_cluster[k8s_cluster].addon_profile.azure_policy&#39; is defined and set to true, but &#39;azurerm_kubernetes_cluster[k8s_cluster].addon_profile.azure_policy&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="2" tests="2">
+		<testcase name="[App Service HTTP2 Disabled]: App Service should have &#39;http2_enabled&#39; enabled">
+			<failure type="App Service HTTP2 Disabled" message="A problem was found on &#39;azure/app_service.tf&#39; file in line 43, &#39;azurerm_app_service[app-service2].site_config&#39; is defined and not null, but &#39;azurerm_app_service[app-service2].site_config&#39; is undefined or null."></failure>
+			<failure type="App Service HTTP2 Disabled" message="A problem was found on &#39;azure/app_service.tf&#39; file in line 28, &#39;azurerm_app_service[app-service1].site_config.http2_enabled&#39; is defined and not null, but &#39;azurerm_app_service[app-service1].site_config.http2_enabled&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Dashboard Is Enabled]: Check if the Kubernetes Dashboard is enabled.">
+			<failure type="Dashboard Is Enabled" message="A problem was found on &#39;azure/aks.tf&#39; file in line 19, &#39;azurerm_kubernetes_cluster[k8s_cluster].addon_profile.kube_dashboard.enabled&#39; is false or undefined, but &#39;azurerm_kubernetes_cluster[k8s_cluster].addon_profile.kube_dashboard.enabled&#39; is true."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="2" tests="2">
+		<testcase name="[EC2 Instance Using API Keys]: EC2 instances should use roles to be granted access to other AWS services">
+			<failure type="EC2 Instance Using API Keys" message="A problem was found on &#39;aws/db-app.tf&#39; file in line 242, aws_instance[db_app] should be using iam_instance_profile to assign a role with permissions, but aws_instance[db_app].user_data is being used to configure AWS API keys."></failure>
+			<failure type="EC2 Instance Using API Keys" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 1, aws_instance[web_host] should be using iam_instance_profile to assign a role with permissions, but aws_instance[web_host].user_data is being used to configure AWS API keys."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[ECR Repository Without Policy]: ECR Repository should have Policies attached to it">
+			<failure type="ECR Repository Without Policy" message="A problem was found on &#39;aws/ecr.tf&#39; file in line 1, aws_ecr_repository[repository] has policies attached, but aws_ecr_repository[repository] doesn&#39;t have policies attached."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[EKS cluster logging is not enabled]: Amazon EKS control plane logging is not enabled">
+			<failure type="EKS cluster logging is not enabled" message="A problem was found on &#39;aws/eks.tf&#39; file in line 117, &#39;enabled_cluster_log_types&#39; is defined and not null, but &#39;enabled_cluster_log_types&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Google Compute Subnetwork with Private Google Access Disabled]: Google Compute Subnetwork should have &#39;private_ip_google_access&#39; set to true">
+			<failure type="Google Compute Subnetwork with Private Google Access Disabled" message="A problem was found on &#39;gcp/networks.tf&#39; file in line 7, &#39;google_compute_subnetwork[public-subnetwork].private_ip_google_access&#39; is defined and not null, but &#39;google_compute_subnetwork[public-subnetwork].private_ip_google_access&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Hardcoded AWS Access Key]: Hard-coded AWS access key / secret key exists in EC2 user data">
+			<failure type="Hardcoded AWS Access Key" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 9, &#39;user_data&#39; doesn&#39;t contain hardcoded access key, but &#39;user_data&#39; contains hardcoded access key."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Dockerfile]" failures="1" tests="1">
+		<testcase name="[Healthcheck Instruction Missing]: Ensure that HEALTHCHECK is being used. The HEALTHCHECK instruction tells Docker how to test a container to check that it is still working">
+			<failure type="Healthcheck Instruction Missing" message="A problem was found on &#39;aws/resources/Dockerfile&#39; file in line 1, Dockerfile contains instruction &#39;HEALTHCHECK&#39;, but Dockerfile doesn&#39;t contain instruction &#39;HEALTHCHECK&#39;."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[IAM Policies Attached To User]: IAM policies should be attached only to groups or roles">
+			<failure type="IAM Policies Attached To User" message="A problem was found on &#39;aws/iam.tf&#39; file in line 27, &#39;user&#39; is redundant, but &#39;user&#39; exists."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Key Vault Secrets Content Type Undefined]: Key Vault Secrets should have set Content Type">
+			<failure type="Key Vault Secrets Content Type Undefined" message="A problem was found on &#39;azure/key_vault.tf&#39; file in line 58, &#39;azurerm_key_vault_secret[secret].content_type&#39; is defined and not null, but &#39;azurerm_key_vault_secret[secret].content_type&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Lambda Functions Without X-Ray Tracing]: AWS Lambda functions should have TracingConfig enabled. For this, property &#39;tracing_Config.mode&#39; should have the value &#39;Active&#39;">
+			<failure type="Lambda Functions Without X-Ray Tracing" message="A problem was found on &#39;aws/lambda.tf&#39; file in line 31, aws_lambda_function[analysis_lambda].tracing_config is defined and not null, but aws_lambda_function[analysis_lambda].tracing_config is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[PostgreSQL Server Infrastructure Encryption Disabled]: PostgreSQL Server Infrastructure Encryption should be enabled">
+			<failure type="PostgreSQL Server Infrastructure Encryption Disabled" message="A problem was found on &#39;azure/sql.tf&#39; file in line 73, &#39;azurerm_postgresql_server[example].infrastructure_encryption_enabled&#39; is defined and set to true, but &#39;azurerm_postgresql_server[example].infrastructure_encryption_enabled&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="5" tests="5">
+		<testcase name="[S3 Bucket Logging Disabled]: S3 bucket without logging">
+			<failure type="S3 Bucket Logging Disabled" message="A problem was found on &#39;aws/s3.tf&#39; file in line 115, &#39;logging&#39; is defined and not null, but &#39;logging&#39; is undefined or null."></failure>
+			<failure type="S3 Bucket Logging Disabled" message="A problem was found on &#39;aws/s3.tf&#39; file in line 43, &#39;logging&#39; is defined and not null, but &#39;logging&#39; is undefined or null."></failure>
+			<failure type="S3 Bucket Logging Disabled" message="A problem was found on &#39;aws/s3.tf&#39; file in line 1, &#39;logging&#39; is defined and not null, but &#39;logging&#39; is undefined or null."></failure>
+			<failure type="S3 Bucket Logging Disabled" message="A problem was found on &#39;aws/s3.tf&#39; file in line 66, &#39;logging&#39; is defined and not null, but &#39;logging&#39; is undefined or null."></failure>
+			<failure type="S3 Bucket Logging Disabled" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 271, &#39;logging&#39; is defined and not null, but &#39;logging&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="2" tests="2">
+		<testcase name="[App Service Authentication Disabled]: Azure App Service authentication settings should be enabled">
+			<failure type="App Service Authentication Disabled" message="A problem was found on &#39;azure/app_service.tf&#39; file in line 51, &#39;azurerm_app_service[app-service2].auth_settings.enabled&#39; is true, but &#39;azurerm_app_service[app-service2].auth_settings.enabled&#39; is false."></failure>
+			<failure type="App Service Authentication Disabled" message="A problem was found on &#39;azure/app_service.tf&#39; file in line 22, &#39;azurerm_app_service[app-service1].auth_settings&#39; is defined, but &#39;azurerm_app_service[app-service1].auth_settings&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="2" tests="2">
+		<testcase name="[EC2 Instance Monitoring Disabled]: EC2 Instance should have detailed monitoring enabled. With detailed monitoring enabled data is available in 1-minute periods">
+			<failure type="EC2 Instance Monitoring Disabled" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 1, &#39;monitoring&#39; is defined and not null%!(EXTRA string=web_host), but &#39;monitoring&#39; is undefined or null%!(EXTRA string=web_host)."></failure>
+			<failure type="EC2 Instance Monitoring Disabled" message="A problem was found on &#39;aws/db-app.tf&#39; file in line 242, &#39;monitoring&#39; is defined and not null%!(EXTRA string=db_app), but &#39;monitoring&#39; is undefined or null%!(EXTRA string=db_app)."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="2" tests="2">
+		<testcase name="[EC2 Not EBS Optimized]: It&#39;s considered a best practice for an EC2 instance to use an EBS optimized instance. This provides the best performance for your EBS volumes by minimizing contention between Amazon EBS I/O and other traffic from your instance">
+			<failure type="EC2 Not EBS Optimized" message="A problem was found on &#39;aws/db-app.tf&#39; file in line 242, &#39;ebs_optimized&#39; is set to true, but &#39;ebs_optimized&#39; is undefined or null."></failure>
+			<failure type="EC2 Not EBS Optimized" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 1, &#39;ebs_optimized&#39; is set to true, but &#39;ebs_optimized&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[ELB Access Logging Disabled]: ELB should have logging enabled to help on error investigation">
+			<failure type="ELB Access Logging Disabled" message="A problem was found on &#39;aws/elb.tf&#39; file in line 2, &#39;aws_elb[{{weblb}}].access_logs&#39; is defined and not null, but &#39;aws_elb[{{weblb}}].access_logs&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="10" tests="10">
+		<testcase name="[Name Is Not Snake Case]: All names should follow snake case pattern.">
+			<failure type="Name Is Not Snake Case" message="A problem was found on &#39;aws/eks.tf&#39; file in line 33, All names should be on snake case pattern, but &#39;policy_attachment-AmazonEKSClusterPolicy&#39; is not in snake case."></failure>
+			<failure type="Name Is Not Snake Case" message="A problem was found on &#39;azure/app_service.tf&#39; file in line 22, All names should be on snake case pattern, but &#39;app-service1&#39; is not in snake case."></failure>
+			<failure type="Name Is Not Snake Case" message="A problem was found on &#39;azure/policies.tf&#39; file in line 1, All names should be on snake case pattern, but &#39;policy-res&#39; is not in snake case."></failure>
+			<failure type="Name Is Not Snake Case" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 231, All names should be on snake case pattern, but &#39;web-eni&#39; is not in snake case."></failure>
+			<failure type="Name Is Not Snake Case" message="A problem was found on &#39;gcp/networks.tf&#39; file in line 7, All names should be on snake case pattern, but &#39;public-subnetwork&#39; is not in snake case."></failure>
+			<failure type="Name Is Not Snake Case" message="A problem was found on &#39;azure/app_service.tf&#39; file in line 43, All names should be on snake case pattern, but &#39;app-service2&#39; is not in snake case."></failure>
+			<failure type="Name Is Not Snake Case" message="A problem was found on &#39;aws/es.tf&#39; file in line 40, All names should be on snake case pattern, but &#39;monitoring-framework-policy&#39; is not in snake case."></failure>
+			<failure type="Name Is Not Snake Case" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 77, All names should be on snake case pattern, but &#39;web-node&#39; is not in snake case."></failure>
+			<failure type="Name Is Not Snake Case" message="A problem was found on &#39;aws/eks.tf&#39; file in line 38, All names should be on snake case pattern, but &#39;policy_attachment-AmazonEKSServicePolicy&#39; is not in snake case."></failure>
+			<failure type="Name Is Not Snake Case" message="A problem was found on &#39;aws/es.tf&#39; file in line 1, All names should be on snake case pattern, but &#39;monitoring-framework&#39; is not in snake case."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Neptune Logging Is Disabled]: Neptune logging should be enabled">
+			<failure type="Neptune Logging Is Disabled" message="A problem was found on &#39;aws/neptune.tf&#39; file in line 1, aws_neptune_cluster.enable_cloudwatch_logs_exports is defined, but aws_neptune_cluster.enable_cloudwatch_logs_exports is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="4" tests="4">
+		<testcase name="[Output Without Description]: All outputs should contain a valid description.">
+			<failure type="Output Without Description" message="A problem was found on &#39;aws/iam.tf&#39; file in line 48, &#39;description&#39; is defined and not null, but &#39;description&#39; is undefined or null."></failure>
+			<failure type="Output Without Description" message="A problem was found on &#39;aws/iam.tf&#39; file in line 52, &#39;description&#39; is defined and not null, but &#39;description&#39; is undefined or null."></failure>
+			<failure type="Output Without Description" message="A problem was found on &#39;aws/eks.tf&#39; file in line 146, &#39;description&#39; is defined and not null, but &#39;description&#39; is undefined or null."></failure>
+			<failure type="Output Without Description" message="A problem was found on &#39;aws/eks.tf&#39; file in line 142, &#39;description&#39; is defined and not null, but &#39;description&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[RDS Without Logging]: RDS does not have any kind of logger">
+			<failure type="RDS Without Logging" message="A problem was found on &#39;aws/db-app.tf&#39; file in line 1, &#39;enabled_cloudwatch_logs_exports&#39; is defined, but &#39;enabled_cloudwatch_logs_exports&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="2" tests="2">
+		<testcase name="[Resource Not Using Tags]: AWS services resource tags are an essential part of managing components">
+			<failure type="Resource Not Using Tags" message="A problem was found on &#39;aws/eks.tf&#39; file in line 66, aws_subnet[{{eks_subnet1}}].tags has tags defined other than &#39;Name&#39;, but aws_subnet[{{eks_subnet1}}].tags has no tags defined."></failure>
+			<failure type="Resource Not Using Tags" message="A problem was found on &#39;aws/eks.tf&#39; file in line 94, aws_subnet[{{eks_subnet2}}].tags has tags defined other than &#39;Name&#39;, but aws_subnet[{{eks_subnet2}}].tags has no tags defined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[SQL Server Alert Email Disabled]: SQL Server alert email should be enabled">
+			<failure type="SQL Server Alert Email Disabled" message="A problem was found on &#39;azure/sql.tf&#39; file in line 31, &#39;azurerm_mssql_server_security_alert_policy[example].email_account_admins&#39; is defined, but &#39;azurerm_mssql_server_security_alert_policy[example].email_account_admins&#39; is undefined."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="3" tests="3">
+		<testcase name="[Security Group Rules Without Description]: It&#39;s considered a best practice for all rules in AWS Security Group to have a description">
+			<failure type="Security Group Rules Without Description" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 90, aws_security_group[{{web-node}}].ingress description is defined and not null, but aws_security_group[{{web-node}}].ingress description is undefined or null."></failure>
+			<failure type="Security Group Rules Without Description" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 83, aws_security_group[{{web-node}}].ingress description is defined and not null, but aws_security_group[{{web-node}}].ingress description is undefined or null."></failure>
+			<failure type="Security Group Rules Without Description" message="A problem was found on &#39;aws/ec2.tf&#39; file in line 97, aws_security_group[{{web-node}}].egress description is defined and not null, but aws_security_group[{{web-node}}].egress description is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="1" tests="1">
+		<testcase name="[Security Group Without Description]: It&#39;s considered a best practice for AWS Security Group to have a description">
+			<failure type="Security Group Without Description" message="A problem was found on &#39;aws/db-app.tf&#39; file in line 116, aws_security_group[{{default}}] description is defined and not null, but aws_security_group[{{default}}] description is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="7" tests="7">
+		<testcase name="[Variable Without Description]: All variables should contain a valid description.">
+			<failure type="Variable Without Description" message="A problem was found on &#39;gcp/variables.tf&#39; file in line 11, &#39;description&#39; is defined and not null, but &#39;description&#39; is undefined or null."></failure>
+			<failure type="Variable Without Description" message="A problem was found on &#39;aws/consts.tf&#39; file in line 4, &#39;description&#39; is defined and not null, but &#39;description&#39; is undefined or null."></failure>
+			<failure type="Variable Without Description" message="A problem was found on &#39;aws/consts.tf&#39; file in line 28, &#39;description&#39; is defined and not null, but &#39;description&#39; is undefined or null."></failure>
+			<failure type="Variable Without Description" message="A problem was found on &#39;aws/consts.tf&#39; file in line 20, &#39;description&#39; is defined and not null, but &#39;description&#39; is undefined or null."></failure>
+			<failure type="Variable Without Description" message="A problem was found on &#39;aws/consts.tf&#39; file in line 8, &#39;description&#39; is defined and not null, but &#39;description&#39; is undefined or null."></failure>
+			<failure type="Variable Without Description" message="A problem was found on &#39;aws/consts.tf&#39; file in line 24, &#39;description&#39; is defined and not null, but &#39;description&#39; is undefined or null."></failure>
+			<failure type="Variable Without Description" message="A problem was found on &#39;azure/variables.tf&#39; file in line 7, &#39;description&#39; is defined and not null, but &#39;description&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="[Terraform]" failures="6" tests="6">
+		<testcase name="[Variable Without Type]: All variables should contain a valid type.">
+			<failure type="Variable Without Type" message="A problem was found on &#39;azure/variables.tf&#39; file in line 12, &#39;type&#39; is defined and not null, but &#39;type&#39; is undefined or null."></failure>
+			<failure type="Variable Without Type" message="A problem was found on &#39;aws/consts.tf&#39; file in line 24, &#39;type&#39; is defined and not null, but &#39;type&#39; is undefined or null."></failure>
+			<failure type="Variable Without Type" message="A problem was found on &#39;aws/consts.tf&#39; file in line 8, &#39;type&#39; is defined and not null, but &#39;type&#39; is undefined or null."></failure>
+			<failure type="Variable Without Type" message="A problem was found on &#39;aws/consts.tf&#39; file in line 4, &#39;type&#39; is defined and not null, but &#39;type&#39; is undefined or null."></failure>
+			<failure type="Variable Without Type" message="A problem was found on &#39;gcp/variables.tf&#39; file in line 16, &#39;type&#39; is defined and not null, but &#39;type&#39; is undefined or null."></failure>
+			<failure type="Variable Without Type" message="A problem was found on &#39;aws/consts.tf&#39; file in line 20, &#39;type&#39; is defined and not null, but &#39;type&#39; is undefined or null."></failure>
+		</testcase>
+	</testsuite>
+</testsuites>

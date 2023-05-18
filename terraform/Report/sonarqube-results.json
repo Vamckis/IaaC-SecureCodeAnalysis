@@ -1,0 +1,2175 @@
+{
+	"issues": [
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "a3a055d2-9a2e-4cc9-b9fb-12850a1a3a4b",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "The Active Directory Administrator is not configured for a SQL server",
+				"filePath": "azure/sql.tf",
+				"textRange": {
+					"startLine": 9
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "b61cce4b-0cc4-472b-8096-15617a6d769b",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Azure App Service should have managed identity enabled",
+				"filePath": "azure/app_service.tf",
+				"textRange": {
+					"startLine": 22
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "Azure App Service should have managed identity enabled",
+					"filePath": "azure/app_service.tf",
+					"textRange": {
+						"startLine": 43
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "b7b9d1c7-2d3b-49b4-b867-ebbe68d0b643",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Ensure App Service is using the latest version of TLS encryption",
+				"filePath": "azure/app_service.tf",
+				"textRange": {
+					"startLine": 29
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "3ddfa124-6407-4845-a501-179f90c65097",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "1.10",
+				"filePath": "aws/iam.tf",
+				"textRange": {
+					"startLine": 29
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "a81573f9-3691-4d83-88a0-7d4af63e17a3",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Azure App Service client certificate should be enabled",
+				"filePath": "azure/app_service.tf",
+				"textRange": {
+					"startLine": 43
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "Azure App Service client certificate should be enabled",
+					"filePath": "azure/app_service.tf",
+					"textRange": {
+						"startLine": 22
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "e576ce44-dd03-4022-a8c0-3906acca2ab4",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "BigQuery dataset is anonymously or publicly accessible",
+				"filePath": "gcp/big_data.tf",
+				"textRange": {
+					"startLine": 24
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "22fbfeac-7b5a-421a-8a27-7a2178bb910b",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "3.8",
+				"filePath": "aws/kms.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "8a893e46-e267-485a-8690-51f39951de58",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "The node image should be Container-Optimized OS(COS)",
+				"filePath": "gcp/gke.tf",
+				"textRange": {
+					"startLine": 29
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "73fb21a1-b19a-45b1-b648-b47b1678681e",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Kubernetes Clusters must be created with Client Certificate enabled, which means 'master_auth' must have 'client_certificate_config' with the attribute 'issue_client_certificate' equal to true",
+				"filePath": "gcp/gke.tf",
+				"textRange": {
+					"startLine": 6
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "d6cabc3a-d57e-48c2-b341-bf3dd4f4a120",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Cloud storage bucket with logging not enabled",
+				"filePath": "gcp/gcs.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "e7e961ac-d17e-4413-84bc-8a1fbe242944",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Object Versioning Not Enabled on Cloud Storage Bucket",
+				"filePath": "gcp/gcs.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "65c1bc7a-4835-4ac4-a2b6-13d310b0648d",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Kubernetes Clusters must be configured with labels, which means the attribute 'resource_labels' must be defined",
+				"filePath": "gcp/gke.tf",
+				"textRange": {
+					"startLine": 6
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "1baba08e-3c8a-4be7-95eb-dced5833de21",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Kubernetes Engine Clusters must have Master Authentication set to enabled, which means the attribute 'master_auth' must have the subattributes 'username' and 'password' defined and not empty",
+				"filePath": "gcp/gke.tf",
+				"textRange": {
+					"startLine": 6
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "35113e6f-2c6b-414d-beec-7a9482d3b2d1",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "The field 'publicly_accessible' should not be set to 'true' (default is 'false').",
+				"filePath": "aws/db-app.tf",
+				"textRange": {
+					"startLine": 21
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "08bd0760-8752-44e1-9779-7bb369b2b4e4",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "The parameter storage_encrypted in aws_db_instance must be set to 'true' (the default is 'false').",
+				"filePath": "aws/db-app.tf",
+				"textRange": {
+					"startLine": 18
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "e6b4b943-6883-47a9-9739-7ada9568f8ca",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "The value on AWS EBS Volume Snapshot Encryptation must be true",
+				"filePath": "aws/ec2.tf",
+				"textRange": {
+					"startLine": 53
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "5a2486aa-facf-477d-a5c1-b010789459ce",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "EC2 Instance should not have a public IP address.",
+				"filePath": "aws/ec2.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "EC2 Instance should not have a public IP address.",
+					"filePath": "aws/db-app.tf",
+					"textRange": {
+						"startLine": 242
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "63ebcb19-2739-4d3f-aa5c-e8bbb9b85281",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "EKS Cluster should be encrypted",
+				"filePath": "aws/eks.tf",
+				"textRange": {
+					"startLine": 117
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "70cdf849-b7d9-4569-b87d-5d82ffd44719",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "GCP - Google Kubernetes Engine (GKE) Basic Authentication must be disabled, which means the username and password provided in the master_auth block must be empty",
+				"filePath": "gcp/gke.tf",
+				"textRange": {
+					"startLine": 6
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "5baa92d2-d8ee-4c75-88a4-52d9d8bb8067",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Kubernetes Engine Clusters must have Legacy Authorization set to disabled, which means the attribute 'enable_legacy_abac' must not be true",
+				"filePath": "gcp/gke.tf",
+				"textRange": {
+					"startLine": 12
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "8b042c30-e441-453f-b162-7696982ebc58",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Make sure that on PostgreSQL Geo Redundant Backups is enabled",
+				"filePath": "azure/sql.tf",
+				"textRange": {
+					"startLine": 80
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "ffac8a12-322e-42c1-b9b9-81ff85c39ef7",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "The HTTP port is open in a Security Group",
+				"filePath": "aws/ec2.tf",
+				"textRange": {
+					"startLine": 77
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "88fd05e0-ac0e-43d2-ba6d-fc0ba60ae1a6",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "IAM Database Auth Enabled must be configured to true",
+				"filePath": "aws/db-app.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "c606ba1d-d736-43eb-ac24-e16108f3a9e0",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Kubernetes Clusters must be created with Alias IP ranges enabled, which means the attribut 'ip_allocation_policy' must be defined and, if defined, the attribute 'networking_mode' must be VPC_NATIVE ",
+				"filePath": "gcp/gke.tf",
+				"textRange": {
+					"startLine": 6
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "4d080822-5ee2-49a4-8984-68f3d4c890fc",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Make sure that for all keys the expiration date is set",
+				"filePath": "azure/key_vault.tf",
+				"textRange": {
+					"startLine": 33
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "fd54f200-402c-4333-a5a4-36ef6709af2f",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "A user should be specified in the dockerfile, otherwise the image will run as root",
+				"filePath": "aws/resources/Dockerfile",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "73e42469-3a86-4f39-ad78-098f325b4e9f",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Make sure that for MySQL Database Server, 'Enforce SSL connection' is enabled",
+				"filePath": "azure/sql.tf",
+				"textRange": {
+					"startLine": 60
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "f118890b-2468-42b1-9ce9-af35146b425b",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "MySQL Server public access should be disabled",
+				"filePath": "azure/sql.tf",
+				"textRange": {
+					"startLine": 59
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "11e7550e-c4b6-472e-adff-c698f157cdd7",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Kubernetes Engine Clusters must have Network Policy enabled, meaning that the attribute 'network_policy.enabled' must be true and the attribute 'addons_config.network_policy_config.disabled' must be false ",
+				"filePath": "gcp/gke.tf",
+				"textRange": {
+					"startLine": 6
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "b90842e5-6779-44d4-9760-972f4c03ba1c",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Check if enable field in the resource azurerm_network_watcher_flow_log is false.",
+				"filePath": "azure/networking.tf",
+				"textRange": {
+					"startLine": 126
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "b139213e-7d24-49c2-8025-c18faa21ecaa",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Node 'auto_upgrade' should be enabled for Kubernetes Clusters",
+				"filePath": "gcp/gke.tf",
+				"textRange": {
+					"startLine": 24
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "76c0bcde-903d-456e-ac13-e58c34987852",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Query to find passwords and secrets in infrastructure code.",
+				"filePath": "aws/ec2.tf",
+				"textRange": {
+					"startLine": 15
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "Query to find passwords and secrets in infrastructure code.",
+					"filePath": "aws/lambda.tf",
+					"textRange": {
+						"startLine": 44
+					}
+				},
+				{
+					"message": "Query to find passwords and secrets in infrastructure code.",
+					"filePath": "aws/providers.tf",
+					"textRange": {
+						"startLine": 10
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "83ab47ff-381d-48cd-bac5-fb32222f54af",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Query to find passwords and secrets in infrastructure code.",
+				"filePath": "aws/ec2.tf",
+				"textRange": {
+					"startLine": 16
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "487f4be7-3fd9-4506-a07a-eae252180c08",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Query to find passwords and secrets in infrastructure code.",
+				"filePath": "azure/sql.tf",
+				"textRange": {
+					"startLine": 83
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "Query to find passwords and secrets in infrastructure code.",
+					"filePath": "azure/sql.tf",
+					"textRange": {
+						"startLine": 15
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "3e2d3b2f-c22a-4df1-9cc6-a7a0aebb0c99",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Query to find passwords and secrets in infrastructure code.",
+				"filePath": "aws/lambda.tf",
+				"textRange": {
+					"startLine": 45
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "Query to find passwords and secrets in infrastructure code.",
+					"filePath": "aws/providers.tf",
+					"textRange": {
+						"startLine": 11
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "9192e0f9-eca5-4056-9282-ae2a736a4088",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Kubernetes Clusters must have Pod Security Policy controller enabled, which means there must be a 'pod_security_policy_config' with the 'enabled' attribute equal to true",
+				"filePath": "gcp/gke.tf",
+				"textRange": {
+					"startLine": 6
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "c407c3cf-c409-4b29-b590-db5f4138d332",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "PostgreSQL Server Threat Detection Policy should be enabled",
+				"filePath": "azure/sql.tf",
+				"textRange": {
+					"startLine": 73
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "6ccb85d7-0420-4907-9380-50313f80946b",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Kubernetes Clusters must be created with Private Clusters enabled, meaning the 'private_cluster_config' must be defined and the attributes 'enable_private_nodes' and 'enable_private_endpoint' must be true",
+				"filePath": "gcp/gke.tf",
+				"textRange": {
+					"startLine": 6
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "38c5ee0d-7f22-4260-ab72-5073048df100",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "S3 bucket with public READ/WRITE access",
+				"filePath": "aws/s3.tf",
+				"textRange": {
+					"startLine": 7
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "5fb49a69-8d46-4495-a2f8-9c8c622b2b6e",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "2.1.1",
+				"filePath": "aws/s3.tf",
+				"textRange": {
+					"startLine": 24
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "6726dcc0-5ff5-459d-b473-a780bef7665c",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+				"filePath": "aws/s3.tf",
+				"textRange": {
+					"startLine": 66
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+					"filePath": "aws/ec2.tf",
+					"textRange": {
+						"startLine": 271
+					}
+				},
+				{
+					"message": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+					"filePath": "aws/s3.tf",
+					"textRange": {
+						"startLine": 91
+					}
+				},
+				{
+					"message": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+					"filePath": "aws/s3.tf",
+					"textRange": {
+						"startLine": 1
+					}
+				},
+				{
+					"message": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+					"filePath": "aws/s3.tf",
+					"textRange": {
+						"startLine": 43
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "2.1.3",
+				"filePath": "aws/ec2.tf",
+				"textRange": {
+					"startLine": 271
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "2.1.3",
+					"filePath": "aws/s3.tf",
+					"textRange": {
+						"startLine": 71
+					}
+				},
+				{
+					"message": "2.1.3",
+					"filePath": "aws/s3.tf",
+					"textRange": {
+						"startLine": 43
+					}
+				},
+				{
+					"message": "2.1.3",
+					"filePath": "aws/s3.tf",
+					"textRange": {
+						"startLine": 118
+					}
+				},
+				{
+					"message": "2.1.3",
+					"filePath": "aws/s3.tf",
+					"textRange": {
+						"startLine": 95
+					}
+				},
+				{
+					"message": "2.1.3",
+					"filePath": "aws/s3.tf",
+					"textRange": {
+						"startLine": 1
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "cf3c7631-cd1e-42f3-8801-a561214a6e79",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Checks if backup configuration is enabled for all Cloud SQL Database instances",
+				"filePath": "gcp/big_data.tf",
+				"textRange": {
+					"startLine": 16
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "b187edca-b81e-4fdc-aff4-aab57db45edb",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Check if any Cloud SQL instances are publicly accessible.",
+				"filePath": "gcp/big_data.tf",
+				"textRange": {
+					"startLine": 12
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "02474449-71aa-40a1-87ae-e14497747b00",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Cloud SQL Database Instance should have SLL enabled",
+				"filePath": "gcp/big_data.tf",
+				"textRange": {
+					"startLine": 8
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "0437633b-daa6-4bbc-8526-c0d2443b946e",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Make sure that for PosgreSQL, the 'Enforce SSL connection' is set to 'ENABLED'",
+				"filePath": "azure/sql.tf",
+				"textRange": {
+					"startLine": 85
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "dfa20ffa-f476-428f-a490-424b41e91c7f",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Make sure that for all secrets the expiration date is set",
+				"filePath": "azure/key_vault.tf",
+				"textRange": {
+					"startLine": 58
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "65905cec-d691-4320-b320-2000436cb696",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "'SSH' (TCP:22) should not be public in AWS Security Group",
+				"filePath": "aws/ec2.tf",
+				"textRange": {
+					"startLine": 87
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "4c7ebcb2-eae2-461e-bc83-456ee2d4f694",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Kubernetes Engine Clusters must have Stackdriver Logging enabled, which means the attribute 'logging_service' must be defined and different from 'none'",
+				"filePath": "gcp/gke.tf",
+				"textRange": {
+					"startLine": 6
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "30e8dfd2-3591-4d19-8d11-79e93106c93d",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Kubernetes Engine Clusters must have Stackdriver Monitoring enabled, which means the attribute 'monitoring_service' must be defined and different than 'none'",
+				"filePath": "gcp/gke.tf",
+				"textRange": {
+					"startLine": 6
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "12944ec4-1fa0-47be-8b17-42a034f937c2",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "See that Storage Accounts forces the use of HTTPS",
+				"filePath": "azure/storage.tf",
+				"textRange": {
+					"startLine": 23
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "5400f379-a347-4bdd-a032-446465fdcc6f",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Trusted MIcrosoft Services are not enabled for Storage Account access",
+				"filePath": "azure/storage.tf",
+				"textRange": {
+					"startLine": 23
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "Trusted MIcrosoft Services are not enabled for Storage Account access",
+					"filePath": "azure/storage.tf",
+					"textRange": {
+						"startLine": 68
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "590d878b-abdc-428f-895a-e2b68a0e1998",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "AWS Security Group should not have an unknown port exposed to the entire Internet",
+				"filePath": "aws/ec2.tf",
+				"textRange": {
+					"startLine": 87
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "4728cd65-a20c-49da-8b31-9c08b423e4db",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Security groups allow ingress from 0.0.0.0:0",
+				"filePath": "aws/ec2.tf",
+				"textRange": {
+					"startLine": 88
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "Security groups allow ingress from 0.0.0.0:0",
+					"filePath": "aws/ec2.tf",
+					"textRange": {
+						"startLine": 95
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "38c71c00-c177-4cd7-8d36-cd1007cdb190",
+			"severity": "CRITICAL",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Ensure that logging for Azure KeyVault is 'Enabled'",
+				"filePath": "azure/key_vault.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "11e9a948-c6c3-4a0f-8dcf-b5cf1763cdbe",
+			"severity": "CRITICAL",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Web app should only accept HTTPS traffic in Azure Web App Service.",
+				"filePath": "azure/app_service.tf",
+				"textRange": {
+					"startLine": 27
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "b17d8bb8-4c08-4785-867e-cb9e62a622aa",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Azure Container Service (AKS) should use Disk Encryption Set ID",
+				"filePath": "azure/aks.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "f5342045-b935-402d-adf1-8dbbd09c0eef",
+			"severity": "MAJOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Check if the Azure Kubernetes Service doesn't have the proper network policy configuration.",
+				"filePath": "azure/aks.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "86f92117-eed8-4614-9c6c-b26da20ff37f",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Azure Container Service (AKS) instance should have role-based access control (RBAC) enabled",
+				"filePath": "azure/aks.tf",
+				"textRange": {
+					"startLine": 23
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "a6cd52a1-3056-4910-96a5-894de9f3f3b3",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Cloud Storage Buckets must not be anonymously or publicly accessible, which means the attribute 'members' must not possess 'allUsers' or 'allAuthenticatedUsers'",
+				"filePath": "gcp/gcs.tf",
+				"textRange": {
+					"startLine": 18
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "b1d51728-7270-4991-ac2f-fc26e2695b38",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "VM disks for critical VMs must be encrypted with Customer Supplied Encryption Keys (CSEK) or with Customer-managed encryption keys (CMEK), which means the attribute 'disk_encryption_key' must be defined and its sub attributes 'raw_key' or 'kms_key_self_link' must also be defined",
+				"filePath": "gcp/instances.tf",
+				"textRange": {
+					"startLine": 36
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "cc997676-481b-4e93-aa81-d19f8c5e9b12",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "2.2.1",
+				"filePath": "aws/ec2.tf",
+				"textRange": {
+					"startLine": 34
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "d1846b12-20c5-4d45-8798-fc35b79268eb",
+			"severity": "MAJOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "ECR should have an image tag be immutable",
+				"filePath": "aws/ecr.tf",
+				"textRange": {
+					"startLine": 3
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "0e32d561-4b5a-4664-a6e3-a3fa85649157",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "ECR (Elastic Container Registry) Repository encryption should be set",
+				"filePath": "aws/ecr.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "24e16922-4330-4e9d-be8a-caa90299466a",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Check if ElasticSearch encryption is disabled at Rest",
+				"filePath": "aws/es.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "967eb3e6-26fc-497d-8895-6428beb6e8e2",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Elasticsearch Domain encryption should be enabled node to node",
+				"filePath": "aws/es.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "16c4216a-50d3-4785-bfb2-4adb5144a8ba",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Elasticsearch Domain policy should avoid wildcard in 'Action' and 'Principal'.",
+				"filePath": "aws/es.tf",
+				"textRange": {
+					"startLine": 42
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "acb6b4e2-a086-4f35-aefd-4db6ea51ada2",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "AWS Elasticsearch should have logs enabled",
+				"filePath": "aws/es.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "9db38e87-f6aa-4b5e-a1ec-7266df259409",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Make sure that alerts notifications are set to 'On' in the Azure Security Center Contact",
+				"filePath": "azure/security_center.tf",
+				"textRange": {
+					"startLine": 6
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "a99130ab-4c0e-43aa-97f8-78d4fcb30024",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Ensure that the encryption is active on the disk",
+				"filePath": "azure/storage.tf",
+				"textRange": {
+					"startLine": 9
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "22ef1d26-80f8-4a6c-8c15-f35aab3cac78",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Google Compute Network should not use a firewall rule that allows all ports",
+				"filePath": "gcp/networks.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "40430747-442d-450a-a34f-dc57149f4609",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "This query checks if logs are enabled for a Google Compute Subnetwork resource.",
+				"filePath": "gcp/networks.tf",
+				"textRange": {
+					"startLine": 7
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "acfdbec6-4a17-471f-b412-169d77553332",
+			"severity": "MAJOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Verifies if Google Container Node Pool Auto Repair is Enabled",
+				"filePath": "gcp/gke.tf",
+				"textRange": {
+					"startLine": 24
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "bb0db090-5509-4853-a827-75ced0b3caa0",
+			"severity": "MAJOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Google Storage Bucket Level Access should be enabled",
+				"filePath": "gcp/gcs.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "e592a0c5-5bdb-414c-9066-5dba7cdea370",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "IAM Access Analyzer should be defined to identify unintentional access",
+				"filePath": "aws/db-app.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "7081f85c-b94d-40fd-8b45-a4f1cac75e46",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "1.11",
+				"filePath": "aws/iam.tf",
+				"textRange": {
+					"startLine": 21
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "575a2155-6af1-4026-b1af-d5bc8fe2a904",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "IAM policies allow all ('*') in a statement action",
+				"filePath": "aws/iam.tf",
+				"textRange": {
+					"startLine": 29
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "IAM policies allow all ('*') in a statement action",
+					"filePath": "aws/db-app.tf",
+					"textRange": {
+						"startLine": 209
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "c91d7ea0-d4d1-403b-8fe1-c9961ac082c5",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Neptune Cluster should have IAM Database Authentication enabled",
+				"filePath": "aws/neptune.tf",
+				"textRange": {
+					"startLine": 7
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "98d59056-f745-4ef5-8613-32bca8d40b7e",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Check if Neptune Cluster Storage is securely encrypted",
+				"filePath": "aws/neptune.tf",
+				"textRange": {
+					"startLine": 9
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "d0b4d550-c001-46c3-bbdb-d5d75d33f05f",
+			"severity": "MAJOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Check if any VM instance disables OSLogin",
+				"filePath": "gcp/instances.tf",
+				"textRange": {
+					"startLine": 21
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "3790d386-be81-4dcf-9850-eaa7df6c10d9",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Make sure that for Postgre SQL Database Server, parameter 'log_checkpoints' is set to 'ON'",
+				"filePath": "azure/sql.tf",
+				"textRange": {
+					"startLine": 109
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "2b3c671f-1b76-4741-8789-ed1fe0785dc4",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Ensure that Connection Throttling is set for the PostgreSQL server",
+				"filePath": "azure/sql.tf",
+				"textRange": {
+					"startLine": 102
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "3e4d5ce6-3280-4027-8010-c26eeea1ec01",
+			"severity": "MAJOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "VM Instance should block project-wide SSH keys",
+				"filePath": "gcp/instances.tf",
+				"textRange": {
+					"startLine": 20
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "678fd659-96f2-454a-a2a0-c2571f83a4a3",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Check if Google Firewall ingress allows RDP access (port 3389)",
+				"filePath": "gcp/networks.tf",
+				"textRange": {
+					"startLine": 25
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "1dc73fb4-5b51-430c-8c5f-25dcf9090b02",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "RDS configured without backup",
+				"filePath": "aws/db-app.tf",
+				"textRange": {
+					"startLine": 17
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "3fa5900f-9aac-4982-96b2-a6143d9c99fb",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Role Definition should not allow custom role creation",
+				"filePath": "azure/roles.tf",
+				"textRange": {
+					"startLine": 9
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "568a4d22-3517-44a6-a7ad-6a7eed88722c",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "S3 bucket should have versioning enabled",
+				"filePath": "aws/s3.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "S3 bucket should have versioning enabled",
+					"filePath": "aws/s3.tf",
+					"textRange": {
+						"startLine": 43
+					}
+				},
+				{
+					"message": "S3 bucket should have versioning enabled",
+					"filePath": "aws/ec2.tf",
+					"textRange": {
+						"startLine": 271
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "f7e296b0-6660-4bc5-8f87-22ac4a815edf",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Make sure that for SQL Servers, 'Auditing' is set to 'On'",
+				"filePath": "azure/sql.tf",
+				"textRange": {
+					"startLine": 9
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "c4dcdcdf-10dd-4bf4-b4a0-8f6239e6aaa0",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Check if Google Firewall allows SSH access (port 22) from the Internet (public CIDR block)",
+				"filePath": "gcp/networks.tf",
+				"textRange": {
+					"startLine": 25
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "819d50fd-1cdf-45c3-9936-be408aaad93e",
+			"severity": "MAJOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Make sure that the 'Standard' pricing tiers were selected.",
+				"filePath": "azure/security_center.tf",
+				"textRange": {
+					"startLine": 2
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "97fa667a-d05b-4f16-9071-58b939f34751",
+			"severity": "MAJOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Check if VM instance enables serial ports",
+				"filePath": "gcp/instances.tf",
+				"textRange": {
+					"startLine": 22
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "2b856bf9-8e8c-4005-875f-303a8cba3918",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Ensure that Activity Log Retention is set 365 days or greater",
+				"filePath": "azure/logging.tf",
+				"textRange": {
+					"startLine": 8
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "7750fcca-dd03-4d38-b663-4b70289bcfd4",
+			"severity": "MAJOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Flow logs enable capturing information about IP traffic flowing in and out of the network security groups. Network Security Group Flow Logs must be enabled with retention period greater than or equal to 90 days. This is important, because these logs are used to check for anomalies and give information of suspected breaches",
+				"filePath": "azure/networking.tf",
+				"textRange": {
+					"startLine": 133
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "Flow logs enable capturing information about IP traffic flowing in and out of the network security groups. Network Security Group Flow Logs must be enabled with retention period greater than or equal to 90 days. This is important, because these logs are used to check for anomalies and give information of suspected breaches",
+					"filePath": "azure/networking.tf",
+					"textRange": {
+						"startLine": 132
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "8263f146-5e03-43e0-9cfe-db960d56d1e7",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Ensure Storage Account is using the latest version of TLS encryption",
+				"filePath": "azure/storage.tf",
+				"textRange": {
+					"startLine": 23
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "9630336b-3fed-4096-8173-b9afdfe346a7",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Checks if the ECR Image has been scanned",
+				"filePath": "aws/ecr.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "3cb4af0b-056d-4fb1-8b95-fdc4593625ff",
+			"severity": "MAJOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Instances must not be configured to use the Default Service Account, that has full access to all Cloud APIs, which means the attribute 'service_account' and its sub attribute 'email' must be defined. Additionally, 'email' must not be empty and must also not be a default Google Compute Engine service account.",
+				"filePath": "gcp/instances.tf",
+				"textRange": {
+					"startLine": 3
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "f83121ea-03da-434f-9277-9cd247ab3047",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "VPC hasn't got any FlowLog associated",
+				"filePath": "aws/eks.tf",
+				"textRange": {
+					"startLine": 43
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "52f04a44-6bfa-4c41-b1d3-4ae99a2de05c",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "VPC Subnet should not assign public IP",
+				"filePath": "aws/eks.tf",
+				"textRange": {
+					"startLine": 93
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "VPC Subnet should not assign public IP",
+					"filePath": "aws/ec2.tf",
+					"textRange": {
+						"startLine": 139
+					}
+				},
+				{
+					"message": "VPC Subnet should not assign public IP",
+					"filePath": "aws/ec2.tf",
+					"textRange": {
+						"startLine": 159
+					}
+				},
+				{
+					"message": "VPC Subnet should not assign public IP",
+					"filePath": "aws/eks.tf",
+					"textRange": {
+						"startLine": 65
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "fd632aaf-b8a1-424d-a4d1-0de22fd3247a",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "VPC should have a Network Firewall associated",
+				"filePath": "aws/ec2.tf",
+				"textRange": {
+					"startLine": 117
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "VPC should have a Network Firewall associated",
+					"filePath": "aws/eks.tf",
+					"textRange": {
+						"startLine": 43
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "b4cc2c52-34a6-4b43-b57c-4bdeb4514a5a",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Virtual Network should have DDoS Protection Plan enabled",
+				"filePath": "azure/networking.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "2e48d91c-50e4-45c8-9312-27b625868a72",
+			"severity": "MAJOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Check if Web Application Firewall is disabled or not configured for Azure's Application Gateway.",
+				"filePath": "azure/application_gateway.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "599318f2-6653-4569-9e21-041d06c63a89",
+			"severity": "MINOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Azure Kubernetes Service (AKS) API should not be exposed to the internet",
+				"filePath": "azure/aks.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "43789711-161b-4708-b5bb-9d1c626f7492",
+			"severity": "MINOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Azure Container Service (AKS) should use Azure Policies Add-On",
+				"filePath": "azure/aks.tf",
+				"textRange": {
+					"startLine": 14
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "525b53be-62ed-4244-b4df-41aecfcb4071",
+			"severity": "MINOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "App Service should have 'http2_enabled' enabled",
+				"filePath": "azure/app_service.tf",
+				"textRange": {
+					"startLine": 43
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "App Service should have 'http2_enabled' enabled",
+					"filePath": "azure/app_service.tf",
+					"textRange": {
+						"startLine": 28
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "61c3cb8b-0715-47e4-b788-86dde40dd2db",
+			"severity": "MINOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Check if the Kubernetes Dashboard is enabled.",
+				"filePath": "azure/aks.tf",
+				"textRange": {
+					"startLine": 19
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "0b93729a-d882-4803-bdc3-ac429a21f158",
+			"severity": "MINOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "EC2 instances should use roles to be granted access to other AWS services",
+				"filePath": "aws/db-app.tf",
+				"textRange": {
+					"startLine": 242
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "EC2 instances should use roles to be granted access to other AWS services",
+					"filePath": "aws/ec2.tf",
+					"textRange": {
+						"startLine": 1
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "69e7c320-b65d-41bb-be02-d63ecc0bcc9d",
+			"severity": "MINOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "ECR Repository should have Policies attached to it",
+				"filePath": "aws/ecr.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "37304d3f-f852-40b8-ae3f-725e87a7cedf",
+			"severity": "MINOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Amazon EKS control plane logging is not enabled",
+				"filePath": "aws/eks.tf",
+				"textRange": {
+					"startLine": 117
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "ee7b93c1-b3f8-4a3b-9588-146d481814f5",
+			"severity": "MINOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Google Compute Subnetwork should have 'private_ip_google_access' set to true",
+				"filePath": "gcp/networks.tf",
+				"textRange": {
+					"startLine": 7
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "d7b9d850-3e06-4a75-852f-c46c2e92240b",
+			"severity": "MINOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Hard-coded AWS access key / secret key exists in EC2 user data",
+				"filePath": "aws/ec2.tf",
+				"textRange": {
+					"startLine": 9
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "b03a748a-542d-44f4-bb86-9199ab4fd2d5",
+			"severity": "MINOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Ensure that HEALTHCHECK is being used. The HEALTHCHECK instruction tells Docker how to test a container to check that it is still working",
+				"filePath": "aws/resources/Dockerfile",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "b4378389-a9aa-44ee-91e7-ef183f11079e",
+			"severity": "MINOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "IAM policies should be attached only to groups or roles",
+				"filePath": "aws/iam.tf",
+				"textRange": {
+					"startLine": 27
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "f8e08a38-fc6e-4915-abbe-a7aadf1d59ef",
+			"severity": "MINOR",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "Key Vault Secrets should have set Content Type",
+				"filePath": "azure/key_vault.tf",
+				"textRange": {
+					"startLine": 58
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "8152e0cf-d2f0-47ad-96d5-d003a76eabd1",
+			"severity": "MINOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "AWS Lambda functions should have TracingConfig enabled. For this, property 'tracing_Config.mode' should have the value 'Active'",
+				"filePath": "aws/lambda.tf",
+				"textRange": {
+					"startLine": 31
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "6425c98b-ca4e-41fe-896a-c78772c131f8",
+			"severity": "MINOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "PostgreSQL Server Infrastructure Encryption should be enabled",
+				"filePath": "azure/sql.tf",
+				"textRange": {
+					"startLine": 73
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "f861041c-8c9f-4156-acfc-5e6e524f5884",
+			"severity": "MINOR",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "S3 bucket without logging",
+				"filePath": "aws/s3.tf",
+				"textRange": {
+					"startLine": 115
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "S3 bucket without logging",
+					"filePath": "aws/s3.tf",
+					"textRange": {
+						"startLine": 43
+					}
+				},
+				{
+					"message": "S3 bucket without logging",
+					"filePath": "aws/s3.tf",
+					"textRange": {
+						"startLine": 1
+					}
+				},
+				{
+					"message": "S3 bucket without logging",
+					"filePath": "aws/s3.tf",
+					"textRange": {
+						"startLine": 66
+					}
+				},
+				{
+					"message": "S3 bucket without logging",
+					"filePath": "aws/ec2.tf",
+					"textRange": {
+						"startLine": 271
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "c7fc1481-2899-4490-bbd8-544a3a61a2f3",
+			"severity": "INFO",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Azure App Service authentication settings should be enabled",
+				"filePath": "azure/app_service.tf",
+				"textRange": {
+					"startLine": 51
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "Azure App Service authentication settings should be enabled",
+					"filePath": "azure/app_service.tf",
+					"textRange": {
+						"startLine": 22
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "23b70e32-032e-4fa6-ba5c-82f56b9980e6",
+			"severity": "INFO",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "EC2 Instance should have detailed monitoring enabled. With detailed monitoring enabled data is available in 1-minute periods",
+				"filePath": "aws/ec2.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "EC2 Instance should have detailed monitoring enabled. With detailed monitoring enabled data is available in 1-minute periods",
+					"filePath": "aws/db-app.tf",
+					"textRange": {
+						"startLine": 242
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "60224630-175a-472a-9e23-133827040766",
+			"severity": "INFO",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "It's considered a best practice for an EC2 instance to use an EBS optimized instance. This provides the best performance for your EBS volumes by minimizing contention between Amazon EBS I/O and other traffic from your instance",
+				"filePath": "aws/db-app.tf",
+				"textRange": {
+					"startLine": 242
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "It's considered a best practice for an EC2 instance to use an EBS optimized instance. This provides the best performance for your EBS volumes by minimizing contention between Amazon EBS I/O and other traffic from your instance",
+					"filePath": "aws/ec2.tf",
+					"textRange": {
+						"startLine": 1
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "20018359-6fd7-4d05-ab26-d4dffccbdf79",
+			"severity": "INFO",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "ELB should have logging enabled to help on error investigation",
+				"filePath": "aws/elb.tf",
+				"textRange": {
+					"startLine": 2
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "1e434b25-8763-4b00-a5ca-ca03b7abbb66",
+			"severity": "INFO",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "All names should follow snake case pattern.",
+				"filePath": "aws/eks.tf",
+				"textRange": {
+					"startLine": 33
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "All names should follow snake case pattern.",
+					"filePath": "azure/app_service.tf",
+					"textRange": {
+						"startLine": 22
+					}
+				},
+				{
+					"message": "All names should follow snake case pattern.",
+					"filePath": "azure/policies.tf",
+					"textRange": {
+						"startLine": 1
+					}
+				},
+				{
+					"message": "All names should follow snake case pattern.",
+					"filePath": "aws/ec2.tf",
+					"textRange": {
+						"startLine": 231
+					}
+				},
+				{
+					"message": "All names should follow snake case pattern.",
+					"filePath": "gcp/networks.tf",
+					"textRange": {
+						"startLine": 7
+					}
+				},
+				{
+					"message": "All names should follow snake case pattern.",
+					"filePath": "azure/app_service.tf",
+					"textRange": {
+						"startLine": 43
+					}
+				},
+				{
+					"message": "All names should follow snake case pattern.",
+					"filePath": "aws/es.tf",
+					"textRange": {
+						"startLine": 40
+					}
+				},
+				{
+					"message": "All names should follow snake case pattern.",
+					"filePath": "aws/ec2.tf",
+					"textRange": {
+						"startLine": 77
+					}
+				},
+				{
+					"message": "All names should follow snake case pattern.",
+					"filePath": "aws/eks.tf",
+					"textRange": {
+						"startLine": 38
+					}
+				},
+				{
+					"message": "All names should follow snake case pattern.",
+					"filePath": "aws/es.tf",
+					"textRange": {
+						"startLine": 1
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "45cff7b6-3b80-40c1-ba7b-2cf480678bb8",
+			"severity": "INFO",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "Neptune logging should be enabled",
+				"filePath": "aws/neptune.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "59312e8a-a64e-41e7-a252-618533dd1ea8",
+			"severity": "INFO",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "All outputs should contain a valid description.",
+				"filePath": "aws/iam.tf",
+				"textRange": {
+					"startLine": 48
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "All outputs should contain a valid description.",
+					"filePath": "aws/iam.tf",
+					"textRange": {
+						"startLine": 52
+					}
+				},
+				{
+					"message": "All outputs should contain a valid description.",
+					"filePath": "aws/eks.tf",
+					"textRange": {
+						"startLine": 146
+					}
+				},
+				{
+					"message": "All outputs should contain a valid description.",
+					"filePath": "aws/eks.tf",
+					"textRange": {
+						"startLine": 142
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "8d7f7b8c-6c7c-40f8-baa6-62006c6c7b56",
+			"severity": "INFO",
+			"type": "VULNERABILITY",
+			"primaryLocation": {
+				"message": "RDS does not have any kind of logger",
+				"filePath": "aws/db-app.tf",
+				"textRange": {
+					"startLine": 1
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "e38a8e0a-b88b-4902-b3fe-b0fcb17d5c10",
+			"severity": "INFO",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "AWS services resource tags are an essential part of managing components",
+				"filePath": "aws/eks.tf",
+				"textRange": {
+					"startLine": 66
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "AWS services resource tags are an essential part of managing components",
+					"filePath": "aws/eks.tf",
+					"textRange": {
+						"startLine": 94
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "55975007-f6e7-4134-83c3-298f1fe4b519",
+			"severity": "INFO",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "SQL Server alert email should be enabled",
+				"filePath": "azure/sql.tf",
+				"textRange": {
+					"startLine": 31
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "68eb4bf3-f9bf-463d-b5cf-e029bb446d2e",
+			"severity": "INFO",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "It's considered a best practice for all rules in AWS Security Group to have a description",
+				"filePath": "aws/ec2.tf",
+				"textRange": {
+					"startLine": 90
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "It's considered a best practice for all rules in AWS Security Group to have a description",
+					"filePath": "aws/ec2.tf",
+					"textRange": {
+						"startLine": 83
+					}
+				},
+				{
+					"message": "It's considered a best practice for all rules in AWS Security Group to have a description",
+					"filePath": "aws/ec2.tf",
+					"textRange": {
+						"startLine": 97
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "cb3f5ed6-0d18-40de-a93d-b3538db31e8c",
+			"severity": "INFO",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "It's considered a best practice for AWS Security Group to have a description",
+				"filePath": "aws/db-app.tf",
+				"textRange": {
+					"startLine": 116
+				}
+			}
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "2a153952-2544-4687-bcc9-cc8fea814a9b",
+			"severity": "INFO",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "All variables should contain a valid description.",
+				"filePath": "gcp/variables.tf",
+				"textRange": {
+					"startLine": 11
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "All variables should contain a valid description.",
+					"filePath": "aws/consts.tf",
+					"textRange": {
+						"startLine": 4
+					}
+				},
+				{
+					"message": "All variables should contain a valid description.",
+					"filePath": "aws/consts.tf",
+					"textRange": {
+						"startLine": 28
+					}
+				},
+				{
+					"message": "All variables should contain a valid description.",
+					"filePath": "aws/consts.tf",
+					"textRange": {
+						"startLine": 20
+					}
+				},
+				{
+					"message": "All variables should contain a valid description.",
+					"filePath": "aws/consts.tf",
+					"textRange": {
+						"startLine": 8
+					}
+				},
+				{
+					"message": "All variables should contain a valid description.",
+					"filePath": "aws/consts.tf",
+					"textRange": {
+						"startLine": 24
+					}
+				},
+				{
+					"message": "All variables should contain a valid description.",
+					"filePath": "azure/variables.tf",
+					"textRange": {
+						"startLine": 7
+					}
+				}
+			]
+		},
+		{
+			"engineId": "KICS 1.5.1",
+			"ruleId": "fc5109bf-01fd-49fb-8bde-4492b543c34a",
+			"severity": "INFO",
+			"type": "CODE_SMELL",
+			"primaryLocation": {
+				"message": "All variables should contain a valid type.",
+				"filePath": "azure/variables.tf",
+				"textRange": {
+					"startLine": 12
+				}
+			},
+			"secondaryLocations": [
+				{
+					"message": "All variables should contain a valid type.",
+					"filePath": "aws/consts.tf",
+					"textRange": {
+						"startLine": 24
+					}
+				},
+				{
+					"message": "All variables should contain a valid type.",
+					"filePath": "aws/consts.tf",
+					"textRange": {
+						"startLine": 8
+					}
+				},
+				{
+					"message": "All variables should contain a valid type.",
+					"filePath": "aws/consts.tf",
+					"textRange": {
+						"startLine": 4
+					}
+				},
+				{
+					"message": "All variables should contain a valid type.",
+					"filePath": "gcp/variables.tf",
+					"textRange": {
+						"startLine": 16
+					}
+				},
+				{
+					"message": "All variables should contain a valid type.",
+					"filePath": "aws/consts.tf",
+					"textRange": {
+						"startLine": 20
+					}
+				}
+			]
+		}
+	]
+}

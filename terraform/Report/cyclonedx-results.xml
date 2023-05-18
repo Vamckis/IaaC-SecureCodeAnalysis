@@ -1,0 +1,3964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.3" serialNumber="urn:uuid:3fbd9fa5-6c2a-415d-960f-b5acaeec848b" xmlns:v="http://cyclonedx.org/schema/ext/vulnerability/1.0" version="1">
+	<metadata>
+		<timestamp>2022-11-01T12:37:17+05:30</timestamp>
+		<tools>
+			<tool>
+				<vendor>Checkmarx</vendor>
+				<name>KICS</name>
+				<version>1.5.1</version>
+			</tool>
+		</tools>
+	</metadata>
+	<components>
+		<component type="file" bom-ref="pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75b">
+			<name>azure/sql.tf</name>
+			<version>0.0.0-78b8f2fae75b</version>
+			<hashes>
+				<hash alg="SHA-256">78b8f2fae75b8909f02d6ba81495b77f12bd6c9bcfc7b33403ef3cbce7bb683b</hash>
+			</hashes>
+			<purl>pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75b</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75ba3a055d2-9a2e-4cc9-b9fb-12850a1a3a4b">
+					<v:id>a3a055d2-9a2e-4cc9-b9fb-12850a1a3a4b</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[AD Admin Not Configured For SQL Server]: The Active Directory Administrator is not configured for a SQL server</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 9, a result was found. &#39;A &#39;azurerm_sql_active_directory_administrator&#39; is not defined for &#39;azurerm_sql_server[example]&#39;&#39;, but &#39;A &#39;azurerm_sql_active_directory_administrator&#39; is defined for &#39;azurerm_sql_server[example]&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75b8b042c30-e441-453f-b162-7696982ebc58">
+					<v:id>8b042c30-e441-453f-b162-7696982ebc58</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Geo Redundancy Is Disabled]: Make sure that on PostgreSQL Geo Redundant Backups is enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 80, a result was found. &#39;&#39;azurerm_postgresql_server.example.geo_redundant_backup_enabled&#39; is false&#39;, but &#39;&#39;azurerm_postgresql_server.example.geo_redundant_backup_enabled&#39; is true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75b73e42469-3a86-4f39-ad78-098f325b4e9f">
+					<v:id>73e42469-3a86-4f39-ad78-098f325b4e9f</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[MySQL SSL Connection Disabled]: Make sure that for MySQL Database Server, &#39;Enforce SSL connection&#39; is enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 60, a result was found. &#39;&#39;azurerm_mysql_server.example.ssl_enforcement_enabled&#39; is equal &#39;false&#39;&#39;, but &#39;&#39;azurerm_mysql_server.example.ssl_enforcement_enabled&#39; is equal &#39;true&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75bf118890b-2468-42b1-9ce9-af35146b425b">
+					<v:id>f118890b-2468-42b1-9ce9-af35146b425b</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[MySQL Server Public Access Enabled]: MySQL Server public access should be disabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 59, a result was found. &#39;&#39;azurerm_mysql_server[example].public_network_access_enabled&#39; is set to true&#39;, but &#39;&#39;azurerm_mysql_server[example].public_network_access_enabled&#39; is set to false&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75b487f4be7-3fd9-4506-a07a-eae252180c08">
+					<v:id>487f4be7-3fd9-4506-a07a-eae252180c08</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Common].[Passwords And Secrets - Generic Password]: Query to find passwords and secrets in infrastructure code.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 83, a result was found. &#39;&#39;  administrator_login_password = &#34;Aa12345678&#34;&#39; contains a secret&#39;, but &#39;Hardcoded secret key should not appear in source&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75b487f4be7-3fd9-4506-a07a-eae252180c08">
+					<v:id>487f4be7-3fd9-4506-a07a-eae252180c08</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Common].[Passwords And Secrets - Generic Password]: Query to find passwords and secrets in infrastructure code.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 15, a result was found. &#39;&#39;  administrator_login_password = &#34;Aa12345678&#34;&#39; contains a secret&#39;, but &#39;Hardcoded secret key should not appear in source&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75bc407c3cf-c409-4b29-b590-db5f4138d332">
+					<v:id>c407c3cf-c409-4b29-b590-db5f4138d332</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[PostgreSQL Server Threat Detection Policy Disabled]: PostgreSQL Server Threat Detection Policy should be enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 73, a result was found. &#39;&#39;azurerm_postgresql_server[example].threat_detection_policy&#39; is undefined or null&#39;, but &#39;&#39;azurerm_postgresql_server[example].threat_detection_policy&#39; is a defined object&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75b0437633b-daa6-4bbc-8526-c0d2443b946e">
+					<v:id>0437633b-daa6-4bbc-8526-c0d2443b946e</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[SSL Enforce Disabled]: Make sure that for PosgreSQL, the &#39;Enforce SSL connection&#39; is set to &#39;ENABLED&#39;</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 85, a result was found. &#39;&#39;azurerm_postgresql_server.example.ssl_enforcement_enabled&#39; is equal &#39;false&#39;&#39;, but &#39;&#39;azurerm_postgresql_server.example.ssl_enforcement_enabled&#39; is equal &#39;true&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75b3790d386-be81-4dcf-9850-eaa7df6c10d9">
+					<v:id>3790d386-be81-4dcf-9850-eaa7df6c10d9</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[PostgreSQL Log Checkpoints Disabled]: Make sure that for Postgre SQL Database Server, parameter &#39;log_checkpoints&#39; is set to &#39;ON&#39;</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 109, a result was found. &#39;&#39;azurerm_postgresql_configuration.example.value&#39; is &#39;OFF&#39;&#39;, but &#39;&#39;azurerm_postgresql_configuration.example.value&#39; should be &#39;ON&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75b2b3c671f-1b76-4741-8789-ed1fe0785dc4">
+					<v:id>2b3c671f-1b76-4741-8789-ed1fe0785dc4</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[PostgreSQL Server Without Connection Throttling]: Ensure that Connection Throttling is set for the PostgreSQL server</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 102, a result was found. &#39;&#39;azurerm_postgresql_configuration.thrtottling_config.value&#39; is &#39;OFF&#39;&#39;, but &#39;&#39;azurerm_postgresql_configuration.thrtottling_config.value&#39; should be &#39;ON&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75bf7e296b0-6660-4bc5-8f87-22ac4a815edf">
+					<v:id>f7e296b0-6660-4bc5-8f87-22ac4a815edf</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[SQL Server Auditing Disabled]: Make sure that for SQL Servers, &#39;Auditing&#39; is set to &#39;On&#39;</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 9, a result was found. &#39;&#39;azurerm_sql_server.example.extended_auditing_policy&#39; does not exist&#39;, but &#39;&#39;azurerm_sql_server.example.extended_auditing_policy&#39; exists&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75b6425c98b-ca4e-41fe-896a-c78772c131f8">
+					<v:id>6425c98b-ca4e-41fe-896a-c78772c131f8</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[PostgreSQL Server Infrastructure Encryption Disabled]: PostgreSQL Server Infrastructure Encryption should be enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 73, a result was found. &#39;&#39;azurerm_postgresql_server[example].infrastructure_encryption_enabled&#39; is undefined or null&#39;, but &#39;&#39;azurerm_postgresql_server[example].infrastructure_encryption_enabled&#39; is defined and set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/sql.tf@0.0.0-78b8f2fae75b55975007-f6e7-4134-83c3-298f1fe4b519">
+					<v:id>55975007-f6e7-4134-83c3-298f1fe4b519</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[SQL Server Alert Email Disabled]: SQL Server alert email should be enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 31, a result was found. &#39;&#39;azurerm_mssql_server_security_alert_policy[example].email_account_admins&#39; is undefined&#39;, but &#39;&#39;azurerm_mssql_server_security_alert_policy[example].email_account_admins&#39; is defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/azure/app_service.tf@0.0.0-2334ccf72526">
+			<name>azure/app_service.tf</name>
+			<version>0.0.0-2334ccf72526</version>
+			<hashes>
+				<hash alg="SHA-256">2334ccf72526a37c3fcfe0012ae82c9459d15feeb292282c1a7815ab64e3d097</hash>
+			</hashes>
+			<purl>pkg:generic/azure/app_service.tf@0.0.0-2334ccf72526</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/azure/app_service.tf@0.0.0-2334ccf72526b61cce4b-0cc4-472b-8096-15617a6d769b">
+					<v:id>b61cce4b-0cc4-472b-8096-15617a6d769b</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[App Service Managed Identity Disabled]: Azure App Service should have managed identity enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 22, a result was found. &#39;&#39;azurerm_app_service[app-service1].identity&#39; is undefined or null&#39;, but &#39;&#39;azurerm_app_service[app-service1].identity&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/app_service.tf@0.0.0-2334ccf72526b61cce4b-0cc4-472b-8096-15617a6d769b">
+					<v:id>b61cce4b-0cc4-472b-8096-15617a6d769b</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[App Service Managed Identity Disabled]: Azure App Service should have managed identity enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 43, a result was found. &#39;&#39;azurerm_app_service[app-service2].identity&#39; is undefined or null&#39;, but &#39;&#39;azurerm_app_service[app-service2].identity&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/app_service.tf@0.0.0-2334ccf72526b7b9d1c7-2d3b-49b4-b867-ebbe68d0b643">
+					<v:id>b7b9d1c7-2d3b-49b4-b867-ebbe68d0b643</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[App Service Not Using Latest TLS Encryption Version]: Ensure App Service is using the latest version of TLS encryption</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 29, a result was found. &#39;&#39;azurerm_app_service[app-service1].site_config.min_tls_version&#39; is not set to &#39;1.2&#39;&#39;, but &#39;&#39;azurerm_app_service[app-service1].site_config.min_tls_version&#39; is set to &#39;1.2&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/app_service.tf@0.0.0-2334ccf72526a81573f9-3691-4d83-88a0-7d4af63e17a3">
+					<v:id>a81573f9-3691-4d83-88a0-7d4af63e17a3</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Azure App Service Client Certificate Disabled]: Azure App Service client certificate should be enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 43, a result was found. &#39;&#39;azurerm_app_service[app-service2].client_cert_enabeld&#39; is undefined&#39;, but &#39;&#39;azurerm_app_service[app-service2].client_cert_enabled&#39; is defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/app_service.tf@0.0.0-2334ccf72526a81573f9-3691-4d83-88a0-7d4af63e17a3">
+					<v:id>a81573f9-3691-4d83-88a0-7d4af63e17a3</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Azure App Service Client Certificate Disabled]: Azure App Service client certificate should be enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 22, a result was found. &#39;&#39;azurerm_app_service[app-service1].client_cert_enabeld&#39; is undefined&#39;, but &#39;&#39;azurerm_app_service[app-service1].client_cert_enabled&#39; is defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/app_service.tf@0.0.0-2334ccf7252611e9a948-c6c3-4a0f-8dcf-b5cf1763cdbe">
+					<v:id>11e9a948-c6c3-4a0f-8dcf-b5cf1763cdbe</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Web App Accepting Traffic Other Than HTTPS]: Web app should only accept HTTPS traffic in Azure Web App Service.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 27, a result was found. &#39;&#39;azurerm_app_service[app-service1].https_only&#39; is not set to true&#39;, but &#39;&#39;azurerm_app_service[app-service1].https_only&#39; is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/app_service.tf@0.0.0-2334ccf72526525b53be-62ed-4244-b4df-41aecfcb4071">
+					<v:id>525b53be-62ed-4244-b4df-41aecfcb4071</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[App Service HTTP2 Disabled]: App Service should have &#39;http2_enabled&#39; enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 43, a result was found. &#39;&#39;azurerm_app_service[app-service2].site_config&#39; is undefined or null&#39;, but &#39;&#39;azurerm_app_service[app-service2].site_config&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/app_service.tf@0.0.0-2334ccf72526525b53be-62ed-4244-b4df-41aecfcb4071">
+					<v:id>525b53be-62ed-4244-b4df-41aecfcb4071</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[App Service HTTP2 Disabled]: App Service should have &#39;http2_enabled&#39; enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 28, a result was found. &#39;&#39;azurerm_app_service[app-service1].site_config.http2_enabled&#39; is undefined or null&#39;, but &#39;&#39;azurerm_app_service[app-service1].site_config.http2_enabled&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/app_service.tf@0.0.0-2334ccf72526c7fc1481-2899-4490-bbd8-544a3a61a2f3">
+					<v:id>c7fc1481-2899-4490-bbd8-544a3a61a2f3</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[App Service Authentication Disabled]: Azure App Service authentication settings should be enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 51, a result was found. &#39;&#39;azurerm_app_service[app-service2].auth_settings.enabled&#39; is false&#39;, but &#39;&#39;azurerm_app_service[app-service2].auth_settings.enabled&#39; is true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/app_service.tf@0.0.0-2334ccf72526c7fc1481-2899-4490-bbd8-544a3a61a2f3">
+					<v:id>c7fc1481-2899-4490-bbd8-544a3a61a2f3</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[App Service Authentication Disabled]: Azure App Service authentication settings should be enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 22, a result was found. &#39;&#39;azurerm_app_service[app-service1].auth_settings&#39; is undefined&#39;, but &#39;&#39;azurerm_app_service[app-service1].auth_settings&#39; is defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/app_service.tf@0.0.0-2334ccf725261e434b25-8763-4b00-a5ca-ca03b7abbb66">
+					<v:id>1e434b25-8763-4b00-a5ca-ca03b7abbb66</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Name Is Not Snake Case]: All names should follow snake case pattern.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 22, a result was found. &#39;&#39;app-service1&#39; is not in snake case&#39;, but &#39;All names should be on snake case pattern&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/app_service.tf@0.0.0-2334ccf725261e434b25-8763-4b00-a5ca-ca03b7abbb66">
+					<v:id>1e434b25-8763-4b00-a5ca-ca03b7abbb66</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Name Is Not Snake Case]: All names should follow snake case pattern.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 43, a result was found. &#39;&#39;app-service2&#39; is not in snake case&#39;, but &#39;All names should be on snake case pattern&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/aws/iam.tf@0.0.0-f0e93459e04e">
+			<name>aws/iam.tf</name>
+			<version>0.0.0-f0e93459e04e</version>
+			<hashes>
+				<hash alg="SHA-256">f0e93459e04e74b3999e1f057909776220cfcfa782e0837284d5f179c33521af</hash>
+			</hashes>
+			<purl>pkg:generic/aws/iam.tf@0.0.0-f0e93459e04e</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/aws/iam.tf@0.0.0-f0e93459e04e3ddfa124-6407-4845-a501-179f90c65097">
+					<v:id>3ddfa124-6407-4845-a501-179f90c65097</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Authentication Without MFA]: Multi-Factor Authentication (MFA) adds an extra layer of authentication assurance beyond traditional credentials. With MFA enabled, when a user signs in to the AWS Console, they will be prompted for their user name and password as well as for an authentication code from their physical or virtual MFA token. It is recommended that MFA be enabled for all accounts that have a console password.&#xA;Enabling MFA provides increased security for console access as it requires the authenticating principal to possess a device that displays a time-sensitive key and have knowledge of a credential.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 29, a result was found. &#39;The attribute(s) &#39;policy.Statement.Condition&#39; or/and &#39;policy.Statement.Condition.BoolIfExists&#39; or/and &#39;policy.Statement.Condition.BoolIfExists.aws:MultiFactorAuthPresent&#39; is/are undefined or null&#39;, but &#39;The attributes &#39;policy.Statement.Condition&#39;, &#39;policy.Statement.Condition.BoolIfExists&#39;, and &#39;policy.Statement.Condition.BoolIfExists.aws:MultiFactorAuthPresent&#39; are defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/iam.tf@0.0.0-f0e93459e04e7081f85c-b94d-40fd-8b45-a4f1cac75e46">
+					<v:id>7081f85c-b94d-40fd-8b45-a4f1cac75e46</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[IAM Access Key Is Exposed]: AWS console defaults to no check boxes selected when creating a new IAM user. When cerating the IAM User credentials you have to determine what type of access they require. Programmatic access: The IAM user might need to make API calls, use the AWS CLI, or use the Tools for Windows PowerShell. In that case, create an access key (access key ID and a secret access key) for that user. AWS Management Console access: If the user needs to access the AWS Management Console, create a password for the user.&#xA;Requiring the additional steps be taken by the user for programmatic access after their profile has been created will give a stronger indication of intent that access keys are [a] necessary for their work and [b] once the access key is established on an account that the keys may be in use somewhere in the organization. Note : Even if it is known the user will need access keys, require them to create the keys themselves or put in a support ticket to have them created as a separate step from user creation.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 21, a result was found. &#39;&#39;aws_iam_access_key[user].user&#39; is &#39;${aws_iam_user.user.name}&#39; for an active access key&#39;, but &#39;&#39;aws_iam_access_key[user].user&#39; is &#39;root&#39; for an active access key&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/iam.tf@0.0.0-f0e93459e04e575a2155-6af1-4026-b1af-d5bc8fe2a904">
+					<v:id>575a2155-6af1-4026-b1af-d5bc8fe2a904</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[IAM Policy Grants Full Permissions]: IAM policies allow all (&#39;*&#39;) in a statement action</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 29, a result was found. &#39;&#39;policy.Statement.Resource&#39; equal &#39;*&#39;&#39;, but &#39;&#39;policy.Statement.Resource&#39; not equal &#39;*&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/iam.tf@0.0.0-f0e93459e04eb4378389-a9aa-44ee-91e7-ef183f11079e">
+					<v:id>b4378389-a9aa-44ee-91e7-ef183f11079e</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[IAM Policies Attached To User]: IAM policies should be attached only to groups or roles</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 27, a result was found. &#39;&#39;user&#39; exists&#39;, but &#39;&#39;user&#39; is redundant&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/iam.tf@0.0.0-f0e93459e04e59312e8a-a64e-41e7-a252-618533dd1ea8">
+					<v:id>59312e8a-a64e-41e7-a252-618533dd1ea8</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Output Without Description]: All outputs should contain a valid description.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 48, a result was found. &#39;&#39;description&#39; is undefined or null&#39;, but &#39;&#39;description&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/iam.tf@0.0.0-f0e93459e04e59312e8a-a64e-41e7-a252-618533dd1ea8">
+					<v:id>59312e8a-a64e-41e7-a252-618533dd1ea8</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Output Without Description]: All outputs should contain a valid description.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 52, a result was found. &#39;&#39;description&#39; is undefined or null&#39;, but &#39;&#39;description&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/gcp/big_data.tf@0.0.0-b935ff838ab7">
+			<name>gcp/big_data.tf</name>
+			<version>0.0.0-b935ff838ab7</version>
+			<hashes>
+				<hash alg="SHA-256">b935ff838ab78b088ac4657fc513a66b79711e1b32e1c979d41a7e2efb050004</hash>
+			</hashes>
+			<purl>pkg:generic/gcp/big_data.tf@0.0.0-b935ff838ab7</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/gcp/big_data.tf@0.0.0-b935ff838ab7e576ce44-dd03-4022-a8c0-3906acca2ab4">
+					<v:id>e576ce44-dd03-4022-a8c0-3906acca2ab4</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[BigQuery Dataset Is Public]: BigQuery dataset is anonymously or publicly accessible</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 24, a result was found. &#39;&#39;access.special_group&#39; is equal to &#39;allAuthenticatedUsers&#39;&#39;, but &#39;&#39;access.special_group&#39; is not equal to &#39;allAuthenticatedUsers&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/big_data.tf@0.0.0-b935ff838ab7cf3c7631-cd1e-42f3-8801-a561214a6e79">
+					<v:id>cf3c7631-cd1e-42f3-8801-a561214a6e79</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[SQL DB Instance Backup Disabled]: Checks if backup configuration is enabled for all Cloud SQL Database instances</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 16, a result was found. &#39;settings.backup_configuration.enabled is false&#39;, but &#39;settings.backup_configuration.enabled is true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/big_data.tf@0.0.0-b935ff838ab7b187edca-b81e-4fdc-aff4-aab57db45edb">
+					<v:id>b187edca-b81e-4fdc-aff4-aab57db45edb</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[SQL DB Instance Is Publicly Accessible]: Check if any Cloud SQL instances are publicly accessible.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 12, a result was found. &#39;&#39;authorized_network&#39; address is not restricted: &#39;0.0.0.0/0&#39;&#39;, but &#39;&#39;authorized_network&#39; address is trusted&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/big_data.tf@0.0.0-b935ff838ab702474449-71aa-40a1-87ae-e14497747b00">
+					<v:id>02474449-71aa-40a1-87ae-e14497747b00</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[SQL DB Instance With SSL Disabled]: Cloud SQL Database Instance should have SLL enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 8, a result was found. &#39;&#39;settings.ip_configuration.require_ssl&#39; is undefined or null&#39;, but &#39;&#39;settings.ip_configuration.require_ssl&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/aws/kms.tf@0.0.0-f1f3d5f95507">
+			<name>aws/kms.tf</name>
+			<version>0.0.0-f1f3d5f95507</version>
+			<hashes>
+				<hash alg="SHA-256">f1f3d5f95507b15f2c5c0b18c0aae888452b1bee722199b989c3288371cd2f27</hash>
+			</hashes>
+			<purl>pkg:generic/aws/kms.tf@0.0.0-f1f3d5f95507</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/aws/kms.tf@0.0.0-f1f3d5f9550722fbfeac-7b5a-421a-8a27-7a2178bb910b">
+					<v:id>22fbfeac-7b5a-421a-8a27-7a2178bb910b</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[CMK Rotation Disabled]: AWS Key Management Service (KMS) allows customers to rotate the backing key which is key material stored within the KMS which is tied to the key ID of the Customer Created customer master key (CMK). It is the backing key that is used to perform cryptographic operations such as encryption and decryption. Automated key rotation currently retains all prior backing keys so that decryption of encrypted data can take place transparently. It is recommended that CMK key rotation be enabled.&#xA;Rotating encryption keys helps reduce the potential impact of a compromised key as data encrypted with a new key cannot be accessed with a previous key that may have been exposed.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;aws_kms_key[logs_key].enable_key_rotation is undefined&#39;, but &#39;aws_kms_key[logs_key].enable_key_rotation is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896b">
+			<name>gcp/gke.tf</name>
+			<version>0.0.0-26c42841896b</version>
+			<hashes>
+				<hash alg="SHA-256">26c42841896bb95d6da7a3765800bc2cb0392abd87321963b99550b003931ff2</hash>
+			</hashes>
+			<purl>pkg:generic/gcp/gke.tf@0.0.0-26c42841896b</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896b8a893e46-e267-485a-8690-51f39951de58">
+					<v:id>8a893e46-e267-485a-8690-51f39951de58</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[COS Node Image Not Used]: The node image should be Container-Optimized OS(COS)</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 29, a result was found. &#39;&#39;node_config.image_type&#39; does not start with &#39;COS&#39;&#39;, but &#39;&#39;node_config.image_type&#39; should start with &#39;COS&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896b73fb21a1-b19a-45b1-b648-b47b1678681e">
+					<v:id>73fb21a1-b19a-45b1-b648-b47b1678681e</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Client Certificate Disabled]: Kubernetes Clusters must be created with Client Certificate enabled, which means &#39;master_auth&#39; must have &#39;client_certificate_config&#39; with the attribute &#39;issue_client_certificate&#39; equal to true</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 6, a result was found. &#39;Attribute &#39;master_auth&#39; is undefined&#39;, but &#39;Attribute &#39;master_auth&#39; is defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896b65c1bc7a-4835-4ac4-a2b6-13d310b0648d">
+					<v:id>65c1bc7a-4835-4ac4-a2b6-13d310b0648d</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Cluster Labels Disabled]: Kubernetes Clusters must be configured with labels, which means the attribute &#39;resource_labels&#39; must be defined</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 6, a result was found. &#39;Attribute &#39;resource_labels&#39; is undefined&#39;, but &#39;Attribute &#39;resource_labels&#39; is defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896b1baba08e-3c8a-4be7-95eb-dced5833de21">
+					<v:id>1baba08e-3c8a-4be7-95eb-dced5833de21</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Cluster Master Authentication Disabled]: Kubernetes Engine Clusters must have Master Authentication set to enabled, which means the attribute &#39;master_auth&#39; must have the subattributes &#39;username&#39; and &#39;password&#39; defined and not empty</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 6, a result was found. &#39;Attribute &#39;master_auth&#39; is undefined&#39;, but &#39;Attribute &#39;master_auth&#39; is defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896b70cdf849-b7d9-4569-b87d-5d82ffd44719">
+					<v:id>70cdf849-b7d9-4569-b87d-5d82ffd44719</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[GKE Basic Authentication Enabled]: GCP - Google Kubernetes Engine (GKE) Basic Authentication must be disabled, which means the username and password provided in the master_auth block must be empty</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 6, a result was found. &#39;Attribute &#39;master_auth&#39; is undefined&#39;, but &#39;Attribute &#39;master_auth&#39; is defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896b5baa92d2-d8ee-4c75-88a4-52d9d8bb8067">
+					<v:id>5baa92d2-d8ee-4c75-88a4-52d9d8bb8067</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[GKE Legacy Authorization Enabled]: Kubernetes Engine Clusters must have Legacy Authorization set to disabled, which means the attribute &#39;enable_legacy_abac&#39; must not be true</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 12, a result was found. &#39;Attribute &#39;enable_legacy_abac&#39; is true&#39;, but &#39;Attribute &#39;enable_legacy_abac&#39; is false&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896bc606ba1d-d736-43eb-ac24-e16108f3a9e0">
+					<v:id>c606ba1d-d736-43eb-ac24-e16108f3a9e0</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[IP Aliasing Disabled]: Kubernetes Clusters must be created with Alias IP ranges enabled, which means the attribut &#39;ip_allocation_policy&#39; must be defined and, if defined, the attribute &#39;networking_mode&#39; must be VPC_NATIVE </v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 6, a result was found. &#39;Attributes &#39;ip_allocation_policy&#39; and &#39;networking_mode&#39; are undefined&#39;, but &#39;Attributes &#39;ip_allocation_policy&#39; and &#39;networking_mode&#39; are defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896b11e7550e-c4b6-472e-adff-c698f157cdd7">
+					<v:id>11e7550e-c4b6-472e-adff-c698f157cdd7</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Network Policy Disabled]: Kubernetes Engine Clusters must have Network Policy enabled, meaning that the attribute &#39;network_policy.enabled&#39; must be true and the attribute &#39;addons_config.network_policy_config.disabled&#39; must be false </v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 6, a result was found. &#39;Attribute &#39;network_policy&#39; is undefined or Attribute &#39;addons_config&#39; is undefined&#39;, but &#39;Attribute &#39;network_policy&#39; is defined and Attribute &#39;addons_config&#39; is defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896bb139213e-7d24-49c2-8025-c18faa21ecaa">
+					<v:id>b139213e-7d24-49c2-8025-c18faa21ecaa</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Node Auto Upgrade Disabled]: Node &#39;auto_upgrade&#39; should be enabled for Kubernetes Clusters</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 24, a result was found. &#39;google_container_node_pool.management is undefined or null&#39;, but &#39;google_container_node_pool.management is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896b9192e0f9-eca5-4056-9282-ae2a736a4088">
+					<v:id>9192e0f9-eca5-4056-9282-ae2a736a4088</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Pod Security Policy Disabled]: Kubernetes Clusters must have Pod Security Policy controller enabled, which means there must be a &#39;pod_security_policy_config&#39; with the &#39;enabled&#39; attribute equal to true</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 6, a result was found. &#39;Attribute &#39;pod_security_policy_config&#39; is undefined&#39;, but &#39;Attribute &#39;pod_security_policy_config&#39; is defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896b6ccb85d7-0420-4907-9380-50313f80946b">
+					<v:id>6ccb85d7-0420-4907-9380-50313f80946b</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Private Cluster Disabled]: Kubernetes Clusters must be created with Private Clusters enabled, meaning the &#39;private_cluster_config&#39; must be defined and the attributes &#39;enable_private_nodes&#39; and &#39;enable_private_endpoint&#39; must be true</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 6, a result was found. &#39;Attribute &#39;private_cluster_config&#39; is undefined or null&#39;, but &#39;Attribute &#39;private_cluster_config&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896b4c7ebcb2-eae2-461e-bc83-456ee2d4f694">
+					<v:id>4c7ebcb2-eae2-461e-bc83-456ee2d4f694</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Stackdriver Logging Disabled]: Kubernetes Engine Clusters must have Stackdriver Logging enabled, which means the attribute &#39;logging_service&#39; must be defined and different from &#39;none&#39;</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 6, a result was found. &#39;Attribute &#39;logging_service&#39; is &#39;none&#39;&#39;, but &#39;Attribute &#39;logging_service&#39; is not &#39;none&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896b30e8dfd2-3591-4d19-8d11-79e93106c93d">
+					<v:id>30e8dfd2-3591-4d19-8d11-79e93106c93d</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Stackdriver Monitoring Disabled]: Kubernetes Engine Clusters must have Stackdriver Monitoring enabled, which means the attribute &#39;monitoring_service&#39; must be defined and different than &#39;none&#39;</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 6, a result was found. &#39;Attribute &#39;monitoring_service&#39; is &#39;none&#39;&#39;, but &#39;Attribute &#39;monitoring_service&#39; is not &#39;none&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gke.tf@0.0.0-26c42841896bacfdbec6-4a17-471f-b412-169d77553332">
+					<v:id>acfdbec6-4a17-471f-b412-169d77553332</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Google Container Node Pool Auto Repair Disabled]: Verifies if Google Container Node Pool Auto Repair is Enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 24, a result was found. &#39;google_container_node_pool[custom_node_pool].management.auto_repair is undefined or null&#39;, but &#39;google_container_node_pool[custom_node_pool].management.auto_repair is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/gcp/gcs.tf@0.0.0-a9d816b48b5c">
+			<name>gcp/gcs.tf</name>
+			<version>0.0.0-a9d816b48b5c</version>
+			<hashes>
+				<hash alg="SHA-256">a9d816b48b5c99f9755c8e2e3617fa99d63b6b93516308966c565b502b740fcf</hash>
+			</hashes>
+			<purl>pkg:generic/gcp/gcs.tf@0.0.0-a9d816b48b5c</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/gcp/gcs.tf@0.0.0-a9d816b48b5cd6cabc3a-d57e-48c2-b341-bf3dd4f4a120">
+					<v:id>d6cabc3a-d57e-48c2-b341-bf3dd4f4a120</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Cloud Storage Bucket Logging Not Enabled]: Cloud storage bucket with logging not enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;google_storage_bucket.logging&#39; is undefined&#39;, but &#39;&#39;google_storage_bucket.logging&#39; is set&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gcs.tf@0.0.0-a9d816b48b5ce7e961ac-d17e-4413-84bc-8a1fbe242944">
+					<v:id>e7e961ac-d17e-4413-84bc-8a1fbe242944</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Cloud Storage Bucket Versioning Disabled]: Object Versioning Not Enabled on Cloud Storage Bucket</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;versioning&#39; it undefined or null&#39;, but &#39;&#39;versioning&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gcs.tf@0.0.0-a9d816b48b5ca6cd52a1-3056-4910-96a5-894de9f3f3b3">
+					<v:id>a6cd52a1-3056-4910-96a5-894de9f3f3b3</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Cloud Storage Anonymous or Publicly Accessible]: Cloud Storage Buckets must not be anonymously or publicly accessible, which means the attribute &#39;members&#39; must not possess &#39;allUsers&#39; or &#39;allAuthenticatedUsers&#39;</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 18, a result was found. &#39;&#39;google_storage_bucket_iam_binding[allow_public_read].members&#39; has &#39;allUsers&#39;&#39;, but &#39;&#39;google_storage_bucket_iam_binding[allow_public_read].members&#39; does not have &#39;allUsers&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/gcs.tf@0.0.0-a9d816b48b5cbb0db090-5509-4853-a827-75ced0b3caa0">
+					<v:id>bb0db090-5509-4853-a827-75ced0b3caa0</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Google Storage Bucket Level Access Disabled]: Google Storage Bucket Level Access should be enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;google_storage_bucket[terragoat_website].uniform_bucket_level_access is undefined or null&#39;, but &#39;google_storage_bucket[terragoat_website].uniform_bucket_level_access is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/aws/db-app.tf@0.0.0-2db5de57fea4">
+			<name>aws/db-app.tf</name>
+			<version>0.0.0-2db5de57fea4</version>
+			<hashes>
+				<hash alg="SHA-256">2db5de57fea4ceb3bb1f2c57c57e5184299cc483626f6dd249713e1b0af82b40</hash>
+			</hashes>
+			<purl>pkg:generic/aws/db-app.tf@0.0.0-2db5de57fea4</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/aws/db-app.tf@0.0.0-2db5de57fea435113e6f-2c6b-414d-beec-7a9482d3b2d1">
+					<v:id>35113e6f-2c6b-414d-beec-7a9482d3b2d1</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[DB Instance Publicly Accessible]: The field &#39;publicly_accessible&#39; should not be set to &#39;true&#39; (default is &#39;false&#39;).</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 21, a result was found. &#39;&#39;publicly_accessible&#39; is set to true&#39;, but &#39;&#39;publicly_accessible&#39; is set to false or undefined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/db-app.tf@0.0.0-2db5de57fea408bd0760-8752-44e1-9779-7bb369b2b4e4">
+					<v:id>08bd0760-8752-44e1-9779-7bb369b2b4e4</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[DB Instance Storage Not Encrypted]: The parameter storage_encrypted in aws_db_instance must be set to &#39;true&#39; (the default is &#39;false&#39;).</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 18, a result was found. &#39;&#39;storage_encrypted&#39; is set to false&#39;, but &#39;&#39;storage_encrypted&#39; is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/db-app.tf@0.0.0-2db5de57fea45a2486aa-facf-477d-a5c1-b010789459ce">
+					<v:id>5a2486aa-facf-477d-a5c1-b010789459ce</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[EC2 Instance Has Public IP]: EC2 Instance should not have a public IP address.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 242, a result was found. &#39;&#39;associate_public_ip_address&#39; is undefined or null&#39;, but &#39;&#39;associate_public_ip_address&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/db-app.tf@0.0.0-2db5de57fea488fd05e0-ac0e-43d2-ba6d-fc0ba60ae1a6">
+					<v:id>88fd05e0-ac0e-43d2-ba6d-fc0ba60ae1a6</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[IAM Database Auth Not Enabled]: IAM Database Auth Enabled must be configured to true</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;iam_database_authentication_enabled&#39; is undefined or null&#39;, but &#39;&#39;iam_database_authentication_enabled&#39; is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/db-app.tf@0.0.0-2db5de57fea4e592a0c5-5bdb-414c-9066-5dba7cdea370">
+					<v:id>e592a0c5-5bdb-414c-9066-5dba7cdea370</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[IAM Access Analyzer Undefined]: IAM Access Analyzer should be defined to identify unintentional access</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;aws_accessanalyzer_analyzer&#39; is undefined&#39;, but &#39;&#39;aws_accessanalyzer_analyzer&#39; is set&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/db-app.tf@0.0.0-2db5de57fea4575a2155-6af1-4026-b1af-d5bc8fe2a904">
+					<v:id>575a2155-6af1-4026-b1af-d5bc8fe2a904</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[IAM Policy Grants Full Permissions]: IAM policies allow all (&#39;*&#39;) in a statement action</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 209, a result was found. &#39;&#39;policy.Statement.Resource&#39; equal &#39;*&#39;&#39;, but &#39;&#39;policy.Statement.Resource&#39; not equal &#39;*&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/db-app.tf@0.0.0-2db5de57fea41dc73fb4-5b51-430c-8c5f-25dcf9090b02">
+					<v:id>1dc73fb4-5b51-430c-8c5f-25dcf9090b02</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[RDS With Backup Disabled]: RDS configured without backup</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 17, a result was found. &#39;&#39;backup_retention_period&#39; is equal &#39;0&#39;&#39;, but &#39;&#39;backup_retention_period&#39; is not equal &#39;0&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/db-app.tf@0.0.0-2db5de57fea40b93729a-d882-4803-bdc3-ac429a21f158">
+					<v:id>0b93729a-d882-4803-bdc3-ac429a21f158</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[EC2 Instance Using API Keys]: EC2 instances should use roles to be granted access to other AWS services</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 242, a result was found. &#39;aws_instance[db_app].user_data is being used to configure AWS API keys&#39;, but &#39;aws_instance[db_app] should be using iam_instance_profile to assign a role with permissions&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/db-app.tf@0.0.0-2db5de57fea423b70e32-032e-4fa6-ba5c-82f56b9980e6">
+					<v:id>23b70e32-032e-4fa6-ba5c-82f56b9980e6</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[EC2 Instance Monitoring Disabled]: EC2 Instance should have detailed monitoring enabled. With detailed monitoring enabled data is available in 1-minute periods</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 242, a result was found. &#39;&#39;monitoring&#39; is undefined or null%!(EXTRA string=db_app)&#39;, but &#39;&#39;monitoring&#39; is defined and not null%!(EXTRA string=db_app)&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/db-app.tf@0.0.0-2db5de57fea460224630-175a-472a-9e23-133827040766">
+					<v:id>60224630-175a-472a-9e23-133827040766</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[EC2 Not EBS Optimized]: It&#39;s considered a best practice for an EC2 instance to use an EBS optimized instance. This provides the best performance for your EBS volumes by minimizing contention between Amazon EBS I/O and other traffic from your instance</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 242, a result was found. &#39;&#39;ebs_optimized&#39; is undefined or null&#39;, but &#39;&#39;ebs_optimized&#39; is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/db-app.tf@0.0.0-2db5de57fea48d7f7b8c-6c7c-40f8-baa6-62006c6c7b56">
+					<v:id>8d7f7b8c-6c7c-40f8-baa6-62006c6c7b56</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[RDS Without Logging]: RDS does not have any kind of logger</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;enabled_cloudwatch_logs_exports&#39; is undefined&#39;, but &#39;&#39;enabled_cloudwatch_logs_exports&#39; is defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/db-app.tf@0.0.0-2db5de57fea4cb3f5ed6-0d18-40de-a93d-b3538db31e8c">
+					<v:id>cb3f5ed6-0d18-40de-a93d-b3538db31e8c</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Security Group Without Description]: It&#39;s considered a best practice for AWS Security Group to have a description</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 116, a result was found. &#39;aws_security_group[{{default}}] description is undefined or null&#39;, but &#39;aws_security_group[{{default}}] description is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd6670">
+			<name>aws/ec2.tf</name>
+			<version>0.0.0-067bd8cd6670</version>
+			<hashes>
+				<hash alg="SHA-256">067bd8cd6670dcbad777011e5c8629392f031628b49692e72ea8aa1a41be1dd0</hash>
+			</hashes>
+			<purl>pkg:generic/aws/ec2.tf@0.0.0-067bd8cd6670</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd6670e6b4b943-6883-47a9-9739-7ada9568f8ca">
+					<v:id>e6b4b943-6883-47a9-9739-7ada9568f8ca</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[EBS Volume Snapshot Not Encrypted]: The value on AWS EBS Volume Snapshot Encryptation must be true</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 53, a result was found. &#39;&#39;aws_ebs_volume[web_host_storage].encrypted&#39; associated with aws_ebs_snapshot[example_snapshot] is undefined&#39;, but &#39;&#39;aws_ebs_volume[web_host_storage].encrypted&#39; associated with aws_ebs_snapshot[example_snapshot] is set&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd66705a2486aa-facf-477d-a5c1-b010789459ce">
+					<v:id>5a2486aa-facf-477d-a5c1-b010789459ce</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[EC2 Instance Has Public IP]: EC2 Instance should not have a public IP address.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;associate_public_ip_address&#39; is undefined or null&#39;, but &#39;&#39;associate_public_ip_address&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd6670ffac8a12-322e-42c1-b9b9-81ff85c39ef7">
+					<v:id>ffac8a12-322e-42c1-b9b9-81ff85c39ef7</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[HTTP Port Open]: The security group ingress rules provide filtering of ingress network traffic to AWS resources. It is recommended that no security group ingress rule allows unrestricted ingress access to remote server HTTP port 80.&#xA;Public access to remote server ports, such as 80, increases the resource attack surface and unnecessarily raises the risk of resource compromise.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 77, a result was found. &#39;aws_security_group.ingress opens the HTTP port (80)&#39;, but &#39;aws_security_group.ingress doesn&#39;t open the HTTP port (80)&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd667076c0bcde-903d-456e-ac13-e58c34987852">
+					<v:id>76c0bcde-903d-456e-ac13-e58c34987852</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Common].[Passwords And Secrets - AWS Access Key]: Query to find passwords and secrets in infrastructure code.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 15, a result was found. &#39;&#39;export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMAAA&#39; contains a secret&#39;, but &#39;Hardcoded secret key should not appear in source&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd667083ab47ff-381d-48cd-bac5-fb32222f54af">
+					<v:id>83ab47ff-381d-48cd-bac5-fb32222f54af</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Common].[Passwords And Secrets - AWS Secret Key]: Query to find passwords and secrets in infrastructure code.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 16, a result was found. &#39;&#39;export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMAAAKEY&#39; contains a secret&#39;, but &#39;Hardcoded secret key should not appear in source&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd66706726dcc0-5ff5-459d-b473-a780bef7665c">
+					<v:id>6726dcc0-5ff5-459d-b473-a780bef7665c</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket SSE Disabled]: If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 271, a result was found. &#39;&#39;server_side_encryption_configuration&#39; is undefined or null&#39;, but &#39;&#39;server_side_encryption_configuration&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd6670c5b31ab9-0f26-4a49-b8aa-4cc064392f4d">
+					<v:id>c5b31ab9-0f26-4a49-b8aa-4cc064392f4d</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Without Enabled MFA Delete]: Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.&#xA;Adding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 271, a result was found. &#39;aws_s3_bucket[flowbucket].versioning is undefined or null&#39;, but &#39;aws_s3_bucket[flowbucket].versioning is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd667065905cec-d691-4320-b320-2000436cb696">
+					<v:id>65905cec-d691-4320-b320-2000436cb696</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Security Group With Unrestricted Access To SSH]: &#39;SSH&#39; (TCP:22) should not be public in AWS Security Group</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 87, a result was found. &#39;aws_security_group[web-node] &#39;SSH&#39; (Port:22) is public&#39;, but &#39;aws_security_group[web-node] &#39;SSH&#39; (Port:22) is not public&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd6670590d878b-abdc-428f-895a-e2b68a0e1998">
+					<v:id>590d878b-abdc-428f-895a-e2b68a0e1998</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Unknown Port Exposed To Internet]: AWS Security Group should not have an unknown port exposed to the entire Internet</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 87, a result was found. &#39;aws_security_group[web-node].ingress.from_port is unknown and is exposed to the entire Internet&#39;, but &#39;aws_security_group[web-node].ingress.from_port is known&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd66704728cd65-a20c-49da-8b31-9c08b423e4db">
+					<v:id>4728cd65-a20c-49da-8b31-9c08b423e4db</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Unrestricted Security Group Ingress]: Security groups should restrict ingress only to well-known and allowed origins: IP addresses or ranges. Unrestricted access may expose security groups associated resources to the Internet, allowing, for example, access to remote server open ports.&#xA;Public access to remote servers increases the resource attack surface and unnecessarily raises the risk of resource compromise.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 88, a result was found. &#39;One of &#39;ingress.cidr_blocks&#39; equal &#39;0.0.0.0/0&#39;&#39;, but &#39;One of &#39;ingress.cidr_blocks&#39; not equal &#39;0.0.0.0/0&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd66704728cd65-a20c-49da-8b31-9c08b423e4db">
+					<v:id>4728cd65-a20c-49da-8b31-9c08b423e4db</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Unrestricted Security Group Ingress]: Security groups should restrict ingress only to well-known and allowed origins: IP addresses or ranges. Unrestricted access may expose security groups associated resources to the Internet, allowing, for example, access to remote server open ports.&#xA;Public access to remote servers increases the resource attack surface and unnecessarily raises the risk of resource compromise.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 95, a result was found. &#39;One of &#39;ingress.cidr_blocks&#39; equal &#39;0.0.0.0/0&#39;&#39;, but &#39;One of &#39;ingress.cidr_blocks&#39; not equal &#39;0.0.0.0/0&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd6670cc997676-481b-4e93-aa81-d19f8c5e9b12">
+					<v:id>cc997676-481b-4e93-aa81-d19f8c5e9b12</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[EBS Volume Encryption Disabled]: Elastic Compute Cloud (EC2) supports encryption at rest when using the Elastic Block Store (EBS) service. While disabled by default, forcing encryption at EBS volume creation is supported.&#xA;Encrypting data at rest reduces the likelihood that it is unintentionally exposed and can nullify the impact of disclosure if the encryption remains unbroken.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 34, a result was found. &#39;One of &#39;aws_ebs_volume.encrypted&#39; is undefined&#39;, but &#39;One of &#39;aws_ebs_volume.encrypted&#39; is defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd6670568a4d22-3517-44a6-a7ad-6a7eed88722c">
+					<v:id>568a4d22-3517-44a6-a7ad-6a7eed88722c</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Without Versioning]: S3 bucket should have versioning enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 271, a result was found. &#39;&#39;versioning&#39; is undefined or null&#39;, but &#39;&#39;versioning&#39; is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd667052f04a44-6bfa-4c41-b1d3-4ae99a2de05c">
+					<v:id>52f04a44-6bfa-4c41-b1d3-4ae99a2de05c</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[VPC Subnet Assigns Public IP]: VPC Subnet should not assign public IP</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 139, a result was found. &#39;aws_subnet[web_subnet].map_public_ip_on_launch is set to true&#39;, but &#39;aws_subnet[web_subnet].map_public_ip_on_launch is set to false or undefined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd667052f04a44-6bfa-4c41-b1d3-4ae99a2de05c">
+					<v:id>52f04a44-6bfa-4c41-b1d3-4ae99a2de05c</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[VPC Subnet Assigns Public IP]: VPC Subnet should not assign public IP</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 159, a result was found. &#39;aws_subnet[web_subnet2].map_public_ip_on_launch is set to true&#39;, but &#39;aws_subnet[web_subnet2].map_public_ip_on_launch is set to false or undefined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd6670fd632aaf-b8a1-424d-a4d1-0de22fd3247a">
+					<v:id>fd632aaf-b8a1-424d-a4d1-0de22fd3247a</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[VPC Without Network Firewall]: VPC should have a Network Firewall associated</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 117, a result was found. &#39;aws_vpc[web_vpc] does not have an &#39;aws_networkfirewall_firewall&#39; associated&#39;, but &#39;aws_vpc[web_vpc] has an &#39;aws_networkfirewall_firewall&#39; associated&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd66700b93729a-d882-4803-bdc3-ac429a21f158">
+					<v:id>0b93729a-d882-4803-bdc3-ac429a21f158</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[EC2 Instance Using API Keys]: EC2 instances should use roles to be granted access to other AWS services</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;aws_instance[web_host].user_data is being used to configure AWS API keys&#39;, but &#39;aws_instance[web_host] should be using iam_instance_profile to assign a role with permissions&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd6670d7b9d850-3e06-4a75-852f-c46c2e92240b">
+					<v:id>d7b9d850-3e06-4a75-852f-c46c2e92240b</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Hardcoded AWS Access Key]: Hard-coded AWS access key / secret key exists in EC2 user data</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 9, a result was found. &#39;&#39;user_data&#39; contains hardcoded access key&#39;, but &#39;&#39;user_data&#39; doesn&#39;t contain hardcoded access key&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd6670f861041c-8c9f-4156-acfc-5e6e524f5884">
+					<v:id>f861041c-8c9f-4156-acfc-5e6e524f5884</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Logging Disabled]: S3 bucket without logging</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 271, a result was found. &#39;&#39;logging&#39; is undefined or null&#39;, but &#39;&#39;logging&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd667023b70e32-032e-4fa6-ba5c-82f56b9980e6">
+					<v:id>23b70e32-032e-4fa6-ba5c-82f56b9980e6</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[EC2 Instance Monitoring Disabled]: EC2 Instance should have detailed monitoring enabled. With detailed monitoring enabled data is available in 1-minute periods</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;monitoring&#39; is undefined or null%!(EXTRA string=web_host)&#39;, but &#39;&#39;monitoring&#39; is defined and not null%!(EXTRA string=web_host)&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd667060224630-175a-472a-9e23-133827040766">
+					<v:id>60224630-175a-472a-9e23-133827040766</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[EC2 Not EBS Optimized]: It&#39;s considered a best practice for an EC2 instance to use an EBS optimized instance. This provides the best performance for your EBS volumes by minimizing contention between Amazon EBS I/O and other traffic from your instance</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;ebs_optimized&#39; is undefined or null&#39;, but &#39;&#39;ebs_optimized&#39; is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd66701e434b25-8763-4b00-a5ca-ca03b7abbb66">
+					<v:id>1e434b25-8763-4b00-a5ca-ca03b7abbb66</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Name Is Not Snake Case]: All names should follow snake case pattern.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 231, a result was found. &#39;&#39;web-eni&#39; is not in snake case&#39;, but &#39;All names should be on snake case pattern&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd66701e434b25-8763-4b00-a5ca-ca03b7abbb66">
+					<v:id>1e434b25-8763-4b00-a5ca-ca03b7abbb66</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Name Is Not Snake Case]: All names should follow snake case pattern.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 77, a result was found. &#39;&#39;web-node&#39; is not in snake case&#39;, but &#39;All names should be on snake case pattern&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd667068eb4bf3-f9bf-463d-b5cf-e029bb446d2e">
+					<v:id>68eb4bf3-f9bf-463d-b5cf-e029bb446d2e</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Security Group Rules Without Description]: It&#39;s considered a best practice for all rules in AWS Security Group to have a description</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 90, a result was found. &#39;aws_security_group[{{web-node}}].ingress description is undefined or null&#39;, but &#39;aws_security_group[{{web-node}}].ingress description is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd667068eb4bf3-f9bf-463d-b5cf-e029bb446d2e">
+					<v:id>68eb4bf3-f9bf-463d-b5cf-e029bb446d2e</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Security Group Rules Without Description]: It&#39;s considered a best practice for all rules in AWS Security Group to have a description</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 83, a result was found. &#39;aws_security_group[{{web-node}}].ingress description is undefined or null&#39;, but &#39;aws_security_group[{{web-node}}].ingress description is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ec2.tf@0.0.0-067bd8cd667068eb4bf3-f9bf-463d-b5cf-e029bb446d2e">
+					<v:id>68eb4bf3-f9bf-463d-b5cf-e029bb446d2e</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Security Group Rules Without Description]: It&#39;s considered a best practice for all rules in AWS Security Group to have a description</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 97, a result was found. &#39;aws_security_group[{{web-node}}].egress description is undefined or null&#39;, but &#39;aws_security_group[{{web-node}}].egress description is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/aws/eks.tf@0.0.0-c6b19a89726c">
+			<name>aws/eks.tf</name>
+			<version>0.0.0-c6b19a89726c</version>
+			<hashes>
+				<hash alg="SHA-256">c6b19a89726c7eb7975f8769c72b176a94e047d151da4cfab186e0f685a22e8b</hash>
+			</hashes>
+			<purl>pkg:generic/aws/eks.tf@0.0.0-c6b19a89726c</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/aws/eks.tf@0.0.0-c6b19a89726c63ebcb19-2739-4d3f-aa5c-e8bbb9b85281">
+					<v:id>63ebcb19-2739-4d3f-aa5c-e8bbb9b85281</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[EKS Cluster Encryption Disabled]: EKS Cluster should be encrypted</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 117, a result was found. &#39;&#39;encryption_config&#39; is undefined or null&#39;, but &#39;&#39;encryption_config&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/eks.tf@0.0.0-c6b19a89726cf83121ea-03da-434f-9277-9cd247ab3047">
+					<v:id>f83121ea-03da-434f-9277-9cd247ab3047</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[VPC FlowLogs Disabled]: VPC hasn&#39;t got any FlowLog associated</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 43, a result was found. &#39;aws_vpc[eks_vpc] is not the same as Flow Logs VPC id&#39;, but &#39;aws_vpc[eks_vpc] is the same as Flow Logs VPC id&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/eks.tf@0.0.0-c6b19a89726c52f04a44-6bfa-4c41-b1d3-4ae99a2de05c">
+					<v:id>52f04a44-6bfa-4c41-b1d3-4ae99a2de05c</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[VPC Subnet Assigns Public IP]: VPC Subnet should not assign public IP</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 93, a result was found. &#39;aws_subnet[eks_subnet2].map_public_ip_on_launch is set to true&#39;, but &#39;aws_subnet[eks_subnet2].map_public_ip_on_launch is set to false or undefined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/eks.tf@0.0.0-c6b19a89726c52f04a44-6bfa-4c41-b1d3-4ae99a2de05c">
+					<v:id>52f04a44-6bfa-4c41-b1d3-4ae99a2de05c</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[VPC Subnet Assigns Public IP]: VPC Subnet should not assign public IP</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 65, a result was found. &#39;aws_subnet[eks_subnet1].map_public_ip_on_launch is set to true&#39;, but &#39;aws_subnet[eks_subnet1].map_public_ip_on_launch is set to false or undefined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/eks.tf@0.0.0-c6b19a89726cfd632aaf-b8a1-424d-a4d1-0de22fd3247a">
+					<v:id>fd632aaf-b8a1-424d-a4d1-0de22fd3247a</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[VPC Without Network Firewall]: VPC should have a Network Firewall associated</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 43, a result was found. &#39;aws_vpc[eks_vpc] does not have an &#39;aws_networkfirewall_firewall&#39; associated&#39;, but &#39;aws_vpc[eks_vpc] has an &#39;aws_networkfirewall_firewall&#39; associated&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/eks.tf@0.0.0-c6b19a89726c37304d3f-f852-40b8-ae3f-725e87a7cedf">
+					<v:id>37304d3f-f852-40b8-ae3f-725e87a7cedf</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[EKS cluster logging is not enabled]: Amazon EKS control plane logging is not enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 117, a result was found. &#39;&#39;enabled_cluster_log_types&#39; is undefined or null&#39;, but &#39;&#39;enabled_cluster_log_types&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/eks.tf@0.0.0-c6b19a89726c1e434b25-8763-4b00-a5ca-ca03b7abbb66">
+					<v:id>1e434b25-8763-4b00-a5ca-ca03b7abbb66</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Name Is Not Snake Case]: All names should follow snake case pattern.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 33, a result was found. &#39;&#39;policy_attachment-AmazonEKSClusterPolicy&#39; is not in snake case&#39;, but &#39;All names should be on snake case pattern&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/eks.tf@0.0.0-c6b19a89726c1e434b25-8763-4b00-a5ca-ca03b7abbb66">
+					<v:id>1e434b25-8763-4b00-a5ca-ca03b7abbb66</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Name Is Not Snake Case]: All names should follow snake case pattern.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 38, a result was found. &#39;&#39;policy_attachment-AmazonEKSServicePolicy&#39; is not in snake case&#39;, but &#39;All names should be on snake case pattern&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/eks.tf@0.0.0-c6b19a89726c59312e8a-a64e-41e7-a252-618533dd1ea8">
+					<v:id>59312e8a-a64e-41e7-a252-618533dd1ea8</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Output Without Description]: All outputs should contain a valid description.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 146, a result was found. &#39;&#39;description&#39; is undefined or null&#39;, but &#39;&#39;description&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/eks.tf@0.0.0-c6b19a89726c59312e8a-a64e-41e7-a252-618533dd1ea8">
+					<v:id>59312e8a-a64e-41e7-a252-618533dd1ea8</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Output Without Description]: All outputs should contain a valid description.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 142, a result was found. &#39;&#39;description&#39; is undefined or null&#39;, but &#39;&#39;description&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/eks.tf@0.0.0-c6b19a89726ce38a8e0a-b88b-4902-b3fe-b0fcb17d5c10">
+					<v:id>e38a8e0a-b88b-4902-b3fe-b0fcb17d5c10</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Resource Not Using Tags]: AWS services resource tags are an essential part of managing components</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 66, a result was found. &#39;aws_subnet[{{eks_subnet1}}].tags has no tags defined&#39;, but &#39;aws_subnet[{{eks_subnet1}}].tags has tags defined other than &#39;Name&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/eks.tf@0.0.0-c6b19a89726ce38a8e0a-b88b-4902-b3fe-b0fcb17d5c10">
+					<v:id>e38a8e0a-b88b-4902-b3fe-b0fcb17d5c10</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Resource Not Using Tags]: AWS services resource tags are an essential part of managing components</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 94, a result was found. &#39;aws_subnet[{{eks_subnet2}}].tags has no tags defined&#39;, but &#39;aws_subnet[{{eks_subnet2}}].tags has tags defined other than &#39;Name&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/azure/key_vault.tf@0.0.0-a537de321a95">
+			<name>azure/key_vault.tf</name>
+			<version>0.0.0-a537de321a95</version>
+			<hashes>
+				<hash alg="SHA-256">a537de321a957e733f74b2ae80a3515bb87cb21ec6275be30736b5dddc50afdd</hash>
+			</hashes>
+			<purl>pkg:generic/azure/key_vault.tf@0.0.0-a537de321a95</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/azure/key_vault.tf@0.0.0-a537de321a954d080822-5ee2-49a4-8984-68f3d4c890fc">
+					<v:id>4d080822-5ee2-49a4-8984-68f3d4c890fc</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Key Expiration Not Set]: Make sure that for all keys the expiration date is set</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 33, a result was found. &#39;&#39;expiration_date&#39; is missing&#39;, but &#39;&#39;expiration_date&#39; exists&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/key_vault.tf@0.0.0-a537de321a95dfa20ffa-f476-428f-a490-424b41e91c7f">
+					<v:id>dfa20ffa-f476-428f-a490-424b41e91c7f</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Secret Expiration Not Set]: Make sure that for all secrets the expiration date is set</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 58, a result was found. &#39;&#39;expiration_date&#39; is missing&#39;, but &#39;&#39;expiration_date&#39; exists&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/key_vault.tf@0.0.0-a537de321a9538c71c00-c177-4cd7-8d36-cd1007cdb190">
+					<v:id>38c71c00-c177-4cd7-8d36-cd1007cdb190</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Vault Auditing Disabled]: Ensure that logging for Azure KeyVault is &#39;Enabled&#39;</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;azurerm_key_vault&#39; is not associated with &#39;azurerm_monitor_diagnostic_setting&#39;&#39;, but &#39;&#39;azurerm_key_vault&#39; is associated with &#39;azurerm_monitor_diagnostic_setting&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/key_vault.tf@0.0.0-a537de321a95f8e08a38-fc6e-4915-abbe-a7aadf1d59ef">
+					<v:id>f8e08a38-fc6e-4915-abbe-a7aadf1d59ef</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Key Vault Secrets Content Type Undefined]: Key Vault Secrets should have set Content Type</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 58, a result was found. &#39;&#39;azurerm_key_vault_secret[secret].content_type&#39; is undefined or null&#39;, but &#39;&#39;azurerm_key_vault_secret[secret].content_type&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/aws/resources/Dockerfile@0.0.0-4c9d0799b508">
+			<name>aws/resources/Dockerfile</name>
+			<version>0.0.0-4c9d0799b508</version>
+			<hashes>
+				<hash alg="SHA-256">4c9d0799b50811f20f5413d5f33a1390883d548af714e103f51e04912b129777</hash>
+			</hashes>
+			<purl>pkg:generic/aws/resources/Dockerfile@0.0.0-4c9d0799b508</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/aws/resources/Dockerfile@0.0.0-4c9d0799b508fd54f200-402c-4333-a5a4-36ef6709af2f">
+					<v:id>fd54f200-402c-4333-a5a4-36ef6709af2f</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Dockerfile].[Missing User Instruction]: A user should be specified in the dockerfile, otherwise the image will run as root</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;The &#39;Dockerfile&#39; does not contain any &#39;USER&#39; instruction&#39;, but &#39;The &#39;Dockerfile&#39; contains the &#39;USER&#39; instruction&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/resources/Dockerfile@0.0.0-4c9d0799b508b03a748a-542d-44f4-bb86-9199ab4fd2d5">
+					<v:id>b03a748a-542d-44f4-bb86-9199ab4fd2d5</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Dockerfile].[Healthcheck Instruction Missing]: Ensure that HEALTHCHECK is being used. The HEALTHCHECK instruction tells Docker how to test a container to check that it is still working</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;Dockerfile doesn&#39;t contain instruction &#39;HEALTHCHECK&#39;&#39;, but &#39;Dockerfile contains instruction &#39;HEALTHCHECK&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/azure/networking.tf@0.0.0-a37a29df445d">
+			<name>azure/networking.tf</name>
+			<version>0.0.0-a37a29df445d</version>
+			<hashes>
+				<hash alg="SHA-256">a37a29df445dc09d851998fc6a8c2e91f75378e3ce2e1d5e11b18aa521746323</hash>
+			</hashes>
+			<purl>pkg:generic/azure/networking.tf@0.0.0-a37a29df445d</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/azure/networking.tf@0.0.0-a37a29df445db90842e5-6779-44d4-9760-972f4c03ba1c">
+					<v:id>b90842e5-6779-44d4-9760-972f4c03ba1c</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Network Watcher Flow Disabled]: Check if enable field in the resource azurerm_network_watcher_flow_log is false.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 126, a result was found. &#39;azurerm_network_watcher_flow_log.enabled is false&#39;, but &#39;azurerm_network_watcher_flow_log.enabled is true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/networking.tf@0.0.0-a37a29df445d7750fcca-dd03-4d38-b663-4b70289bcfd4">
+					<v:id>7750fcca-dd03-4d38-b663-4b70289bcfd4</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Small Flow Logs Retention Period]: Flow logs enable capturing information about IP traffic flowing in and out of the network security groups. Network Security Group Flow Logs must be enabled with retention period greater than or equal to 90 days. This is important, because these logs are used to check for anomalies and give information of suspected breaches</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 133, a result was found. &#39;&#39;retention_policy.days&#39; is bigger than 90 [10])&#39;, but &#39;&#39;flow_log.retention_policy.days&#39; is bigger than 90)&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/networking.tf@0.0.0-a37a29df445d7750fcca-dd03-4d38-b663-4b70289bcfd4">
+					<v:id>7750fcca-dd03-4d38-b663-4b70289bcfd4</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Small Flow Logs Retention Period]: Flow logs enable capturing information about IP traffic flowing in and out of the network security groups. Network Security Group Flow Logs must be enabled with retention period greater than or equal to 90 days. This is important, because these logs are used to check for anomalies and give information of suspected breaches</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 132, a result was found. &#39;&#39;flow_log.retention_policy&#39; is disabled)&#39;, but &#39;&#39;flow_log.retention_policy&#39; should be enabled)&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/networking.tf@0.0.0-a37a29df445db4cc2c52-34a6-4b43-b57c-4bdeb4514a5a">
+					<v:id>b4cc2c52-34a6-4b43-b57c-4bdeb4514a5a</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Virtual Network with DDoS Protection Plan disabled]: Virtual Network should have DDoS Protection Plan enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;azurerm_virtual_network[example].ddos_protection_plan&#39; is undefined or null&#39;, but &#39;&#39;azurerm_virtual_network[example].ddos_protection_plan&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/aws/lambda.tf@0.0.0-6ccab8860dae">
+			<name>aws/lambda.tf</name>
+			<version>0.0.0-6ccab8860dae</version>
+			<hashes>
+				<hash alg="SHA-256">6ccab8860daed84f1fce9ed9fb3961737efdd62a3eb65df31a2ecd229810838a</hash>
+			</hashes>
+			<purl>pkg:generic/aws/lambda.tf@0.0.0-6ccab8860dae</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/aws/lambda.tf@0.0.0-6ccab8860dae76c0bcde-903d-456e-ac13-e58c34987852">
+					<v:id>76c0bcde-903d-456e-ac13-e58c34987852</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Common].[Passwords And Secrets - AWS Access Key]: Query to find passwords and secrets in infrastructure code.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 44, a result was found. &#39;&#39;      access_key = &#34;AKIAIOSFODNN7EXAMPLE&#34;&#39; contains a secret&#39;, but &#39;Hardcoded secret key should not appear in source&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/lambda.tf@0.0.0-6ccab8860dae3e2d3b2f-c22a-4df1-9cc6-a7a0aebb0c99">
+					<v:id>3e2d3b2f-c22a-4df1-9cc6-a7a0aebb0c99</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Common].[Passwords And Secrets - Generic Secret]: Query to find passwords and secrets in infrastructure code.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 45, a result was found. &#39;&#39;      secret_key = &#34;wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY&#34;&#39; contains a secret&#39;, but &#39;Hardcoded secret key should not appear in source&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/lambda.tf@0.0.0-6ccab8860dae8152e0cf-d2f0-47ad-96d5-d003a76eabd1">
+					<v:id>8152e0cf-d2f0-47ad-96d5-d003a76eabd1</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Lambda Functions Without X-Ray Tracing]: AWS Lambda functions should have TracingConfig enabled. For this, property &#39;tracing_Config.mode&#39; should have the value &#39;Active&#39;</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 31, a result was found. &#39;aws_lambda_function[analysis_lambda].tracing_config is undefined or null&#39;, but &#39;aws_lambda_function[analysis_lambda].tracing_config is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/aws/providers.tf@0.0.0-edb39e696e7a">
+			<name>aws/providers.tf</name>
+			<version>0.0.0-edb39e696e7a</version>
+			<hashes>
+				<hash alg="SHA-256">edb39e696e7ac40f8f95d27e767435a129e4a651e54046ea2a3adcd12908928d</hash>
+			</hashes>
+			<purl>pkg:generic/aws/providers.tf@0.0.0-edb39e696e7a</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/aws/providers.tf@0.0.0-edb39e696e7a76c0bcde-903d-456e-ac13-e58c34987852">
+					<v:id>76c0bcde-903d-456e-ac13-e58c34987852</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Common].[Passwords And Secrets - AWS Access Key]: Query to find passwords and secrets in infrastructure code.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 10, a result was found. &#39;&#39;  access_key = &#34;AKIAIOSFODNN7EXAMPLE&#34;&#39; contains a secret&#39;, but &#39;Hardcoded secret key should not appear in source&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/providers.tf@0.0.0-edb39e696e7a3e2d3b2f-c22a-4df1-9cc6-a7a0aebb0c99">
+					<v:id>3e2d3b2f-c22a-4df1-9cc6-a7a0aebb0c99</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Common].[Passwords And Secrets - Generic Secret]: Query to find passwords and secrets in infrastructure code.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 11, a result was found. &#39;&#39;  secret_key = &#34;wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY&#34;&#39; contains a secret&#39;, but &#39;Hardcoded secret key should not appear in source&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e44">
+			<name>aws/s3.tf</name>
+			<version>0.0.0-132a063c2e44</version>
+			<hashes>
+				<hash alg="SHA-256">132a063c2e441d50dc810550a947cc53fe21ceb16d8b09d78d2b801aba4a2141</hash>
+			</hashes>
+			<purl>pkg:generic/aws/s3.tf@0.0.0-132a063c2e44</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e4438c5ee0d-7f22-4260-ab72-5073048df100">
+					<v:id>38c5ee0d-7f22-4260-ab72-5073048df100</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket ACL Allows Read Or Write to All Users]: S3 bucket with public READ/WRITE access</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 7, a result was found. &#39;&#39;acl&#39; is equal &#39;public-read&#39;&#39;, but &#39;&#39;acl&#39; is equal &#39;private&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e445fb49a69-8d46-4495-a2f8-9c8c622b2b6e">
+					<v:id>5fb49a69-8d46-4495-a2f8-9c8c622b2b6e</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Object Not Encrypted]: Amazon S3 provides a variety of no, or low, cost encryption options to protect data at rest.&#xA;Encrypting data at rest reduces the likelihood that it is unintentionally exposed and can nullify the impact of disclosure if the encryption remains unbroken.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 24, a result was found. &#39;aws_s3_bucket_object.server_side_encryption is undefined or null&#39;, but &#39;aws_s3_bucket_object.server_side_encryption is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e446726dcc0-5ff5-459d-b473-a780bef7665c">
+					<v:id>6726dcc0-5ff5-459d-b473-a780bef7665c</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket SSE Disabled]: If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 66, a result was found. &#39;&#39;server_side_encryption_configuration&#39; is undefined or null&#39;, but &#39;&#39;server_side_encryption_configuration&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e446726dcc0-5ff5-459d-b473-a780bef7665c">
+					<v:id>6726dcc0-5ff5-459d-b473-a780bef7665c</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket SSE Disabled]: If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 91, a result was found. &#39;&#39;server_side_encryption_configuration&#39; is undefined or null&#39;, but &#39;&#39;server_side_encryption_configuration&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e446726dcc0-5ff5-459d-b473-a780bef7665c">
+					<v:id>6726dcc0-5ff5-459d-b473-a780bef7665c</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket SSE Disabled]: If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;server_side_encryption_configuration&#39; is undefined or null&#39;, but &#39;&#39;server_side_encryption_configuration&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e446726dcc0-5ff5-459d-b473-a780bef7665c">
+					<v:id>6726dcc0-5ff5-459d-b473-a780bef7665c</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket SSE Disabled]: If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 43, a result was found. &#39;&#39;server_side_encryption_configuration&#39; is undefined or null&#39;, but &#39;&#39;server_side_encryption_configuration&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e44c5b31ab9-0f26-4a49-b8aa-4cc064392f4d">
+					<v:id>c5b31ab9-0f26-4a49-b8aa-4cc064392f4d</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Without Enabled MFA Delete]: Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.&#xA;Adding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 71, a result was found. &#39;&#39;mfa_delete&#39; is undefined or null&#39;, but &#39;&#39;mfa_delete&#39; is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e44c5b31ab9-0f26-4a49-b8aa-4cc064392f4d">
+					<v:id>c5b31ab9-0f26-4a49-b8aa-4cc064392f4d</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Without Enabled MFA Delete]: Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.&#xA;Adding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 43, a result was found. &#39;aws_s3_bucket[financials].versioning is undefined or null&#39;, but &#39;aws_s3_bucket[financials].versioning is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e44c5b31ab9-0f26-4a49-b8aa-4cc064392f4d">
+					<v:id>c5b31ab9-0f26-4a49-b8aa-4cc064392f4d</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Without Enabled MFA Delete]: Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.&#xA;Adding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 118, a result was found. &#39;&#39;mfa_delete&#39; is undefined or null&#39;, but &#39;&#39;mfa_delete&#39; is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e44c5b31ab9-0f26-4a49-b8aa-4cc064392f4d">
+					<v:id>c5b31ab9-0f26-4a49-b8aa-4cc064392f4d</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Without Enabled MFA Delete]: Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.&#xA;Adding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 95, a result was found. &#39;&#39;mfa_delete&#39; is undefined or null&#39;, but &#39;&#39;mfa_delete&#39; is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e44c5b31ab9-0f26-4a49-b8aa-4cc064392f4d">
+					<v:id>c5b31ab9-0f26-4a49-b8aa-4cc064392f4d</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Without Enabled MFA Delete]: Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.&#xA;Adding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;aws_s3_bucket[data].versioning is undefined or null&#39;, but &#39;aws_s3_bucket[data].versioning is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e44568a4d22-3517-44a6-a7ad-6a7eed88722c">
+					<v:id>568a4d22-3517-44a6-a7ad-6a7eed88722c</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Without Versioning]: S3 bucket should have versioning enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;versioning&#39; is undefined or null&#39;, but &#39;&#39;versioning&#39; is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e44568a4d22-3517-44a6-a7ad-6a7eed88722c">
+					<v:id>568a4d22-3517-44a6-a7ad-6a7eed88722c</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Without Versioning]: S3 bucket should have versioning enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 43, a result was found. &#39;&#39;versioning&#39; is undefined or null&#39;, but &#39;&#39;versioning&#39; is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e44f861041c-8c9f-4156-acfc-5e6e524f5884">
+					<v:id>f861041c-8c9f-4156-acfc-5e6e524f5884</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Logging Disabled]: S3 bucket without logging</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 115, a result was found. &#39;&#39;logging&#39; is undefined or null&#39;, but &#39;&#39;logging&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e44f861041c-8c9f-4156-acfc-5e6e524f5884">
+					<v:id>f861041c-8c9f-4156-acfc-5e6e524f5884</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Logging Disabled]: S3 bucket without logging</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 43, a result was found. &#39;&#39;logging&#39; is undefined or null&#39;, but &#39;&#39;logging&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e44f861041c-8c9f-4156-acfc-5e6e524f5884">
+					<v:id>f861041c-8c9f-4156-acfc-5e6e524f5884</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Logging Disabled]: S3 bucket without logging</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;logging&#39; is undefined or null&#39;, but &#39;&#39;logging&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/s3.tf@0.0.0-132a063c2e44f861041c-8c9f-4156-acfc-5e6e524f5884">
+					<v:id>f861041c-8c9f-4156-acfc-5e6e524f5884</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[S3 Bucket Logging Disabled]: S3 bucket without logging</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 66, a result was found. &#39;&#39;logging&#39; is undefined or null&#39;, but &#39;&#39;logging&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/azure/storage.tf@0.0.0-e3cc09ee2106">
+			<name>azure/storage.tf</name>
+			<version>0.0.0-e3cc09ee2106</version>
+			<hashes>
+				<hash alg="SHA-256">e3cc09ee21061c921dcddcaba9104eda7c629f21fe8ddb7dadf31082fe6cf72e</hash>
+			</hashes>
+			<purl>pkg:generic/azure/storage.tf@0.0.0-e3cc09ee2106</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/azure/storage.tf@0.0.0-e3cc09ee210612944ec4-1fa0-47be-8b17-42a034f937c2">
+					<v:id>12944ec4-1fa0-47be-8b17-42a034f937c2</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Storage Account Not Forcing HTTPS]: See that Storage Accounts forces the use of HTTPS</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 23, a result was found. &#39;&#39;azurerm_storage_account.example.enable_https_traffic_only&#39; does not exist&#39;, but &#39;&#39;azurerm_storage_account.example.enable_https_traffic_only&#39; equals &#39;true&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/storage.tf@0.0.0-e3cc09ee21065400f379-a347-4bdd-a032-446465fdcc6f">
+					<v:id>5400f379-a347-4bdd-a032-446465fdcc6f</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Trusted Microsoft Services Not Enabled]: Trusted MIcrosoft Services are not enabled for Storage Account access</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 23, a result was found. &#39;&#39;network_rules&#39; is undefined or null&#39;, but &#39;&#39;network_rules&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/storage.tf@0.0.0-e3cc09ee21065400f379-a347-4bdd-a032-446465fdcc6f">
+					<v:id>5400f379-a347-4bdd-a032-446465fdcc6f</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>High</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Trusted Microsoft Services Not Enabled]: Trusted MIcrosoft Services are not enabled for Storage Account access</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 68, a result was found. &#39;&#39;bypass&#39; does not contain &#39;AzureServices&#39;&#39;, but &#39;&#39;bypass&#39; contains &#39;AzureServices&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/storage.tf@0.0.0-e3cc09ee2106a99130ab-4c0e-43aa-97f8-78d4fcb30024">
+					<v:id>a99130ab-4c0e-43aa-97f8-78d4fcb30024</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Encryption On Managed Disk Disabled]: Ensure that the encryption is active on the disk</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 9, a result was found. &#39;azurerm_managed_disk[example].encryption_settings.enabled is false&#39;, but &#39;azurerm_managed_disk[example].encryption_settings.enabled is true &#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/storage.tf@0.0.0-e3cc09ee21068263f146-5e03-43e0-9cfe-db960d56d1e7">
+					<v:id>8263f146-5e03-43e0-9cfe-db960d56d1e7</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Storage Account Not Using Latest TLS Encryption Version]: Ensure Storage Account is using the latest version of TLS encryption</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 23, a result was found. &#39;&#39;azurerm_storage_account[example].min_tls_version&#39; is undefined or null&#39;, but &#39;&#39;azurerm_storage_account[example].min_tls_version&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/azure/aks.tf@0.0.0-15b64665afc0">
+			<name>azure/aks.tf</name>
+			<version>0.0.0-15b64665afc0</version>
+			<hashes>
+				<hash alg="SHA-256">15b64665afc0067b97bec93e762bb21238ad5ef4c82d8496c783ffcb92238a49</hash>
+			</hashes>
+			<purl>pkg:generic/azure/aks.tf@0.0.0-15b64665afc0</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/azure/aks.tf@0.0.0-15b64665afc0b17d8bb8-4c08-4785-867e-cb9e62a622aa">
+					<v:id>b17d8bb8-4c08-4785-867e-cb9e62a622aa</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[AKS Disk Encryption Set ID Undefined]: Azure Container Service (AKS) should use Disk Encryption Set ID</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;azurerm_kubernetes_cluster[k8s_cluster].disk_encryption_set_id&#39; is undefined or null&#39;, but &#39;&#39;azurerm_kubernetes_cluster[k8s_cluster].disk_encryption_set_id&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/aks.tf@0.0.0-15b64665afc0f5342045-b935-402d-adf1-8dbbd09c0eef">
+					<v:id>f5342045-b935-402d-adf1-8dbbd09c0eef</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[AKS Network Policy Misconfigured]: Check if the Azure Kubernetes Service doesn&#39;t have the proper network policy configuration.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;azurerm_kubernetes_cluster[k8s_cluster].network_profile&#39; is undefined&#39;, but &#39;&#39;azurerm_kubernetes_cluster[k8s_cluster].network_profile&#39; is set&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/aks.tf@0.0.0-15b64665afc086f92117-eed8-4614-9c6c-b26da20ff37f">
+					<v:id>86f92117-eed8-4614-9c6c-b26da20ff37f</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[AKS RBAC Disabled]: Azure Container Service (AKS) instance should have role-based access control (RBAC) enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 23, a result was found. &#39;&#39;azurerm_kubernetes_cluster[k8s_cluster].role_based_access_control.enabled&#39; is not set to true&#39;, but &#39;&#39;azurerm_kubernetes_cluster[k8s_cluster].role_based_access_control.enabled&#39; is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/aks.tf@0.0.0-15b64665afc0599318f2-6653-4569-9e21-041d06c63a89">
+					<v:id>599318f2-6653-4569-9e21-041d06c63a89</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[AKS Private Cluster Disabled]: Azure Kubernetes Service (AKS) API should not be exposed to the internet</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;azurerm_kubernetes_cluster[k8s_cluster].private_cluster_enabled&#39; is undefined&#39;, but &#39;&#39;azurerm_kubernetes_cluster[k8s_cluster].private_cluster_enabled&#39; is defined and set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/aks.tf@0.0.0-15b64665afc043789711-161b-4708-b5bb-9d1c626f7492">
+					<v:id>43789711-161b-4708-b5bb-9d1c626f7492</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[AKS Uses Azure Policies Add-On Disabled]: Azure Container Service (AKS) should use Azure Policies Add-On</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 14, a result was found. &#39;&#39;azurerm_kubernetes_cluster[k8s_cluster].addon_profile.azure_policy&#39; is undefined or null&#39;, but &#39;&#39;azurerm_kubernetes_cluster[k8s_cluster].addon_profile.azure_policy&#39; is defined and set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/aks.tf@0.0.0-15b64665afc061c3cb8b-0715-47e4-b788-86dde40dd2db">
+					<v:id>61c3cb8b-0715-47e4-b788-86dde40dd2db</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Dashboard Is Enabled]: Check if the Kubernetes Dashboard is enabled.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 19, a result was found. &#39;&#39;azurerm_kubernetes_cluster[k8s_cluster].addon_profile.kube_dashboard.enabled&#39; is true&#39;, but &#39;&#39;azurerm_kubernetes_cluster[k8s_cluster].addon_profile.kube_dashboard.enabled&#39; is false or undefined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/gcp/instances.tf@0.0.0-6f36eba23a40">
+			<name>gcp/instances.tf</name>
+			<version>0.0.0-6f36eba23a40</version>
+			<hashes>
+				<hash alg="SHA-256">6f36eba23a40d7a9f831fc66a03f3e9fdb84b3068094ff8987aa2c77f1564467</hash>
+			</hashes>
+			<purl>pkg:generic/gcp/instances.tf@0.0.0-6f36eba23a40</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/gcp/instances.tf@0.0.0-6f36eba23a40b1d51728-7270-4991-ac2f-fc26e2695b38">
+					<v:id>b1d51728-7270-4991-ac2f-fc26e2695b38</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Disk Encryption Disabled]: VM disks for critical VMs must be encrypted with Customer Supplied Encryption Keys (CSEK) or with Customer-managed encryption keys (CMEK), which means the attribute &#39;disk_encryption_key&#39; must be defined and its sub attributes &#39;raw_key&#39; or &#39;kms_key_self_link&#39; must also be defined</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 36, a result was found. &#39;&#39;google_compute_disk[unencrypted_disk].disk_encryption_key&#39; is undefined or null&#39;, but &#39;&#39;google_compute_disk[unencrypted_disk].disk_encryption_key&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/instances.tf@0.0.0-6f36eba23a40d0b4d550-c001-46c3-bbdb-d5d75d33f05f">
+					<v:id>d0b4d550-c001-46c3-bbdb-d5d75d33f05f</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[OSLogin Is Disabled For VM Instance]: Check if any VM instance disables OSLogin</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 21, a result was found. &#39;google_compute_instance[server].metadata.enable-oslogin is false&#39;, but &#39;google_compute_instance[server].metadata.enable-oslogin is true or undefined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/instances.tf@0.0.0-6f36eba23a403e4d5ce6-3280-4027-8010-c26eeea1ec01">
+					<v:id>3e4d5ce6-3280-4027-8010-c26eeea1ec01</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Project-wide SSH Keys Are Enabled In VM Instances]: VM Instance should block project-wide SSH keys</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 20, a result was found. &#39;google_compute_instance[server].metadata.block-project-ssh-keys is false&#39;, but &#39;google_compute_instance[server].metadata.block-project-ssh-keys is true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/instances.tf@0.0.0-6f36eba23a4097fa667a-d05b-4f16-9071-58b939f34751">
+					<v:id>97fa667a-d05b-4f16-9071-58b939f34751</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Serial Ports Are Enabled For VM Instances]: Check if VM instance enables serial ports</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 22, a result was found. &#39;google_compute_instance[server].metadata.serial-port-enable is true&#39;, but &#39;google_compute_instance[server].metadata.serial-port-enable is false or undefined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/instances.tf@0.0.0-6f36eba23a403cb4af0b-056d-4fb1-8b95-fdc4593625ff">
+					<v:id>3cb4af0b-056d-4fb1-8b95-fdc4593625ff</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Using Default Service Account]: Instances must not be configured to use the Default Service Account, that has full access to all Cloud APIs, which means the attribute &#39;service_account&#39; and its sub attribute &#39;email&#39; must be defined. Additionally, &#39;email&#39; must not be empty and must also not be a default Google Compute Engine service account.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 3, a result was found. &#39;&#39;google_compute_instance[server].service_account&#39; is undefined or null&#39;, but &#39;&#39;google_compute_instance[server].service_account&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/aws/ecr.tf@0.0.0-c252e1e539e6">
+			<name>aws/ecr.tf</name>
+			<version>0.0.0-c252e1e539e6</version>
+			<hashes>
+				<hash alg="SHA-256">c252e1e539e618626d9d133e0f6a6e264a66a411446709d0dfd2eae63a080a2d</hash>
+			</hashes>
+			<purl>pkg:generic/aws/ecr.tf@0.0.0-c252e1e539e6</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/aws/ecr.tf@0.0.0-c252e1e539e6d1846b12-20c5-4d45-8798-fc35b79268eb">
+					<v:id>d1846b12-20c5-4d45-8798-fc35b79268eb</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[ECR Image Tag Not Immutable]: ECR should have an image tag be immutable</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 3, a result was found. &#39;aws_ecr_repository.repository.image_tag_mutability is &#39;MUTABLE&#39;&#39;, but &#39;aws_ecr_repository.repository.image_tag_mutability is &#39;IMMUTABLE&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ecr.tf@0.0.0-c252e1e539e60e32d561-4b5a-4664-a6e3-a3fa85649157">
+					<v:id>0e32d561-4b5a-4664-a6e3-a3fa85649157</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[ECR Repository Not Encrypted]: ECR (Elastic Container Registry) Repository encryption should be set</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;The attribute &#39;encryption_configuration&#39; is undefined or null&#39;, but &#39;The attribute &#39;encryption_configuration&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ecr.tf@0.0.0-c252e1e539e69630336b-3fed-4096-8173-b9afdfe346a7">
+					<v:id>9630336b-3fed-4096-8173-b9afdfe346a7</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Unscanned ECR Image]: Checks if the ECR Image has been scanned</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;aws_ecr_repository[repository].image_scanning_configuration is undefined&#39;, but &#39;aws_ecr_repository[repository].image_scanning_configuration is defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/ecr.tf@0.0.0-c252e1e539e669e7c320-b65d-41bb-be02-d63ecc0bcc9d">
+					<v:id>69e7c320-b65d-41bb-be02-d63ecc0bcc9d</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[ECR Repository Without Policy]: ECR Repository should have Policies attached to it</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;aws_ecr_repository[repository] doesn&#39;t have policies attached&#39;, but &#39;aws_ecr_repository[repository] has policies attached&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/aws/es.tf@0.0.0-4c17ff08d480">
+			<name>aws/es.tf</name>
+			<version>0.0.0-4c17ff08d480</version>
+			<hashes>
+				<hash alg="SHA-256">4c17ff08d480322a586094e20c3dec9fe495817c2c4f0e86bb1aca80c19aa8bb</hash>
+			</hashes>
+			<purl>pkg:generic/aws/es.tf@0.0.0-4c17ff08d480</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/aws/es.tf@0.0.0-4c17ff08d48024e16922-4330-4e9d-be8a-caa90299466a">
+					<v:id>24e16922-4330-4e9d-be8a-caa90299466a</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[ElasticSearch Not Encrypted At Rest]: Check if ElasticSearch encryption is disabled at Rest</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;encrypt_at_rest&#39; is undefined&#39;, but &#39;&#39;encrypt_at_rest&#39; is set and enabled&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/es.tf@0.0.0-4c17ff08d480967eb3e6-26fc-497d-8895-6428beb6e8e2">
+					<v:id>967eb3e6-26fc-497d-8895-6428beb6e8e2</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Elasticsearch Domain Not Encrypted Node To Node]: Elasticsearch Domain encryption should be enabled node to node</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;The attribute &#39;node_to_node_encryption&#39; is undefined&#39;, but &#39;The attribute &#39;node_to_node_encryption&#39; is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/es.tf@0.0.0-4c17ff08d48016c4216a-50d3-4785-bfb2-4adb5144a8ba">
+					<v:id>16c4216a-50d3-4785-bfb2-4adb5144a8ba</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Elasticsearch Domain With Vulnerable Policy]: Elasticsearch Domain policy should avoid wildcard in &#39;Action&#39; and &#39;Principal&#39;.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 42, a result was found. &#39;aws_elasticsearch_domain_policy[monitoring-framework-policy].access_policies has wildcard in &#39;Action&#39; or &#39;Principal&#39;&#39;, but &#39;aws_elasticsearch_domain_policy[monitoring-framework-policy].access_policies does not have wildcard in &#39;Action&#39; and &#39;Principal&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/es.tf@0.0.0-4c17ff08d480acb6b4e2-a086-4f35-aefd-4db6ea51ada2">
+					<v:id>acb6b4e2-a086-4f35-aefd-4db6ea51ada2</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Elasticsearch Log is disabled]: AWS Elasticsearch should have logs enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;log_publishing_options&#39; is undefined or null&#39;, but &#39;&#39;log_publishing_options&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/es.tf@0.0.0-4c17ff08d4801e434b25-8763-4b00-a5ca-ca03b7abbb66">
+					<v:id>1e434b25-8763-4b00-a5ca-ca03b7abbb66</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Name Is Not Snake Case]: All names should follow snake case pattern.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 40, a result was found. &#39;&#39;monitoring-framework-policy&#39; is not in snake case&#39;, but &#39;All names should be on snake case pattern&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/es.tf@0.0.0-4c17ff08d4801e434b25-8763-4b00-a5ca-ca03b7abbb66">
+					<v:id>1e434b25-8763-4b00-a5ca-ca03b7abbb66</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Name Is Not Snake Case]: All names should follow snake case pattern.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;monitoring-framework&#39; is not in snake case&#39;, but &#39;All names should be on snake case pattern&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/azure/security_center.tf@0.0.0-852aad1e328a">
+			<name>azure/security_center.tf</name>
+			<version>0.0.0-852aad1e328a</version>
+			<hashes>
+				<hash alg="SHA-256">852aad1e328a563f96ebbe8b057878568404e4dafb044c65354018704dace351</hash>
+			</hashes>
+			<purl>pkg:generic/azure/security_center.tf@0.0.0-852aad1e328a</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/azure/security_center.tf@0.0.0-852aad1e328a9db38e87-f6aa-4b5e-a1ec-7266df259409">
+					<v:id>9db38e87-f6aa-4b5e-a1ec-7266df259409</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Email Alerts Disabled]: Make sure that alerts notifications are set to &#39;On&#39; in the Azure Security Center Contact</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 6, a result was found. &#39;&#39;azurerm_security_center_contact.contact.alert_notifications&#39; is false&#39;, but &#39;&#39;azurerm_security_center_contact.contact.alert_notifications&#39; is true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/security_center.tf@0.0.0-852aad1e328a819d50fd-1cdf-45c3-9936-be408aaad93e">
+					<v:id>819d50fd-1cdf-45c3-9936-be408aaad93e</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Security Center Pricing Tier Is Not Standard]: Make sure that the &#39;Standard&#39; pricing tiers were selected.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 2, a result was found. &#39;&#39;azurerm_security_center_subscription_pricing.pricing.tier&#39; is &#39;Free&#39;&#39;, but &#39;&#39;azurerm_security_center_subscription_pricing.pricing.tier&#39; is &#39;Standard&#39;&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/gcp/networks.tf@0.0.0-ec7177bcb4e8">
+			<name>gcp/networks.tf</name>
+			<version>0.0.0-ec7177bcb4e8</version>
+			<hashes>
+				<hash alg="SHA-256">ec7177bcb4e837ef9a2835794852dfe74f959e698399cffd6d80263332f7b229</hash>
+			</hashes>
+			<purl>pkg:generic/gcp/networks.tf@0.0.0-ec7177bcb4e8</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/gcp/networks.tf@0.0.0-ec7177bcb4e822ef1d26-80f8-4a6c-8c15-f35aab3cac78">
+					<v:id>22ef1d26-80f8-4a6c-8c15-f35aab3cac78</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Google Compute Network Using Firewall Rule that Allows All Ports]: Google Compute Network should not use a firewall rule that allows all ports</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;google_compute_network[vpc]&#39; is using a firewall rule that allows access to all ports&#39;, but &#39;&#39;google_compute_network[vpc]&#39; is not using a firewall rule that allows access to all ports&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/networks.tf@0.0.0-ec7177bcb4e840430747-442d-450a-a34f-dc57149f4609">
+					<v:id>40430747-442d-450a-a34f-dc57149f4609</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Google Compute Subnetwork Logging Disabled]: This query checks if logs are enabled for a Google Compute Subnetwork resource.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 7, a result was found. &#39;&#39;google_compute_subnetwork[public-subnetwork].log_config&#39; is undefined or null&#39;, but &#39;&#39;google_compute_subnetwork[public-subnetwork].log_config&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/networks.tf@0.0.0-ec7177bcb4e8678fd659-96f2-454a-a2a0-c2571f83a4a3">
+					<v:id>678fd659-96f2-454a-a2a0-c2571f83a4a3</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[RDP Access Is Not Restricted]: Check if Google Firewall ingress allows RDP access (port 3389)</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 25, a result was found. &#39;&#39;google_compute_firewall[allow_all].allow.ports&#39; includes RDP port 3389&#39;, but &#39;&#39;google_compute_firewall[allow_all].allow.ports&#39; does not include RDP port 3389&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/networks.tf@0.0.0-ec7177bcb4e8c4dcdcdf-10dd-4bf4-b4a0-8f6239e6aaa0">
+					<v:id>c4dcdcdf-10dd-4bf4-b4a0-8f6239e6aaa0</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[SSH Access Is Not Restricted]: Check if Google Firewall allows SSH access (port 22) from the Internet (public CIDR block)</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 25, a result was found. &#39;&#39;google_compute_firewall[allow_all].allow.ports&#39; includes SSH port 22&#39;, but &#39;&#39;google_compute_firewall[allow_all].allow.ports&#39; does not include SSH port 22&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/networks.tf@0.0.0-ec7177bcb4e8ee7b93c1-b3f8-4a3b-9588-146d481814f5">
+					<v:id>ee7b93c1-b3f8-4a3b-9588-146d481814f5</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Low</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Google Compute Subnetwork with Private Google Access Disabled]: Google Compute Subnetwork should have &#39;private_ip_google_access&#39; set to true</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 7, a result was found. &#39;&#39;google_compute_subnetwork[public-subnetwork].private_ip_google_access&#39; is undefined or null&#39;, but &#39;&#39;google_compute_subnetwork[public-subnetwork].private_ip_google_access&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/networks.tf@0.0.0-ec7177bcb4e81e434b25-8763-4b00-a5ca-ca03b7abbb66">
+					<v:id>1e434b25-8763-4b00-a5ca-ca03b7abbb66</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Name Is Not Snake Case]: All names should follow snake case pattern.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 7, a result was found. &#39;&#39;public-subnetwork&#39; is not in snake case&#39;, but &#39;All names should be on snake case pattern&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/aws/neptune.tf@0.0.0-c743ca589b3c">
+			<name>aws/neptune.tf</name>
+			<version>0.0.0-c743ca589b3c</version>
+			<hashes>
+				<hash alg="SHA-256">c743ca589b3c3ca0fa311ec9fc0c135233852314b0c2aea0a0bf6ed5203a2d6c</hash>
+			</hashes>
+			<purl>pkg:generic/aws/neptune.tf@0.0.0-c743ca589b3c</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/aws/neptune.tf@0.0.0-c743ca589b3cc91d7ea0-d4d1-403b-8fe1-c9961ac082c5">
+					<v:id>c91d7ea0-d4d1-403b-8fe1-c9961ac082c5</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Neptune Cluster With IAM Database Authentication Disabled]: Neptune Cluster should have IAM Database Authentication enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 7, a result was found. &#39;&#39;iam_database_authentication_enabled&#39; is set to false&#39;, but &#39;&#39;iam_database_authentication_enabled&#39; is set to true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/neptune.tf@0.0.0-c743ca589b3c98d59056-f745-4ef5-8613-32bca8d40b7e">
+					<v:id>98d59056-f745-4ef5-8613-32bca8d40b7e</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Neptune Database Cluster Encryption Disabled]: Check if Neptune Cluster Storage is securely encrypted</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 9, a result was found. &#39;&#39;storage_encrypted&#39; is false&#39;, but &#39;&#39;storage_encrypted&#39; should be true&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/neptune.tf@0.0.0-c743ca589b3c45cff7b6-3b80-40c1-ba7b-2cf480678bb8">
+					<v:id>45cff7b6-3b80-40c1-ba7b-2cf480678bb8</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Neptune Logging Is Disabled]: Neptune logging should be enabled</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;aws_neptune_cluster.enable_cloudwatch_logs_exports is undefined&#39;, but &#39;aws_neptune_cluster.enable_cloudwatch_logs_exports is defined&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/azure/roles.tf@0.0.0-81e2411d8f58">
+			<name>azure/roles.tf</name>
+			<version>0.0.0-81e2411d8f58</version>
+			<hashes>
+				<hash alg="SHA-256">81e2411d8f58bb3a18e02b14714b53721eeec6da7ae586a129b0ee3ee344bcdb</hash>
+			</hashes>
+			<purl>pkg:generic/azure/roles.tf@0.0.0-81e2411d8f58</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/azure/roles.tf@0.0.0-81e2411d8f583fa5900f-9aac-4982-96b2-a6143d9c99fb">
+					<v:id>3fa5900f-9aac-4982-96b2-a6143d9c99fb</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Role Definition Allows Custom Role Creation]: Role Definition should not allow custom role creation</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 9, a result was found. &#39;azurerm_role_definition[example].permissions.actions allows custom role creation&#39;, but &#39;azurerm_role_definition[example].permissions.actions does not allow custom role creation&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/azure/logging.tf@0.0.0-e545d63c8e29">
+			<name>azure/logging.tf</name>
+			<version>0.0.0-e545d63c8e29</version>
+			<hashes>
+				<hash alg="SHA-256">e545d63c8e29f32169d9ad5c0b26e39db9de31e14fce3c0299314a7f75bd9a46</hash>
+			</hashes>
+			<purl>pkg:generic/azure/logging.tf@0.0.0-e545d63c8e29</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/azure/logging.tf@0.0.0-e545d63c8e292b856bf9-8e8c-4005-875f-303a8cba3918">
+					<v:id>2b856bf9-8e8c-4005-875f-303a8cba3918</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Small Activity Log Retention Period]: Ensure that Activity Log Retention is set 365 days or greater</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 8, a result was found. &#39;&#39;azurerm_monitor_log_profile[logging_profile].retention_policy.days&#39; is lesser than 365 days or different than 0 (indefinitely)&#39;, but &#39;&#39;azurerm_monitor_log_profile[logging_profile].retention_policy.days&#39; is greater than or equal to 365 days or 0 (indefinitely)&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/azure/application_gateway.tf@0.0.0-33feb153207c">
+			<name>azure/application_gateway.tf</name>
+			<version>0.0.0-33feb153207c</version>
+			<hashes>
+				<hash alg="SHA-256">33feb153207c06422c333e7e811515ea39609ee1a5170b64f5db248bf79c29e8</hash>
+			</hashes>
+			<purl>pkg:generic/azure/application_gateway.tf@0.0.0-33feb153207c</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/azure/application_gateway.tf@0.0.0-33feb153207c2e48d91c-50e4-45c8-9312-27b625868a72">
+					<v:id>2e48d91c-50e4-45c8-9312-27b625868a72</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>Medium</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[WAF Is Disabled For Azure Application Gateway]: Check if Web Application Firewall is disabled or not configured for Azure&#39;s Application Gateway.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;azurerm_application_gateway[network]&#39; is undefined&#39;, but &#39;&#39;azurerm_application_gateway[network]&#39; is set&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/aws/elb.tf@0.0.0-2c85b9cd746c">
+			<name>aws/elb.tf</name>
+			<version>0.0.0-2c85b9cd746c</version>
+			<hashes>
+				<hash alg="SHA-256">2c85b9cd746c3895765514328fdc40c9266e06c2e7300e9728bfc0cacf05ff59</hash>
+			</hashes>
+			<purl>pkg:generic/aws/elb.tf@0.0.0-2c85b9cd746c</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/aws/elb.tf@0.0.0-2c85b9cd746c20018359-6fd7-4d05-ab26-d4dffccbdf79">
+					<v:id>20018359-6fd7-4d05-ab26-d4dffccbdf79</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[ELB Access Logging Disabled]: ELB should have logging enabled to help on error investigation</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 2, a result was found. &#39;&#39;aws_elb[{{weblb}}].access_logs&#39; is undefined or null&#39;, but &#39;&#39;aws_elb[{{weblb}}].access_logs&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/azure/policies.tf@0.0.0-e2b05b9752d0">
+			<name>azure/policies.tf</name>
+			<version>0.0.0-e2b05b9752d0</version>
+			<hashes>
+				<hash alg="SHA-256">e2b05b9752d012d94009bc62602f611ce9326addd4f03a0dbb18cdd05d3785e5</hash>
+			</hashes>
+			<purl>pkg:generic/azure/policies.tf@0.0.0-e2b05b9752d0</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/azure/policies.tf@0.0.0-e2b05b9752d01e434b25-8763-4b00-a5ca-ca03b7abbb66">
+					<v:id>1e434b25-8763-4b00-a5ca-ca03b7abbb66</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Name Is Not Snake Case]: All names should follow snake case pattern.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 1, a result was found. &#39;&#39;policy-res&#39; is not in snake case&#39;, but &#39;All names should be on snake case pattern&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/gcp/variables.tf@0.0.0-b9aea0cb10dc">
+			<name>gcp/variables.tf</name>
+			<version>0.0.0-b9aea0cb10dc</version>
+			<hashes>
+				<hash alg="SHA-256">b9aea0cb10dce3155753978a5473687e93d7bad9f411b1ccdec6eb0e14f7bcc0</hash>
+			</hashes>
+			<purl>pkg:generic/gcp/variables.tf@0.0.0-b9aea0cb10dc</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/gcp/variables.tf@0.0.0-b9aea0cb10dc2a153952-2544-4687-bcc9-cc8fea814a9b">
+					<v:id>2a153952-2544-4687-bcc9-cc8fea814a9b</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Variable Without Description]: All variables should contain a valid description.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 11, a result was found. &#39;&#39;description&#39; is undefined or null&#39;, but &#39;&#39;description&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/gcp/variables.tf@0.0.0-b9aea0cb10dcfc5109bf-01fd-49fb-8bde-4492b543c34a">
+					<v:id>fc5109bf-01fd-49fb-8bde-4492b543c34a</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Variable Without Type]: All variables should contain a valid type.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 16, a result was found. &#39;&#39;type&#39; is undefined or null&#39;, but &#39;&#39;type&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/aws/consts.tf@0.0.0-517810c10505">
+			<name>aws/consts.tf</name>
+			<version>0.0.0-517810c10505</version>
+			<hashes>
+				<hash alg="SHA-256">517810c105054c1a64b8e58dafd4edc3ae958fa0416869cc5a64c742ea9c546a</hash>
+			</hashes>
+			<purl>pkg:generic/aws/consts.tf@0.0.0-517810c10505</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/aws/consts.tf@0.0.0-517810c105052a153952-2544-4687-bcc9-cc8fea814a9b">
+					<v:id>2a153952-2544-4687-bcc9-cc8fea814a9b</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Variable Without Description]: All variables should contain a valid description.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 4, a result was found. &#39;&#39;description&#39; is undefined or null&#39;, but &#39;&#39;description&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/consts.tf@0.0.0-517810c105052a153952-2544-4687-bcc9-cc8fea814a9b">
+					<v:id>2a153952-2544-4687-bcc9-cc8fea814a9b</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Variable Without Description]: All variables should contain a valid description.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 28, a result was found. &#39;&#39;description&#39; is undefined or null&#39;, but &#39;&#39;description&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/consts.tf@0.0.0-517810c105052a153952-2544-4687-bcc9-cc8fea814a9b">
+					<v:id>2a153952-2544-4687-bcc9-cc8fea814a9b</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Variable Without Description]: All variables should contain a valid description.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 20, a result was found. &#39;&#39;description&#39; is undefined or null&#39;, but &#39;&#39;description&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/consts.tf@0.0.0-517810c105052a153952-2544-4687-bcc9-cc8fea814a9b">
+					<v:id>2a153952-2544-4687-bcc9-cc8fea814a9b</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Variable Without Description]: All variables should contain a valid description.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 8, a result was found. &#39;&#39;description&#39; is undefined or null&#39;, but &#39;&#39;description&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/consts.tf@0.0.0-517810c105052a153952-2544-4687-bcc9-cc8fea814a9b">
+					<v:id>2a153952-2544-4687-bcc9-cc8fea814a9b</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Variable Without Description]: All variables should contain a valid description.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 24, a result was found. &#39;&#39;description&#39; is undefined or null&#39;, but &#39;&#39;description&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/consts.tf@0.0.0-517810c10505fc5109bf-01fd-49fb-8bde-4492b543c34a">
+					<v:id>fc5109bf-01fd-49fb-8bde-4492b543c34a</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Variable Without Type]: All variables should contain a valid type.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 24, a result was found. &#39;&#39;type&#39; is undefined or null&#39;, but &#39;&#39;type&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/consts.tf@0.0.0-517810c10505fc5109bf-01fd-49fb-8bde-4492b543c34a">
+					<v:id>fc5109bf-01fd-49fb-8bde-4492b543c34a</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Variable Without Type]: All variables should contain a valid type.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 8, a result was found. &#39;&#39;type&#39; is undefined or null&#39;, but &#39;&#39;type&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/consts.tf@0.0.0-517810c10505fc5109bf-01fd-49fb-8bde-4492b543c34a">
+					<v:id>fc5109bf-01fd-49fb-8bde-4492b543c34a</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Variable Without Type]: All variables should contain a valid type.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 4, a result was found. &#39;&#39;type&#39; is undefined or null&#39;, but &#39;&#39;type&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/aws/consts.tf@0.0.0-517810c10505fc5109bf-01fd-49fb-8bde-4492b543c34a">
+					<v:id>fc5109bf-01fd-49fb-8bde-4492b543c34a</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Variable Without Type]: All variables should contain a valid type.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 20, a result was found. &#39;&#39;type&#39; is undefined or null&#39;, but &#39;&#39;type&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+		<component type="file" bom-ref="pkg:generic/azure/variables.tf@0.0.0-b829de444fb1">
+			<name>azure/variables.tf</name>
+			<version>0.0.0-b829de444fb1</version>
+			<hashes>
+				<hash alg="SHA-256">b829de444fb18b57fd54764f40d3e379aafa57bd0321eb86369f285e37fa1c60</hash>
+			</hashes>
+			<purl>pkg:generic/azure/variables.tf@0.0.0-b829de444fb1</purl>
+			<v:vulnerabilities>
+				<v:vulnerability ref="pkg:generic/azure/variables.tf@0.0.0-b829de444fb12a153952-2544-4687-bcc9-cc8fea814a9b">
+					<v:id>2a153952-2544-4687-bcc9-cc8fea814a9b</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Variable Without Description]: All variables should contain a valid description.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 7, a result was found. &#39;&#39;description&#39; is undefined or null&#39;, but &#39;&#39;description&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+				<v:vulnerability ref="pkg:generic/azure/variables.tf@0.0.0-b829de444fb1fc5109bf-01fd-49fb-8bde-4492b543c34a">
+					<v:id>fc5109bf-01fd-49fb-8bde-4492b543c34a</v:id>
+					<v:source>
+						<name>KICS</name>
+						<url>https://kics.io/</url>
+					</v:source>
+					<v:ratings>
+						<v:rating>
+							<v:severity>None</v:severity>
+							<v:method>Other</v:method>
+						</v:rating>
+					</v:ratings>
+					<v:description>[Terraform].[Variable Without Type]: All variables should contain a valid type.</v:description>
+					<v:recommendations>
+						<v:recommendation>
+							<Recommendation>In line 12, a result was found. &#39;&#39;type&#39; is undefined or null&#39;, but &#39;&#39;type&#39; is defined and not null&#39;</Recommendation>
+						</v:recommendation>
+					</v:recommendations>
+				</v:vulnerability>
+			</v:vulnerabilities>
+		</component>
+	</components>
+</bom>

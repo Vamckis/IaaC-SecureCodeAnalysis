@@ -1,0 +1,3837 @@
+{
+	"kics_version": "1.5.1",
+	"files_scanned": 37,
+	"files_parsed": 37,
+	"files_failed_to_scan": 0,
+	"queries_total": 909,
+	"queries_failed_to_execute": 0,
+	"queries_failed_to_compute_similarity_id": 0,
+	"scan_id": "console",
+	"severity_counters": {
+		"HIGH": 74,
+		"INFO": 43,
+		"LOW": 21,
+		"MEDIUM": 53,
+		"TRACE": 0
+	},
+	"total_counter": 191,
+	"total_bom_resources": 0,
+	"start": "2022-11-01T12:37:02.632466+05:30",
+	"end": "2022-11-01T12:37:15.730825+05:30",
+	"paths": [
+		"."
+	],
+	"queries": [
+		{
+			"query_name": "AD Admin Not Configured For SQL Server",
+			"query_id": "a3a055d2-9a2e-4cc9-b9fb-12850a1a3a4b",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/sql_active_directory_administrator",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Insecure Configurations",
+			"description": "The Active Directory Administrator is not configured for a SQL server",
+			"description_id": "bccbda19",
+			"files": [
+				{
+					"file_name": "azure/sql.tf",
+					"similarity_id": "80c80ca05c3cd6fdddc808e042d3a404aee120a7419d89649c909409d6235614",
+					"line": 9,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_sql_server[example]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "A 'azurerm_sql_active_directory_administrator' is defined for 'azurerm_sql_server[example]'",
+					"actual_value": "A 'azurerm_sql_active_directory_administrator' is not defined for 'azurerm_sql_server[example]'"
+				}
+			]
+		},
+		{
+			"query_name": "App Service Managed Identity Disabled",
+			"query_id": "b61cce4b-0cc4-472b-8096-15617a6d769b",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#identity",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Resource Management",
+			"description": "Azure App Service should have managed identity enabled",
+			"description_id": "c8096e2d",
+			"files": [
+				{
+					"file_name": "azure/app_service.tf",
+					"similarity_id": "a1500eb974c3924ae5bcb513c42cd9df1bd405155c2123a13c98c50b70b1e27f",
+					"line": 22,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_app_service[app-service1]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_app_service[app-service1].identity' is defined and not null",
+					"actual_value": "'azurerm_app_service[app-service1].identity' is undefined or null"
+				},
+				{
+					"file_name": "azure/app_service.tf",
+					"similarity_id": "df386e73852102d2ba5330d00afd6d182da0106773c91cdb7f6438b48eb93f1e",
+					"line": 43,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_app_service[app-service2]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_app_service[app-service2].identity' is defined and not null",
+					"actual_value": "'azurerm_app_service[app-service2].identity' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "App Service Not Using Latest TLS Encryption Version",
+			"query_id": "b7b9d1c7-2d3b-49b4-b867-ebbe68d0b643",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#min_tls_version",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Encryption",
+			"description": "Ensure App Service is using the latest version of TLS encryption",
+			"description_id": "63399f46",
+			"files": [
+				{
+					"file_name": "azure/app_service.tf",
+					"similarity_id": "4a63a09f4d42757a0021e8a7628b2d3e2d019d1e56d0151c3f0f4ae22371f46e",
+					"line": 29,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_app_service[app-service1].site_config.min_tls_version",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_app_service[app-service1].site_config.min_tls_version' is set to '1.2'",
+					"actual_value": "'azurerm_app_service[app-service1].site_config.min_tls_version' is not set to '1.2'"
+				}
+			]
+		},
+		{
+			"query_name": "Authentication Without MFA",
+			"query_id": "3ddfa124-6407-4845-a501-179f90c65097",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_policy",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Insecure Configurations",
+			"description": "Users should authenticate with MFA (Multi-factor Authentication)",
+			"description_id": "0db1a4b2",
+			"cis_description_id": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 1.10",
+			"cis_description_title": "Ensure multi-factor authentication (MFA) is enabled for all IAM users that have a console password",
+			"cis_description_text": "Multi-Factor Authentication (MFA) adds an extra layer of authentication assurance beyond traditional credentials. With MFA enabled, when a user signs in to the AWS Console, they will be prompted for their user name and password as well as for an authentication code from their physical or virtual MFA token. It is recommended that MFA be enabled for all accounts that have a console password.\nEnabling MFA provides increased security for console access as it requires the authenticating principal to possess a device that displays a time-sensitive key and have knowledge of a credential.",
+			"files": [
+				{
+					"file_name": "aws/iam.tf",
+					"similarity_id": "4d5f6a20a8c5f1dd85638933961b4724117e1c87968d62a021a63aae9d812a33",
+					"line": 29,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_iam_user_policy[userpolicy].policy",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "The attributes 'policy.Statement.Condition', 'policy.Statement.Condition.BoolIfExists', and 'policy.Statement.Condition.BoolIfExists.aws:MultiFactorAuthPresent' are defined and not null",
+					"actual_value": "The attribute(s) 'policy.Statement.Condition' or/and 'policy.Statement.Condition.BoolIfExists' or/and 'policy.Statement.Condition.BoolIfExists.aws:MultiFactorAuthPresent' is/are undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Azure App Service Client Certificate Disabled",
+			"query_id": "a81573f9-3691-4d83-88a0-7d4af63e17a3",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#client_cert_enabled",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Networking and Firewall",
+			"description": "Azure App Service client certificate should be enabled",
+			"description_id": "7beaf18e",
+			"files": [
+				{
+					"file_name": "azure/app_service.tf",
+					"similarity_id": "132afac336f5533a6841eb045d224cb5027662480f80a976d631812268173ccb",
+					"line": 43,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_app_service[app-service2]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_app_service[app-service2].client_cert_enabled' is defined",
+					"actual_value": "'azurerm_app_service[app-service2].client_cert_enabeld' is undefined"
+				},
+				{
+					"file_name": "azure/app_service.tf",
+					"similarity_id": "71469ea63313714860346c23af7a1508f3e1be9cf745da6492ff1ac9752c1e3b",
+					"line": 22,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_app_service[app-service1]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_app_service[app-service1].client_cert_enabled' is defined",
+					"actual_value": "'azurerm_app_service[app-service1].client_cert_enabeld' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "BigQuery Dataset Is Public",
+			"query_id": "e576ce44-dd03-4022-a8c0-3906acca2ab4",
+			"query_url": "https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Access Control",
+			"description": "BigQuery dataset is anonymously or publicly accessible",
+			"description_id": "cb5081a0",
+			"files": [
+				{
+					"file_name": "gcp/big_data.tf",
+					"similarity_id": "25aaa3a42a100e6379339e0ca390792f02d858742bf25e7ffaf4da22279da92b",
+					"line": 24,
+					"issue_type": "IncorrectValue",
+					"search_key": "google_bigquery_dataset[dataset].access.special_group",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'access.special_group' is not equal to 'allAuthenticatedUsers'",
+					"actual_value": "'access.special_group' is equal to 'allAuthenticatedUsers'"
+				}
+			]
+		},
+		{
+			"query_name": "CMK Rotation Disabled",
+			"query_id": "22fbfeac-7b5a-421a-8a27-7a2178bb910b",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key#enable_key_rotation",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Observability",
+			"description": "Customer Master Keys (CMK) must have rotation enabled, which means the attribute 'enable_key_rotation' must be set to 'true' when the key is enabled.",
+			"description_id": "64cfa70f",
+			"cis_description_id": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 3.8",
+			"cis_description_title": "Ensure rotation for customer created CMKs is enabled",
+			"cis_description_text": "AWS Key Management Service (KMS) allows customers to rotate the backing key which is key material stored within the KMS which is tied to the key ID of the Customer Created customer master key (CMK). It is the backing key that is used to perform cryptographic operations such as encryption and decryption. Automated key rotation currently retains all prior backing keys so that decryption of encrypted data can take place transparently. It is recommended that CMK key rotation be enabled.\nRotating encryption keys helps reduce the potential impact of a compromised key as data encrypted with a new key cannot be accessed with a previous key that may have been exposed.",
+			"files": [
+				{
+					"file_name": "aws/kms.tf",
+					"similarity_id": "6ff3c4ad4dfad1d926a0aeee6a3ae3d3d33b5572dc823b2480e6c77041a4f057",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_kms_key[logs_key]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_kms_key[logs_key].enable_key_rotation is set to true",
+					"actual_value": "aws_kms_key[logs_key].enable_key_rotation is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "COS Node Image Not Used",
+			"query_id": "8a893e46-e267-485a-8690-51f39951de58",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_node_pool#node_config",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "The node image should be Container-Optimized OS(COS)",
+			"description_id": "4bdfef01",
+			"files": [
+				{
+					"file_name": "gcp/gke.tf",
+					"similarity_id": "01911cc291d98225a30163a7b0237eb22b9e83f3283e8c604cf43a0cc68c6881",
+					"line": 29,
+					"issue_type": "IncorrectValue",
+					"search_key": "google_container_node_pool[custom_node_pool].node_config.image_type",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'node_config.image_type' should start with 'COS'",
+					"actual_value": "'node_config.image_type' does not start with 'COS'"
+				}
+			]
+		},
+		{
+			"query_name": "Client Certificate Disabled",
+			"query_id": "73fb21a1-b19a-45b1-b648-b47b1678681e",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "Kubernetes Clusters must be created with Client Certificate enabled, which means 'master_auth' must have 'client_certificate_config' with the attribute 'issue_client_certificate' equal to true",
+			"description_id": "94728b0c",
+			"files": [
+				{
+					"file_name": "gcp/gke.tf",
+					"similarity_id": "99a9cc093a629375cc470e0d701c054c576f6b4f6a5e94c8c46c08f5197c42c1",
+					"line": 6,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_container_cluster[workload_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Attribute 'master_auth' is defined",
+					"actual_value": "Attribute 'master_auth' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "Cloud Storage Bucket Logging Not Enabled",
+			"query_id": "d6cabc3a-d57e-48c2-b341-bf3dd4f4a120",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket#log_bucket",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Observability",
+			"description": "Cloud storage bucket with logging not enabled",
+			"description_id": "9e9984aa",
+			"files": [
+				{
+					"file_name": "gcp/gcs.tf",
+					"similarity_id": "2fae46cc78fde3fe8210cdf5e83298bc00fa337990c7ecaa5c89ce2efc1b649d",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_storage_bucket[terragoat_website]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'google_storage_bucket.logging' is set",
+					"actual_value": "'google_storage_bucket.logging' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "Cloud Storage Bucket Versioning Disabled",
+			"query_id": "e7e961ac-d17e-4413-84bc-8a1fbe242944",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket#enabled",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Observability",
+			"description": "Object Versioning Not Enabled on Cloud Storage Bucket",
+			"description_id": "9fda4554",
+			"files": [
+				{
+					"file_name": "gcp/gcs.tf",
+					"similarity_id": "62ca78c80512f28793829fb0bb6a6717d2b1438bd666160ce722ce543e9ee3ca",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_storage_bucket[terragoat_website]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'versioning' is defined and not null",
+					"actual_value": "'versioning' it undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Cluster Labels Disabled",
+			"query_id": "65c1bc7a-4835-4ac4-a2b6-13d310b0648d",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "Kubernetes Clusters must be configured with labels, which means the attribute 'resource_labels' must be defined",
+			"description_id": "947385a5",
+			"files": [
+				{
+					"file_name": "gcp/gke.tf",
+					"similarity_id": "a851617e0d4ed5739442cc67208723f08ca4b1dc172cf1097d83e9662bf0223a",
+					"line": 6,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_container_cluster[workload_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Attribute 'resource_labels' is defined",
+					"actual_value": "Attribute 'resource_labels' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "Cluster Master Authentication Disabled",
+			"query_id": "1baba08e-3c8a-4be7-95eb-dced5833de21",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "Kubernetes Engine Clusters must have Master Authentication set to enabled, which means the attribute 'master_auth' must have the subattributes 'username' and 'password' defined and not empty",
+			"description_id": "70e5d429",
+			"files": [
+				{
+					"file_name": "gcp/gke.tf",
+					"similarity_id": "925b421451366ca4912d9f5e97c36496b574cb0f2c87138f63e749ca70d3d91b",
+					"line": 6,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_container_cluster[workload_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Attribute 'master_auth' is defined",
+					"actual_value": "Attribute 'master_auth' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "DB Instance Publicly Accessible",
+			"query_id": "35113e6f-2c6b-414d-beec-7a9482d3b2d1",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance#publicly_accessible",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Insecure Configurations",
+			"description": "The field 'publicly_accessible' should not be set to 'true' (default is 'false').",
+			"description_id": "c145a47f",
+			"files": [
+				{
+					"file_name": "aws/db-app.tf",
+					"similarity_id": "e6dc9861fc4076b5aae13a3c2161c9c757c7c2d5dda3aca87847923dba6f52b0",
+					"line": 21,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_db_instance[default].publicly_accessible",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'publicly_accessible' is set to false or undefined",
+					"actual_value": "'publicly_accessible' is set to true"
+				}
+			]
+		},
+		{
+			"query_name": "DB Instance Storage Not Encrypted",
+			"query_id": "08bd0760-8752-44e1-9779-7bb369b2b4e4",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance#storage_encrypted",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Encryption",
+			"description": "The parameter storage_encrypted in aws_db_instance must be set to 'true' (the default is 'false').",
+			"description_id": "88ca11bc",
+			"files": [
+				{
+					"file_name": "aws/db-app.tf",
+					"similarity_id": "296b51e6a17fcefea9f6af5b26e22171fdb7a3ca33eb532e3517d9df23ee38e2",
+					"line": 18,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_db_instance[default].storage_encrypted",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'storage_encrypted' is set to true",
+					"actual_value": "'storage_encrypted' is set to false"
+				}
+			]
+		},
+		{
+			"query_name": "EBS Volume Snapshot Not Encrypted",
+			"query_id": "e6b4b943-6883-47a9-9739-7ada9568f8ca",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ebs_snapshot#encrypted",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Encryption",
+			"description": "The value on AWS EBS Volume Snapshot Encryptation must be true",
+			"description_id": "b36765a7",
+			"files": [
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "7d807dac6b95b20da83e28e951180ac11e5923cbea1423a3b045ef10d5d86868",
+					"line": 53,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_ebs_snapshot[example_snapshot]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'aws_ebs_volume[web_host_storage].encrypted' associated with aws_ebs_snapshot[example_snapshot] is set",
+					"actual_value": "'aws_ebs_volume[web_host_storage].encrypted' associated with aws_ebs_snapshot[example_snapshot] is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "EC2 Instance Has Public IP",
+			"query_id": "5a2486aa-facf-477d-a5c1-b010789459ce",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#associate_public_ip_address",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Networking and Firewall",
+			"description": "EC2 Instance should not have a public IP address.",
+			"description_id": "c6f1d1f4",
+			"files": [
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "2eda40bfe4404b2f2267af7cf8d8d5213ab581155382af9ac6daf8e2cfae997e",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_instance.web_host",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'associate_public_ip_address' is defined and not null",
+					"actual_value": "'associate_public_ip_address' is undefined or null"
+				},
+				{
+					"file_name": "aws/db-app.tf",
+					"similarity_id": "44b31b1a83538fca76f0a8dcb0dbeb8db6dc75cb4070889c7f873bd92d3902f1",
+					"line": 242,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_instance.db_app",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'associate_public_ip_address' is defined and not null",
+					"actual_value": "'associate_public_ip_address' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "EKS Cluster Encryption Disabled",
+			"query_id": "63ebcb19-2739-4d3f-aa5c-e8bbb9b85281",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster#encryption_config",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Encryption",
+			"description": "EKS Cluster should be encrypted",
+			"description_id": "0a928b22",
+			"files": [
+				{
+					"file_name": "aws/eks.tf",
+					"similarity_id": "3b2a1c49d17df5f6e11b9f67bdcc1211181aeafecf9543242ccf830dafaf7051",
+					"line": 117,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_eks_cluster[eks_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'encryption_config' is defined and not null",
+					"actual_value": "'encryption_config' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "GKE Basic Authentication Enabled",
+			"query_id": "70cdf849-b7d9-4569-b87d-5d82ffd44719",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "GCP - Google Kubernetes Engine (GKE) Basic Authentication must be disabled, which means the username and password provided in the master_auth block must be empty",
+			"description_id": "c59b567e",
+			"files": [
+				{
+					"file_name": "gcp/gke.tf",
+					"similarity_id": "2123a2a342f3cc8cc29d7be7c7fafb7071c570bc52db491fd05bf1f3a862489d",
+					"line": 6,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_container_cluster[workload_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Attribute 'master_auth' is defined",
+					"actual_value": "Attribute 'master_auth' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "GKE Legacy Authorization Enabled",
+			"query_id": "5baa92d2-d8ee-4c75-88a4-52d9d8bb8067",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "Kubernetes Engine Clusters must have Legacy Authorization set to disabled, which means the attribute 'enable_legacy_abac' must not be true",
+			"description_id": "a2e814bc",
+			"files": [
+				{
+					"file_name": "gcp/gke.tf",
+					"similarity_id": "ac62823057be3c9081e54a1bbd50052a51f32e1ef97dcb92eb54f277658d88a6",
+					"line": 12,
+					"issue_type": "IncorrectValue",
+					"search_key": "google_container_cluster[workload_cluster].enable_legacy_abac",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Attribute 'enable_legacy_abac' is false",
+					"actual_value": "Attribute 'enable_legacy_abac' is true"
+				}
+			]
+		},
+		{
+			"query_name": "Geo Redundancy Is Disabled",
+			"query_id": "8b042c30-e441-453f-b162-7696982ebc58",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_server",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Backup",
+			"description": "Make sure that on PostgreSQL Geo Redundant Backups is enabled",
+			"description_id": "4646e954",
+			"files": [
+				{
+					"file_name": "azure/sql.tf",
+					"similarity_id": "e5d3bc2cf940aa11f503d4763eb79fce598a8aa06532389a013d1301da0080f8",
+					"line": 80,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_postgresql_server[example].geo_redundant_backup_enabled",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_postgresql_server.example.geo_redundant_backup_enabled' is true",
+					"actual_value": "'azurerm_postgresql_server.example.geo_redundant_backup_enabled' is false"
+				}
+			]
+		},
+		{
+			"query_name": "HTTP Port Open",
+			"query_id": "ffac8a12-322e-42c1-b9b9-81ff85c39ef7",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Networking and Firewall",
+			"description": "The HTTP port is open in a Security Group",
+			"description_id": "a829609b",
+			"cis_description_id": "CIS Security -  v - Rule ",
+			"cis_description_text": "The security group ingress rules provide filtering of ingress network traffic to AWS resources. It is recommended that no security group ingress rule allows unrestricted ingress access to remote server HTTP port 80.\nPublic access to remote server ports, such as 80, increases the resource attack surface and unnecessarily raises the risk of resource compromise.",
+			"files": [
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "5cc3ed8fcdf2d61ee661f36d37bb314cda4fd1e2b662c7991e551237d54e34cf",
+					"line": 77,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_security_group[web-node]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_security_group.ingress doesn't open the HTTP port (80)",
+					"actual_value": "aws_security_group.ingress opens the HTTP port (80)"
+				}
+			]
+		},
+		{
+			"query_name": "IAM Database Auth Not Enabled",
+			"query_id": "88fd05e0-ac0e-43d2-ba6d-fc0ba60ae1a6",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance#iam_database_authentication_enabled",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Encryption",
+			"description": "IAM Database Auth Enabled must be configured to true",
+			"description_id": "12b1c8aa",
+			"files": [
+				{
+					"file_name": "aws/db-app.tf",
+					"similarity_id": "2e347e12d1fc4d005725378e325549c81aff9f62ed9e87971fffdb741131d0f9",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_db_instance[default]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'iam_database_authentication_enabled' is set to true",
+					"actual_value": "'iam_database_authentication_enabled' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "IP Aliasing Disabled",
+			"query_id": "c606ba1d-d736-43eb-ac24-e16108f3a9e0",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "Kubernetes Clusters must be created with Alias IP ranges enabled, which means the attribut 'ip_allocation_policy' must be defined and, if defined, the attribute 'networking_mode' must be VPC_NATIVE ",
+			"description_id": "e7d9862a",
+			"files": [
+				{
+					"file_name": "gcp/gke.tf",
+					"similarity_id": "a2e7b7c69930a42d79133d6146cdf73a403aeed1e7363d67a0fbd2e4fb112af3",
+					"line": 6,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_container_cluster[workload_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Attributes 'ip_allocation_policy' and 'networking_mode' are defined",
+					"actual_value": "Attributes 'ip_allocation_policy' and 'networking_mode' are undefined"
+				}
+			]
+		},
+		{
+			"query_name": "Key Expiration Not Set",
+			"query_id": "4d080822-5ee2-49a4-8984-68f3d4c890fc",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault_key",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Secret Management",
+			"description": "Make sure that for all keys the expiration date is set",
+			"description_id": "bb99ceb7",
+			"files": [
+				{
+					"file_name": "azure/key_vault.tf",
+					"similarity_id": "67d1945fba52b578ef6dffe4796b7d2c68139ddc1680e050a41705ba1fb2ffb2",
+					"line": 33,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_key_vault_key[generated]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'expiration_date' exists",
+					"actual_value": "'expiration_date' is missing"
+				}
+			]
+		},
+		{
+			"query_name": "Missing User Instruction",
+			"query_id": "fd54f200-402c-4333-a5a4-36ef6709af2f",
+			"query_url": "https://docs.docker.com/engine/reference/builder/#user",
+			"severity": "HIGH",
+			"platform": "Dockerfile",
+			"category": "Build Process",
+			"description": "A user should be specified in the dockerfile, otherwise the image will run as root",
+			"description_id": "eb49caf6",
+			"files": [
+				{
+					"file_name": "aws/resources/Dockerfile",
+					"similarity_id": "5ceabbbdf8453b338fca16cfe4e0e0f2d8e5356b1b857cb74a083bdf53e60cf0",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "FROM={{python:3.7-slim}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "The 'Dockerfile' contains the 'USER' instruction",
+					"actual_value": "The 'Dockerfile' does not contain any 'USER' instruction"
+				}
+			]
+		},
+		{
+			"query_name": "MySQL SSL Connection Disabled",
+			"query_id": "73e42469-3a86-4f39-ad78-098f325b4e9f",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mysql_server",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Encryption",
+			"description": "Make sure that for MySQL Database Server, 'Enforce SSL connection' is enabled",
+			"description_id": "81500787",
+			"files": [
+				{
+					"file_name": "azure/sql.tf",
+					"similarity_id": "813fb984e8ed473f1959f791696706a1e46f316d6c568f7e8aea37a9fda6bff7",
+					"line": 60,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_mysql_server[example].ssl_enforcement_enabled",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_mysql_server.example.ssl_enforcement_enabled' is equal 'true'",
+					"actual_value": "'azurerm_mysql_server.example.ssl_enforcement_enabled' is equal 'false'"
+				}
+			]
+		},
+		{
+			"query_name": "MySQL Server Public Access Enabled",
+			"query_id": "f118890b-2468-42b1-9ce9-af35146b425b",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mysql_server#public_network_access_enabled",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Networking and Firewall",
+			"description": "MySQL Server public access should be disabled",
+			"description_id": "e5c71632",
+			"files": [
+				{
+					"file_name": "azure/sql.tf",
+					"similarity_id": "dbe43cf9d72dbfc8022c76f004df71f4a63d791e11426236ac82f0463bffe084",
+					"line": 59,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_mysql_server[example].public_network_access_enabled",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_mysql_server[example].public_network_access_enabled' is set to false",
+					"actual_value": "'azurerm_mysql_server[example].public_network_access_enabled' is set to true"
+				}
+			]
+		},
+		{
+			"query_name": "Network Policy Disabled",
+			"query_id": "11e7550e-c4b6-472e-adff-c698f157cdd7",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "Kubernetes Engine Clusters must have Network Policy enabled, meaning that the attribute 'network_policy.enabled' must be true and the attribute 'addons_config.network_policy_config.disabled' must be false ",
+			"description_id": "afcf7c4b",
+			"files": [
+				{
+					"file_name": "gcp/gke.tf",
+					"similarity_id": "1c0f98203f29e3b130206f08a0e580f965e2370399f761faff57c7a9bb91ad0e",
+					"line": 6,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_container_cluster[workload_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Attribute 'network_policy' is defined and Attribute 'addons_config' is defined",
+					"actual_value": "Attribute 'network_policy' is undefined or Attribute 'addons_config' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "Network Watcher Flow Disabled",
+			"query_id": "b90842e5-6779-44d4-9760-972f4c03ba1c",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_watcher_flow_log",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Insecure Configurations",
+			"description": "Check if enable field in the resource azurerm_network_watcher_flow_log is false.",
+			"description_id": "fd29818c",
+			"files": [
+				{
+					"file_name": "azure/networking.tf",
+					"similarity_id": "6fe894fd9093d84b75b7961ede6d1512d9bd4a750e2a82caf80d92df5f477f38",
+					"line": 126,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_network_watcher_flow_log[flow_log].enable",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "azurerm_network_watcher_flow_log.enabled is true",
+					"actual_value": "azurerm_network_watcher_flow_log.enabled is false"
+				}
+			]
+		},
+		{
+			"query_name": "Node Auto Upgrade Disabled",
+			"query_id": "b139213e-7d24-49c2-8025-c18faa21ecaa",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_node_pool#auto_upgrade",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Resource Management",
+			"description": "Node 'auto_upgrade' should be enabled for Kubernetes Clusters",
+			"description_id": "46e4c29f",
+			"files": [
+				{
+					"file_name": "gcp/gke.tf",
+					"similarity_id": "f6c60dfbf75a984cdd6cb5ab81be799ef313ae8accb8ac6363737dd920d81aae",
+					"line": 24,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_container_node_pool[custom_node_pool]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "google_container_node_pool.management is defined and not null",
+					"actual_value": "google_container_node_pool.management is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Passwords And Secrets - AWS Access Key",
+			"query_id": "76c0bcde-903d-456e-ac13-e58c34987852",
+			"query_url": "https://kics.io/",
+			"severity": "HIGH",
+			"platform": "Common",
+			"cloud_provider": "COMMON",
+			"category": "Secret Management",
+			"description": "Query to find passwords and secrets in infrastructure code.",
+			"description_id": "d69d8a89",
+			"files": [
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "75c8ac0cca33469146e758572369c2ba80365e6dd349b016c8235fd1a734a393",
+					"line": 15,
+					"issue_type": "RedundantAttribute",
+					"search_key": "",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Hardcoded secret key should not appear in source",
+					"actual_value": "'export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMAAA' contains a secret"
+				},
+				{
+					"file_name": "aws/lambda.tf",
+					"similarity_id": "80a54c80710b42bf7308ecdc9cb4b80175f2e7503d9d33c1fcc9e14f30ae6681",
+					"line": 44,
+					"issue_type": "RedundantAttribute",
+					"search_key": "",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Hardcoded secret key should not appear in source",
+					"actual_value": "'      access_key = \"AKIAIOSFODNN7EXAMPLE\"' contains a secret"
+				},
+				{
+					"file_name": "aws/providers.tf",
+					"similarity_id": "5c1dca8077dcbc6004eb71a6a9167c628fa55cc1ce1c7e9f7fe20fef8008123f",
+					"line": 10,
+					"issue_type": "RedundantAttribute",
+					"search_key": "",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Hardcoded secret key should not appear in source",
+					"actual_value": "'  access_key = \"AKIAIOSFODNN7EXAMPLE\"' contains a secret"
+				}
+			]
+		},
+		{
+			"query_name": "Passwords And Secrets - AWS Secret Key",
+			"query_id": "83ab47ff-381d-48cd-bac5-fb32222f54af",
+			"query_url": "https://kics.io/",
+			"severity": "HIGH",
+			"platform": "Common",
+			"cloud_provider": "COMMON",
+			"category": "Secret Management",
+			"description": "Query to find passwords and secrets in infrastructure code.",
+			"description_id": "d69d8a89",
+			"files": [
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "bc1594a3d098b752d4d7a1e6ae363f91e7e4b59ced609d1b1e73dd247c29d8b9",
+					"line": 16,
+					"issue_type": "RedundantAttribute",
+					"search_key": "",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Hardcoded secret key should not appear in source",
+					"actual_value": "'export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMAAAKEY' contains a secret"
+				}
+			]
+		},
+		{
+			"query_name": "Passwords And Secrets - Generic Password",
+			"query_id": "487f4be7-3fd9-4506-a07a-eae252180c08",
+			"query_url": "https://kics.io/",
+			"severity": "HIGH",
+			"platform": "Common",
+			"cloud_provider": "COMMON",
+			"category": "Secret Management",
+			"description": "Query to find passwords and secrets in infrastructure code.",
+			"description_id": "d69d8a89",
+			"files": [
+				{
+					"file_name": "azure/sql.tf",
+					"similarity_id": "37b4de0709f475b850f2a550fe8968ec3bc2375c6c5921c5a4458164a542a3ca",
+					"line": 83,
+					"issue_type": "RedundantAttribute",
+					"search_key": "",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Hardcoded secret key should not appear in source",
+					"actual_value": "'  administrator_login_password = \"Aa12345678\"' contains a secret"
+				},
+				{
+					"file_name": "azure/sql.tf",
+					"similarity_id": "d490da2d118b695383fa3e0b60f86760a4818df6223231a5509c1596d887758e",
+					"line": 15,
+					"issue_type": "RedundantAttribute",
+					"search_key": "",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Hardcoded secret key should not appear in source",
+					"actual_value": "'  administrator_login_password = \"Aa12345678\"' contains a secret"
+				}
+			]
+		},
+		{
+			"query_name": "Passwords And Secrets - Generic Secret",
+			"query_id": "3e2d3b2f-c22a-4df1-9cc6-a7a0aebb0c99",
+			"query_url": "https://kics.io/",
+			"severity": "HIGH",
+			"platform": "Common",
+			"cloud_provider": "COMMON",
+			"category": "Secret Management",
+			"description": "Query to find passwords and secrets in infrastructure code.",
+			"description_id": "d69d8a89",
+			"files": [
+				{
+					"file_name": "aws/lambda.tf",
+					"similarity_id": "110dd39fcad53bc4edd45c31c49d0c23273260a956a7e16423bcc72c93ac5b64",
+					"line": 45,
+					"issue_type": "RedundantAttribute",
+					"search_key": "",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Hardcoded secret key should not appear in source",
+					"actual_value": "'      secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"' contains a secret"
+				},
+				{
+					"file_name": "aws/providers.tf",
+					"similarity_id": "3c1056de9f7ae592365a73e64b2833ffe7e2221db9beb70fc05be170fafb7035",
+					"line": 11,
+					"issue_type": "RedundantAttribute",
+					"search_key": "",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Hardcoded secret key should not appear in source",
+					"actual_value": "'  secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"' contains a secret"
+				}
+			]
+		},
+		{
+			"query_name": "Pod Security Policy Disabled",
+			"query_id": "9192e0f9-eca5-4056-9282-ae2a736a4088",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "Kubernetes Clusters must have Pod Security Policy controller enabled, which means there must be a 'pod_security_policy_config' with the 'enabled' attribute equal to true",
+			"description_id": "546c4012",
+			"files": [
+				{
+					"file_name": "gcp/gke.tf",
+					"similarity_id": "ddb7e12798b819bba962e074092be9dd484ed6e28870d4db6a723512a763ed00",
+					"line": 6,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_container_cluster[workload_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Attribute 'pod_security_policy_config' is defined",
+					"actual_value": "Attribute 'pod_security_policy_config' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "PostgreSQL Server Threat Detection Policy Disabled",
+			"query_id": "c407c3cf-c409-4b29-b590-db5f4138d332",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_server#threat_detection_policy",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Resource Management",
+			"description": "PostgreSQL Server Threat Detection Policy should be enabled",
+			"description_id": "ed803b39",
+			"files": [
+				{
+					"file_name": "azure/sql.tf",
+					"similarity_id": "c73214515c8aa4a366272ef5ca84f20aca9155c70630999d37592ec42bade4fa",
+					"line": 73,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_postgresql_server[example]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_postgresql_server[example].threat_detection_policy' is a defined object",
+					"actual_value": "'azurerm_postgresql_server[example].threat_detection_policy' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Private Cluster Disabled",
+			"query_id": "6ccb85d7-0420-4907-9380-50313f80946b",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "Kubernetes Clusters must be created with Private Clusters enabled, meaning the 'private_cluster_config' must be defined and the attributes 'enable_private_nodes' and 'enable_private_endpoint' must be true",
+			"description_id": "e9bbb09e",
+			"files": [
+				{
+					"file_name": "gcp/gke.tf",
+					"similarity_id": "4e83d1b9369018de295c063e0b7ba9a98d20f24e7f308a2a6ce23d82cece72dd",
+					"line": 6,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_container_cluster[workload_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Attribute 'private_cluster_config' is defined and not null",
+					"actual_value": "Attribute 'private_cluster_config' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "S3 Bucket ACL Allows Read Or Write to All Users",
+			"query_id": "38c5ee0d-7f22-4260-ab72-5073048df100",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Access Control",
+			"description": "S3 bucket with public READ/WRITE access",
+			"description_id": "d535387f",
+			"files": [
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "fcc1b9737f41a0db886a6e0ed0f2fb6f8121c89b6a7f8868c51a009d27ad3655",
+					"line": 7,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_s3_bucket[data].acl=public-read",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'acl' is equal 'private'",
+					"actual_value": "'acl' is equal 'public-read'"
+				}
+			]
+		},
+		{
+			"query_name": "S3 Bucket Object Not Encrypted",
+			"query_id": "5fb49a69-8d46-4495-a2f8-9c8c622b2b6e",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_object#server_side_encryption",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Encryption",
+			"description": "S3 Bucket Object should have server-side encryption enabled",
+			"description_id": "e6b92744",
+			"cis_description_id": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 2.1.1",
+			"cis_description_title": "Ensure all S3 buckets employ encryption-at-rest",
+			"cis_description_text": "Amazon S3 provides a variety of no, or low, cost encryption options to protect data at rest.\nEncrypting data at rest reduces the likelihood that it is unintentionally exposed and can nullify the impact of disclosure if the encryption remains unbroken.",
+			"files": [
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "3d1075b36959f76e42e5d1d51aaa526771b8440f03b1355ee34222b626c10975",
+					"line": 24,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket_object[{{data_object}}]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_s3_bucket_object.server_side_encryption is defined and not null",
+					"actual_value": "aws_s3_bucket_object.server_side_encryption is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "S3 Bucket SSE Disabled",
+			"query_id": "6726dcc0-5ff5-459d-b473-a780bef7665c",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#server_side_encryption_configuration",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Encryption",
+			"description": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+			"description_id": "b386c506",
+			"files": [
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "d602e9165c5a0a2ec3f83ffa82eee4dfc05480242e1c3bfc57c0e154f96e5f1f",
+					"line": 66,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[operations]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'server_side_encryption_configuration' is defined and not null",
+					"actual_value": "'server_side_encryption_configuration' is undefined or null"
+				},
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "72a2d50867d07ec4246fa256249dca88c8ede0e766cc74a62cf1014d5bdde460",
+					"line": 271,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[flowbucket]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'server_side_encryption_configuration' is defined and not null",
+					"actual_value": "'server_side_encryption_configuration' is undefined or null"
+				},
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "5705b9e10a8df0687e4346d261fd8ef79710bda8a17500d57c6356933b0d01c8",
+					"line": 91,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[data_science]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'server_side_encryption_configuration' is defined and not null",
+					"actual_value": "'server_side_encryption_configuration' is undefined or null"
+				},
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "f6ecaa68f29598ebdde3a36aa5f91e0660587dac338815f42e84aa7e34383046",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[data]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'server_side_encryption_configuration' is defined and not null",
+					"actual_value": "'server_side_encryption_configuration' is undefined or null"
+				},
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "0cef8be3c95f313e0254d9ef1160d12ee58886a7a32df247288b7c06b4d68663",
+					"line": 43,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[financials]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'server_side_encryption_configuration' is defined and not null",
+					"actual_value": "'server_side_encryption_configuration' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "S3 Bucket Without Enabled MFA Delete",
+			"query_id": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#mfa_delete",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Insecure Configurations",
+			"description": "S3 bucket without MFA Delete Enabled. MFA delete cannot be enabled through Terraform, it can be done by adding a MFA device (https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable.html) and enabling versioning and MFA delete by using AWS CLI: 'aws s3api put-bucket-versioning --versioning-configuration=Status=Enabled,MFADelete=Enabled --bucket=\u003cBUCKET_NAME\u003e --mfa=\u003cMFA_SERIAL_NUMBER\u003e'. Please, also notice that MFA delete can not be used with lifecycle configurations",
+			"description_id": "e1699d08",
+			"cis_description_id": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 2.1.3",
+			"cis_description_title": "Ensure MFA Delete is enable on S3 buckets",
+			"cis_description_text": "Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.\nAdding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.",
+			"files": [
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "ddd1a778c89c17cdb00f2abbbd590354ceb8337c25767b62af9b5b143073106c",
+					"line": 271,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[flowbucket]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_s3_bucket[flowbucket].versioning is defined and not null",
+					"actual_value": "aws_s3_bucket[flowbucket].versioning is undefined or null"
+				},
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "5b9356c8c0fb083f1ca6493ec8368db88307f40bc3ff375a5b36ce78fb7263fc",
+					"line": 71,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[operations].versioning",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'mfa_delete' is set to true",
+					"actual_value": "'mfa_delete' is undefined or null"
+				},
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "05f7f8e471b7328b6a016167c96fc270d2b1b1ba01d8ff31514bc1a7c575e7c9",
+					"line": 43,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[financials]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_s3_bucket[financials].versioning is defined and not null",
+					"actual_value": "aws_s3_bucket[financials].versioning is undefined or null"
+				},
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "3c4f72015c7107e7627ac1a063a502dad024a0795eedd67ed571345fc833d921",
+					"line": 118,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[logs].versioning",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'mfa_delete' is set to true",
+					"actual_value": "'mfa_delete' is undefined or null"
+				},
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "2faeb06b84f7159cd592d8e0c7388c3796e395e4264b572b92e9848cf31f38ff",
+					"line": 95,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[data_science].versioning",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'mfa_delete' is set to true",
+					"actual_value": "'mfa_delete' is undefined or null"
+				},
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "759091b9a4c562623e8c00d8d90219f5d56bcbba64085c3395e5096e90af09f3",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[data]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_s3_bucket[data].versioning is defined and not null",
+					"actual_value": "aws_s3_bucket[data].versioning is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "SQL DB Instance Backup Disabled",
+			"query_id": "cf3c7631-cd1e-42f3-8801-a561214a6e79",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/sql_database_instance",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Backup",
+			"description": "Checks if backup configuration is enabled for all Cloud SQL Database instances",
+			"description_id": "ab1d4131",
+			"files": [
+				{
+					"file_name": "gcp/big_data.tf",
+					"similarity_id": "6a896c4b9017ddebff59ffc20b96617dd75d7bf187630106a0d1706eace284a3",
+					"line": 16,
+					"issue_type": "IncorrectValue",
+					"search_key": "google_sql_database_instance[master_instance].settings.backup_configuration.enabled",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "settings.backup_configuration.enabled is true",
+					"actual_value": "settings.backup_configuration.enabled is false"
+				}
+			]
+		},
+		{
+			"query_name": "SQL DB Instance Is Publicly Accessible",
+			"query_id": "b187edca-b81e-4fdc-aff4-aab57db45edb",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/sql_database_instance",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Access Control",
+			"description": "Check if any Cloud SQL instances are publicly accessible.",
+			"description_id": "9beef444",
+			"files": [
+				{
+					"file_name": "gcp/big_data.tf",
+					"similarity_id": "93763b872d086a32f593d2c2ee26aa8480530875d0bcb66c83639d950de78832",
+					"line": 12,
+					"issue_type": "IncorrectValue",
+					"search_key": "google_sql_database_instance[master_instance].settings.ip_configuration.authorized_networks.value=0.0.0.0/0",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'authorized_network' address is trusted",
+					"actual_value": "'authorized_network' address is not restricted: '0.0.0.0/0'"
+				}
+			]
+		},
+		{
+			"query_name": "SQL DB Instance With SSL Disabled",
+			"query_id": "02474449-71aa-40a1-87ae-e14497747b00",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/sql_database_instance#require_ssl",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Encryption",
+			"description": "Cloud SQL Database Instance should have SLL enabled",
+			"description_id": "8983549e",
+			"files": [
+				{
+					"file_name": "gcp/big_data.tf",
+					"similarity_id": "0953d60fa5c836b2b13c4fd70148ee6fa8e5a21dcb6f08c33fcf93317661b3ea",
+					"line": 8,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_sql_database_instance[master_instance].settings.ip_configuration",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'settings.ip_configuration.require_ssl' is defined and not null",
+					"actual_value": "'settings.ip_configuration.require_ssl' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "SSL Enforce Disabled",
+			"query_id": "0437633b-daa6-4bbc-8526-c0d2443b946e",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_server",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Encryption",
+			"description": "Make sure that for PosgreSQL, the 'Enforce SSL connection' is set to 'ENABLED'",
+			"description_id": "9549423a",
+			"files": [
+				{
+					"file_name": "azure/sql.tf",
+					"similarity_id": "2c16b3d666195df20980ee588a47a302bf108c72ce027307fe4b198ea980892d",
+					"line": 85,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_postgresql_server[example].ssl_enforcement_enabled",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_postgresql_server.example.ssl_enforcement_enabled' is equal 'true'",
+					"actual_value": "'azurerm_postgresql_server.example.ssl_enforcement_enabled' is equal 'false'"
+				}
+			]
+		},
+		{
+			"query_name": "Secret Expiration Not Set",
+			"query_id": "dfa20ffa-f476-428f-a490-424b41e91c7f",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault_secret",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Secret Management",
+			"description": "Make sure that for all secrets the expiration date is set",
+			"description_id": "172cf4e6",
+			"files": [
+				{
+					"file_name": "azure/key_vault.tf",
+					"similarity_id": "32273f39a6c2fccce1313ce6824ccc0f048a863433be5753724036168473288d",
+					"line": 58,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_key_vault_secret[secret]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'expiration_date' exists",
+					"actual_value": "'expiration_date' is missing"
+				}
+			]
+		},
+		{
+			"query_name": "Security Group With Unrestricted Access To SSH",
+			"query_id": "65905cec-d691-4320-b320-2000436cb696",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Networking and Firewall",
+			"description": "'SSH' (TCP:22) should not be public in AWS Security Group",
+			"description_id": "51e59188",
+			"files": [
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "46416690763be107cda96bec2f89e70d7218a5b0141c93e6f2e0825d1b8e74b0",
+					"line": 87,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_security_group[web-node].ingress.cidr_blocks",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_security_group[web-node] 'SSH' (Port:22) is not public",
+					"actual_value": "aws_security_group[web-node] 'SSH' (Port:22) is public"
+				}
+			]
+		},
+		{
+			"query_name": "Stackdriver Logging Disabled",
+			"query_id": "4c7ebcb2-eae2-461e-bc83-456ee2d4f694",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Observability",
+			"description": "Kubernetes Engine Clusters must have Stackdriver Logging enabled, which means the attribute 'logging_service' must be defined and different from 'none'",
+			"description_id": "b292106d",
+			"files": [
+				{
+					"file_name": "gcp/gke.tf",
+					"similarity_id": "2741b4784e38b94ab291ebb11d3fabfce3d2a1dbb642d5241f9e5aa5ab428ce8",
+					"line": 6,
+					"issue_type": "IncorrectValue",
+					"search_key": "google_container_cluster[workload_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Attribute 'logging_service' is not 'none'",
+					"actual_value": "Attribute 'logging_service' is 'none'"
+				}
+			]
+		},
+		{
+			"query_name": "Stackdriver Monitoring Disabled",
+			"query_id": "30e8dfd2-3591-4d19-8d11-79e93106c93d",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Observability",
+			"description": "Kubernetes Engine Clusters must have Stackdriver Monitoring enabled, which means the attribute 'monitoring_service' must be defined and different than 'none'",
+			"description_id": "97635f79",
+			"files": [
+				{
+					"file_name": "gcp/gke.tf",
+					"similarity_id": "c2522101a44787bab7f1161fe3b08acd2f2555c1beb0eac978d835701ead7f3b",
+					"line": 6,
+					"issue_type": "IncorrectValue",
+					"search_key": "google_container_cluster[workload_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Attribute 'monitoring_service' is not 'none'",
+					"actual_value": "Attribute 'monitoring_service' is 'none'"
+				}
+			]
+		},
+		{
+			"query_name": "Storage Account Not Forcing HTTPS",
+			"query_id": "12944ec4-1fa0-47be-8b17-42a034f937c2",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Encryption",
+			"description": "See that Storage Accounts forces the use of HTTPS",
+			"description_id": "ab6688ca",
+			"files": [
+				{
+					"file_name": "azure/storage.tf",
+					"similarity_id": "28ed601eed01f3f3e9ad3962312621f861dd57c38f9cef85e4418ebd0dd79029",
+					"line": 23,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_storage_account[example]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_storage_account.example.enable_https_traffic_only' equals 'true'",
+					"actual_value": "'azurerm_storage_account.example.enable_https_traffic_only' does not exist"
+				}
+			]
+		},
+		{
+			"query_name": "Trusted Microsoft Services Not Enabled",
+			"query_id": "5400f379-a347-4bdd-a032-446465fdcc6f",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account#bypass",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Insecure Configurations",
+			"description": "Trusted MIcrosoft Services are not enabled for Storage Account access",
+			"description_id": "2d2af667",
+			"files": [
+				{
+					"file_name": "azure/storage.tf",
+					"similarity_id": "88459f7b320c69e8d7aeff2593d10e2d4a9a10b3f00988c2e00df8b9577ccdf2",
+					"line": 23,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_storage_account[example]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'network_rules' is defined and not null",
+					"actual_value": "'network_rules' is undefined or null"
+				},
+				{
+					"file_name": "azure/storage.tf",
+					"similarity_id": "7cb00c1b72a9aea8915dfc450f97556083d02d9e921c2f7de219b2e28002dc6a",
+					"line": 68,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_storage_account_network_rules[test].bypass",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'bypass' contains 'AzureServices'",
+					"actual_value": "'bypass' does not contain 'AzureServices'"
+				}
+			]
+		},
+		{
+			"query_name": "Unknown Port Exposed To Internet",
+			"query_id": "590d878b-abdc-428f-895a-e2b68a0e1998",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Networking and Firewall",
+			"description": "AWS Security Group should not have an unknown port exposed to the entire Internet",
+			"description_id": "e55e747f",
+			"files": [
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "edb1b7aea212d85d3b47791b1446df518fdd3d6e79b5f731d1bc6edc81c7bbfc",
+					"line": 87,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_security_group[web-node].ingress.cidr_blocks",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_security_group[web-node].ingress.from_port is known",
+					"actual_value": "aws_security_group[web-node].ingress.from_port is unknown and is exposed to the entire Internet"
+				}
+			]
+		},
+		{
+			"query_name": "Unrestricted Security Group Ingress",
+			"query_id": "4728cd65-a20c-49da-8b31-9c08b423e4db",
+			"query_url": "https://www.terraform.io/docs/providers/aws/r/security_group.html",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Networking and Firewall",
+			"description": "Security groups allow ingress from 0.0.0.0:0",
+			"description_id": "ce3ee5e0",
+			"cis_description_id": "CIS Security -  v - Rule ",
+			"cis_description_text": "Security groups should restrict ingress only to well-known and allowed origins: IP addresses or ranges. Unrestricted access may expose security groups associated resources to the Internet, allowing, for example, access to remote server open ports.\nPublic access to remote servers increases the resource attack surface and unnecessarily raises the risk of resource compromise.",
+			"files": [
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "62e77a746b16bdbc57fb596f961f1213251edd2d4b0a7c0501c87e5ab687e671",
+					"line": 88,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_security_group[web-node]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "One of 'ingress.cidr_blocks' not equal '0.0.0.0/0'",
+					"actual_value": "One of 'ingress.cidr_blocks' equal '0.0.0.0/0'"
+				},
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "a2bfae3e0f507ede2b8e1b304efb6828856eead38d3d7e8ac945d767237152a7",
+					"line": 95,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_security_group[web-node]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "One of 'ingress.cidr_blocks' not equal '0.0.0.0/0'",
+					"actual_value": "One of 'ingress.cidr_blocks' equal '0.0.0.0/0'"
+				}
+			]
+		},
+		{
+			"query_name": "Vault Auditing Disabled",
+			"query_id": "38c71c00-c177-4cd7-8d36-cd1007cdb190",
+			"query_url": "https://www.terraform.io/docs/providers/azurerm/r/key_vault.html",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Observability",
+			"description": "Ensure that logging for Azure KeyVault is 'Enabled'",
+			"description_id": "047ab315",
+			"files": [
+				{
+					"file_name": "azure/key_vault.tf",
+					"similarity_id": "7420d8f9e737067425b52c4371bd47a2dbcfd0ecdbe9e40c6167365b4025cdb9",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_key_vault[example]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_key_vault' is associated with 'azurerm_monitor_diagnostic_setting'",
+					"actual_value": "'azurerm_key_vault' is not associated with 'azurerm_monitor_diagnostic_setting'"
+				}
+			]
+		},
+		{
+			"query_name": "Web App Accepting Traffic Other Than HTTPS",
+			"query_id": "11e9a948-c6c3-4a0f-8dcf-b5cf1763cdbe",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#https_only",
+			"severity": "HIGH",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Insecure Configurations",
+			"description": "Web app should only accept HTTPS traffic in Azure Web App Service.",
+			"description_id": "74140c3d",
+			"files": [
+				{
+					"file_name": "azure/app_service.tf",
+					"similarity_id": "7700490a36cc7c5c98eb27682b7a0bf39d2eb3e4e13f71448dacb377ece9de8d",
+					"line": 27,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_app_service[app-service1].https_only",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_app_service[app-service1].https_only' is set to true",
+					"actual_value": "'azurerm_app_service[app-service1].https_only' is not set to true"
+				}
+			]
+		},
+		{
+			"query_name": "AKS Disk Encryption Set ID Undefined",
+			"query_id": "b17d8bb8-4c08-4785-867e-cb9e62a622aa",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster#disk_encryption_set_id",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Encryption",
+			"description": "Azure Container Service (AKS) should use Disk Encryption Set ID",
+			"description_id": "4eddeb5c",
+			"files": [
+				{
+					"file_name": "azure/aks.tf",
+					"similarity_id": "7f6a4c1d1b3848397cf238285e9b3b6b999097683abf811029bcc90c75758b46",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_kubernetes_cluster[k8s_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_kubernetes_cluster[k8s_cluster].disk_encryption_set_id' is defined and not null",
+					"actual_value": "'azurerm_kubernetes_cluster[k8s_cluster].disk_encryption_set_id' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "AKS Network Policy Misconfigured",
+			"query_id": "f5342045-b935-402d-adf1-8dbbd09c0eef",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/kubernetes_cluster",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Insecure Configurations",
+			"description": "Check if the Azure Kubernetes Service doesn't have the proper network policy configuration.",
+			"description_id": "7708dadb",
+			"files": [
+				{
+					"file_name": "azure/aks.tf",
+					"similarity_id": "3c1e2c171668754f208d089be9af40333acddbd1cf09f5e02a7faa1b0ddec27d",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_kubernetes_cluster[k8s_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_kubernetes_cluster[k8s_cluster].network_profile' is set",
+					"actual_value": "'azurerm_kubernetes_cluster[k8s_cluster].network_profile' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "AKS RBAC Disabled",
+			"query_id": "86f92117-eed8-4614-9c6c-b26da20ff37f",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster#role_based_access_control",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Access Control",
+			"description": "Azure Container Service (AKS) instance should have role-based access control (RBAC) enabled",
+			"description_id": "d27166a7",
+			"files": [
+				{
+					"file_name": "azure/aks.tf",
+					"similarity_id": "8b0075198f73d086188af492e4b670eea9fb24df30de1b9c361bdd0369f82ab7",
+					"line": 23,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_kubernetes_cluster[k8s_cluster].role_based_access_control.enabled",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_kubernetes_cluster[k8s_cluster].role_based_access_control.enabled' is set to true",
+					"actual_value": "'azurerm_kubernetes_cluster[k8s_cluster].role_based_access_control.enabled' is not set to true"
+				}
+			]
+		},
+		{
+			"query_name": "Cloud Storage Anonymous or Publicly Accessible",
+			"query_id": "a6cd52a1-3056-4910-96a5-894de9f3f3b3",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket_iam#google_storage_bucket_iam_binding",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Access Control",
+			"description": "Cloud Storage Buckets must not be anonymously or publicly accessible, which means the attribute 'members' must not possess 'allUsers' or 'allAuthenticatedUsers'",
+			"description_id": "fd990360",
+			"files": [
+				{
+					"file_name": "gcp/gcs.tf",
+					"similarity_id": "753a66703f392ada37fa143e4cbda2e38b048d54451dcb3d5ec3e0251810b26b",
+					"line": 18,
+					"issue_type": "IncorrectValue",
+					"search_key": "google_storage_bucket_iam_binding[allow_public_read].members",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'google_storage_bucket_iam_binding[allow_public_read].members' does not have 'allUsers'",
+					"actual_value": "'google_storage_bucket_iam_binding[allow_public_read].members' has 'allUsers'"
+				}
+			]
+		},
+		{
+			"query_name": "Disk Encryption Disabled",
+			"query_id": "b1d51728-7270-4991-ac2f-fc26e2695b38",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_disk",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Encryption",
+			"description": "VM disks for critical VMs must be encrypted with Customer Supplied Encryption Keys (CSEK) or with Customer-managed encryption keys (CMEK), which means the attribute 'disk_encryption_key' must be defined and its sub attributes 'raw_key' or 'kms_key_self_link' must also be defined",
+			"description_id": "33fb7fa7",
+			"files": [
+				{
+					"file_name": "gcp/instances.tf",
+					"similarity_id": "57e437d3fde2adff393929bf1682cb47d5a1b3880d9b8d894c34ee5c2b7c7e4b",
+					"line": 36,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_compute_disk[unencrypted_disk]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'google_compute_disk[unencrypted_disk].disk_encryption_key' is defined and not null",
+					"actual_value": "'google_compute_disk[unencrypted_disk].disk_encryption_key' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "EBS Volume Encryption Disabled",
+			"query_id": "cc997676-481b-4e93-aa81-d19f8c5e9b12",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ebs_volume#encrypted",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Encryption",
+			"description": "The value on AWS EBS Volume Cluster Encryption must be true",
+			"description_id": "977695a1",
+			"cis_description_id": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 2.2.1",
+			"cis_description_title": "Ensure EBS volume encryption is enabled",
+			"cis_description_text": "Elastic Compute Cloud (EC2) supports encryption at rest when using the Elastic Block Store (EBS) service. While disabled by default, forcing encryption at EBS volume creation is supported.\nEncrypting data at rest reduces the likelihood that it is unintentionally exposed and can nullify the impact of disclosure if the encryption remains unbroken.",
+			"files": [
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "a29bcd6c7174b6ebe463db78365fecd35f8225b7d35de884a6f4e3e2280f84d4",
+					"line": 34,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_ebs_volume[web_host_storage]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "One of 'aws_ebs_volume.encrypted' is defined",
+					"actual_value": "One of 'aws_ebs_volume.encrypted' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "ECR Image Tag Not Immutable",
+			"query_id": "d1846b12-20c5-4d45-8798-fc35b79268eb",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_repository",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Insecure Configurations",
+			"description": "ECR should have an image tag be immutable",
+			"description_id": "1cc5d4e2",
+			"files": [
+				{
+					"file_name": "aws/ecr.tf",
+					"similarity_id": "5eb9bd8b1b98072589755d6872789c2f524eef207d574cc4210252f308e04d53",
+					"line": 3,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_ecr_repository.repository.image_tag_mutability",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_ecr_repository.repository.image_tag_mutability is 'IMMUTABLE'",
+					"actual_value": "aws_ecr_repository.repository.image_tag_mutability is 'MUTABLE'"
+				}
+			]
+		},
+		{
+			"query_name": "ECR Repository Not Encrypted",
+			"query_id": "0e32d561-4b5a-4664-a6e3-a3fa85649157",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_repository#encryption_configuration",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Encryption",
+			"description": "ECR (Elastic Container Registry) Repository encryption should be set",
+			"description_id": "e96d149c",
+			"files": [
+				{
+					"file_name": "aws/ecr.tf",
+					"similarity_id": "bbdf5d14f29a03e39e1285821eced1e030d974a423c2ee45da3da07122162e1e",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_ecr_repository[repository]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "The attribute 'encryption_configuration' is defined and not null",
+					"actual_value": "The attribute 'encryption_configuration' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "ElasticSearch Not Encrypted At Rest",
+			"query_id": "24e16922-4330-4e9d-be8a-caa90299466a",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elasticsearch_domain",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Encryption",
+			"description": "Check if ElasticSearch encryption is disabled at Rest",
+			"description_id": "c402717e",
+			"files": [
+				{
+					"file_name": "aws/es.tf",
+					"similarity_id": "f4301e7efc70de1241d025958917609372ee5347cf0b611db683348660c02be3",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_elasticsearch_domain[monitoring-framework]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'encrypt_at_rest' is set and enabled",
+					"actual_value": "'encrypt_at_rest' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "Elasticsearch Domain Not Encrypted Node To Node",
+			"query_id": "967eb3e6-26fc-497d-8895-6428beb6e8e2",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elasticsearch_domain#node_to_node_encryption",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Encryption",
+			"description": "Elasticsearch Domain encryption should be enabled node to node",
+			"description_id": "e3dc1b2d",
+			"files": [
+				{
+					"file_name": "aws/es.tf",
+					"similarity_id": "1e60fb7907d0d8e890b9eb61397970c354f1c9e75de102c2621f14e9e787e73f",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_elasticsearch_domain[{{monitoring-framework}}]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "The attribute 'node_to_node_encryption' is set to true",
+					"actual_value": "The attribute 'node_to_node_encryption' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "Elasticsearch Domain With Vulnerable Policy",
+			"query_id": "16c4216a-50d3-4785-bfb2-4adb5144a8ba",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elasticsearch_domain_policy#access_policies",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Access Control",
+			"description": "Elasticsearch Domain policy should avoid wildcard in 'Action' and 'Principal'.",
+			"description_id": "265f06df",
+			"files": [
+				{
+					"file_name": "aws/es.tf",
+					"similarity_id": "94986872b9941efe6d6075385d98b59d3a55958d791293c5455aae6d2b9838cf",
+					"line": 42,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_elasticsearch_domain_policy[monitoring-framework-policy].access_policies",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_elasticsearch_domain_policy[monitoring-framework-policy].access_policies does not have wildcard in 'Action' and 'Principal'",
+					"actual_value": "aws_elasticsearch_domain_policy[monitoring-framework-policy].access_policies has wildcard in 'Action' or 'Principal'"
+				}
+			]
+		},
+		{
+			"query_name": "Elasticsearch Log is disabled",
+			"query_id": "acb6b4e2-a086-4f35-aefd-4db6ea51ada2",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elasticsearch_domain#log_publishing_options",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Observability",
+			"description": "AWS Elasticsearch should have logs enabled",
+			"description_id": "e0526e1b",
+			"files": [
+				{
+					"file_name": "aws/es.tf",
+					"similarity_id": "5db7af48599e19dea7d03b0c514df47001b4629647d27583a880834b233e3d23",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_elasticsearch_domain[{{monitoring-framework}}]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'log_publishing_options' is defined and not null",
+					"actual_value": "'log_publishing_options' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Email Alerts Disabled",
+			"query_id": "9db38e87-f6aa-4b5e-a1ec-7266df259409",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_contact",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Observability",
+			"description": "Make sure that alerts notifications are set to 'On' in the Azure Security Center Contact",
+			"description_id": "23aadb20",
+			"files": [
+				{
+					"file_name": "azure/security_center.tf",
+					"similarity_id": "0bc88d61539f1416a6a881a7c3e9cda42c16d7a7f126076b3148cada5df4559b",
+					"line": 6,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_security_center_contact[contact].alert_notifications",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_security_center_contact.contact.alert_notifications' is true",
+					"actual_value": "'azurerm_security_center_contact.contact.alert_notifications' is false"
+				}
+			]
+		},
+		{
+			"query_name": "Encryption On Managed Disk Disabled",
+			"query_id": "a99130ab-4c0e-43aa-97f8-78d4fcb30024",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/managed_disk#encryption_settings",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Encryption",
+			"description": "Ensure that the encryption is active on the disk",
+			"description_id": "8f6e1fa8",
+			"files": [
+				{
+					"file_name": "azure/storage.tf",
+					"similarity_id": "239797fc88ca6895568147a80cbd2afb52fa22489fbd74cfcb296e438ef3ddb1",
+					"line": 9,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_managed_disk[example].encryption_settings.enabled",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "azurerm_managed_disk[example].encryption_settings.enabled is true ",
+					"actual_value": "azurerm_managed_disk[example].encryption_settings.enabled is false"
+				}
+			]
+		},
+		{
+			"query_name": "Google Compute Network Using Firewall Rule that Allows All Ports",
+			"query_id": "22ef1d26-80f8-4a6c-8c15-f35aab3cac78",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall#allow",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Networking and Firewall",
+			"description": "Google Compute Network should not use a firewall rule that allows all ports",
+			"description_id": "20fce4e9",
+			"files": [
+				{
+					"file_name": "gcp/networks.tf",
+					"similarity_id": "0b3d071a31a34ae173d2535dccdcef1c0d5264baa4d7457ea58369674b8b73fc",
+					"line": 1,
+					"issue_type": "IncorrectValue",
+					"search_key": "google_compute_network[vpc]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'google_compute_network[vpc]' is not using a firewall rule that allows access to all ports",
+					"actual_value": "'google_compute_network[vpc]' is using a firewall rule that allows access to all ports"
+				}
+			]
+		},
+		{
+			"query_name": "Google Compute Subnetwork Logging Disabled",
+			"query_id": "40430747-442d-450a-a34f-dc57149f4609",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_subnetwork",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Observability",
+			"description": "This query checks if logs are enabled for a Google Compute Subnetwork resource.",
+			"description_id": "689ef05b",
+			"files": [
+				{
+					"file_name": "gcp/networks.tf",
+					"similarity_id": "1a82d6baab178d274e6a1cee6421d9b1312143677d60280be0337fe40b075884",
+					"line": 7,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_compute_subnetwork[public-subnetwork]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'google_compute_subnetwork[public-subnetwork].log_config' is defined and not null",
+					"actual_value": "'google_compute_subnetwork[public-subnetwork].log_config' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Google Container Node Pool Auto Repair Disabled",
+			"query_id": "acfdbec6-4a17-471f-b412-169d77553332",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_node_pool",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "Verifies if Google Container Node Pool Auto Repair is Enabled",
+			"description_id": "39487293",
+			"files": [
+				{
+					"file_name": "gcp/gke.tf",
+					"similarity_id": "5dc6e24ccb9540da4f3ac7366ee1e08a1f4211111759d54a5a60bbeef18ace89",
+					"line": 24,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_container_node_pool[custom_node_pool].management",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "google_container_node_pool[custom_node_pool].management.auto_repair is defined and not null",
+					"actual_value": "google_container_node_pool[custom_node_pool].management.auto_repair is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Google Storage Bucket Level Access Disabled",
+			"query_id": "bb0db090-5509-4853-a827-75ced0b3caa0",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "Google Storage Bucket Level Access should be enabled",
+			"description_id": "6a48f2c6",
+			"files": [
+				{
+					"file_name": "gcp/gcs.tf",
+					"similarity_id": "ff25eb0342c9c35a3d556dd3d40c5ccef7351654251135471b0b8e16121ace97",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_storage_bucket[terragoat_website]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "google_storage_bucket[terragoat_website].uniform_bucket_level_access is defined and not null",
+					"actual_value": "google_storage_bucket[terragoat_website].uniform_bucket_level_access is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "IAM Access Analyzer Undefined",
+			"query_id": "e592a0c5-5bdb-414c-9066-5dba7cdea370",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/accessanalyzer_analyzer",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Access Control",
+			"description": "IAM Access Analyzer should be defined to identify unintentional access",
+			"description_id": "d03e85ae",
+			"files": [
+				{
+					"file_name": "aws/db-app.tf",
+					"similarity_id": "ace5e9484758c4154581bdf934f8a2c671f0257e4585ae8c821e9bba3893dad2",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "resource",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'aws_accessanalyzer_analyzer' is set",
+					"actual_value": "'aws_accessanalyzer_analyzer' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "IAM Access Key Is Exposed",
+			"query_id": "7081f85c-b94d-40fd-8b45-a4f1cac75e46",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_access_key",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Access Control",
+			"description": "Check if IAM Access Key is active for some user besides 'root'",
+			"description_id": "99b02242",
+			"cis_description_id": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 1.11",
+			"cis_description_title": "Do not setup access keys during initial user setup for all IAM users that have a console password",
+			"cis_description_text": "AWS console defaults to no check boxes selected when creating a new IAM user. When cerating the IAM User credentials you have to determine what type of access they require. Programmatic access: The IAM user might need to make API calls, use the AWS CLI, or use the Tools for Windows PowerShell. In that case, create an access key (access key ID and a secret access key) for that user. AWS Management Console access: If the user needs to access the AWS Management Console, create a password for the user.\nRequiring the additional steps be taken by the user for programmatic access after their profile has been created will give a stronger indication of intent that access keys are [a] necessary for their work and [b] once the access key is established on an account that the keys may be in use somewhere in the organization. Note : Even if it is known the user will need access keys, require them to create the keys themselves or put in a support ticket to have them created as a separate step from user creation.",
+			"files": [
+				{
+					"file_name": "aws/iam.tf",
+					"similarity_id": "2766026ca9bd6e5b18add117bb8998b7648549cf68ea4bd69d7069440ddc7d67",
+					"line": 21,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_iam_access_key[user].user",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'aws_iam_access_key[user].user' is 'root' for an active access key",
+					"actual_value": "'aws_iam_access_key[user].user' is '${aws_iam_user.user.name}' for an active access key"
+				}
+			]
+		},
+		{
+			"query_name": "IAM Policy Grants Full Permissions",
+			"query_id": "575a2155-6af1-4026-b1af-d5bc8fe2a904",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Access Control",
+			"description": "IAM policies allow all ('*') in a statement action",
+			"description_id": "f20cf2cf",
+			"files": [
+				{
+					"file_name": "aws/iam.tf",
+					"similarity_id": "567795fc95260bea21f9451cd2167b69aa021d37c047bfb4f737fb13ddaf5f88",
+					"line": 29,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_iam_user_policy[userpolicy].policy",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'policy.Statement.Resource' not equal '*'",
+					"actual_value": "'policy.Statement.Resource' equal '*'"
+				},
+				{
+					"file_name": "aws/db-app.tf",
+					"similarity_id": "89cbb1653600a511305abb1ee5d546437ee7086eeda0699ed05ef63673f37d7b",
+					"line": 209,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_iam_role_policy[ec2policy].policy",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'policy.Statement.Resource' not equal '*'",
+					"actual_value": "'policy.Statement.Resource' equal '*'"
+				}
+			]
+		},
+		{
+			"query_name": "Neptune Cluster With IAM Database Authentication Disabled",
+			"query_id": "c91d7ea0-d4d1-403b-8fe1-c9961ac082c5",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/neptune_cluster#storage_encrypted",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Access Control",
+			"description": "Neptune Cluster should have IAM Database Authentication enabled",
+			"description_id": "88b26e61",
+			"files": [
+				{
+					"file_name": "aws/neptune.tf",
+					"similarity_id": "a7cbaec955fb1d03bac85936ff8003458cab54479e4dd4fd87fd5aae464c15db",
+					"line": 7,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_neptune_cluster[default].iam_database_authentication_enabled",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'iam_database_authentication_enabled' is set to true",
+					"actual_value": "'iam_database_authentication_enabled' is set to false"
+				}
+			]
+		},
+		{
+			"query_name": "Neptune Database Cluster Encryption Disabled",
+			"query_id": "98d59056-f745-4ef5-8613-32bca8d40b7e",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/neptune_cluster#storage_encrypted",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Encryption",
+			"description": "Check if Neptune Cluster Storage is securely encrypted",
+			"description_id": "06036045",
+			"files": [
+				{
+					"file_name": "aws/neptune.tf",
+					"similarity_id": "7737c75d201ed04639c8e84db2fa8405324eecb2c05a12289bbf975548224d1c",
+					"line": 9,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_neptune_cluster[default].storage_encrypted",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'storage_encrypted' should be true",
+					"actual_value": "'storage_encrypted' is false"
+				}
+			]
+		},
+		{
+			"query_name": "OSLogin Is Disabled For VM Instance",
+			"query_id": "d0b4d550-c001-46c3-bbdb-d5d75d33f05f",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "Check if any VM instance disables OSLogin",
+			"description_id": "a0cc649c",
+			"files": [
+				{
+					"file_name": "gcp/instances.tf",
+					"similarity_id": "4c959aaeb1acdbc8403e4e9c5166b2d90a0fb1602baa22dc10f1016cd7398eac",
+					"line": 21,
+					"issue_type": "IncorrectValue",
+					"search_key": "google_compute_instance[server].metadata.enable-oslogin",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "google_compute_instance[server].metadata.enable-oslogin is true or undefined",
+					"actual_value": "google_compute_instance[server].metadata.enable-oslogin is false"
+				}
+			]
+		},
+		{
+			"query_name": "PostgreSQL Log Checkpoints Disabled",
+			"query_id": "3790d386-be81-4dcf-9850-eaa7df6c10d9",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_configuration",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Observability",
+			"description": "Make sure that for Postgre SQL Database Server, parameter 'log_checkpoints' is set to 'ON'",
+			"description_id": "06d14345",
+			"files": [
+				{
+					"file_name": "azure/sql.tf",
+					"similarity_id": "c655e8288bd7f7d34aa1b0ee8c0b86da6cc8e0f1662551a56b89b489aefb3f40",
+					"line": 109,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_postgresql_configuration[example].value",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_postgresql_configuration.example.value' should be 'ON'",
+					"actual_value": "'azurerm_postgresql_configuration.example.value' is 'OFF'"
+				}
+			]
+		},
+		{
+			"query_name": "PostgreSQL Server Without Connection Throttling",
+			"query_id": "2b3c671f-1b76-4741-8789-ed1fe0785dc4",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_configuration",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Observability",
+			"description": "Ensure that Connection Throttling is set for the PostgreSQL server",
+			"description_id": "6f6649db",
+			"files": [
+				{
+					"file_name": "azure/sql.tf",
+					"similarity_id": "34790d9838c8c520fba0c9f34f6d4cf04e122770a7695dd47d49992318d5bc4e",
+					"line": 102,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_postgresql_configuration[thrtottling_config].value",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_postgresql_configuration.thrtottling_config.value' should be 'ON'",
+					"actual_value": "'azurerm_postgresql_configuration.thrtottling_config.value' is 'OFF'"
+				}
+			]
+		},
+		{
+			"query_name": "Project-wide SSH Keys Are Enabled In VM Instances",
+			"query_id": "3e4d5ce6-3280-4027-8010-c26eeea1ec01",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "VM Instance should block project-wide SSH keys",
+			"description_id": "4b9307cd",
+			"files": [
+				{
+					"file_name": "gcp/instances.tf",
+					"similarity_id": "20bdaf4fa365530c992d82b42fa3aadbdf1f0b179564da36eda7b122095fcdfd",
+					"line": 20,
+					"issue_type": "IncorrectValue",
+					"search_key": "google_compute_instance[server].metadata.block-project-ssh-keys",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "google_compute_instance[server].metadata.block-project-ssh-keys is true",
+					"actual_value": "google_compute_instance[server].metadata.block-project-ssh-keys is false"
+				}
+			]
+		},
+		{
+			"query_name": "RDP Access Is Not Restricted",
+			"query_id": "678fd659-96f2-454a-a2a0-c2571f83a4a3",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Networking and Firewall",
+			"description": "Check if Google Firewall ingress allows RDP access (port 3389)",
+			"description_id": "f8156d3b",
+			"files": [
+				{
+					"file_name": "gcp/networks.tf",
+					"similarity_id": "5dd4f909beb2f44e8d970ec6aadff3c9544cb88f0a74308fd41801ba0a9a9b3f",
+					"line": 25,
+					"issue_type": "IncorrectValue",
+					"search_key": "google_compute_firewall[allow_all].allow.ports",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'google_compute_firewall[allow_all].allow.ports' does not include RDP port 3389",
+					"actual_value": "'google_compute_firewall[allow_all].allow.ports' includes RDP port 3389"
+				}
+			]
+		},
+		{
+			"query_name": "RDS With Backup Disabled",
+			"query_id": "1dc73fb4-5b51-430c-8c5f-25dcf9090b02",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Backup",
+			"description": "RDS configured without backup",
+			"description_id": "73fdfe55",
+			"files": [
+				{
+					"file_name": "aws/db-app.tf",
+					"similarity_id": "566394fcab3c7354de4404ff54325de5d26be82cc41941be92c6879a13397744",
+					"line": 17,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_db_instance[default].backup_retention_period",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'backup_retention_period' is not equal '0'",
+					"actual_value": "'backup_retention_period' is equal '0'"
+				}
+			]
+		},
+		{
+			"query_name": "Role Definition Allows Custom Role Creation",
+			"query_id": "3fa5900f-9aac-4982-96b2-a6143d9c99fb",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_definition#actions",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Access Control",
+			"description": "Role Definition should not allow custom role creation",
+			"description_id": "a96dc1b9",
+			"files": [
+				{
+					"file_name": "azure/roles.tf",
+					"similarity_id": "d2196f56d160695f876f0b4fcb6b777a74d7a5ad81cf2451a114b6fb008df776",
+					"line": 9,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_role_definition[example].permissions.actions",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "azurerm_role_definition[example].permissions.actions does not allow custom role creation",
+					"actual_value": "azurerm_role_definition[example].permissions.actions allows custom role creation"
+				}
+			]
+		},
+		{
+			"query_name": "S3 Bucket Without Versioning",
+			"query_id": "568a4d22-3517-44a6-a7ad-6a7eed88722c",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#versioning",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Observability",
+			"description": "S3 bucket should have versioning enabled",
+			"description_id": "7614ce3b",
+			"files": [
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "50e894606a4bac4bac6cf312a4816457a68945435ad8d04c7c040398e7b17841",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[data]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'versioning' is set to true",
+					"actual_value": "'versioning' is undefined or null"
+				},
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "c1a9cd1a76bd2ffe06c9d53030f5f9f5f698c2dc342f59c68f6191d19505db3b",
+					"line": 43,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[financials]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'versioning' is set to true",
+					"actual_value": "'versioning' is undefined or null"
+				},
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "3412ec259e9c177dce048dc526874119e93295f49c090fd9bd58df562675dacd",
+					"line": 271,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[flowbucket]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'versioning' is set to true",
+					"actual_value": "'versioning' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "SQL Server Auditing Disabled",
+			"query_id": "f7e296b0-6660-4bc5-8f87-22ac4a815edf",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/sql_server",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Observability",
+			"description": "Make sure that for SQL Servers, 'Auditing' is set to 'On'",
+			"description_id": "609638cc",
+			"files": [
+				{
+					"file_name": "azure/sql.tf",
+					"similarity_id": "697b67edd0e127d33030d106d1b1fe7db8281b81f23cdd1bd5eeec94b65742c6",
+					"line": 9,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_sql_server[example]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_sql_server.example.extended_auditing_policy' exists",
+					"actual_value": "'azurerm_sql_server.example.extended_auditing_policy' does not exist"
+				}
+			]
+		},
+		{
+			"query_name": "SSH Access Is Not Restricted",
+			"query_id": "c4dcdcdf-10dd-4bf4-b4a0-8f6239e6aaa0",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Networking and Firewall",
+			"description": "Check if Google Firewall allows SSH access (port 22) from the Internet (public CIDR block)",
+			"description_id": "c0e4fb6f",
+			"files": [
+				{
+					"file_name": "gcp/networks.tf",
+					"similarity_id": "ecacd9c10f1313117c0c006f77185ccf0c0d454076efedc2800341f1a2d3a123",
+					"line": 25,
+					"issue_type": "IncorrectValue",
+					"search_key": "google_compute_firewall[allow_all].allow.ports=0-65535",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'google_compute_firewall[allow_all].allow.ports' does not include SSH port 22",
+					"actual_value": "'google_compute_firewall[allow_all].allow.ports' includes SSH port 22"
+				}
+			]
+		},
+		{
+			"query_name": "Security Center Pricing Tier Is Not Standard",
+			"query_id": "819d50fd-1cdf-45c3-9936-be408aaad93e",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Insecure Configurations",
+			"description": "Make sure that the 'Standard' pricing tiers were selected.",
+			"description_id": "6a9ab071",
+			"files": [
+				{
+					"file_name": "azure/security_center.tf",
+					"similarity_id": "8d5f54a3d1f2b5e3d55df25d50a7d6807168641e917a75bf9dca10e57d0f75c0",
+					"line": 2,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_security_center_subscription_pricing[pricing].tier",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_security_center_subscription_pricing.pricing.tier' is 'Standard'",
+					"actual_value": "'azurerm_security_center_subscription_pricing.pricing.tier' is 'Free'"
+				}
+			]
+		},
+		{
+			"query_name": "Serial Ports Are Enabled For VM Instances",
+			"query_id": "97fa667a-d05b-4f16-9071-58b939f34751",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "Check if VM instance enables serial ports",
+			"description_id": "2967cde6",
+			"files": [
+				{
+					"file_name": "gcp/instances.tf",
+					"similarity_id": "a2808e0daa9886df8116f6f73ce3c3315eff2ee954514b925eacc217e76aeb26",
+					"line": 22,
+					"issue_type": "IncorrectValue",
+					"search_key": "google_compute_instance[server].metadata.serial-port-enable",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "google_compute_instance[server].metadata.serial-port-enable is false or undefined",
+					"actual_value": "google_compute_instance[server].metadata.serial-port-enable is true"
+				}
+			]
+		},
+		{
+			"query_name": "Small Activity Log Retention Period",
+			"query_id": "2b856bf9-8e8c-4005-875f-303a8cba3918",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/monitor_log_profile",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Observability",
+			"description": "Ensure that Activity Log Retention is set 365 days or greater",
+			"description_id": "224ff4f9",
+			"files": [
+				{
+					"file_name": "azure/logging.tf",
+					"similarity_id": "97f6995c884ff17301573735ab478b7fea075b007a5498b177f9f862d43de36c",
+					"line": 8,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_monitor_log_profile[logging_profile].retention_policy.days",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_monitor_log_profile[logging_profile].retention_policy.days' is greater than or equal to 365 days or 0 (indefinitely)",
+					"actual_value": "'azurerm_monitor_log_profile[logging_profile].retention_policy.days' is lesser than 365 days or different than 0 (indefinitely)"
+				}
+			]
+		},
+		{
+			"query_name": "Small Flow Logs Retention Period",
+			"query_id": "7750fcca-dd03-4d38-b663-4b70289bcfd4",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_watcher_flow_log",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Insecure Configurations",
+			"description": "Flow logs enable capturing information about IP traffic flowing in and out of the network security groups. Network Security Group Flow Logs must be enabled with retention period greater than or equal to 90 days. This is important, because these logs are used to check for anomalies and give information of suspected breaches",
+			"description_id": "02e10365",
+			"files": [
+				{
+					"file_name": "azure/networking.tf",
+					"similarity_id": "922741dddfb8faa31a55fdd1c1d46f75ed20011b748198a620cf542118bddcd3",
+					"line": 133,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_network_watcher_flow_log[flow_log].retention_policy.days",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'flow_log.retention_policy.days' is bigger than 90)",
+					"actual_value": "'retention_policy.days' is bigger than 90 [10])"
+				},
+				{
+					"file_name": "azure/networking.tf",
+					"similarity_id": "aa1af4325ea7b119fb385eea33e44e402ad46d82a9ec6eb6d230c6118c2a856a",
+					"line": 132,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_network_watcher_flow_log[flow_log].retention_policy.enabled",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'flow_log.retention_policy' should be enabled)",
+					"actual_value": "'flow_log.retention_policy' is disabled)"
+				}
+			]
+		},
+		{
+			"query_name": "Storage Account Not Using Latest TLS Encryption Version",
+			"query_id": "8263f146-5e03-43e0-9cfe-db960d56d1e7",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Encryption",
+			"description": "Ensure Storage Account is using the latest version of TLS encryption",
+			"description_id": "a38872a7",
+			"files": [
+				{
+					"file_name": "azure/storage.tf",
+					"similarity_id": "b9a37439036281b7906e14287b83bb1da7726e33b930db17d610d76a386c456e",
+					"line": 23,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_storage_account[example]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_storage_account[example].min_tls_version' is defined and not null",
+					"actual_value": "'azurerm_storage_account[example].min_tls_version' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Unscanned ECR Image",
+			"query_id": "9630336b-3fed-4096-8173-b9afdfe346a7",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_repository#scan_on_push",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Encryption",
+			"description": "Checks if the ECR Image has been scanned",
+			"description_id": "791b37b8",
+			"files": [
+				{
+					"file_name": "aws/ecr.tf",
+					"similarity_id": "10703aefbc1ee7f7d6c138c16e3f2bbaba6bdd8d3019b671229aab155e2ab488",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_ecr_repository[repository]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_ecr_repository[repository].image_scanning_configuration is defined",
+					"actual_value": "aws_ecr_repository[repository].image_scanning_configuration is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "Using Default Service Account",
+			"query_id": "3cb4af0b-056d-4fb1-8b95-fdc4593625ff",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Insecure Configurations",
+			"description": "Instances must not be configured to use the Default Service Account, that has full access to all Cloud APIs, which means the attribute 'service_account' and its sub attribute 'email' must be defined. Additionally, 'email' must not be empty and must also not be a default Google Compute Engine service account.",
+			"description_id": "5c3e219f",
+			"files": [
+				{
+					"file_name": "gcp/instances.tf",
+					"similarity_id": "0e3e389bcac122c2ea57f72d0b2ba5ac185090374a5637660799960efb741cdc",
+					"line": 3,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_compute_instance[server]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'google_compute_instance[server].service_account' is defined and not null",
+					"actual_value": "'google_compute_instance[server].service_account' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "VPC FlowLogs Disabled",
+			"query_id": "f83121ea-03da-434f-9277-9cd247ab3047",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Observability",
+			"description": "VPC hasn't got any FlowLog associated",
+			"description_id": "cdbdeb30",
+			"files": [
+				{
+					"file_name": "aws/eks.tf",
+					"similarity_id": "71d3d17f12dbdb8be1c4476587d15f06af8f47beac206cf995a20263431cf05d",
+					"line": 43,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_vpc[eks_vpc]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_vpc[eks_vpc] is the same as Flow Logs VPC id",
+					"actual_value": "aws_vpc[eks_vpc] is not the same as Flow Logs VPC id"
+				}
+			]
+		},
+		{
+			"query_name": "VPC Subnet Assigns Public IP",
+			"query_id": "52f04a44-6bfa-4c41-b1d3-4ae99a2de05c",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet#map_public_ip_on_launch",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Networking and Firewall",
+			"description": "VPC Subnet should not assign public IP",
+			"description_id": "2b7ea60d",
+			"files": [
+				{
+					"file_name": "aws/eks.tf",
+					"similarity_id": "ca7f5620cb669fff30d6bdb8219ce5f6db200ad89b417010159deb6a7ff2009a",
+					"line": 93,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_subnet[eks_subnet2].map_public_ip_on_launch",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_subnet[eks_subnet2].map_public_ip_on_launch is set to false or undefined",
+					"actual_value": "aws_subnet[eks_subnet2].map_public_ip_on_launch is set to true"
+				},
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "4c0ae2e9ad1ff1b46d934105da2e9d707cb741f8ecea774edc6096f5386b40b3",
+					"line": 139,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_subnet[web_subnet].map_public_ip_on_launch",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_subnet[web_subnet].map_public_ip_on_launch is set to false or undefined",
+					"actual_value": "aws_subnet[web_subnet].map_public_ip_on_launch is set to true"
+				},
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "b5afbb2f7a22314228a0e93ed5f73d9696e2ef0da4bf9a1e9a8971c05bfc35fb",
+					"line": 159,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_subnet[web_subnet2].map_public_ip_on_launch",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_subnet[web_subnet2].map_public_ip_on_launch is set to false or undefined",
+					"actual_value": "aws_subnet[web_subnet2].map_public_ip_on_launch is set to true"
+				},
+				{
+					"file_name": "aws/eks.tf",
+					"similarity_id": "ac121b95fb52e306b344a7113e8e3d3d877fee35812599a72787a14856693d46",
+					"line": 65,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_subnet[eks_subnet1].map_public_ip_on_launch",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_subnet[eks_subnet1].map_public_ip_on_launch is set to false or undefined",
+					"actual_value": "aws_subnet[eks_subnet1].map_public_ip_on_launch is set to true"
+				}
+			]
+		},
+		{
+			"query_name": "VPC Without Network Firewall",
+			"query_id": "fd632aaf-b8a1-424d-a4d1-0de22fd3247a",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/networkfirewall_firewall#vpc_id",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Networking and Firewall",
+			"description": "VPC should have a Network Firewall associated",
+			"description_id": "2e7d55e6",
+			"files": [
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "801c7028e7f2bcc22d7a85107b5695ecf71953097db217ca9345ffff5e0313ef",
+					"line": 117,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_vpc[web_vpc]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_vpc[web_vpc] has an 'aws_networkfirewall_firewall' associated",
+					"actual_value": "aws_vpc[web_vpc] does not have an 'aws_networkfirewall_firewall' associated"
+				},
+				{
+					"file_name": "aws/eks.tf",
+					"similarity_id": "efa31bd4ced02d8b23ed2a7293dc8905def66d863b2238cf010489d04ab76fe2",
+					"line": 43,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_vpc[eks_vpc]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_vpc[eks_vpc] has an 'aws_networkfirewall_firewall' associated",
+					"actual_value": "aws_vpc[eks_vpc] does not have an 'aws_networkfirewall_firewall' associated"
+				}
+			]
+		},
+		{
+			"query_name": "Virtual Network with DDoS Protection Plan disabled",
+			"query_id": "b4cc2c52-34a6-4b43-b57c-4bdeb4514a5a",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network#ddos_protection_plan",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Availability",
+			"description": "Virtual Network should have DDoS Protection Plan enabled",
+			"description_id": "c08cb91b",
+			"files": [
+				{
+					"file_name": "azure/networking.tf",
+					"similarity_id": "594b9c40250ea4a02dc68c4b4dc20924c320aa68d89a166612fa4fdc56874c33",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_virtual_network[example]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_virtual_network[example].ddos_protection_plan' is defined and not null",
+					"actual_value": "'azurerm_virtual_network[example].ddos_protection_plan' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "WAF Is Disabled For Azure Application Gateway",
+			"query_id": "2e48d91c-50e4-45c8-9312-27b625868a72",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_gateway",
+			"severity": "MEDIUM",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Networking and Firewall",
+			"description": "Check if Web Application Firewall is disabled or not configured for Azure's Application Gateway.",
+			"description_id": "97c222ec",
+			"files": [
+				{
+					"file_name": "azure/application_gateway.tf",
+					"similarity_id": "803b22cf9c7b1710b7ce438403418889529652d7246e9b760f34a021af2c580a",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_application_gateway[network]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_application_gateway[network]' is set",
+					"actual_value": "'azurerm_application_gateway[network]' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "AKS Private Cluster Disabled",
+			"query_id": "599318f2-6653-4569-9e21-041d06c63a89",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster#private_cluster_enabled",
+			"severity": "LOW",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Networking and Firewall",
+			"description": "Azure Kubernetes Service (AKS) API should not be exposed to the internet",
+			"description_id": "3ec5eed5",
+			"files": [
+				{
+					"file_name": "azure/aks.tf",
+					"similarity_id": "bb08ee8b9e31d9922dedf270c4d51b58372bf90c6e4d26d3cc4958a2965a35d5",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_kubernetes_cluster[k8s_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_kubernetes_cluster[k8s_cluster].private_cluster_enabled' is defined and set to true",
+					"actual_value": "'azurerm_kubernetes_cluster[k8s_cluster].private_cluster_enabled' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "AKS Uses Azure Policies Add-On Disabled",
+			"query_id": "43789711-161b-4708-b5bb-9d1c626f7492",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster#azure_policy",
+			"severity": "LOW",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Best Practices",
+			"description": "Azure Container Service (AKS) should use Azure Policies Add-On",
+			"description_id": "df6d2dcb",
+			"files": [
+				{
+					"file_name": "azure/aks.tf",
+					"similarity_id": "5f2f8ef13112e2a33fa1d3e897b37535e1966b7b8d2cfa97c5c3a43080fbf0fb",
+					"line": 14,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_kubernetes_cluster[k8s_cluster].addon_profile",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_kubernetes_cluster[k8s_cluster].addon_profile.azure_policy' is defined and set to true",
+					"actual_value": "'azurerm_kubernetes_cluster[k8s_cluster].addon_profile.azure_policy' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "App Service HTTP2 Disabled",
+			"query_id": "525b53be-62ed-4244-b4df-41aecfcb4071",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#http2_enabled",
+			"severity": "LOW",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Insecure Configurations",
+			"description": "App Service should have 'http2_enabled' enabled",
+			"description_id": "dee0c164",
+			"files": [
+				{
+					"file_name": "azure/app_service.tf",
+					"similarity_id": "d4e5ab5d62173aefdc48f903528384e5e45c982bad333bce585abbd683b75976",
+					"line": 43,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_app_service[app-service2]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_app_service[app-service2].site_config' is defined and not null",
+					"actual_value": "'azurerm_app_service[app-service2].site_config' is undefined or null"
+				},
+				{
+					"file_name": "azure/app_service.tf",
+					"similarity_id": "dc80523b78c8ab0b56d4cad8de72e5b5bed1b55561f533b8f2a875d6c40a6185",
+					"line": 28,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_app_service[app-service1].site_config",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_app_service[app-service1].site_config.http2_enabled' is defined and not null",
+					"actual_value": "'azurerm_app_service[app-service1].site_config.http2_enabled' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Dashboard Is Enabled",
+			"query_id": "61c3cb8b-0715-47e4-b788-86dde40dd2db",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster",
+			"severity": "LOW",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Insecure Configurations",
+			"description": "Check if the Kubernetes Dashboard is enabled.",
+			"description_id": "3f384e51",
+			"files": [
+				{
+					"file_name": "azure/aks.tf",
+					"similarity_id": "63496e3ed3d0eb76649bc76003664da927beb9bbd6f62e90c6a065ce9ac5d4ba",
+					"line": 19,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_kubernetes_cluster[k8s_cluster].addon_profile.kube_dashboard.enabled",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_kubernetes_cluster[k8s_cluster].addon_profile.kube_dashboard.enabled' is false or undefined",
+					"actual_value": "'azurerm_kubernetes_cluster[k8s_cluster].addon_profile.kube_dashboard.enabled' is true"
+				}
+			]
+		},
+		{
+			"query_name": "EC2 Instance Using API Keys",
+			"query_id": "0b93729a-d882-4803-bdc3-ac429a21f158",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#iam_instance_profile",
+			"severity": "LOW",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Access Control",
+			"description": "EC2 instances should use roles to be granted access to other AWS services",
+			"description_id": "ffd8ce80",
+			"files": [
+				{
+					"file_name": "aws/db-app.tf",
+					"similarity_id": "89f34afe0e3742867f08011ec1c089014689f562b36d7994819880528dbb1fcb",
+					"line": 242,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_instance[db_app]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_instance[db_app] should be using iam_instance_profile to assign a role with permissions",
+					"actual_value": "aws_instance[db_app].user_data is being used to configure AWS API keys"
+				},
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "7aa4aeddceef01bdb81ee0504ec1a70f90f5ab0578f155f1279e516ca41dd5ab",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_instance[web_host]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_instance[web_host] should be using iam_instance_profile to assign a role with permissions",
+					"actual_value": "aws_instance[web_host].user_data is being used to configure AWS API keys"
+				}
+			]
+		},
+		{
+			"query_name": "ECR Repository Without Policy",
+			"query_id": "69e7c320-b65d-41bb-be02-d63ecc0bcc9d",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_repository_policy",
+			"severity": "LOW",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Best Practices",
+			"description": "ECR Repository should have Policies attached to it",
+			"description_id": "cb9636f6",
+			"files": [
+				{
+					"file_name": "aws/ecr.tf",
+					"similarity_id": "a454712a8a0a7b97f34a27e7f64407b64cc9f5b5a0ef97d5c6f542b37de6c264",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_ecr_repository[repository]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_ecr_repository[repository] has policies attached",
+					"actual_value": "aws_ecr_repository[repository] doesn't have policies attached"
+				}
+			]
+		},
+		{
+			"query_name": "EKS cluster logging is not enabled",
+			"query_id": "37304d3f-f852-40b8-ae3f-725e87a7cedf",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster#enabled_cluster_log_types",
+			"severity": "LOW",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Observability",
+			"description": "Amazon EKS control plane logging is not enabled",
+			"description_id": "80a41f88",
+			"files": [
+				{
+					"file_name": "aws/eks.tf",
+					"similarity_id": "2d15ad26a177af943ffb9fdd1291560f0ff7326fa82446d61fbe005df0b450b0",
+					"line": 117,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_eks_cluster[eks_cluster]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'enabled_cluster_log_types' is defined and not null",
+					"actual_value": "'enabled_cluster_log_types' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Google Compute Subnetwork with Private Google Access Disabled",
+			"query_id": "ee7b93c1-b3f8-4a3b-9588-146d481814f5",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_subnetwork#private_ip_google_access",
+			"severity": "LOW",
+			"platform": "Terraform",
+			"cloud_provider": "GCP",
+			"category": "Networking and Firewall",
+			"description": "Google Compute Subnetwork should have 'private_ip_google_access' set to true",
+			"description_id": "87e8a4f7",
+			"files": [
+				{
+					"file_name": "gcp/networks.tf",
+					"similarity_id": "95b30cb9b6203437d241ae2ba9ec91fc4be0f88a661e0c5547d85e33a63f233b",
+					"line": 7,
+					"issue_type": "MissingAttribute",
+					"search_key": "google_compute_subnetwork[public-subnetwork]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'google_compute_subnetwork[public-subnetwork].private_ip_google_access' is defined and not null",
+					"actual_value": "'google_compute_subnetwork[public-subnetwork].private_ip_google_access' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Hardcoded AWS Access Key",
+			"query_id": "d7b9d850-3e06-4a75-852f-c46c2e92240b",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance",
+			"severity": "LOW",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Secret Management",
+			"description": "Hard-coded AWS access key / secret key exists in EC2 user data",
+			"description_id": "9e8cbdfb",
+			"files": [
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "bc2637edfc5cd16d676be8929fac25e1d53d88217ab4b1b93ada33ba05e97b93",
+					"line": 9,
+					"issue_type": "IncorrectValue",
+					"search_key": "aws_instance[web_host].user_data",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'user_data' doesn't contain hardcoded access key",
+					"actual_value": "'user_data' contains hardcoded access key"
+				}
+			]
+		},
+		{
+			"query_name": "Healthcheck Instruction Missing",
+			"query_id": "b03a748a-542d-44f4-bb86-9199ab4fd2d5",
+			"query_url": "https://docs.docker.com/engine/reference/builder/#healthcheck",
+			"severity": "LOW",
+			"platform": "Dockerfile",
+			"category": "Insecure Configurations",
+			"description": "Ensure that HEALTHCHECK is being used. The HEALTHCHECK instruction tells Docker how to test a container to check that it is still working",
+			"description_id": "426121ee",
+			"files": [
+				{
+					"file_name": "aws/resources/Dockerfile",
+					"similarity_id": "9e1cd27fee964787083fb2309b931a7bc9c8567715f4d480f982f3956240b14f",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "FROM={{python:3.7-slim}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Dockerfile contains instruction 'HEALTHCHECK'",
+					"actual_value": "Dockerfile doesn't contain instruction 'HEALTHCHECK'"
+				}
+			]
+		},
+		{
+			"query_name": "IAM Policies Attached To User",
+			"query_id": "b4378389-a9aa-44ee-91e7-ef183f11079e",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy_attachment",
+			"severity": "LOW",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Best Practices",
+			"description": "IAM policies should be attached only to groups or roles",
+			"description_id": "32ec58ec",
+			"files": [
+				{
+					"file_name": "aws/iam.tf",
+					"similarity_id": "56e43688118a98f7413ac43e70714fa62308e41daa460962594aeb14bddc0989",
+					"line": 27,
+					"issue_type": "RedundantAttribute",
+					"search_key": "aws_iam_user_policy[{{userpolicy}}].user",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'user' is redundant",
+					"actual_value": "'user' exists"
+				}
+			]
+		},
+		{
+			"query_name": "Key Vault Secrets Content Type Undefined",
+			"query_id": "f8e08a38-fc6e-4915-abbe-a7aadf1d59ef",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault_secret#content_type",
+			"severity": "LOW",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Best Practices",
+			"description": "Key Vault Secrets should have set Content Type",
+			"description_id": "4aacc07b",
+			"files": [
+				{
+					"file_name": "azure/key_vault.tf",
+					"similarity_id": "387d130bc84f5a46ccfebd0b2f9e1f8b65d01281b8e64bdd1bcf1684430ee328",
+					"line": 58,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_key_vault_secret[secret]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_key_vault_secret[secret].content_type' is defined and not null",
+					"actual_value": "'azurerm_key_vault_secret[secret].content_type' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Lambda Functions Without X-Ray Tracing",
+			"query_id": "8152e0cf-d2f0-47ad-96d5-d003a76eabd1",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function#tracing_config",
+			"severity": "LOW",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Observability",
+			"description": "AWS Lambda functions should have TracingConfig enabled. For this, property 'tracing_Config.mode' should have the value 'Active'",
+			"description_id": "2f90e1e9",
+			"files": [
+				{
+					"file_name": "aws/lambda.tf",
+					"similarity_id": "39300c7f227698e88e18ce16b46aba66ccd56eac64fa0f71ee65f42270f930df",
+					"line": 31,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_lambda_function[analysis_lambda]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_lambda_function[analysis_lambda].tracing_config is defined and not null",
+					"actual_value": "aws_lambda_function[analysis_lambda].tracing_config is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "PostgreSQL Server Infrastructure Encryption Disabled",
+			"query_id": "6425c98b-ca4e-41fe-896a-c78772c131f8",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_server#infrastructure_encryption_enabled",
+			"severity": "LOW",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Encryption",
+			"description": "PostgreSQL Server Infrastructure Encryption should be enabled",
+			"description_id": "b982dca0",
+			"files": [
+				{
+					"file_name": "azure/sql.tf",
+					"similarity_id": "71e6680c16c9788a448c205e01e3938fc118ea0bbecf5f8baeb37ae657ee49af",
+					"line": 73,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_postgresql_server[example]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_postgresql_server[example].infrastructure_encryption_enabled' is defined and set to true",
+					"actual_value": "'azurerm_postgresql_server[example].infrastructure_encryption_enabled' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "S3 Bucket Logging Disabled",
+			"query_id": "f861041c-8c9f-4156-acfc-5e6e524f5884",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket",
+			"severity": "LOW",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Observability",
+			"description": "S3 bucket without logging",
+			"description_id": "fa5c7c72",
+			"files": [
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "893731d62f2077576319163132f521c285b9ae2ddb20de19921315d3cb815b16",
+					"line": 115,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[logs]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'logging' is defined and not null",
+					"actual_value": "'logging' is undefined or null"
+				},
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "395f96a15d7cbf2a6c7a1f269700fbaacd793f58a571af0fc8d124ea779eb41c",
+					"line": 43,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[financials]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'logging' is defined and not null",
+					"actual_value": "'logging' is undefined or null"
+				},
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "cea7b16e829fa8e42ad73ba8f4c7abdaa104d834805f75b1c5939a6ef45d1ca8",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[data]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'logging' is defined and not null",
+					"actual_value": "'logging' is undefined or null"
+				},
+				{
+					"file_name": "aws/s3.tf",
+					"similarity_id": "e9805d178fbb921ac8ec795eacf3d9521c8ac003aace1522aff912bc64a988b9",
+					"line": 66,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[operations]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'logging' is defined and not null",
+					"actual_value": "'logging' is undefined or null"
+				},
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "3c59a4ad4b40d164266db5da188ada48126ba567811134d29f19b5f618c8bd74",
+					"line": 271,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_s3_bucket[flowbucket]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'logging' is defined and not null",
+					"actual_value": "'logging' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "App Service Authentication Disabled",
+			"query_id": "c7fc1481-2899-4490-bbd8-544a3a61a2f3",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#enabled",
+			"severity": "INFO",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Access Control",
+			"description": "Azure App Service authentication settings should be enabled",
+			"description_id": "ec37a064",
+			"files": [
+				{
+					"file_name": "azure/app_service.tf",
+					"similarity_id": "142f1ce4ab6d0f5cc8b0ae2d7d4095ca5102550b0e1383d06b88d2dc2c423f3a",
+					"line": 51,
+					"issue_type": "IncorrectValue",
+					"search_key": "azurerm_app_service[app-service2].auth_settings.enabled",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_app_service[app-service2].auth_settings.enabled' is true",
+					"actual_value": "'azurerm_app_service[app-service2].auth_settings.enabled' is false"
+				},
+				{
+					"file_name": "azure/app_service.tf",
+					"similarity_id": "79c712a47eabb58358f6d365e0fdc40d1e66edcdabc99876ad09bc1ab414e375",
+					"line": 22,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_app_service[app-service1]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_app_service[app-service1].auth_settings' is defined",
+					"actual_value": "'azurerm_app_service[app-service1].auth_settings' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "EC2 Instance Monitoring Disabled",
+			"query_id": "23b70e32-032e-4fa6-ba5c-82f56b9980e6",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#monitoring",
+			"severity": "INFO",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Observability",
+			"description": "EC2 Instance should have detailed monitoring enabled. With detailed monitoring enabled data is available in 1-minute periods",
+			"description_id": "0d5413e6",
+			"files": [
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "cde57c151744b2065015646e019518fb082a286399675fd56290d79f485ab75a",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_instance.{{web_host}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'monitoring' is defined and not null%!(EXTRA string=web_host)",
+					"actual_value": "'monitoring' is undefined or null%!(EXTRA string=web_host)"
+				},
+				{
+					"file_name": "aws/db-app.tf",
+					"similarity_id": "e2844cf5ba75a21c197a3ed6241be373a8170a6749d4144b838b746b265f195b",
+					"line": 242,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_instance.{{db_app}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'monitoring' is defined and not null%!(EXTRA string=db_app)",
+					"actual_value": "'monitoring' is undefined or null%!(EXTRA string=db_app)"
+				}
+			]
+		},
+		{
+			"query_name": "EC2 Not EBS Optimized",
+			"query_id": "60224630-175a-472a-9e23-133827040766",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#ebs_optimized",
+			"severity": "INFO",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Best Practices",
+			"description": "It's considered a best practice for an EC2 instance to use an EBS optimized instance. This provides the best performance for your EBS volumes by minimizing contention between Amazon EBS I/O and other traffic from your instance",
+			"description_id": "ddce4bd9",
+			"files": [
+				{
+					"file_name": "aws/db-app.tf",
+					"similarity_id": "157cf62c29a10b511c2c488404e03cc41f864f2e6a18f091da211c2b133a1ba5",
+					"line": 242,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_instance[{{db_app}}]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'ebs_optimized' is set to true",
+					"actual_value": "'ebs_optimized' is undefined or null"
+				},
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "24c179347f3535dc1d79b6b4dd680759812f05df102d022ffe3f63aac4d6398a",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_instance[{{web_host}}]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'ebs_optimized' is set to true",
+					"actual_value": "'ebs_optimized' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "ELB Access Logging Disabled",
+			"query_id": "20018359-6fd7-4d05-ab26-d4dffccbdf79",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elb#enabled",
+			"severity": "INFO",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Observability",
+			"description": "ELB should have logging enabled to help on error investigation",
+			"description_id": "c745bca6",
+			"files": [
+				{
+					"file_name": "aws/elb.tf",
+					"similarity_id": "f3b41da1731b77d837f9432c31a6cc71f7e150a99485719959990e875705ff38",
+					"line": 2,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_elb[{{weblb}}]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'aws_elb[{{weblb}}].access_logs' is defined and not null",
+					"actual_value": "'aws_elb[{{weblb}}].access_logs' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Name Is Not Snake Case",
+			"query_id": "1e434b25-8763-4b00-a5ca-ca03b7abbb66",
+			"query_url": "https://www.terraform.io/docs/extend/best-practices/naming.html#naming",
+			"severity": "INFO",
+			"platform": "Terraform",
+			"cloud_provider": "COMMON",
+			"category": "Best Practices",
+			"description": "All names should follow snake case pattern.",
+			"description_id": "ac707cad",
+			"files": [
+				{
+					"file_name": "aws/eks.tf",
+					"similarity_id": "826bc7a5840bca669ed5912a30aedd026b3b857a905950a6af8bd99724723559",
+					"line": 33,
+					"issue_type": "IncorrectValue",
+					"search_key": "resource.aws_iam_role_policy_attachment.policy_attachment-AmazonEKSClusterPolicy",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "All names should be on snake case pattern",
+					"actual_value": "'policy_attachment-AmazonEKSClusterPolicy' is not in snake case"
+				},
+				{
+					"file_name": "azure/app_service.tf",
+					"similarity_id": "f49327f24a32405c0b6fae18b564ccb79c0d5a84736e620f34f700dfd8479d6f",
+					"line": 22,
+					"issue_type": "IncorrectValue",
+					"search_key": "resource.azurerm_app_service.app-service1",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "All names should be on snake case pattern",
+					"actual_value": "'app-service1' is not in snake case"
+				},
+				{
+					"file_name": "azure/policies.tf",
+					"similarity_id": "c5c54dd557e743fdbfc63722d5a6f98caa9cbf025e3b8e4891c1d6c3f3cf20dc",
+					"line": 1,
+					"issue_type": "IncorrectValue",
+					"search_key": "resource.azurerm_policy_definition.policy-res",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "All names should be on snake case pattern",
+					"actual_value": "'policy-res' is not in snake case"
+				},
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "f5effa7f613e2a117f78743adfd9c51b9eb9834ecfed82e3ef9c408c27148619",
+					"line": 231,
+					"issue_type": "IncorrectValue",
+					"search_key": "resource.aws_network_interface.web-eni",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "All names should be on snake case pattern",
+					"actual_value": "'web-eni' is not in snake case"
+				},
+				{
+					"file_name": "gcp/networks.tf",
+					"similarity_id": "8f89390be84931d3c2b5050cce3b45c31c22df3cd928015ce01631b48153b4d6",
+					"line": 7,
+					"issue_type": "IncorrectValue",
+					"search_key": "resource.google_compute_subnetwork.public-subnetwork",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "All names should be on snake case pattern",
+					"actual_value": "'public-subnetwork' is not in snake case"
+				},
+				{
+					"file_name": "azure/app_service.tf",
+					"similarity_id": "02977df64f81a97d73496f5ae73783c1710c5d76a5e91318a37b87e80ac1a16c",
+					"line": 43,
+					"issue_type": "IncorrectValue",
+					"search_key": "resource.azurerm_app_service.app-service2",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "All names should be on snake case pattern",
+					"actual_value": "'app-service2' is not in snake case"
+				},
+				{
+					"file_name": "aws/es.tf",
+					"similarity_id": "9f22977a3069cda7d97e2e6f5cdbcd468d345c9a2fccf044776c113140ab5f3c",
+					"line": 40,
+					"issue_type": "IncorrectValue",
+					"search_key": "resource.aws_elasticsearch_domain_policy.monitoring-framework-policy",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "All names should be on snake case pattern",
+					"actual_value": "'monitoring-framework-policy' is not in snake case"
+				},
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "f0c9a6b0ba26cdf7b71f323b55bbb8047c65106d0c38eb1b426e970d00f6d2ad",
+					"line": 77,
+					"issue_type": "IncorrectValue",
+					"search_key": "resource.aws_security_group.web-node",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "All names should be on snake case pattern",
+					"actual_value": "'web-node' is not in snake case"
+				},
+				{
+					"file_name": "aws/eks.tf",
+					"similarity_id": "5586fa7d57d20aa559b84acbedfe4170834ca78c89263a044379751cff7afbfa",
+					"line": 38,
+					"issue_type": "IncorrectValue",
+					"search_key": "resource.aws_iam_role_policy_attachment.policy_attachment-AmazonEKSServicePolicy",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "All names should be on snake case pattern",
+					"actual_value": "'policy_attachment-AmazonEKSServicePolicy' is not in snake case"
+				},
+				{
+					"file_name": "aws/es.tf",
+					"similarity_id": "d8a487d73c3bad6ece2b5e41c7368f14068b881e9e5531461b4d7e2145b7ed48",
+					"line": 1,
+					"issue_type": "IncorrectValue",
+					"search_key": "resource.aws_elasticsearch_domain.monitoring-framework",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "All names should be on snake case pattern",
+					"actual_value": "'monitoring-framework' is not in snake case"
+				}
+			]
+		},
+		{
+			"query_name": "Neptune Logging Is Disabled",
+			"query_id": "45cff7b6-3b80-40c1-ba7b-2cf480678bb8",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/neptune_cluster#enable_cloudwatch_logs_exports",
+			"severity": "INFO",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Observability",
+			"description": "Neptune logging should be enabled",
+			"description_id": "eb6f1a3b",
+			"files": [
+				{
+					"file_name": "aws/neptune.tf",
+					"similarity_id": "5bcb8f9503d969e4a7f1dfb585ceb0e85fc1d4e6a5e598fbb248f3de205c1e59",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_neptune_cluster[{{default}}]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_neptune_cluster.enable_cloudwatch_logs_exports is defined",
+					"actual_value": "aws_neptune_cluster.enable_cloudwatch_logs_exports is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "Output Without Description",
+			"query_id": "59312e8a-a64e-41e7-a252-618533dd1ea8",
+			"query_url": "https://www.terraform.io/docs/language/values/outputs.html#description-output-value-documentation",
+			"severity": "INFO",
+			"platform": "Terraform",
+			"cloud_provider": "COMMON",
+			"category": "Best Practices",
+			"description": "All outputs should contain a valid description.",
+			"description_id": "81535d16",
+			"files": [
+				{
+					"file_name": "aws/iam.tf",
+					"similarity_id": "e689419bd7cd580724b223acd3ef57ccf3497f9630d8e8764762bee598ac09d9",
+					"line": 48,
+					"issue_type": "MissingAttribute",
+					"search_key": "output.{{username}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'description' is defined and not null",
+					"actual_value": "'description' is undefined or null"
+				},
+				{
+					"file_name": "aws/iam.tf",
+					"similarity_id": "3169d1d3e5f8aaa1be54301bfc38b1730f2d1d3d4cbe2c8c87544622b686dc28",
+					"line": 52,
+					"issue_type": "MissingAttribute",
+					"search_key": "output.{{secret}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'description' is defined and not null",
+					"actual_value": "'description' is undefined or null"
+				},
+				{
+					"file_name": "aws/eks.tf",
+					"similarity_id": "081d3136db05ad300b20cfb018a02ddd7baa00953e317afa3e1d66a480d1d8c0",
+					"line": 146,
+					"issue_type": "MissingAttribute",
+					"search_key": "output.{{kubeconfig-certificate-authority-data}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'description' is defined and not null",
+					"actual_value": "'description' is undefined or null"
+				},
+				{
+					"file_name": "aws/eks.tf",
+					"similarity_id": "d47dbb8978f122c908a3d1262190880c74bb2c5a91c5faa095f351a12573fa00",
+					"line": 142,
+					"issue_type": "MissingAttribute",
+					"search_key": "output.{{endpoint}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'description' is defined and not null",
+					"actual_value": "'description' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "RDS Without Logging",
+			"query_id": "8d7f7b8c-6c7c-40f8-baa6-62006c6c7b56",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance#enabled_cloudwatch_logs_exports",
+			"severity": "INFO",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Observability",
+			"description": "RDS does not have any kind of logger",
+			"description_id": "c499a58c",
+			"files": [
+				{
+					"file_name": "aws/db-app.tf",
+					"similarity_id": "369eaf40c28aff41e0799bd9fb7c6266fc8af2f2e2a47769ea9f885cb93dcc1a",
+					"line": 1,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_db_instance[default]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'enabled_cloudwatch_logs_exports' is defined",
+					"actual_value": "'enabled_cloudwatch_logs_exports' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "Resource Not Using Tags",
+			"query_id": "e38a8e0a-b88b-4902-b3fe-b0fcb17d5c10",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/resource-tagging",
+			"severity": "INFO",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Best Practices",
+			"description": "AWS services resource tags are an essential part of managing components",
+			"description_id": "09db2d52",
+			"files": [
+				{
+					"file_name": "aws/eks.tf",
+					"similarity_id": "10c52274c171c61abc054351fde4d74bd586b633c1d1dbb7f6428945707a649e",
+					"line": 66,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_subnet[{{eks_subnet1}}].tags",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_subnet[{{eks_subnet1}}].tags has tags defined other than 'Name'",
+					"actual_value": "aws_subnet[{{eks_subnet1}}].tags has no tags defined"
+				},
+				{
+					"file_name": "aws/eks.tf",
+					"similarity_id": "a418dca3d96ac79ce9cf4b2b30d06097893ef9ec80c04cddbf321e028126050e",
+					"line": 94,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_subnet[{{eks_subnet2}}].tags",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_subnet[{{eks_subnet2}}].tags has tags defined other than 'Name'",
+					"actual_value": "aws_subnet[{{eks_subnet2}}].tags has no tags defined"
+				}
+			]
+		},
+		{
+			"query_name": "SQL Server Alert Email Disabled",
+			"query_id": "55975007-f6e7-4134-83c3-298f1fe4b519",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mssql_server_security_alert_policy#email_account_admins",
+			"severity": "INFO",
+			"platform": "Terraform",
+			"cloud_provider": "AZURE",
+			"category": "Best Practices",
+			"description": "SQL Server alert email should be enabled",
+			"description_id": "4eb880dd",
+			"files": [
+				{
+					"file_name": "azure/sql.tf",
+					"similarity_id": "223e089c0748407e296de7ef502c4ae379421bbb18d19bbb8196b82a7be69204",
+					"line": 31,
+					"issue_type": "MissingAttribute",
+					"search_key": "azurerm_mssql_server_security_alert_policy[example]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'azurerm_mssql_server_security_alert_policy[example].email_account_admins' is defined",
+					"actual_value": "'azurerm_mssql_server_security_alert_policy[example].email_account_admins' is undefined"
+				}
+			]
+		},
+		{
+			"query_name": "Security Group Rules Without Description",
+			"query_id": "68eb4bf3-f9bf-463d-b5cf-e029bb446d2e",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group#description",
+			"severity": "INFO",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Best Practices",
+			"description": "It's considered a best practice for all rules in AWS Security Group to have a description",
+			"description_id": "cee242dd",
+			"files": [
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "f878dfd9ecfb0bcffc361fab76bf701959bb50442b16d31ddcbca75e1abd94c1",
+					"line": 90,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_security_group[{{web-node}}].ingress",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_security_group[{{web-node}}].ingress description is defined and not null",
+					"actual_value": "aws_security_group[{{web-node}}].ingress description is undefined or null"
+				},
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "ff0f91389c887eecfa85353f3db69a7afa154089d3ed14dce9db3e88e881172a",
+					"line": 83,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_security_group[{{web-node}}].ingress",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_security_group[{{web-node}}].ingress description is defined and not null",
+					"actual_value": "aws_security_group[{{web-node}}].ingress description is undefined or null"
+				},
+				{
+					"file_name": "aws/ec2.tf",
+					"similarity_id": "74162301447ec6da0d7595a463abaefe703131a980f20d78b1e9bfb828888d8c",
+					"line": 97,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_security_group[{{web-node}}].egress",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_security_group[{{web-node}}].egress description is defined and not null",
+					"actual_value": "aws_security_group[{{web-node}}].egress description is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Security Group Without Description",
+			"query_id": "cb3f5ed6-0d18-40de-a93d-b3538db31e8c",
+			"query_url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group#description",
+			"severity": "INFO",
+			"platform": "Terraform",
+			"cloud_provider": "AWS",
+			"category": "Best Practices",
+			"description": "It's considered a best practice for AWS Security Group to have a description",
+			"description_id": "bc535d27",
+			"files": [
+				{
+					"file_name": "aws/db-app.tf",
+					"similarity_id": "d99132e072d2b52bc4c86b14f36552beb6c4b25b8a2084a95a2e71ed6b54dc40",
+					"line": 116,
+					"issue_type": "MissingAttribute",
+					"search_key": "aws_security_group[{{default}}]",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "aws_security_group[{{default}}] description is defined and not null",
+					"actual_value": "aws_security_group[{{default}}] description is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Variable Without Description",
+			"query_id": "2a153952-2544-4687-bcc9-cc8fea814a9b",
+			"query_url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation",
+			"severity": "INFO",
+			"platform": "Terraform",
+			"cloud_provider": "COMMON",
+			"category": "Best Practices",
+			"description": "All variables should contain a valid description.",
+			"description_id": "b44986be",
+			"files": [
+				{
+					"file_name": "gcp/variables.tf",
+					"similarity_id": "1505fa524b4422000f4ffe9eda03a57646efab246d82b4c1a627d0271cedaa7e",
+					"line": 11,
+					"issue_type": "MissingAttribute",
+					"search_key": "variable.{{region}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'description' is defined and not null",
+					"actual_value": "'description' is undefined or null"
+				},
+				{
+					"file_name": "aws/consts.tf",
+					"similarity_id": "c649f3ccdad15813905e12fb8a8a012253a8a6422250aa4b160e71f805c81e28",
+					"line": 4,
+					"issue_type": "MissingAttribute",
+					"search_key": "variable.{{company_name}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'description' is defined and not null",
+					"actual_value": "'description' is undefined or null"
+				},
+				{
+					"file_name": "aws/consts.tf",
+					"similarity_id": "97c3874ae3f87de0f13662c790dac8dc7ef514e2e9fdfc9bdc2a6d0dbaac9255",
+					"line": 28,
+					"issue_type": "MissingAttribute",
+					"search_key": "variable.{{ami}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'description' is defined and not null",
+					"actual_value": "'description' is undefined or null"
+				},
+				{
+					"file_name": "aws/consts.tf",
+					"similarity_id": "adf463d01422cd766881393a8d0684c330cdcb9d2971700919cc5afb91ad74af",
+					"line": 20,
+					"issue_type": "MissingAttribute",
+					"search_key": "variable.{{profile}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'description' is defined and not null",
+					"actual_value": "'description' is undefined or null"
+				},
+				{
+					"file_name": "aws/consts.tf",
+					"similarity_id": "38836ce179bac419c5855db7b713ca70c14fb9b7da7eec3c3aa13c975d7faf69",
+					"line": 8,
+					"issue_type": "MissingAttribute",
+					"search_key": "variable.{{environment}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'description' is defined and not null",
+					"actual_value": "'description' is undefined or null"
+				},
+				{
+					"file_name": "aws/consts.tf",
+					"similarity_id": "8c471b1e6264b36615440e77e278c39d4a0d467f456e677e7a1a5d4e8d27df57",
+					"line": 24,
+					"issue_type": "MissingAttribute",
+					"search_key": "variable.{{region}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'description' is defined and not null",
+					"actual_value": "'description' is undefined or null"
+				},
+				{
+					"file_name": "azure/variables.tf",
+					"similarity_id": "1c1540324a90109e8d8646d33fc81b4cf3fe0d52a51d2856cca01ec0a93be39c",
+					"line": 7,
+					"issue_type": "MissingAttribute",
+					"search_key": "variable.{{location}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'description' is defined and not null",
+					"actual_value": "'description' is undefined or null"
+				}
+			]
+		},
+		{
+			"query_name": "Variable Without Type",
+			"query_id": "fc5109bf-01fd-49fb-8bde-4492b543c34a",
+			"query_url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation",
+			"severity": "INFO",
+			"platform": "Terraform",
+			"cloud_provider": "COMMON",
+			"category": "Best Practices",
+			"description": "All variables should contain a valid type.",
+			"description_id": "bba696eb",
+			"files": [
+				{
+					"file_name": "azure/variables.tf",
+					"similarity_id": "bed17720129be0fd0fda9cac164dd9e8f37ff7a79080f0deb7afda2cdb0619ec",
+					"line": 12,
+					"issue_type": "MissingAttribute",
+					"search_key": "variable.{{environment}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'type' is defined and not null",
+					"actual_value": "'type' is undefined or null"
+				},
+				{
+					"file_name": "aws/consts.tf",
+					"similarity_id": "408c957c0f7ade65a05f74bc3299b30633b612c5a352007f2207a3b33023a2a2",
+					"line": 24,
+					"issue_type": "MissingAttribute",
+					"search_key": "variable.{{region}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'type' is defined and not null",
+					"actual_value": "'type' is undefined or null"
+				},
+				{
+					"file_name": "aws/consts.tf",
+					"similarity_id": "c45a60ffa481bbd8eb4bd9b5bf9472c0078a4c3c389c96f82dfb6111b778b06c",
+					"line": 8,
+					"issue_type": "MissingAttribute",
+					"search_key": "variable.{{environment}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'type' is defined and not null",
+					"actual_value": "'type' is undefined or null"
+				},
+				{
+					"file_name": "aws/consts.tf",
+					"similarity_id": "ae403f5e07b6048d8c0d8bb191ea67709d1433c7fc4be790ed66d9e47290474e",
+					"line": 4,
+					"issue_type": "MissingAttribute",
+					"search_key": "variable.{{company_name}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'type' is defined and not null",
+					"actual_value": "'type' is undefined or null"
+				},
+				{
+					"file_name": "gcp/variables.tf",
+					"similarity_id": "49989c68f3b6c37111bc7e6af4b8367ef93af255c19dcd420d7a70199ca29561",
+					"line": 16,
+					"issue_type": "MissingAttribute",
+					"search_key": "variable.{{environment}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'type' is defined and not null",
+					"actual_value": "'type' is undefined or null"
+				},
+				{
+					"file_name": "aws/consts.tf",
+					"similarity_id": "967b4f613a3832abdafcb5311b9aadb4fe717e01993acb348db6dc92e4b38afc",
+					"line": 20,
+					"issue_type": "MissingAttribute",
+					"search_key": "variable.{{profile}}",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "'type' is defined and not null",
+					"actual_value": "'type' is undefined or null"
+				}
+			]
+		}
+	]
+}

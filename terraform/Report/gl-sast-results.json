@@ -1,0 +1,5795 @@
+{
+	"schema": "https://gitlab.com/gitlab-org/security-products/security-report-schemas/-/raw/v13.1.0/dist/sast-report-format.json",
+	"version": "14.0.1",
+	"scan": {
+		"start_time": "2022-11-01T12:37:02",
+		"end_time": "2022-11-01T12:37:15",
+		"status": "success",
+		"type": "sast",
+		"scanner": {
+			"id": "keeping-infrastructure-as-code-secure",
+			"name": "Keeping Infrastructure as Code Secure",
+			"url": "https://www.kics.io/",
+			"version": "1.5.1",
+			"vendor": {
+				"name": "Checkmarx"
+			}
+		}
+	},
+	"vulnerabilities": [
+		{
+			"id": "80c80ca05c3cd6fdddc808e042d3a404aee120a7419d89649c909409d6235614",
+			"category": "sast",
+			"severity": "High",
+			"cve": "80c80ca05c3cd6fdddc808e042d3a404aee120a7419d89649c909409d6235614",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "AD Admin Not Configured For SQL Server",
+			"message": "The Active Directory Administrator is not configured for a SQL server",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/sql_active_directory_administrator"
+				}
+			],
+			"location": {
+				"file": "azure/sql.tf",
+				"start_line": 9,
+				"end_line": 9
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "a3a055d2-9a2e-4cc9-b9fb-12850a1a3a4b"
+				}
+			]
+		},
+		{
+			"id": "a1500eb974c3924ae5bcb513c42cd9df1bd405155c2123a13c98c50b70b1e27f",
+			"category": "sast",
+			"severity": "High",
+			"cve": "a1500eb974c3924ae5bcb513c42cd9df1bd405155c2123a13c98c50b70b1e27f",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "App Service Managed Identity Disabled",
+			"message": "Azure App Service should have managed identity enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#identity"
+				}
+			],
+			"location": {
+				"file": "azure/app_service.tf",
+				"start_line": 22,
+				"end_line": 22
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "b61cce4b-0cc4-472b-8096-15617a6d769b"
+				}
+			]
+		},
+		{
+			"id": "df386e73852102d2ba5330d00afd6d182da0106773c91cdb7f6438b48eb93f1e",
+			"category": "sast",
+			"severity": "High",
+			"cve": "df386e73852102d2ba5330d00afd6d182da0106773c91cdb7f6438b48eb93f1e",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "App Service Managed Identity Disabled",
+			"message": "Azure App Service should have managed identity enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#identity"
+				}
+			],
+			"location": {
+				"file": "azure/app_service.tf",
+				"start_line": 43,
+				"end_line": 43
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "b61cce4b-0cc4-472b-8096-15617a6d769b"
+				}
+			]
+		},
+		{
+			"id": "4a63a09f4d42757a0021e8a7628b2d3e2d019d1e56d0151c3f0f4ae22371f46e",
+			"category": "sast",
+			"severity": "High",
+			"cve": "4a63a09f4d42757a0021e8a7628b2d3e2d019d1e56d0151c3f0f4ae22371f46e",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "App Service Not Using Latest TLS Encryption Version",
+			"message": "Ensure App Service is using the latest version of TLS encryption",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#min_tls_version"
+				}
+			],
+			"location": {
+				"file": "azure/app_service.tf",
+				"start_line": 29,
+				"end_line": 29
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "b7b9d1c7-2d3b-49b4-b867-ebbe68d0b643"
+				}
+			]
+		},
+		{
+			"id": "4d5f6a20a8c5f1dd85638933961b4724117e1c87968d62a021a63aae9d812a33",
+			"category": "sast",
+			"severity": "High",
+			"cve": "4d5f6a20a8c5f1dd85638933961b4724117e1c87968d62a021a63aae9d812a33",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Authentication Without MFA",
+			"message": "Multi-Factor Authentication (MFA) adds an extra layer of authentication assurance beyond traditional credentials. With MFA enabled, when a user signs in to the AWS Console, they will be prompted for their user name and password as well as for an authentication code from their physical or virtual MFA token. It is recommended that MFA be enabled for all accounts that have a console password.\nEnabling MFA provides increased security for console access as it requires the authenticating principal to possess a device that displays a time-sensitive key and have knowledge of a credential.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_policy"
+				}
+			],
+			"location": {
+				"file": "aws/iam.tf",
+				"start_line": 29,
+				"end_line": 29
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "3ddfa124-6407-4845-a501-179f90c65097"
+				}
+			],
+			"details": {
+				"cisId": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 1.10",
+				"cisTitle": "Ensure multi-factor authentication (MFA) is enabled for all IAM users that have a console password"
+			}
+		},
+		{
+			"id": "132afac336f5533a6841eb045d224cb5027662480f80a976d631812268173ccb",
+			"category": "sast",
+			"severity": "High",
+			"cve": "132afac336f5533a6841eb045d224cb5027662480f80a976d631812268173ccb",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Azure App Service Client Certificate Disabled",
+			"message": "Azure App Service client certificate should be enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#client_cert_enabled"
+				}
+			],
+			"location": {
+				"file": "azure/app_service.tf",
+				"start_line": 43,
+				"end_line": 43
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "a81573f9-3691-4d83-88a0-7d4af63e17a3"
+				}
+			]
+		},
+		{
+			"id": "71469ea63313714860346c23af7a1508f3e1be9cf745da6492ff1ac9752c1e3b",
+			"category": "sast",
+			"severity": "High",
+			"cve": "71469ea63313714860346c23af7a1508f3e1be9cf745da6492ff1ac9752c1e3b",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Azure App Service Client Certificate Disabled",
+			"message": "Azure App Service client certificate should be enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#client_cert_enabled"
+				}
+			],
+			"location": {
+				"file": "azure/app_service.tf",
+				"start_line": 22,
+				"end_line": 22
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "a81573f9-3691-4d83-88a0-7d4af63e17a3"
+				}
+			]
+		},
+		{
+			"id": "25aaa3a42a100e6379339e0ca390792f02d858742bf25e7ffaf4da22279da92b",
+			"category": "sast",
+			"severity": "High",
+			"cve": "25aaa3a42a100e6379339e0ca390792f02d858742bf25e7ffaf4da22279da92b",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "BigQuery Dataset Is Public",
+			"message": "BigQuery dataset is anonymously or publicly accessible",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html"
+				}
+			],
+			"location": {
+				"file": "gcp/big_data.tf",
+				"start_line": 24,
+				"end_line": 24
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "e576ce44-dd03-4022-a8c0-3906acca2ab4"
+				}
+			]
+		},
+		{
+			"id": "6ff3c4ad4dfad1d926a0aeee6a3ae3d3d33b5572dc823b2480e6c77041a4f057",
+			"category": "sast",
+			"severity": "High",
+			"cve": "6ff3c4ad4dfad1d926a0aeee6a3ae3d3d33b5572dc823b2480e6c77041a4f057",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "CMK Rotation Disabled",
+			"message": "AWS Key Management Service (KMS) allows customers to rotate the backing key which is key material stored within the KMS which is tied to the key ID of the Customer Created customer master key (CMK). It is the backing key that is used to perform cryptographic operations such as encryption and decryption. Automated key rotation currently retains all prior backing keys so that decryption of encrypted data can take place transparently. It is recommended that CMK key rotation be enabled.\nRotating encryption keys helps reduce the potential impact of a compromised key as data encrypted with a new key cannot be accessed with a previous key that may have been exposed.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key#enable_key_rotation"
+				}
+			],
+			"location": {
+				"file": "aws/kms.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "22fbfeac-7b5a-421a-8a27-7a2178bb910b"
+				}
+			],
+			"details": {
+				"cisId": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 3.8",
+				"cisTitle": "Ensure rotation for customer created CMKs is enabled"
+			}
+		},
+		{
+			"id": "01911cc291d98225a30163a7b0237eb22b9e83f3283e8c604cf43a0cc68c6881",
+			"category": "sast",
+			"severity": "High",
+			"cve": "01911cc291d98225a30163a7b0237eb22b9e83f3283e8c604cf43a0cc68c6881",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "COS Node Image Not Used",
+			"message": "The node image should be Container-Optimized OS(COS)",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_node_pool#node_config"
+				}
+			],
+			"location": {
+				"file": "gcp/gke.tf",
+				"start_line": 29,
+				"end_line": 29
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "8a893e46-e267-485a-8690-51f39951de58"
+				}
+			]
+		},
+		{
+			"id": "99a9cc093a629375cc470e0d701c054c576f6b4f6a5e94c8c46c08f5197c42c1",
+			"category": "sast",
+			"severity": "High",
+			"cve": "99a9cc093a629375cc470e0d701c054c576f6b4f6a5e94c8c46c08f5197c42c1",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Client Certificate Disabled",
+			"message": "Kubernetes Clusters must be created with Client Certificate enabled, which means 'master_auth' must have 'client_certificate_config' with the attribute 'issue_client_certificate' equal to true",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster"
+				}
+			],
+			"location": {
+				"file": "gcp/gke.tf",
+				"start_line": 6,
+				"end_line": 6
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "73fb21a1-b19a-45b1-b648-b47b1678681e"
+				}
+			]
+		},
+		{
+			"id": "2fae46cc78fde3fe8210cdf5e83298bc00fa337990c7ecaa5c89ce2efc1b649d",
+			"category": "sast",
+			"severity": "High",
+			"cve": "2fae46cc78fde3fe8210cdf5e83298bc00fa337990c7ecaa5c89ce2efc1b649d",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Cloud Storage Bucket Logging Not Enabled",
+			"message": "Cloud storage bucket with logging not enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket#log_bucket"
+				}
+			],
+			"location": {
+				"file": "gcp/gcs.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "d6cabc3a-d57e-48c2-b341-bf3dd4f4a120"
+				}
+			]
+		},
+		{
+			"id": "62ca78c80512f28793829fb0bb6a6717d2b1438bd666160ce722ce543e9ee3ca",
+			"category": "sast",
+			"severity": "High",
+			"cve": "62ca78c80512f28793829fb0bb6a6717d2b1438bd666160ce722ce543e9ee3ca",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Cloud Storage Bucket Versioning Disabled",
+			"message": "Object Versioning Not Enabled on Cloud Storage Bucket",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket#enabled"
+				}
+			],
+			"location": {
+				"file": "gcp/gcs.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "e7e961ac-d17e-4413-84bc-8a1fbe242944"
+				}
+			]
+		},
+		{
+			"id": "a851617e0d4ed5739442cc67208723f08ca4b1dc172cf1097d83e9662bf0223a",
+			"category": "sast",
+			"severity": "High",
+			"cve": "a851617e0d4ed5739442cc67208723f08ca4b1dc172cf1097d83e9662bf0223a",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Cluster Labels Disabled",
+			"message": "Kubernetes Clusters must be configured with labels, which means the attribute 'resource_labels' must be defined",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster"
+				}
+			],
+			"location": {
+				"file": "gcp/gke.tf",
+				"start_line": 6,
+				"end_line": 6
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "65c1bc7a-4835-4ac4-a2b6-13d310b0648d"
+				}
+			]
+		},
+		{
+			"id": "925b421451366ca4912d9f5e97c36496b574cb0f2c87138f63e749ca70d3d91b",
+			"category": "sast",
+			"severity": "High",
+			"cve": "925b421451366ca4912d9f5e97c36496b574cb0f2c87138f63e749ca70d3d91b",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Cluster Master Authentication Disabled",
+			"message": "Kubernetes Engine Clusters must have Master Authentication set to enabled, which means the attribute 'master_auth' must have the subattributes 'username' and 'password' defined and not empty",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster"
+				}
+			],
+			"location": {
+				"file": "gcp/gke.tf",
+				"start_line": 6,
+				"end_line": 6
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "1baba08e-3c8a-4be7-95eb-dced5833de21"
+				}
+			]
+		},
+		{
+			"id": "e6dc9861fc4076b5aae13a3c2161c9c757c7c2d5dda3aca87847923dba6f52b0",
+			"category": "sast",
+			"severity": "High",
+			"cve": "e6dc9861fc4076b5aae13a3c2161c9c757c7c2d5dda3aca87847923dba6f52b0",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "DB Instance Publicly Accessible",
+			"message": "The field 'publicly_accessible' should not be set to 'true' (default is 'false').",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance#publicly_accessible"
+				}
+			],
+			"location": {
+				"file": "aws/db-app.tf",
+				"start_line": 21,
+				"end_line": 21
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "35113e6f-2c6b-414d-beec-7a9482d3b2d1"
+				}
+			]
+		},
+		{
+			"id": "296b51e6a17fcefea9f6af5b26e22171fdb7a3ca33eb532e3517d9df23ee38e2",
+			"category": "sast",
+			"severity": "High",
+			"cve": "296b51e6a17fcefea9f6af5b26e22171fdb7a3ca33eb532e3517d9df23ee38e2",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "DB Instance Storage Not Encrypted",
+			"message": "The parameter storage_encrypted in aws_db_instance must be set to 'true' (the default is 'false').",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance#storage_encrypted"
+				}
+			],
+			"location": {
+				"file": "aws/db-app.tf",
+				"start_line": 18,
+				"end_line": 18
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "08bd0760-8752-44e1-9779-7bb369b2b4e4"
+				}
+			]
+		},
+		{
+			"id": "7d807dac6b95b20da83e28e951180ac11e5923cbea1423a3b045ef10d5d86868",
+			"category": "sast",
+			"severity": "High",
+			"cve": "7d807dac6b95b20da83e28e951180ac11e5923cbea1423a3b045ef10d5d86868",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "EBS Volume Snapshot Not Encrypted",
+			"message": "The value on AWS EBS Volume Snapshot Encryptation must be true",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ebs_snapshot#encrypted"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 53,
+				"end_line": 53
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "e6b4b943-6883-47a9-9739-7ada9568f8ca"
+				}
+			]
+		},
+		{
+			"id": "2eda40bfe4404b2f2267af7cf8d8d5213ab581155382af9ac6daf8e2cfae997e",
+			"category": "sast",
+			"severity": "High",
+			"cve": "2eda40bfe4404b2f2267af7cf8d8d5213ab581155382af9ac6daf8e2cfae997e",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "EC2 Instance Has Public IP",
+			"message": "EC2 Instance should not have a public IP address.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#associate_public_ip_address"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "5a2486aa-facf-477d-a5c1-b010789459ce"
+				}
+			]
+		},
+		{
+			"id": "44b31b1a83538fca76f0a8dcb0dbeb8db6dc75cb4070889c7f873bd92d3902f1",
+			"category": "sast",
+			"severity": "High",
+			"cve": "44b31b1a83538fca76f0a8dcb0dbeb8db6dc75cb4070889c7f873bd92d3902f1",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "EC2 Instance Has Public IP",
+			"message": "EC2 Instance should not have a public IP address.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#associate_public_ip_address"
+				}
+			],
+			"location": {
+				"file": "aws/db-app.tf",
+				"start_line": 242,
+				"end_line": 242
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "5a2486aa-facf-477d-a5c1-b010789459ce"
+				}
+			]
+		},
+		{
+			"id": "3b2a1c49d17df5f6e11b9f67bdcc1211181aeafecf9543242ccf830dafaf7051",
+			"category": "sast",
+			"severity": "High",
+			"cve": "3b2a1c49d17df5f6e11b9f67bdcc1211181aeafecf9543242ccf830dafaf7051",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "EKS Cluster Encryption Disabled",
+			"message": "EKS Cluster should be encrypted",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster#encryption_config"
+				}
+			],
+			"location": {
+				"file": "aws/eks.tf",
+				"start_line": 117,
+				"end_line": 117
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "63ebcb19-2739-4d3f-aa5c-e8bbb9b85281"
+				}
+			]
+		},
+		{
+			"id": "2123a2a342f3cc8cc29d7be7c7fafb7071c570bc52db491fd05bf1f3a862489d",
+			"category": "sast",
+			"severity": "High",
+			"cve": "2123a2a342f3cc8cc29d7be7c7fafb7071c570bc52db491fd05bf1f3a862489d",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "GKE Basic Authentication Enabled",
+			"message": "GCP - Google Kubernetes Engine (GKE) Basic Authentication must be disabled, which means the username and password provided in the master_auth block must be empty",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster"
+				}
+			],
+			"location": {
+				"file": "gcp/gke.tf",
+				"start_line": 6,
+				"end_line": 6
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "70cdf849-b7d9-4569-b87d-5d82ffd44719"
+				}
+			]
+		},
+		{
+			"id": "ac62823057be3c9081e54a1bbd50052a51f32e1ef97dcb92eb54f277658d88a6",
+			"category": "sast",
+			"severity": "High",
+			"cve": "ac62823057be3c9081e54a1bbd50052a51f32e1ef97dcb92eb54f277658d88a6",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "GKE Legacy Authorization Enabled",
+			"message": "Kubernetes Engine Clusters must have Legacy Authorization set to disabled, which means the attribute 'enable_legacy_abac' must not be true",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster"
+				}
+			],
+			"location": {
+				"file": "gcp/gke.tf",
+				"start_line": 12,
+				"end_line": 12
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "5baa92d2-d8ee-4c75-88a4-52d9d8bb8067"
+				}
+			]
+		},
+		{
+			"id": "e5d3bc2cf940aa11f503d4763eb79fce598a8aa06532389a013d1301da0080f8",
+			"category": "sast",
+			"severity": "High",
+			"cve": "e5d3bc2cf940aa11f503d4763eb79fce598a8aa06532389a013d1301da0080f8",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Geo Redundancy Is Disabled",
+			"message": "Make sure that on PostgreSQL Geo Redundant Backups is enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_server"
+				}
+			],
+			"location": {
+				"file": "azure/sql.tf",
+				"start_line": 80,
+				"end_line": 80
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "8b042c30-e441-453f-b162-7696982ebc58"
+				}
+			]
+		},
+		{
+			"id": "5cc3ed8fcdf2d61ee661f36d37bb314cda4fd1e2b662c7991e551237d54e34cf",
+			"category": "sast",
+			"severity": "High",
+			"cve": "5cc3ed8fcdf2d61ee661f36d37bb314cda4fd1e2b662c7991e551237d54e34cf",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "HTTP Port Open",
+			"message": "The HTTP port is open in a Security Group",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 77,
+				"end_line": 77
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "ffac8a12-322e-42c1-b9b9-81ff85c39ef7"
+				}
+			]
+		},
+		{
+			"id": "2e347e12d1fc4d005725378e325549c81aff9f62ed9e87971fffdb741131d0f9",
+			"category": "sast",
+			"severity": "High",
+			"cve": "2e347e12d1fc4d005725378e325549c81aff9f62ed9e87971fffdb741131d0f9",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "IAM Database Auth Not Enabled",
+			"message": "IAM Database Auth Enabled must be configured to true",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance#iam_database_authentication_enabled"
+				}
+			],
+			"location": {
+				"file": "aws/db-app.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "88fd05e0-ac0e-43d2-ba6d-fc0ba60ae1a6"
+				}
+			]
+		},
+		{
+			"id": "a2e7b7c69930a42d79133d6146cdf73a403aeed1e7363d67a0fbd2e4fb112af3",
+			"category": "sast",
+			"severity": "High",
+			"cve": "a2e7b7c69930a42d79133d6146cdf73a403aeed1e7363d67a0fbd2e4fb112af3",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "IP Aliasing Disabled",
+			"message": "Kubernetes Clusters must be created with Alias IP ranges enabled, which means the attribut 'ip_allocation_policy' must be defined and, if defined, the attribute 'networking_mode' must be VPC_NATIVE ",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster"
+				}
+			],
+			"location": {
+				"file": "gcp/gke.tf",
+				"start_line": 6,
+				"end_line": 6
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "c606ba1d-d736-43eb-ac24-e16108f3a9e0"
+				}
+			]
+		},
+		{
+			"id": "67d1945fba52b578ef6dffe4796b7d2c68139ddc1680e050a41705ba1fb2ffb2",
+			"category": "sast",
+			"severity": "High",
+			"cve": "67d1945fba52b578ef6dffe4796b7d2c68139ddc1680e050a41705ba1fb2ffb2",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Key Expiration Not Set",
+			"message": "Make sure that for all keys the expiration date is set",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault_key"
+				}
+			],
+			"location": {
+				"file": "azure/key_vault.tf",
+				"start_line": 33,
+				"end_line": 33
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "4d080822-5ee2-49a4-8984-68f3d4c890fc"
+				}
+			]
+		},
+		{
+			"id": "5ceabbbdf8453b338fca16cfe4e0e0f2d8e5356b1b857cb74a083bdf53e60cf0",
+			"category": "sast",
+			"severity": "High",
+			"cve": "5ceabbbdf8453b338fca16cfe4e0e0f2d8e5356b1b857cb74a083bdf53e60cf0",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Missing User Instruction",
+			"message": "A user should be specified in the dockerfile, otherwise the image will run as root",
+			"links": [
+				{
+					"url": "https://docs.docker.com/engine/reference/builder/#user"
+				}
+			],
+			"location": {
+				"file": "aws/resources/Dockerfile",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/dockerfile-queries",
+					"value": "fd54f200-402c-4333-a5a4-36ef6709af2f"
+				}
+			]
+		},
+		{
+			"id": "813fb984e8ed473f1959f791696706a1e46f316d6c568f7e8aea37a9fda6bff7",
+			"category": "sast",
+			"severity": "High",
+			"cve": "813fb984e8ed473f1959f791696706a1e46f316d6c568f7e8aea37a9fda6bff7",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "MySQL SSL Connection Disabled",
+			"message": "Make sure that for MySQL Database Server, 'Enforce SSL connection' is enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mysql_server"
+				}
+			],
+			"location": {
+				"file": "azure/sql.tf",
+				"start_line": 60,
+				"end_line": 60
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "73e42469-3a86-4f39-ad78-098f325b4e9f"
+				}
+			]
+		},
+		{
+			"id": "dbe43cf9d72dbfc8022c76f004df71f4a63d791e11426236ac82f0463bffe084",
+			"category": "sast",
+			"severity": "High",
+			"cve": "dbe43cf9d72dbfc8022c76f004df71f4a63d791e11426236ac82f0463bffe084",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "MySQL Server Public Access Enabled",
+			"message": "MySQL Server public access should be disabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mysql_server#public_network_access_enabled"
+				}
+			],
+			"location": {
+				"file": "azure/sql.tf",
+				"start_line": 59,
+				"end_line": 59
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "f118890b-2468-42b1-9ce9-af35146b425b"
+				}
+			]
+		},
+		{
+			"id": "1c0f98203f29e3b130206f08a0e580f965e2370399f761faff57c7a9bb91ad0e",
+			"category": "sast",
+			"severity": "High",
+			"cve": "1c0f98203f29e3b130206f08a0e580f965e2370399f761faff57c7a9bb91ad0e",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Network Policy Disabled",
+			"message": "Kubernetes Engine Clusters must have Network Policy enabled, meaning that the attribute 'network_policy.enabled' must be true and the attribute 'addons_config.network_policy_config.disabled' must be false ",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster"
+				}
+			],
+			"location": {
+				"file": "gcp/gke.tf",
+				"start_line": 6,
+				"end_line": 6
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "11e7550e-c4b6-472e-adff-c698f157cdd7"
+				}
+			]
+		},
+		{
+			"id": "6fe894fd9093d84b75b7961ede6d1512d9bd4a750e2a82caf80d92df5f477f38",
+			"category": "sast",
+			"severity": "High",
+			"cve": "6fe894fd9093d84b75b7961ede6d1512d9bd4a750e2a82caf80d92df5f477f38",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Network Watcher Flow Disabled",
+			"message": "Check if enable field in the resource azurerm_network_watcher_flow_log is false.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_watcher_flow_log"
+				}
+			],
+			"location": {
+				"file": "azure/networking.tf",
+				"start_line": 126,
+				"end_line": 126
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "b90842e5-6779-44d4-9760-972f4c03ba1c"
+				}
+			]
+		},
+		{
+			"id": "f6c60dfbf75a984cdd6cb5ab81be799ef313ae8accb8ac6363737dd920d81aae",
+			"category": "sast",
+			"severity": "High",
+			"cve": "f6c60dfbf75a984cdd6cb5ab81be799ef313ae8accb8ac6363737dd920d81aae",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Node Auto Upgrade Disabled",
+			"message": "Node 'auto_upgrade' should be enabled for Kubernetes Clusters",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_node_pool#auto_upgrade"
+				}
+			],
+			"location": {
+				"file": "gcp/gke.tf",
+				"start_line": 24,
+				"end_line": 24
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "b139213e-7d24-49c2-8025-c18faa21ecaa"
+				}
+			]
+		},
+		{
+			"id": "75c8ac0cca33469146e758572369c2ba80365e6dd349b016c8235fd1a734a393",
+			"category": "sast",
+			"severity": "High",
+			"cve": "75c8ac0cca33469146e758572369c2ba80365e6dd349b016c8235fd1a734a393",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Passwords And Secrets - AWS Access Key",
+			"message": "Query to find passwords and secrets in infrastructure code.",
+			"links": [
+				{
+					"url": "https://kics.io/"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 15,
+				"end_line": 15
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/common-queries",
+					"value": "76c0bcde-903d-456e-ac13-e58c34987852"
+				}
+			]
+		},
+		{
+			"id": "80a54c80710b42bf7308ecdc9cb4b80175f2e7503d9d33c1fcc9e14f30ae6681",
+			"category": "sast",
+			"severity": "High",
+			"cve": "80a54c80710b42bf7308ecdc9cb4b80175f2e7503d9d33c1fcc9e14f30ae6681",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Passwords And Secrets - AWS Access Key",
+			"message": "Query to find passwords and secrets in infrastructure code.",
+			"links": [
+				{
+					"url": "https://kics.io/"
+				}
+			],
+			"location": {
+				"file": "aws/lambda.tf",
+				"start_line": 44,
+				"end_line": 44
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/common-queries",
+					"value": "76c0bcde-903d-456e-ac13-e58c34987852"
+				}
+			]
+		},
+		{
+			"id": "5c1dca8077dcbc6004eb71a6a9167c628fa55cc1ce1c7e9f7fe20fef8008123f",
+			"category": "sast",
+			"severity": "High",
+			"cve": "5c1dca8077dcbc6004eb71a6a9167c628fa55cc1ce1c7e9f7fe20fef8008123f",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Passwords And Secrets - AWS Access Key",
+			"message": "Query to find passwords and secrets in infrastructure code.",
+			"links": [
+				{
+					"url": "https://kics.io/"
+				}
+			],
+			"location": {
+				"file": "aws/providers.tf",
+				"start_line": 10,
+				"end_line": 10
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/common-queries",
+					"value": "76c0bcde-903d-456e-ac13-e58c34987852"
+				}
+			]
+		},
+		{
+			"id": "bc1594a3d098b752d4d7a1e6ae363f91e7e4b59ced609d1b1e73dd247c29d8b9",
+			"category": "sast",
+			"severity": "High",
+			"cve": "bc1594a3d098b752d4d7a1e6ae363f91e7e4b59ced609d1b1e73dd247c29d8b9",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Passwords And Secrets - AWS Secret Key",
+			"message": "Query to find passwords and secrets in infrastructure code.",
+			"links": [
+				{
+					"url": "https://kics.io/"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 16,
+				"end_line": 16
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/common-queries",
+					"value": "83ab47ff-381d-48cd-bac5-fb32222f54af"
+				}
+			]
+		},
+		{
+			"id": "37b4de0709f475b850f2a550fe8968ec3bc2375c6c5921c5a4458164a542a3ca",
+			"category": "sast",
+			"severity": "High",
+			"cve": "37b4de0709f475b850f2a550fe8968ec3bc2375c6c5921c5a4458164a542a3ca",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Passwords And Secrets - Generic Password",
+			"message": "Query to find passwords and secrets in infrastructure code.",
+			"links": [
+				{
+					"url": "https://kics.io/"
+				}
+			],
+			"location": {
+				"file": "azure/sql.tf",
+				"start_line": 83,
+				"end_line": 83
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/common-queries",
+					"value": "487f4be7-3fd9-4506-a07a-eae252180c08"
+				}
+			]
+		},
+		{
+			"id": "d490da2d118b695383fa3e0b60f86760a4818df6223231a5509c1596d887758e",
+			"category": "sast",
+			"severity": "High",
+			"cve": "d490da2d118b695383fa3e0b60f86760a4818df6223231a5509c1596d887758e",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Passwords And Secrets - Generic Password",
+			"message": "Query to find passwords and secrets in infrastructure code.",
+			"links": [
+				{
+					"url": "https://kics.io/"
+				}
+			],
+			"location": {
+				"file": "azure/sql.tf",
+				"start_line": 15,
+				"end_line": 15
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/common-queries",
+					"value": "487f4be7-3fd9-4506-a07a-eae252180c08"
+				}
+			]
+		},
+		{
+			"id": "110dd39fcad53bc4edd45c31c49d0c23273260a956a7e16423bcc72c93ac5b64",
+			"category": "sast",
+			"severity": "High",
+			"cve": "110dd39fcad53bc4edd45c31c49d0c23273260a956a7e16423bcc72c93ac5b64",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Passwords And Secrets - Generic Secret",
+			"message": "Query to find passwords and secrets in infrastructure code.",
+			"links": [
+				{
+					"url": "https://kics.io/"
+				}
+			],
+			"location": {
+				"file": "aws/lambda.tf",
+				"start_line": 45,
+				"end_line": 45
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/common-queries",
+					"value": "3e2d3b2f-c22a-4df1-9cc6-a7a0aebb0c99"
+				}
+			]
+		},
+		{
+			"id": "3c1056de9f7ae592365a73e64b2833ffe7e2221db9beb70fc05be170fafb7035",
+			"category": "sast",
+			"severity": "High",
+			"cve": "3c1056de9f7ae592365a73e64b2833ffe7e2221db9beb70fc05be170fafb7035",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Passwords And Secrets - Generic Secret",
+			"message": "Query to find passwords and secrets in infrastructure code.",
+			"links": [
+				{
+					"url": "https://kics.io/"
+				}
+			],
+			"location": {
+				"file": "aws/providers.tf",
+				"start_line": 11,
+				"end_line": 11
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/common-queries",
+					"value": "3e2d3b2f-c22a-4df1-9cc6-a7a0aebb0c99"
+				}
+			]
+		},
+		{
+			"id": "ddb7e12798b819bba962e074092be9dd484ed6e28870d4db6a723512a763ed00",
+			"category": "sast",
+			"severity": "High",
+			"cve": "ddb7e12798b819bba962e074092be9dd484ed6e28870d4db6a723512a763ed00",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Pod Security Policy Disabled",
+			"message": "Kubernetes Clusters must have Pod Security Policy controller enabled, which means there must be a 'pod_security_policy_config' with the 'enabled' attribute equal to true",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster"
+				}
+			],
+			"location": {
+				"file": "gcp/gke.tf",
+				"start_line": 6,
+				"end_line": 6
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "9192e0f9-eca5-4056-9282-ae2a736a4088"
+				}
+			]
+		},
+		{
+			"id": "c73214515c8aa4a366272ef5ca84f20aca9155c70630999d37592ec42bade4fa",
+			"category": "sast",
+			"severity": "High",
+			"cve": "c73214515c8aa4a366272ef5ca84f20aca9155c70630999d37592ec42bade4fa",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "PostgreSQL Server Threat Detection Policy Disabled",
+			"message": "PostgreSQL Server Threat Detection Policy should be enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_server#threat_detection_policy"
+				}
+			],
+			"location": {
+				"file": "azure/sql.tf",
+				"start_line": 73,
+				"end_line": 73
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "c407c3cf-c409-4b29-b590-db5f4138d332"
+				}
+			]
+		},
+		{
+			"id": "4e83d1b9369018de295c063e0b7ba9a98d20f24e7f308a2a6ce23d82cece72dd",
+			"category": "sast",
+			"severity": "High",
+			"cve": "4e83d1b9369018de295c063e0b7ba9a98d20f24e7f308a2a6ce23d82cece72dd",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Private Cluster Disabled",
+			"message": "Kubernetes Clusters must be created with Private Clusters enabled, meaning the 'private_cluster_config' must be defined and the attributes 'enable_private_nodes' and 'enable_private_endpoint' must be true",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster"
+				}
+			],
+			"location": {
+				"file": "gcp/gke.tf",
+				"start_line": 6,
+				"end_line": 6
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "6ccb85d7-0420-4907-9380-50313f80946b"
+				}
+			]
+		},
+		{
+			"id": "fcc1b9737f41a0db886a6e0ed0f2fb6f8121c89b6a7f8868c51a009d27ad3655",
+			"category": "sast",
+			"severity": "High",
+			"cve": "fcc1b9737f41a0db886a6e0ed0f2fb6f8121c89b6a7f8868c51a009d27ad3655",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket ACL Allows Read Or Write to All Users",
+			"message": "S3 bucket with public READ/WRITE access",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 7,
+				"end_line": 7
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "38c5ee0d-7f22-4260-ab72-5073048df100"
+				}
+			]
+		},
+		{
+			"id": "3d1075b36959f76e42e5d1d51aaa526771b8440f03b1355ee34222b626c10975",
+			"category": "sast",
+			"severity": "High",
+			"cve": "3d1075b36959f76e42e5d1d51aaa526771b8440f03b1355ee34222b626c10975",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Object Not Encrypted",
+			"message": "Amazon S3 provides a variety of no, or low, cost encryption options to protect data at rest.\nEncrypting data at rest reduces the likelihood that it is unintentionally exposed and can nullify the impact of disclosure if the encryption remains unbroken.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_object#server_side_encryption"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 24,
+				"end_line": 24
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "5fb49a69-8d46-4495-a2f8-9c8c622b2b6e"
+				}
+			],
+			"details": {
+				"cisId": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 2.1.1",
+				"cisTitle": "Ensure all S3 buckets employ encryption-at-rest"
+			}
+		},
+		{
+			"id": "d602e9165c5a0a2ec3f83ffa82eee4dfc05480242e1c3bfc57c0e154f96e5f1f",
+			"category": "sast",
+			"severity": "High",
+			"cve": "d602e9165c5a0a2ec3f83ffa82eee4dfc05480242e1c3bfc57c0e154f96e5f1f",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket SSE Disabled",
+			"message": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#server_side_encryption_configuration"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 66,
+				"end_line": 66
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "6726dcc0-5ff5-459d-b473-a780bef7665c"
+				}
+			]
+		},
+		{
+			"id": "72a2d50867d07ec4246fa256249dca88c8ede0e766cc74a62cf1014d5bdde460",
+			"category": "sast",
+			"severity": "High",
+			"cve": "72a2d50867d07ec4246fa256249dca88c8ede0e766cc74a62cf1014d5bdde460",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket SSE Disabled",
+			"message": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#server_side_encryption_configuration"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 271,
+				"end_line": 271
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "6726dcc0-5ff5-459d-b473-a780bef7665c"
+				}
+			]
+		},
+		{
+			"id": "5705b9e10a8df0687e4346d261fd8ef79710bda8a17500d57c6356933b0d01c8",
+			"category": "sast",
+			"severity": "High",
+			"cve": "5705b9e10a8df0687e4346d261fd8ef79710bda8a17500d57c6356933b0d01c8",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket SSE Disabled",
+			"message": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#server_side_encryption_configuration"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 91,
+				"end_line": 91
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "6726dcc0-5ff5-459d-b473-a780bef7665c"
+				}
+			]
+		},
+		{
+			"id": "f6ecaa68f29598ebdde3a36aa5f91e0660587dac338815f42e84aa7e34383046",
+			"category": "sast",
+			"severity": "High",
+			"cve": "f6ecaa68f29598ebdde3a36aa5f91e0660587dac338815f42e84aa7e34383046",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket SSE Disabled",
+			"message": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#server_side_encryption_configuration"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "6726dcc0-5ff5-459d-b473-a780bef7665c"
+				}
+			]
+		},
+		{
+			"id": "0cef8be3c95f313e0254d9ef1160d12ee58886a7a32df247288b7c06b4d68663",
+			"category": "sast",
+			"severity": "High",
+			"cve": "0cef8be3c95f313e0254d9ef1160d12ee58886a7a32df247288b7c06b4d68663",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket SSE Disabled",
+			"message": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#server_side_encryption_configuration"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 43,
+				"end_line": 43
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "6726dcc0-5ff5-459d-b473-a780bef7665c"
+				}
+			]
+		},
+		{
+			"id": "ddd1a778c89c17cdb00f2abbbd590354ceb8337c25767b62af9b5b143073106c",
+			"category": "sast",
+			"severity": "High",
+			"cve": "ddd1a778c89c17cdb00f2abbbd590354ceb8337c25767b62af9b5b143073106c",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Without Enabled MFA Delete",
+			"message": "Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.\nAdding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#mfa_delete"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 271,
+				"end_line": 271
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d"
+				}
+			],
+			"details": {
+				"cisId": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 2.1.3",
+				"cisTitle": "Ensure MFA Delete is enable on S3 buckets"
+			}
+		},
+		{
+			"id": "5b9356c8c0fb083f1ca6493ec8368db88307f40bc3ff375a5b36ce78fb7263fc",
+			"category": "sast",
+			"severity": "High",
+			"cve": "5b9356c8c0fb083f1ca6493ec8368db88307f40bc3ff375a5b36ce78fb7263fc",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Without Enabled MFA Delete",
+			"message": "Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.\nAdding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#mfa_delete"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 71,
+				"end_line": 71
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d"
+				}
+			],
+			"details": {
+				"cisId": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 2.1.3",
+				"cisTitle": "Ensure MFA Delete is enable on S3 buckets"
+			}
+		},
+		{
+			"id": "05f7f8e471b7328b6a016167c96fc270d2b1b1ba01d8ff31514bc1a7c575e7c9",
+			"category": "sast",
+			"severity": "High",
+			"cve": "05f7f8e471b7328b6a016167c96fc270d2b1b1ba01d8ff31514bc1a7c575e7c9",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Without Enabled MFA Delete",
+			"message": "Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.\nAdding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#mfa_delete"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 43,
+				"end_line": 43
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d"
+				}
+			],
+			"details": {
+				"cisId": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 2.1.3",
+				"cisTitle": "Ensure MFA Delete is enable on S3 buckets"
+			}
+		},
+		{
+			"id": "3c4f72015c7107e7627ac1a063a502dad024a0795eedd67ed571345fc833d921",
+			"category": "sast",
+			"severity": "High",
+			"cve": "3c4f72015c7107e7627ac1a063a502dad024a0795eedd67ed571345fc833d921",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Without Enabled MFA Delete",
+			"message": "Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.\nAdding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#mfa_delete"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 118,
+				"end_line": 118
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d"
+				}
+			],
+			"details": {
+				"cisId": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 2.1.3",
+				"cisTitle": "Ensure MFA Delete is enable on S3 buckets"
+			}
+		},
+		{
+			"id": "2faeb06b84f7159cd592d8e0c7388c3796e395e4264b572b92e9848cf31f38ff",
+			"category": "sast",
+			"severity": "High",
+			"cve": "2faeb06b84f7159cd592d8e0c7388c3796e395e4264b572b92e9848cf31f38ff",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Without Enabled MFA Delete",
+			"message": "Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.\nAdding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#mfa_delete"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 95,
+				"end_line": 95
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d"
+				}
+			],
+			"details": {
+				"cisId": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 2.1.3",
+				"cisTitle": "Ensure MFA Delete is enable on S3 buckets"
+			}
+		},
+		{
+			"id": "759091b9a4c562623e8c00d8d90219f5d56bcbba64085c3395e5096e90af09f3",
+			"category": "sast",
+			"severity": "High",
+			"cve": "759091b9a4c562623e8c00d8d90219f5d56bcbba64085c3395e5096e90af09f3",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Without Enabled MFA Delete",
+			"message": "Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.\nAdding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#mfa_delete"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d"
+				}
+			],
+			"details": {
+				"cisId": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 2.1.3",
+				"cisTitle": "Ensure MFA Delete is enable on S3 buckets"
+			}
+		},
+		{
+			"id": "6a896c4b9017ddebff59ffc20b96617dd75d7bf187630106a0d1706eace284a3",
+			"category": "sast",
+			"severity": "High",
+			"cve": "6a896c4b9017ddebff59ffc20b96617dd75d7bf187630106a0d1706eace284a3",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "SQL DB Instance Backup Disabled",
+			"message": "Checks if backup configuration is enabled for all Cloud SQL Database instances",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/sql_database_instance"
+				}
+			],
+			"location": {
+				"file": "gcp/big_data.tf",
+				"start_line": 16,
+				"end_line": 16
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "cf3c7631-cd1e-42f3-8801-a561214a6e79"
+				}
+			]
+		},
+		{
+			"id": "93763b872d086a32f593d2c2ee26aa8480530875d0bcb66c83639d950de78832",
+			"category": "sast",
+			"severity": "High",
+			"cve": "93763b872d086a32f593d2c2ee26aa8480530875d0bcb66c83639d950de78832",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "SQL DB Instance Is Publicly Accessible",
+			"message": "Check if any Cloud SQL instances are publicly accessible.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/sql_database_instance"
+				}
+			],
+			"location": {
+				"file": "gcp/big_data.tf",
+				"start_line": 12,
+				"end_line": 12
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "b187edca-b81e-4fdc-aff4-aab57db45edb"
+				}
+			]
+		},
+		{
+			"id": "0953d60fa5c836b2b13c4fd70148ee6fa8e5a21dcb6f08c33fcf93317661b3ea",
+			"category": "sast",
+			"severity": "High",
+			"cve": "0953d60fa5c836b2b13c4fd70148ee6fa8e5a21dcb6f08c33fcf93317661b3ea",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "SQL DB Instance With SSL Disabled",
+			"message": "Cloud SQL Database Instance should have SLL enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/sql_database_instance#require_ssl"
+				}
+			],
+			"location": {
+				"file": "gcp/big_data.tf",
+				"start_line": 8,
+				"end_line": 8
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "02474449-71aa-40a1-87ae-e14497747b00"
+				}
+			]
+		},
+		{
+			"id": "2c16b3d666195df20980ee588a47a302bf108c72ce027307fe4b198ea980892d",
+			"category": "sast",
+			"severity": "High",
+			"cve": "2c16b3d666195df20980ee588a47a302bf108c72ce027307fe4b198ea980892d",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "SSL Enforce Disabled",
+			"message": "Make sure that for PosgreSQL, the 'Enforce SSL connection' is set to 'ENABLED'",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_server"
+				}
+			],
+			"location": {
+				"file": "azure/sql.tf",
+				"start_line": 85,
+				"end_line": 85
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "0437633b-daa6-4bbc-8526-c0d2443b946e"
+				}
+			]
+		},
+		{
+			"id": "32273f39a6c2fccce1313ce6824ccc0f048a863433be5753724036168473288d",
+			"category": "sast",
+			"severity": "High",
+			"cve": "32273f39a6c2fccce1313ce6824ccc0f048a863433be5753724036168473288d",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Secret Expiration Not Set",
+			"message": "Make sure that for all secrets the expiration date is set",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault_secret"
+				}
+			],
+			"location": {
+				"file": "azure/key_vault.tf",
+				"start_line": 58,
+				"end_line": 58
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "dfa20ffa-f476-428f-a490-424b41e91c7f"
+				}
+			]
+		},
+		{
+			"id": "46416690763be107cda96bec2f89e70d7218a5b0141c93e6f2e0825d1b8e74b0",
+			"category": "sast",
+			"severity": "High",
+			"cve": "46416690763be107cda96bec2f89e70d7218a5b0141c93e6f2e0825d1b8e74b0",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Security Group With Unrestricted Access To SSH",
+			"message": "'SSH' (TCP:22) should not be public in AWS Security Group",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 87,
+				"end_line": 87
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "65905cec-d691-4320-b320-2000436cb696"
+				}
+			]
+		},
+		{
+			"id": "2741b4784e38b94ab291ebb11d3fabfce3d2a1dbb642d5241f9e5aa5ab428ce8",
+			"category": "sast",
+			"severity": "High",
+			"cve": "2741b4784e38b94ab291ebb11d3fabfce3d2a1dbb642d5241f9e5aa5ab428ce8",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Stackdriver Logging Disabled",
+			"message": "Kubernetes Engine Clusters must have Stackdriver Logging enabled, which means the attribute 'logging_service' must be defined and different from 'none'",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster"
+				}
+			],
+			"location": {
+				"file": "gcp/gke.tf",
+				"start_line": 6,
+				"end_line": 6
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "4c7ebcb2-eae2-461e-bc83-456ee2d4f694"
+				}
+			]
+		},
+		{
+			"id": "c2522101a44787bab7f1161fe3b08acd2f2555c1beb0eac978d835701ead7f3b",
+			"category": "sast",
+			"severity": "High",
+			"cve": "c2522101a44787bab7f1161fe3b08acd2f2555c1beb0eac978d835701ead7f3b",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Stackdriver Monitoring Disabled",
+			"message": "Kubernetes Engine Clusters must have Stackdriver Monitoring enabled, which means the attribute 'monitoring_service' must be defined and different than 'none'",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster"
+				}
+			],
+			"location": {
+				"file": "gcp/gke.tf",
+				"start_line": 6,
+				"end_line": 6
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "30e8dfd2-3591-4d19-8d11-79e93106c93d"
+				}
+			]
+		},
+		{
+			"id": "28ed601eed01f3f3e9ad3962312621f861dd57c38f9cef85e4418ebd0dd79029",
+			"category": "sast",
+			"severity": "High",
+			"cve": "28ed601eed01f3f3e9ad3962312621f861dd57c38f9cef85e4418ebd0dd79029",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Storage Account Not Forcing HTTPS",
+			"message": "See that Storage Accounts forces the use of HTTPS",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account"
+				}
+			],
+			"location": {
+				"file": "azure/storage.tf",
+				"start_line": 23,
+				"end_line": 23
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "12944ec4-1fa0-47be-8b17-42a034f937c2"
+				}
+			]
+		},
+		{
+			"id": "88459f7b320c69e8d7aeff2593d10e2d4a9a10b3f00988c2e00df8b9577ccdf2",
+			"category": "sast",
+			"severity": "High",
+			"cve": "88459f7b320c69e8d7aeff2593d10e2d4a9a10b3f00988c2e00df8b9577ccdf2",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Trusted Microsoft Services Not Enabled",
+			"message": "Trusted MIcrosoft Services are not enabled for Storage Account access",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account#bypass"
+				}
+			],
+			"location": {
+				"file": "azure/storage.tf",
+				"start_line": 23,
+				"end_line": 23
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "5400f379-a347-4bdd-a032-446465fdcc6f"
+				}
+			]
+		},
+		{
+			"id": "7cb00c1b72a9aea8915dfc450f97556083d02d9e921c2f7de219b2e28002dc6a",
+			"category": "sast",
+			"severity": "High",
+			"cve": "7cb00c1b72a9aea8915dfc450f97556083d02d9e921c2f7de219b2e28002dc6a",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Trusted Microsoft Services Not Enabled",
+			"message": "Trusted MIcrosoft Services are not enabled for Storage Account access",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account#bypass"
+				}
+			],
+			"location": {
+				"file": "azure/storage.tf",
+				"start_line": 68,
+				"end_line": 68
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "5400f379-a347-4bdd-a032-446465fdcc6f"
+				}
+			]
+		},
+		{
+			"id": "edb1b7aea212d85d3b47791b1446df518fdd3d6e79b5f731d1bc6edc81c7bbfc",
+			"category": "sast",
+			"severity": "High",
+			"cve": "edb1b7aea212d85d3b47791b1446df518fdd3d6e79b5f731d1bc6edc81c7bbfc",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Unknown Port Exposed To Internet",
+			"message": "AWS Security Group should not have an unknown port exposed to the entire Internet",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 87,
+				"end_line": 87
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "590d878b-abdc-428f-895a-e2b68a0e1998"
+				}
+			]
+		},
+		{
+			"id": "62e77a746b16bdbc57fb596f961f1213251edd2d4b0a7c0501c87e5ab687e671",
+			"category": "sast",
+			"severity": "High",
+			"cve": "62e77a746b16bdbc57fb596f961f1213251edd2d4b0a7c0501c87e5ab687e671",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Unrestricted Security Group Ingress",
+			"message": "Security groups allow ingress from 0.0.0.0:0",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/providers/aws/r/security_group.html"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 88,
+				"end_line": 88
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "4728cd65-a20c-49da-8b31-9c08b423e4db"
+				}
+			]
+		},
+		{
+			"id": "a2bfae3e0f507ede2b8e1b304efb6828856eead38d3d7e8ac945d767237152a7",
+			"category": "sast",
+			"severity": "High",
+			"cve": "a2bfae3e0f507ede2b8e1b304efb6828856eead38d3d7e8ac945d767237152a7",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Unrestricted Security Group Ingress",
+			"message": "Security groups allow ingress from 0.0.0.0:0",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/providers/aws/r/security_group.html"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 95,
+				"end_line": 95
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "4728cd65-a20c-49da-8b31-9c08b423e4db"
+				}
+			]
+		},
+		{
+			"id": "7420d8f9e737067425b52c4371bd47a2dbcfd0ecdbe9e40c6167365b4025cdb9",
+			"category": "sast",
+			"severity": "High",
+			"cve": "7420d8f9e737067425b52c4371bd47a2dbcfd0ecdbe9e40c6167365b4025cdb9",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Vault Auditing Disabled",
+			"message": "Ensure that logging for Azure KeyVault is 'Enabled'",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/providers/azurerm/r/key_vault.html"
+				}
+			],
+			"location": {
+				"file": "azure/key_vault.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "38c71c00-c177-4cd7-8d36-cd1007cdb190"
+				}
+			]
+		},
+		{
+			"id": "7700490a36cc7c5c98eb27682b7a0bf39d2eb3e4e13f71448dacb377ece9de8d",
+			"category": "sast",
+			"severity": "High",
+			"cve": "7700490a36cc7c5c98eb27682b7a0bf39d2eb3e4e13f71448dacb377ece9de8d",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Web App Accepting Traffic Other Than HTTPS",
+			"message": "Web app should only accept HTTPS traffic in Azure Web App Service.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#https_only"
+				}
+			],
+			"location": {
+				"file": "azure/app_service.tf",
+				"start_line": 27,
+				"end_line": 27
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "11e9a948-c6c3-4a0f-8dcf-b5cf1763cdbe"
+				}
+			]
+		},
+		{
+			"id": "7f6a4c1d1b3848397cf238285e9b3b6b999097683abf811029bcc90c75758b46",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "7f6a4c1d1b3848397cf238285e9b3b6b999097683abf811029bcc90c75758b46",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "AKS Disk Encryption Set ID Undefined",
+			"message": "Azure Container Service (AKS) should use Disk Encryption Set ID",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster#disk_encryption_set_id"
+				}
+			],
+			"location": {
+				"file": "azure/aks.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "b17d8bb8-4c08-4785-867e-cb9e62a622aa"
+				}
+			]
+		},
+		{
+			"id": "3c1e2c171668754f208d089be9af40333acddbd1cf09f5e02a7faa1b0ddec27d",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "3c1e2c171668754f208d089be9af40333acddbd1cf09f5e02a7faa1b0ddec27d",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "AKS Network Policy Misconfigured",
+			"message": "Check if the Azure Kubernetes Service doesn't have the proper network policy configuration.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/kubernetes_cluster"
+				}
+			],
+			"location": {
+				"file": "azure/aks.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "f5342045-b935-402d-adf1-8dbbd09c0eef"
+				}
+			]
+		},
+		{
+			"id": "8b0075198f73d086188af492e4b670eea9fb24df30de1b9c361bdd0369f82ab7",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "8b0075198f73d086188af492e4b670eea9fb24df30de1b9c361bdd0369f82ab7",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "AKS RBAC Disabled",
+			"message": "Azure Container Service (AKS) instance should have role-based access control (RBAC) enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster#role_based_access_control"
+				}
+			],
+			"location": {
+				"file": "azure/aks.tf",
+				"start_line": 23,
+				"end_line": 23
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "86f92117-eed8-4614-9c6c-b26da20ff37f"
+				}
+			]
+		},
+		{
+			"id": "753a66703f392ada37fa143e4cbda2e38b048d54451dcb3d5ec3e0251810b26b",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "753a66703f392ada37fa143e4cbda2e38b048d54451dcb3d5ec3e0251810b26b",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Cloud Storage Anonymous or Publicly Accessible",
+			"message": "Cloud Storage Buckets must not be anonymously or publicly accessible, which means the attribute 'members' must not possess 'allUsers' or 'allAuthenticatedUsers'",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket_iam#google_storage_bucket_iam_binding"
+				}
+			],
+			"location": {
+				"file": "gcp/gcs.tf",
+				"start_line": 18,
+				"end_line": 18
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "a6cd52a1-3056-4910-96a5-894de9f3f3b3"
+				}
+			]
+		},
+		{
+			"id": "57e437d3fde2adff393929bf1682cb47d5a1b3880d9b8d894c34ee5c2b7c7e4b",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "57e437d3fde2adff393929bf1682cb47d5a1b3880d9b8d894c34ee5c2b7c7e4b",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Disk Encryption Disabled",
+			"message": "VM disks for critical VMs must be encrypted with Customer Supplied Encryption Keys (CSEK) or with Customer-managed encryption keys (CMEK), which means the attribute 'disk_encryption_key' must be defined and its sub attributes 'raw_key' or 'kms_key_self_link' must also be defined",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_disk"
+				}
+			],
+			"location": {
+				"file": "gcp/instances.tf",
+				"start_line": 36,
+				"end_line": 36
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "b1d51728-7270-4991-ac2f-fc26e2695b38"
+				}
+			]
+		},
+		{
+			"id": "a29bcd6c7174b6ebe463db78365fecd35f8225b7d35de884a6f4e3e2280f84d4",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "a29bcd6c7174b6ebe463db78365fecd35f8225b7d35de884a6f4e3e2280f84d4",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "EBS Volume Encryption Disabled",
+			"message": "Elastic Compute Cloud (EC2) supports encryption at rest when using the Elastic Block Store (EBS) service. While disabled by default, forcing encryption at EBS volume creation is supported.\nEncrypting data at rest reduces the likelihood that it is unintentionally exposed and can nullify the impact of disclosure if the encryption remains unbroken.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ebs_volume#encrypted"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 34,
+				"end_line": 34
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "cc997676-481b-4e93-aa81-d19f8c5e9b12"
+				}
+			],
+			"details": {
+				"cisId": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 2.2.1",
+				"cisTitle": "Ensure EBS volume encryption is enabled"
+			}
+		},
+		{
+			"id": "5eb9bd8b1b98072589755d6872789c2f524eef207d574cc4210252f308e04d53",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "5eb9bd8b1b98072589755d6872789c2f524eef207d574cc4210252f308e04d53",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "ECR Image Tag Not Immutable",
+			"message": "ECR should have an image tag be immutable",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_repository"
+				}
+			],
+			"location": {
+				"file": "aws/ecr.tf",
+				"start_line": 3,
+				"end_line": 3
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "d1846b12-20c5-4d45-8798-fc35b79268eb"
+				}
+			]
+		},
+		{
+			"id": "bbdf5d14f29a03e39e1285821eced1e030d974a423c2ee45da3da07122162e1e",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "bbdf5d14f29a03e39e1285821eced1e030d974a423c2ee45da3da07122162e1e",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "ECR Repository Not Encrypted",
+			"message": "ECR (Elastic Container Registry) Repository encryption should be set",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_repository#encryption_configuration"
+				}
+			],
+			"location": {
+				"file": "aws/ecr.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "0e32d561-4b5a-4664-a6e3-a3fa85649157"
+				}
+			]
+		},
+		{
+			"id": "f4301e7efc70de1241d025958917609372ee5347cf0b611db683348660c02be3",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "f4301e7efc70de1241d025958917609372ee5347cf0b611db683348660c02be3",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "ElasticSearch Not Encrypted At Rest",
+			"message": "Check if ElasticSearch encryption is disabled at Rest",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elasticsearch_domain"
+				}
+			],
+			"location": {
+				"file": "aws/es.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "24e16922-4330-4e9d-be8a-caa90299466a"
+				}
+			]
+		},
+		{
+			"id": "1e60fb7907d0d8e890b9eb61397970c354f1c9e75de102c2621f14e9e787e73f",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "1e60fb7907d0d8e890b9eb61397970c354f1c9e75de102c2621f14e9e787e73f",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Elasticsearch Domain Not Encrypted Node To Node",
+			"message": "Elasticsearch Domain encryption should be enabled node to node",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elasticsearch_domain#node_to_node_encryption"
+				}
+			],
+			"location": {
+				"file": "aws/es.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "967eb3e6-26fc-497d-8895-6428beb6e8e2"
+				}
+			]
+		},
+		{
+			"id": "94986872b9941efe6d6075385d98b59d3a55958d791293c5455aae6d2b9838cf",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "94986872b9941efe6d6075385d98b59d3a55958d791293c5455aae6d2b9838cf",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Elasticsearch Domain With Vulnerable Policy",
+			"message": "Elasticsearch Domain policy should avoid wildcard in 'Action' and 'Principal'.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elasticsearch_domain_policy#access_policies"
+				}
+			],
+			"location": {
+				"file": "aws/es.tf",
+				"start_line": 42,
+				"end_line": 42
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "16c4216a-50d3-4785-bfb2-4adb5144a8ba"
+				}
+			]
+		},
+		{
+			"id": "5db7af48599e19dea7d03b0c514df47001b4629647d27583a880834b233e3d23",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "5db7af48599e19dea7d03b0c514df47001b4629647d27583a880834b233e3d23",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Elasticsearch Log is disabled",
+			"message": "AWS Elasticsearch should have logs enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elasticsearch_domain#log_publishing_options"
+				}
+			],
+			"location": {
+				"file": "aws/es.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "acb6b4e2-a086-4f35-aefd-4db6ea51ada2"
+				}
+			]
+		},
+		{
+			"id": "0bc88d61539f1416a6a881a7c3e9cda42c16d7a7f126076b3148cada5df4559b",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "0bc88d61539f1416a6a881a7c3e9cda42c16d7a7f126076b3148cada5df4559b",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Email Alerts Disabled",
+			"message": "Make sure that alerts notifications are set to 'On' in the Azure Security Center Contact",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_contact"
+				}
+			],
+			"location": {
+				"file": "azure/security_center.tf",
+				"start_line": 6,
+				"end_line": 6
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "9db38e87-f6aa-4b5e-a1ec-7266df259409"
+				}
+			]
+		},
+		{
+			"id": "239797fc88ca6895568147a80cbd2afb52fa22489fbd74cfcb296e438ef3ddb1",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "239797fc88ca6895568147a80cbd2afb52fa22489fbd74cfcb296e438ef3ddb1",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Encryption On Managed Disk Disabled",
+			"message": "Ensure that the encryption is active on the disk",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/managed_disk#encryption_settings"
+				}
+			],
+			"location": {
+				"file": "azure/storage.tf",
+				"start_line": 9,
+				"end_line": 9
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "a99130ab-4c0e-43aa-97f8-78d4fcb30024"
+				}
+			]
+		},
+		{
+			"id": "0b3d071a31a34ae173d2535dccdcef1c0d5264baa4d7457ea58369674b8b73fc",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "0b3d071a31a34ae173d2535dccdcef1c0d5264baa4d7457ea58369674b8b73fc",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Google Compute Network Using Firewall Rule that Allows All Ports",
+			"message": "Google Compute Network should not use a firewall rule that allows all ports",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall#allow"
+				}
+			],
+			"location": {
+				"file": "gcp/networks.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "22ef1d26-80f8-4a6c-8c15-f35aab3cac78"
+				}
+			]
+		},
+		{
+			"id": "1a82d6baab178d274e6a1cee6421d9b1312143677d60280be0337fe40b075884",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "1a82d6baab178d274e6a1cee6421d9b1312143677d60280be0337fe40b075884",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Google Compute Subnetwork Logging Disabled",
+			"message": "This query checks if logs are enabled for a Google Compute Subnetwork resource.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_subnetwork"
+				}
+			],
+			"location": {
+				"file": "gcp/networks.tf",
+				"start_line": 7,
+				"end_line": 7
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "40430747-442d-450a-a34f-dc57149f4609"
+				}
+			]
+		},
+		{
+			"id": "5dc6e24ccb9540da4f3ac7366ee1e08a1f4211111759d54a5a60bbeef18ace89",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "5dc6e24ccb9540da4f3ac7366ee1e08a1f4211111759d54a5a60bbeef18ace89",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Google Container Node Pool Auto Repair Disabled",
+			"message": "Verifies if Google Container Node Pool Auto Repair is Enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_node_pool"
+				}
+			],
+			"location": {
+				"file": "gcp/gke.tf",
+				"start_line": 24,
+				"end_line": 24
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "acfdbec6-4a17-471f-b412-169d77553332"
+				}
+			]
+		},
+		{
+			"id": "ff25eb0342c9c35a3d556dd3d40c5ccef7351654251135471b0b8e16121ace97",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "ff25eb0342c9c35a3d556dd3d40c5ccef7351654251135471b0b8e16121ace97",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Google Storage Bucket Level Access Disabled",
+			"message": "Google Storage Bucket Level Access should be enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket"
+				}
+			],
+			"location": {
+				"file": "gcp/gcs.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "bb0db090-5509-4853-a827-75ced0b3caa0"
+				}
+			]
+		},
+		{
+			"id": "ace5e9484758c4154581bdf934f8a2c671f0257e4585ae8c821e9bba3893dad2",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "ace5e9484758c4154581bdf934f8a2c671f0257e4585ae8c821e9bba3893dad2",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "IAM Access Analyzer Undefined",
+			"message": "IAM Access Analyzer should be defined to identify unintentional access",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/accessanalyzer_analyzer"
+				}
+			],
+			"location": {
+				"file": "aws/db-app.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "e592a0c5-5bdb-414c-9066-5dba7cdea370"
+				}
+			]
+		},
+		{
+			"id": "2766026ca9bd6e5b18add117bb8998b7648549cf68ea4bd69d7069440ddc7d67",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "2766026ca9bd6e5b18add117bb8998b7648549cf68ea4bd69d7069440ddc7d67",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "IAM Access Key Is Exposed",
+			"message": "AWS console defaults to no check boxes selected when creating a new IAM user. When cerating the IAM User credentials you have to determine what type of access they require. Programmatic access: The IAM user might need to make API calls, use the AWS CLI, or use the Tools for Windows PowerShell. In that case, create an access key (access key ID and a secret access key) for that user. AWS Management Console access: If the user needs to access the AWS Management Console, create a password for the user.\nRequiring the additional steps be taken by the user for programmatic access after their profile has been created will give a stronger indication of intent that access keys are [a] necessary for their work and [b] once the access key is established on an account that the keys may be in use somewhere in the organization. Note : Even if it is known the user will need access keys, require them to create the keys themselves or put in a support ticket to have them created as a separate step from user creation.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_access_key"
+				}
+			],
+			"location": {
+				"file": "aws/iam.tf",
+				"start_line": 21,
+				"end_line": 21
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "7081f85c-b94d-40fd-8b45-a4f1cac75e46"
+				}
+			],
+			"details": {
+				"cisId": "CIS Security - CIS Amazon Web Services Foundations Benchmark v1.4.0 - Rule 1.11",
+				"cisTitle": "Do not setup access keys during initial user setup for all IAM users that have a console password"
+			}
+		},
+		{
+			"id": "567795fc95260bea21f9451cd2167b69aa021d37c047bfb4f737fb13ddaf5f88",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "567795fc95260bea21f9451cd2167b69aa021d37c047bfb4f737fb13ddaf5f88",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "IAM Policy Grants Full Permissions",
+			"message": "IAM policies allow all ('*') in a statement action",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy"
+				}
+			],
+			"location": {
+				"file": "aws/iam.tf",
+				"start_line": 29,
+				"end_line": 29
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "575a2155-6af1-4026-b1af-d5bc8fe2a904"
+				}
+			]
+		},
+		{
+			"id": "89cbb1653600a511305abb1ee5d546437ee7086eeda0699ed05ef63673f37d7b",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "89cbb1653600a511305abb1ee5d546437ee7086eeda0699ed05ef63673f37d7b",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "IAM Policy Grants Full Permissions",
+			"message": "IAM policies allow all ('*') in a statement action",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy"
+				}
+			],
+			"location": {
+				"file": "aws/db-app.tf",
+				"start_line": 209,
+				"end_line": 209
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "575a2155-6af1-4026-b1af-d5bc8fe2a904"
+				}
+			]
+		},
+		{
+			"id": "a7cbaec955fb1d03bac85936ff8003458cab54479e4dd4fd87fd5aae464c15db",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "a7cbaec955fb1d03bac85936ff8003458cab54479e4dd4fd87fd5aae464c15db",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Neptune Cluster With IAM Database Authentication Disabled",
+			"message": "Neptune Cluster should have IAM Database Authentication enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/neptune_cluster#storage_encrypted"
+				}
+			],
+			"location": {
+				"file": "aws/neptune.tf",
+				"start_line": 7,
+				"end_line": 7
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "c91d7ea0-d4d1-403b-8fe1-c9961ac082c5"
+				}
+			]
+		},
+		{
+			"id": "7737c75d201ed04639c8e84db2fa8405324eecb2c05a12289bbf975548224d1c",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "7737c75d201ed04639c8e84db2fa8405324eecb2c05a12289bbf975548224d1c",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Neptune Database Cluster Encryption Disabled",
+			"message": "Check if Neptune Cluster Storage is securely encrypted",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/neptune_cluster#storage_encrypted"
+				}
+			],
+			"location": {
+				"file": "aws/neptune.tf",
+				"start_line": 9,
+				"end_line": 9
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "98d59056-f745-4ef5-8613-32bca8d40b7e"
+				}
+			]
+		},
+		{
+			"id": "4c959aaeb1acdbc8403e4e9c5166b2d90a0fb1602baa22dc10f1016cd7398eac",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "4c959aaeb1acdbc8403e4e9c5166b2d90a0fb1602baa22dc10f1016cd7398eac",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "OSLogin Is Disabled For VM Instance",
+			"message": "Check if any VM instance disables OSLogin",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance"
+				}
+			],
+			"location": {
+				"file": "gcp/instances.tf",
+				"start_line": 21,
+				"end_line": 21
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "d0b4d550-c001-46c3-bbdb-d5d75d33f05f"
+				}
+			]
+		},
+		{
+			"id": "c655e8288bd7f7d34aa1b0ee8c0b86da6cc8e0f1662551a56b89b489aefb3f40",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "c655e8288bd7f7d34aa1b0ee8c0b86da6cc8e0f1662551a56b89b489aefb3f40",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "PostgreSQL Log Checkpoints Disabled",
+			"message": "Make sure that for Postgre SQL Database Server, parameter 'log_checkpoints' is set to 'ON'",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_configuration"
+				}
+			],
+			"location": {
+				"file": "azure/sql.tf",
+				"start_line": 109,
+				"end_line": 109
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "3790d386-be81-4dcf-9850-eaa7df6c10d9"
+				}
+			]
+		},
+		{
+			"id": "34790d9838c8c520fba0c9f34f6d4cf04e122770a7695dd47d49992318d5bc4e",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "34790d9838c8c520fba0c9f34f6d4cf04e122770a7695dd47d49992318d5bc4e",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "PostgreSQL Server Without Connection Throttling",
+			"message": "Ensure that Connection Throttling is set for the PostgreSQL server",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_configuration"
+				}
+			],
+			"location": {
+				"file": "azure/sql.tf",
+				"start_line": 102,
+				"end_line": 102
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "2b3c671f-1b76-4741-8789-ed1fe0785dc4"
+				}
+			]
+		},
+		{
+			"id": "20bdaf4fa365530c992d82b42fa3aadbdf1f0b179564da36eda7b122095fcdfd",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "20bdaf4fa365530c992d82b42fa3aadbdf1f0b179564da36eda7b122095fcdfd",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Project-wide SSH Keys Are Enabled In VM Instances",
+			"message": "VM Instance should block project-wide SSH keys",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance"
+				}
+			],
+			"location": {
+				"file": "gcp/instances.tf",
+				"start_line": 20,
+				"end_line": 20
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "3e4d5ce6-3280-4027-8010-c26eeea1ec01"
+				}
+			]
+		},
+		{
+			"id": "5dd4f909beb2f44e8d970ec6aadff3c9544cb88f0a74308fd41801ba0a9a9b3f",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "5dd4f909beb2f44e8d970ec6aadff3c9544cb88f0a74308fd41801ba0a9a9b3f",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "RDP Access Is Not Restricted",
+			"message": "Check if Google Firewall ingress allows RDP access (port 3389)",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall"
+				}
+			],
+			"location": {
+				"file": "gcp/networks.tf",
+				"start_line": 25,
+				"end_line": 25
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "678fd659-96f2-454a-a2a0-c2571f83a4a3"
+				}
+			]
+		},
+		{
+			"id": "566394fcab3c7354de4404ff54325de5d26be82cc41941be92c6879a13397744",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "566394fcab3c7354de4404ff54325de5d26be82cc41941be92c6879a13397744",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "RDS With Backup Disabled",
+			"message": "RDS configured without backup",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance"
+				}
+			],
+			"location": {
+				"file": "aws/db-app.tf",
+				"start_line": 17,
+				"end_line": 17
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "1dc73fb4-5b51-430c-8c5f-25dcf9090b02"
+				}
+			]
+		},
+		{
+			"id": "d2196f56d160695f876f0b4fcb6b777a74d7a5ad81cf2451a114b6fb008df776",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "d2196f56d160695f876f0b4fcb6b777a74d7a5ad81cf2451a114b6fb008df776",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Role Definition Allows Custom Role Creation",
+			"message": "Role Definition should not allow custom role creation",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_definition#actions"
+				}
+			],
+			"location": {
+				"file": "azure/roles.tf",
+				"start_line": 9,
+				"end_line": 9
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "3fa5900f-9aac-4982-96b2-a6143d9c99fb"
+				}
+			]
+		},
+		{
+			"id": "50e894606a4bac4bac6cf312a4816457a68945435ad8d04c7c040398e7b17841",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "50e894606a4bac4bac6cf312a4816457a68945435ad8d04c7c040398e7b17841",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Without Versioning",
+			"message": "S3 bucket should have versioning enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#versioning"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "568a4d22-3517-44a6-a7ad-6a7eed88722c"
+				}
+			]
+		},
+		{
+			"id": "c1a9cd1a76bd2ffe06c9d53030f5f9f5f698c2dc342f59c68f6191d19505db3b",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "c1a9cd1a76bd2ffe06c9d53030f5f9f5f698c2dc342f59c68f6191d19505db3b",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Without Versioning",
+			"message": "S3 bucket should have versioning enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#versioning"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 43,
+				"end_line": 43
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "568a4d22-3517-44a6-a7ad-6a7eed88722c"
+				}
+			]
+		},
+		{
+			"id": "3412ec259e9c177dce048dc526874119e93295f49c090fd9bd58df562675dacd",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "3412ec259e9c177dce048dc526874119e93295f49c090fd9bd58df562675dacd",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Without Versioning",
+			"message": "S3 bucket should have versioning enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#versioning"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 271,
+				"end_line": 271
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "568a4d22-3517-44a6-a7ad-6a7eed88722c"
+				}
+			]
+		},
+		{
+			"id": "697b67edd0e127d33030d106d1b1fe7db8281b81f23cdd1bd5eeec94b65742c6",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "697b67edd0e127d33030d106d1b1fe7db8281b81f23cdd1bd5eeec94b65742c6",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "SQL Server Auditing Disabled",
+			"message": "Make sure that for SQL Servers, 'Auditing' is set to 'On'",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/sql_server"
+				}
+			],
+			"location": {
+				"file": "azure/sql.tf",
+				"start_line": 9,
+				"end_line": 9
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "f7e296b0-6660-4bc5-8f87-22ac4a815edf"
+				}
+			]
+		},
+		{
+			"id": "ecacd9c10f1313117c0c006f77185ccf0c0d454076efedc2800341f1a2d3a123",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "ecacd9c10f1313117c0c006f77185ccf0c0d454076efedc2800341f1a2d3a123",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "SSH Access Is Not Restricted",
+			"message": "Check if Google Firewall allows SSH access (port 22) from the Internet (public CIDR block)",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall"
+				}
+			],
+			"location": {
+				"file": "gcp/networks.tf",
+				"start_line": 25,
+				"end_line": 25
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "c4dcdcdf-10dd-4bf4-b4a0-8f6239e6aaa0"
+				}
+			]
+		},
+		{
+			"id": "8d5f54a3d1f2b5e3d55df25d50a7d6807168641e917a75bf9dca10e57d0f75c0",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "8d5f54a3d1f2b5e3d55df25d50a7d6807168641e917a75bf9dca10e57d0f75c0",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Security Center Pricing Tier Is Not Standard",
+			"message": "Make sure that the 'Standard' pricing tiers were selected.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing"
+				}
+			],
+			"location": {
+				"file": "azure/security_center.tf",
+				"start_line": 2,
+				"end_line": 2
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "819d50fd-1cdf-45c3-9936-be408aaad93e"
+				}
+			]
+		},
+		{
+			"id": "a2808e0daa9886df8116f6f73ce3c3315eff2ee954514b925eacc217e76aeb26",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "a2808e0daa9886df8116f6f73ce3c3315eff2ee954514b925eacc217e76aeb26",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Serial Ports Are Enabled For VM Instances",
+			"message": "Check if VM instance enables serial ports",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance"
+				}
+			],
+			"location": {
+				"file": "gcp/instances.tf",
+				"start_line": 22,
+				"end_line": 22
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "97fa667a-d05b-4f16-9071-58b939f34751"
+				}
+			]
+		},
+		{
+			"id": "97f6995c884ff17301573735ab478b7fea075b007a5498b177f9f862d43de36c",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "97f6995c884ff17301573735ab478b7fea075b007a5498b177f9f862d43de36c",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Small Activity Log Retention Period",
+			"message": "Ensure that Activity Log Retention is set 365 days or greater",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/monitor_log_profile"
+				}
+			],
+			"location": {
+				"file": "azure/logging.tf",
+				"start_line": 8,
+				"end_line": 8
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "2b856bf9-8e8c-4005-875f-303a8cba3918"
+				}
+			]
+		},
+		{
+			"id": "922741dddfb8faa31a55fdd1c1d46f75ed20011b748198a620cf542118bddcd3",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "922741dddfb8faa31a55fdd1c1d46f75ed20011b748198a620cf542118bddcd3",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Small Flow Logs Retention Period",
+			"message": "Flow logs enable capturing information about IP traffic flowing in and out of the network security groups. Network Security Group Flow Logs must be enabled with retention period greater than or equal to 90 days. This is important, because these logs are used to check for anomalies and give information of suspected breaches",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_watcher_flow_log"
+				}
+			],
+			"location": {
+				"file": "azure/networking.tf",
+				"start_line": 133,
+				"end_line": 133
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "7750fcca-dd03-4d38-b663-4b70289bcfd4"
+				}
+			]
+		},
+		{
+			"id": "aa1af4325ea7b119fb385eea33e44e402ad46d82a9ec6eb6d230c6118c2a856a",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "aa1af4325ea7b119fb385eea33e44e402ad46d82a9ec6eb6d230c6118c2a856a",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Small Flow Logs Retention Period",
+			"message": "Flow logs enable capturing information about IP traffic flowing in and out of the network security groups. Network Security Group Flow Logs must be enabled with retention period greater than or equal to 90 days. This is important, because these logs are used to check for anomalies and give information of suspected breaches",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_watcher_flow_log"
+				}
+			],
+			"location": {
+				"file": "azure/networking.tf",
+				"start_line": 132,
+				"end_line": 132
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "7750fcca-dd03-4d38-b663-4b70289bcfd4"
+				}
+			]
+		},
+		{
+			"id": "b9a37439036281b7906e14287b83bb1da7726e33b930db17d610d76a386c456e",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "b9a37439036281b7906e14287b83bb1da7726e33b930db17d610d76a386c456e",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Storage Account Not Using Latest TLS Encryption Version",
+			"message": "Ensure Storage Account is using the latest version of TLS encryption",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account"
+				}
+			],
+			"location": {
+				"file": "azure/storage.tf",
+				"start_line": 23,
+				"end_line": 23
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "8263f146-5e03-43e0-9cfe-db960d56d1e7"
+				}
+			]
+		},
+		{
+			"id": "10703aefbc1ee7f7d6c138c16e3f2bbaba6bdd8d3019b671229aab155e2ab488",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "10703aefbc1ee7f7d6c138c16e3f2bbaba6bdd8d3019b671229aab155e2ab488",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Unscanned ECR Image",
+			"message": "Checks if the ECR Image has been scanned",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_repository#scan_on_push"
+				}
+			],
+			"location": {
+				"file": "aws/ecr.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "9630336b-3fed-4096-8173-b9afdfe346a7"
+				}
+			]
+		},
+		{
+			"id": "0e3e389bcac122c2ea57f72d0b2ba5ac185090374a5637660799960efb741cdc",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "0e3e389bcac122c2ea57f72d0b2ba5ac185090374a5637660799960efb741cdc",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Using Default Service Account",
+			"message": "Instances must not be configured to use the Default Service Account, that has full access to all Cloud APIs, which means the attribute 'service_account' and its sub attribute 'email' must be defined. Additionally, 'email' must not be empty and must also not be a default Google Compute Engine service account.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance"
+				}
+			],
+			"location": {
+				"file": "gcp/instances.tf",
+				"start_line": 3,
+				"end_line": 3
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "3cb4af0b-056d-4fb1-8b95-fdc4593625ff"
+				}
+			]
+		},
+		{
+			"id": "71d3d17f12dbdb8be1c4476587d15f06af8f47beac206cf995a20263431cf05d",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "71d3d17f12dbdb8be1c4476587d15f06af8f47beac206cf995a20263431cf05d",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "VPC FlowLogs Disabled",
+			"message": "VPC hasn't got any FlowLog associated",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc"
+				}
+			],
+			"location": {
+				"file": "aws/eks.tf",
+				"start_line": 43,
+				"end_line": 43
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "f83121ea-03da-434f-9277-9cd247ab3047"
+				}
+			]
+		},
+		{
+			"id": "ca7f5620cb669fff30d6bdb8219ce5f6db200ad89b417010159deb6a7ff2009a",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "ca7f5620cb669fff30d6bdb8219ce5f6db200ad89b417010159deb6a7ff2009a",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "VPC Subnet Assigns Public IP",
+			"message": "VPC Subnet should not assign public IP",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet#map_public_ip_on_launch"
+				}
+			],
+			"location": {
+				"file": "aws/eks.tf",
+				"start_line": 93,
+				"end_line": 93
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "52f04a44-6bfa-4c41-b1d3-4ae99a2de05c"
+				}
+			]
+		},
+		{
+			"id": "4c0ae2e9ad1ff1b46d934105da2e9d707cb741f8ecea774edc6096f5386b40b3",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "4c0ae2e9ad1ff1b46d934105da2e9d707cb741f8ecea774edc6096f5386b40b3",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "VPC Subnet Assigns Public IP",
+			"message": "VPC Subnet should not assign public IP",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet#map_public_ip_on_launch"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 139,
+				"end_line": 139
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "52f04a44-6bfa-4c41-b1d3-4ae99a2de05c"
+				}
+			]
+		},
+		{
+			"id": "b5afbb2f7a22314228a0e93ed5f73d9696e2ef0da4bf9a1e9a8971c05bfc35fb",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "b5afbb2f7a22314228a0e93ed5f73d9696e2ef0da4bf9a1e9a8971c05bfc35fb",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "VPC Subnet Assigns Public IP",
+			"message": "VPC Subnet should not assign public IP",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet#map_public_ip_on_launch"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 159,
+				"end_line": 159
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "52f04a44-6bfa-4c41-b1d3-4ae99a2de05c"
+				}
+			]
+		},
+		{
+			"id": "ac121b95fb52e306b344a7113e8e3d3d877fee35812599a72787a14856693d46",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "ac121b95fb52e306b344a7113e8e3d3d877fee35812599a72787a14856693d46",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "VPC Subnet Assigns Public IP",
+			"message": "VPC Subnet should not assign public IP",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet#map_public_ip_on_launch"
+				}
+			],
+			"location": {
+				"file": "aws/eks.tf",
+				"start_line": 65,
+				"end_line": 65
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "52f04a44-6bfa-4c41-b1d3-4ae99a2de05c"
+				}
+			]
+		},
+		{
+			"id": "801c7028e7f2bcc22d7a85107b5695ecf71953097db217ca9345ffff5e0313ef",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "801c7028e7f2bcc22d7a85107b5695ecf71953097db217ca9345ffff5e0313ef",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "VPC Without Network Firewall",
+			"message": "VPC should have a Network Firewall associated",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/networkfirewall_firewall#vpc_id"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 117,
+				"end_line": 117
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "fd632aaf-b8a1-424d-a4d1-0de22fd3247a"
+				}
+			]
+		},
+		{
+			"id": "efa31bd4ced02d8b23ed2a7293dc8905def66d863b2238cf010489d04ab76fe2",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "efa31bd4ced02d8b23ed2a7293dc8905def66d863b2238cf010489d04ab76fe2",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "VPC Without Network Firewall",
+			"message": "VPC should have a Network Firewall associated",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/networkfirewall_firewall#vpc_id"
+				}
+			],
+			"location": {
+				"file": "aws/eks.tf",
+				"start_line": 43,
+				"end_line": 43
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "fd632aaf-b8a1-424d-a4d1-0de22fd3247a"
+				}
+			]
+		},
+		{
+			"id": "594b9c40250ea4a02dc68c4b4dc20924c320aa68d89a166612fa4fdc56874c33",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "594b9c40250ea4a02dc68c4b4dc20924c320aa68d89a166612fa4fdc56874c33",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Virtual Network with DDoS Protection Plan disabled",
+			"message": "Virtual Network should have DDoS Protection Plan enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network#ddos_protection_plan"
+				}
+			],
+			"location": {
+				"file": "azure/networking.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "b4cc2c52-34a6-4b43-b57c-4bdeb4514a5a"
+				}
+			]
+		},
+		{
+			"id": "803b22cf9c7b1710b7ce438403418889529652d7246e9b760f34a021af2c580a",
+			"category": "sast",
+			"severity": "Medium",
+			"cve": "803b22cf9c7b1710b7ce438403418889529652d7246e9b760f34a021af2c580a",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "WAF Is Disabled For Azure Application Gateway",
+			"message": "Check if Web Application Firewall is disabled or not configured for Azure's Application Gateway.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_gateway"
+				}
+			],
+			"location": {
+				"file": "azure/application_gateway.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "2e48d91c-50e4-45c8-9312-27b625868a72"
+				}
+			]
+		},
+		{
+			"id": "bb08ee8b9e31d9922dedf270c4d51b58372bf90c6e4d26d3cc4958a2965a35d5",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "bb08ee8b9e31d9922dedf270c4d51b58372bf90c6e4d26d3cc4958a2965a35d5",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "AKS Private Cluster Disabled",
+			"message": "Azure Kubernetes Service (AKS) API should not be exposed to the internet",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster#private_cluster_enabled"
+				}
+			],
+			"location": {
+				"file": "azure/aks.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "599318f2-6653-4569-9e21-041d06c63a89"
+				}
+			]
+		},
+		{
+			"id": "5f2f8ef13112e2a33fa1d3e897b37535e1966b7b8d2cfa97c5c3a43080fbf0fb",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "5f2f8ef13112e2a33fa1d3e897b37535e1966b7b8d2cfa97c5c3a43080fbf0fb",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "AKS Uses Azure Policies Add-On Disabled",
+			"message": "Azure Container Service (AKS) should use Azure Policies Add-On",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster#azure_policy"
+				}
+			],
+			"location": {
+				"file": "azure/aks.tf",
+				"start_line": 14,
+				"end_line": 14
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "43789711-161b-4708-b5bb-9d1c626f7492"
+				}
+			]
+		},
+		{
+			"id": "d4e5ab5d62173aefdc48f903528384e5e45c982bad333bce585abbd683b75976",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "d4e5ab5d62173aefdc48f903528384e5e45c982bad333bce585abbd683b75976",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "App Service HTTP2 Disabled",
+			"message": "App Service should have 'http2_enabled' enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#http2_enabled"
+				}
+			],
+			"location": {
+				"file": "azure/app_service.tf",
+				"start_line": 43,
+				"end_line": 43
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "525b53be-62ed-4244-b4df-41aecfcb4071"
+				}
+			]
+		},
+		{
+			"id": "dc80523b78c8ab0b56d4cad8de72e5b5bed1b55561f533b8f2a875d6c40a6185",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "dc80523b78c8ab0b56d4cad8de72e5b5bed1b55561f533b8f2a875d6c40a6185",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "App Service HTTP2 Disabled",
+			"message": "App Service should have 'http2_enabled' enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#http2_enabled"
+				}
+			],
+			"location": {
+				"file": "azure/app_service.tf",
+				"start_line": 28,
+				"end_line": 28
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "525b53be-62ed-4244-b4df-41aecfcb4071"
+				}
+			]
+		},
+		{
+			"id": "63496e3ed3d0eb76649bc76003664da927beb9bbd6f62e90c6a065ce9ac5d4ba",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "63496e3ed3d0eb76649bc76003664da927beb9bbd6f62e90c6a065ce9ac5d4ba",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Dashboard Is Enabled",
+			"message": "Check if the Kubernetes Dashboard is enabled.",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster"
+				}
+			],
+			"location": {
+				"file": "azure/aks.tf",
+				"start_line": 19,
+				"end_line": 19
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "61c3cb8b-0715-47e4-b788-86dde40dd2db"
+				}
+			]
+		},
+		{
+			"id": "89f34afe0e3742867f08011ec1c089014689f562b36d7994819880528dbb1fcb",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "89f34afe0e3742867f08011ec1c089014689f562b36d7994819880528dbb1fcb",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "EC2 Instance Using API Keys",
+			"message": "EC2 instances should use roles to be granted access to other AWS services",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#iam_instance_profile"
+				}
+			],
+			"location": {
+				"file": "aws/db-app.tf",
+				"start_line": 242,
+				"end_line": 242
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "0b93729a-d882-4803-bdc3-ac429a21f158"
+				}
+			]
+		},
+		{
+			"id": "7aa4aeddceef01bdb81ee0504ec1a70f90f5ab0578f155f1279e516ca41dd5ab",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "7aa4aeddceef01bdb81ee0504ec1a70f90f5ab0578f155f1279e516ca41dd5ab",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "EC2 Instance Using API Keys",
+			"message": "EC2 instances should use roles to be granted access to other AWS services",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#iam_instance_profile"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "0b93729a-d882-4803-bdc3-ac429a21f158"
+				}
+			]
+		},
+		{
+			"id": "a454712a8a0a7b97f34a27e7f64407b64cc9f5b5a0ef97d5c6f542b37de6c264",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "a454712a8a0a7b97f34a27e7f64407b64cc9f5b5a0ef97d5c6f542b37de6c264",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "ECR Repository Without Policy",
+			"message": "ECR Repository should have Policies attached to it",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_repository_policy"
+				}
+			],
+			"location": {
+				"file": "aws/ecr.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "69e7c320-b65d-41bb-be02-d63ecc0bcc9d"
+				}
+			]
+		},
+		{
+			"id": "2d15ad26a177af943ffb9fdd1291560f0ff7326fa82446d61fbe005df0b450b0",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "2d15ad26a177af943ffb9fdd1291560f0ff7326fa82446d61fbe005df0b450b0",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "EKS cluster logging is not enabled",
+			"message": "Amazon EKS control plane logging is not enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster#enabled_cluster_log_types"
+				}
+			],
+			"location": {
+				"file": "aws/eks.tf",
+				"start_line": 117,
+				"end_line": 117
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "37304d3f-f852-40b8-ae3f-725e87a7cedf"
+				}
+			]
+		},
+		{
+			"id": "95b30cb9b6203437d241ae2ba9ec91fc4be0f88a661e0c5547d85e33a63f233b",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "95b30cb9b6203437d241ae2ba9ec91fc4be0f88a661e0c5547d85e33a63f233b",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Google Compute Subnetwork with Private Google Access Disabled",
+			"message": "Google Compute Subnetwork should have 'private_ip_google_access' set to true",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_subnetwork#private_ip_google_access"
+				}
+			],
+			"location": {
+				"file": "gcp/networks.tf",
+				"start_line": 7,
+				"end_line": 7
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "ee7b93c1-b3f8-4a3b-9588-146d481814f5"
+				}
+			]
+		},
+		{
+			"id": "bc2637edfc5cd16d676be8929fac25e1d53d88217ab4b1b93ada33ba05e97b93",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "bc2637edfc5cd16d676be8929fac25e1d53d88217ab4b1b93ada33ba05e97b93",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Hardcoded AWS Access Key",
+			"message": "Hard-coded AWS access key / secret key exists in EC2 user data",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 9,
+				"end_line": 9
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "d7b9d850-3e06-4a75-852f-c46c2e92240b"
+				}
+			]
+		},
+		{
+			"id": "9e1cd27fee964787083fb2309b931a7bc9c8567715f4d480f982f3956240b14f",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "9e1cd27fee964787083fb2309b931a7bc9c8567715f4d480f982f3956240b14f",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Healthcheck Instruction Missing",
+			"message": "Ensure that HEALTHCHECK is being used. The HEALTHCHECK instruction tells Docker how to test a container to check that it is still working",
+			"links": [
+				{
+					"url": "https://docs.docker.com/engine/reference/builder/#healthcheck"
+				}
+			],
+			"location": {
+				"file": "aws/resources/Dockerfile",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/dockerfile-queries",
+					"value": "b03a748a-542d-44f4-bb86-9199ab4fd2d5"
+				}
+			]
+		},
+		{
+			"id": "56e43688118a98f7413ac43e70714fa62308e41daa460962594aeb14bddc0989",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "56e43688118a98f7413ac43e70714fa62308e41daa460962594aeb14bddc0989",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "IAM Policies Attached To User",
+			"message": "IAM policies should be attached only to groups or roles",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy_attachment"
+				}
+			],
+			"location": {
+				"file": "aws/iam.tf",
+				"start_line": 27,
+				"end_line": 27
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "b4378389-a9aa-44ee-91e7-ef183f11079e"
+				}
+			]
+		},
+		{
+			"id": "387d130bc84f5a46ccfebd0b2f9e1f8b65d01281b8e64bdd1bcf1684430ee328",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "387d130bc84f5a46ccfebd0b2f9e1f8b65d01281b8e64bdd1bcf1684430ee328",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Key Vault Secrets Content Type Undefined",
+			"message": "Key Vault Secrets should have set Content Type",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault_secret#content_type"
+				}
+			],
+			"location": {
+				"file": "azure/key_vault.tf",
+				"start_line": 58,
+				"end_line": 58
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "f8e08a38-fc6e-4915-abbe-a7aadf1d59ef"
+				}
+			]
+		},
+		{
+			"id": "39300c7f227698e88e18ce16b46aba66ccd56eac64fa0f71ee65f42270f930df",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "39300c7f227698e88e18ce16b46aba66ccd56eac64fa0f71ee65f42270f930df",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Lambda Functions Without X-Ray Tracing",
+			"message": "AWS Lambda functions should have TracingConfig enabled. For this, property 'tracing_Config.mode' should have the value 'Active'",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function#tracing_config"
+				}
+			],
+			"location": {
+				"file": "aws/lambda.tf",
+				"start_line": 31,
+				"end_line": 31
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "8152e0cf-d2f0-47ad-96d5-d003a76eabd1"
+				}
+			]
+		},
+		{
+			"id": "71e6680c16c9788a448c205e01e3938fc118ea0bbecf5f8baeb37ae657ee49af",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "71e6680c16c9788a448c205e01e3938fc118ea0bbecf5f8baeb37ae657ee49af",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "PostgreSQL Server Infrastructure Encryption Disabled",
+			"message": "PostgreSQL Server Infrastructure Encryption should be enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_server#infrastructure_encryption_enabled"
+				}
+			],
+			"location": {
+				"file": "azure/sql.tf",
+				"start_line": 73,
+				"end_line": 73
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "6425c98b-ca4e-41fe-896a-c78772c131f8"
+				}
+			]
+		},
+		{
+			"id": "893731d62f2077576319163132f521c285b9ae2ddb20de19921315d3cb815b16",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "893731d62f2077576319163132f521c285b9ae2ddb20de19921315d3cb815b16",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Logging Disabled",
+			"message": "S3 bucket without logging",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 115,
+				"end_line": 115
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "f861041c-8c9f-4156-acfc-5e6e524f5884"
+				}
+			]
+		},
+		{
+			"id": "395f96a15d7cbf2a6c7a1f269700fbaacd793f58a571af0fc8d124ea779eb41c",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "395f96a15d7cbf2a6c7a1f269700fbaacd793f58a571af0fc8d124ea779eb41c",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Logging Disabled",
+			"message": "S3 bucket without logging",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 43,
+				"end_line": 43
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "f861041c-8c9f-4156-acfc-5e6e524f5884"
+				}
+			]
+		},
+		{
+			"id": "cea7b16e829fa8e42ad73ba8f4c7abdaa104d834805f75b1c5939a6ef45d1ca8",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "cea7b16e829fa8e42ad73ba8f4c7abdaa104d834805f75b1c5939a6ef45d1ca8",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Logging Disabled",
+			"message": "S3 bucket without logging",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "f861041c-8c9f-4156-acfc-5e6e524f5884"
+				}
+			]
+		},
+		{
+			"id": "e9805d178fbb921ac8ec795eacf3d9521c8ac003aace1522aff912bc64a988b9",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "e9805d178fbb921ac8ec795eacf3d9521c8ac003aace1522aff912bc64a988b9",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Logging Disabled",
+			"message": "S3 bucket without logging",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket"
+				}
+			],
+			"location": {
+				"file": "aws/s3.tf",
+				"start_line": 66,
+				"end_line": 66
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "f861041c-8c9f-4156-acfc-5e6e524f5884"
+				}
+			]
+		},
+		{
+			"id": "3c59a4ad4b40d164266db5da188ada48126ba567811134d29f19b5f618c8bd74",
+			"category": "sast",
+			"severity": "Low",
+			"cve": "3c59a4ad4b40d164266db5da188ada48126ba567811134d29f19b5f618c8bd74",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "S3 Bucket Logging Disabled",
+			"message": "S3 bucket without logging",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 271,
+				"end_line": 271
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "f861041c-8c9f-4156-acfc-5e6e524f5884"
+				}
+			]
+		},
+		{
+			"id": "142f1ce4ab6d0f5cc8b0ae2d7d4095ca5102550b0e1383d06b88d2dc2c423f3a",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "142f1ce4ab6d0f5cc8b0ae2d7d4095ca5102550b0e1383d06b88d2dc2c423f3a",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "App Service Authentication Disabled",
+			"message": "Azure App Service authentication settings should be enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#enabled"
+				}
+			],
+			"location": {
+				"file": "azure/app_service.tf",
+				"start_line": 51,
+				"end_line": 51
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "c7fc1481-2899-4490-bbd8-544a3a61a2f3"
+				}
+			]
+		},
+		{
+			"id": "79c712a47eabb58358f6d365e0fdc40d1e66edcdabc99876ad09bc1ab414e375",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "79c712a47eabb58358f6d365e0fdc40d1e66edcdabc99876ad09bc1ab414e375",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "App Service Authentication Disabled",
+			"message": "Azure App Service authentication settings should be enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#enabled"
+				}
+			],
+			"location": {
+				"file": "azure/app_service.tf",
+				"start_line": 22,
+				"end_line": 22
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "c7fc1481-2899-4490-bbd8-544a3a61a2f3"
+				}
+			]
+		},
+		{
+			"id": "cde57c151744b2065015646e019518fb082a286399675fd56290d79f485ab75a",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "cde57c151744b2065015646e019518fb082a286399675fd56290d79f485ab75a",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "EC2 Instance Monitoring Disabled",
+			"message": "EC2 Instance should have detailed monitoring enabled. With detailed monitoring enabled data is available in 1-minute periods",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#monitoring"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "23b70e32-032e-4fa6-ba5c-82f56b9980e6"
+				}
+			]
+		},
+		{
+			"id": "e2844cf5ba75a21c197a3ed6241be373a8170a6749d4144b838b746b265f195b",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "e2844cf5ba75a21c197a3ed6241be373a8170a6749d4144b838b746b265f195b",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "EC2 Instance Monitoring Disabled",
+			"message": "EC2 Instance should have detailed monitoring enabled. With detailed monitoring enabled data is available in 1-minute periods",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#monitoring"
+				}
+			],
+			"location": {
+				"file": "aws/db-app.tf",
+				"start_line": 242,
+				"end_line": 242
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "23b70e32-032e-4fa6-ba5c-82f56b9980e6"
+				}
+			]
+		},
+		{
+			"id": "157cf62c29a10b511c2c488404e03cc41f864f2e6a18f091da211c2b133a1ba5",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "157cf62c29a10b511c2c488404e03cc41f864f2e6a18f091da211c2b133a1ba5",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "EC2 Not EBS Optimized",
+			"message": "It's considered a best practice for an EC2 instance to use an EBS optimized instance. This provides the best performance for your EBS volumes by minimizing contention between Amazon EBS I/O and other traffic from your instance",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#ebs_optimized"
+				}
+			],
+			"location": {
+				"file": "aws/db-app.tf",
+				"start_line": 242,
+				"end_line": 242
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "60224630-175a-472a-9e23-133827040766"
+				}
+			]
+		},
+		{
+			"id": "24c179347f3535dc1d79b6b4dd680759812f05df102d022ffe3f63aac4d6398a",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "24c179347f3535dc1d79b6b4dd680759812f05df102d022ffe3f63aac4d6398a",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "EC2 Not EBS Optimized",
+			"message": "It's considered a best practice for an EC2 instance to use an EBS optimized instance. This provides the best performance for your EBS volumes by minimizing contention between Amazon EBS I/O and other traffic from your instance",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#ebs_optimized"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "60224630-175a-472a-9e23-133827040766"
+				}
+			]
+		},
+		{
+			"id": "f3b41da1731b77d837f9432c31a6cc71f7e150a99485719959990e875705ff38",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "f3b41da1731b77d837f9432c31a6cc71f7e150a99485719959990e875705ff38",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "ELB Access Logging Disabled",
+			"message": "ELB should have logging enabled to help on error investigation",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elb#enabled"
+				}
+			],
+			"location": {
+				"file": "aws/elb.tf",
+				"start_line": 2,
+				"end_line": 2
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "20018359-6fd7-4d05-ab26-d4dffccbdf79"
+				}
+			]
+		},
+		{
+			"id": "826bc7a5840bca669ed5912a30aedd026b3b857a905950a6af8bd99724723559",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "826bc7a5840bca669ed5912a30aedd026b3b857a905950a6af8bd99724723559",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Name Is Not Snake Case",
+			"message": "All names should follow snake case pattern.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/extend/best-practices/naming.html#naming"
+				}
+			],
+			"location": {
+				"file": "aws/eks.tf",
+				"start_line": 33,
+				"end_line": 33
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "1e434b25-8763-4b00-a5ca-ca03b7abbb66"
+				}
+			]
+		},
+		{
+			"id": "f49327f24a32405c0b6fae18b564ccb79c0d5a84736e620f34f700dfd8479d6f",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "f49327f24a32405c0b6fae18b564ccb79c0d5a84736e620f34f700dfd8479d6f",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Name Is Not Snake Case",
+			"message": "All names should follow snake case pattern.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/extend/best-practices/naming.html#naming"
+				}
+			],
+			"location": {
+				"file": "azure/app_service.tf",
+				"start_line": 22,
+				"end_line": 22
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "1e434b25-8763-4b00-a5ca-ca03b7abbb66"
+				}
+			]
+		},
+		{
+			"id": "c5c54dd557e743fdbfc63722d5a6f98caa9cbf025e3b8e4891c1d6c3f3cf20dc",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "c5c54dd557e743fdbfc63722d5a6f98caa9cbf025e3b8e4891c1d6c3f3cf20dc",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Name Is Not Snake Case",
+			"message": "All names should follow snake case pattern.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/extend/best-practices/naming.html#naming"
+				}
+			],
+			"location": {
+				"file": "azure/policies.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "1e434b25-8763-4b00-a5ca-ca03b7abbb66"
+				}
+			]
+		},
+		{
+			"id": "f5effa7f613e2a117f78743adfd9c51b9eb9834ecfed82e3ef9c408c27148619",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "f5effa7f613e2a117f78743adfd9c51b9eb9834ecfed82e3ef9c408c27148619",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Name Is Not Snake Case",
+			"message": "All names should follow snake case pattern.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/extend/best-practices/naming.html#naming"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 231,
+				"end_line": 231
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "1e434b25-8763-4b00-a5ca-ca03b7abbb66"
+				}
+			]
+		},
+		{
+			"id": "8f89390be84931d3c2b5050cce3b45c31c22df3cd928015ce01631b48153b4d6",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "8f89390be84931d3c2b5050cce3b45c31c22df3cd928015ce01631b48153b4d6",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Name Is Not Snake Case",
+			"message": "All names should follow snake case pattern.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/extend/best-practices/naming.html#naming"
+				}
+			],
+			"location": {
+				"file": "gcp/networks.tf",
+				"start_line": 7,
+				"end_line": 7
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "1e434b25-8763-4b00-a5ca-ca03b7abbb66"
+				}
+			]
+		},
+		{
+			"id": "02977df64f81a97d73496f5ae73783c1710c5d76a5e91318a37b87e80ac1a16c",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "02977df64f81a97d73496f5ae73783c1710c5d76a5e91318a37b87e80ac1a16c",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Name Is Not Snake Case",
+			"message": "All names should follow snake case pattern.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/extend/best-practices/naming.html#naming"
+				}
+			],
+			"location": {
+				"file": "azure/app_service.tf",
+				"start_line": 43,
+				"end_line": 43
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "1e434b25-8763-4b00-a5ca-ca03b7abbb66"
+				}
+			]
+		},
+		{
+			"id": "9f22977a3069cda7d97e2e6f5cdbcd468d345c9a2fccf044776c113140ab5f3c",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "9f22977a3069cda7d97e2e6f5cdbcd468d345c9a2fccf044776c113140ab5f3c",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Name Is Not Snake Case",
+			"message": "All names should follow snake case pattern.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/extend/best-practices/naming.html#naming"
+				}
+			],
+			"location": {
+				"file": "aws/es.tf",
+				"start_line": 40,
+				"end_line": 40
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "1e434b25-8763-4b00-a5ca-ca03b7abbb66"
+				}
+			]
+		},
+		{
+			"id": "f0c9a6b0ba26cdf7b71f323b55bbb8047c65106d0c38eb1b426e970d00f6d2ad",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "f0c9a6b0ba26cdf7b71f323b55bbb8047c65106d0c38eb1b426e970d00f6d2ad",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Name Is Not Snake Case",
+			"message": "All names should follow snake case pattern.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/extend/best-practices/naming.html#naming"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 77,
+				"end_line": 77
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "1e434b25-8763-4b00-a5ca-ca03b7abbb66"
+				}
+			]
+		},
+		{
+			"id": "5586fa7d57d20aa559b84acbedfe4170834ca78c89263a044379751cff7afbfa",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "5586fa7d57d20aa559b84acbedfe4170834ca78c89263a044379751cff7afbfa",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Name Is Not Snake Case",
+			"message": "All names should follow snake case pattern.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/extend/best-practices/naming.html#naming"
+				}
+			],
+			"location": {
+				"file": "aws/eks.tf",
+				"start_line": 38,
+				"end_line": 38
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "1e434b25-8763-4b00-a5ca-ca03b7abbb66"
+				}
+			]
+		},
+		{
+			"id": "d8a487d73c3bad6ece2b5e41c7368f14068b881e9e5531461b4d7e2145b7ed48",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "d8a487d73c3bad6ece2b5e41c7368f14068b881e9e5531461b4d7e2145b7ed48",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Name Is Not Snake Case",
+			"message": "All names should follow snake case pattern.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/extend/best-practices/naming.html#naming"
+				}
+			],
+			"location": {
+				"file": "aws/es.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "1e434b25-8763-4b00-a5ca-ca03b7abbb66"
+				}
+			]
+		},
+		{
+			"id": "5bcb8f9503d969e4a7f1dfb585ceb0e85fc1d4e6a5e598fbb248f3de205c1e59",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "5bcb8f9503d969e4a7f1dfb585ceb0e85fc1d4e6a5e598fbb248f3de205c1e59",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Neptune Logging Is Disabled",
+			"message": "Neptune logging should be enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/neptune_cluster#enable_cloudwatch_logs_exports"
+				}
+			],
+			"location": {
+				"file": "aws/neptune.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "45cff7b6-3b80-40c1-ba7b-2cf480678bb8"
+				}
+			]
+		},
+		{
+			"id": "e689419bd7cd580724b223acd3ef57ccf3497f9630d8e8764762bee598ac09d9",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "e689419bd7cd580724b223acd3ef57ccf3497f9630d8e8764762bee598ac09d9",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Output Without Description",
+			"message": "All outputs should contain a valid description.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/outputs.html#description-output-value-documentation"
+				}
+			],
+			"location": {
+				"file": "aws/iam.tf",
+				"start_line": 48,
+				"end_line": 48
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "59312e8a-a64e-41e7-a252-618533dd1ea8"
+				}
+			]
+		},
+		{
+			"id": "3169d1d3e5f8aaa1be54301bfc38b1730f2d1d3d4cbe2c8c87544622b686dc28",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "3169d1d3e5f8aaa1be54301bfc38b1730f2d1d3d4cbe2c8c87544622b686dc28",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Output Without Description",
+			"message": "All outputs should contain a valid description.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/outputs.html#description-output-value-documentation"
+				}
+			],
+			"location": {
+				"file": "aws/iam.tf",
+				"start_line": 52,
+				"end_line": 52
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "59312e8a-a64e-41e7-a252-618533dd1ea8"
+				}
+			]
+		},
+		{
+			"id": "081d3136db05ad300b20cfb018a02ddd7baa00953e317afa3e1d66a480d1d8c0",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "081d3136db05ad300b20cfb018a02ddd7baa00953e317afa3e1d66a480d1d8c0",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Output Without Description",
+			"message": "All outputs should contain a valid description.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/outputs.html#description-output-value-documentation"
+				}
+			],
+			"location": {
+				"file": "aws/eks.tf",
+				"start_line": 146,
+				"end_line": 146
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "59312e8a-a64e-41e7-a252-618533dd1ea8"
+				}
+			]
+		},
+		{
+			"id": "d47dbb8978f122c908a3d1262190880c74bb2c5a91c5faa095f351a12573fa00",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "d47dbb8978f122c908a3d1262190880c74bb2c5a91c5faa095f351a12573fa00",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Output Without Description",
+			"message": "All outputs should contain a valid description.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/outputs.html#description-output-value-documentation"
+				}
+			],
+			"location": {
+				"file": "aws/eks.tf",
+				"start_line": 142,
+				"end_line": 142
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "59312e8a-a64e-41e7-a252-618533dd1ea8"
+				}
+			]
+		},
+		{
+			"id": "369eaf40c28aff41e0799bd9fb7c6266fc8af2f2e2a47769ea9f885cb93dcc1a",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "369eaf40c28aff41e0799bd9fb7c6266fc8af2f2e2a47769ea9f885cb93dcc1a",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "RDS Without Logging",
+			"message": "RDS does not have any kind of logger",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance#enabled_cloudwatch_logs_exports"
+				}
+			],
+			"location": {
+				"file": "aws/db-app.tf",
+				"start_line": 1,
+				"end_line": 1
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "8d7f7b8c-6c7c-40f8-baa6-62006c6c7b56"
+				}
+			]
+		},
+		{
+			"id": "10c52274c171c61abc054351fde4d74bd586b633c1d1dbb7f6428945707a649e",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "10c52274c171c61abc054351fde4d74bd586b633c1d1dbb7f6428945707a649e",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Resource Not Using Tags",
+			"message": "AWS services resource tags are an essential part of managing components",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/resource-tagging"
+				}
+			],
+			"location": {
+				"file": "aws/eks.tf",
+				"start_line": 66,
+				"end_line": 66
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "e38a8e0a-b88b-4902-b3fe-b0fcb17d5c10"
+				}
+			]
+		},
+		{
+			"id": "a418dca3d96ac79ce9cf4b2b30d06097893ef9ec80c04cddbf321e028126050e",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "a418dca3d96ac79ce9cf4b2b30d06097893ef9ec80c04cddbf321e028126050e",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Resource Not Using Tags",
+			"message": "AWS services resource tags are an essential part of managing components",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/resource-tagging"
+				}
+			],
+			"location": {
+				"file": "aws/eks.tf",
+				"start_line": 94,
+				"end_line": 94
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "e38a8e0a-b88b-4902-b3fe-b0fcb17d5c10"
+				}
+			]
+		},
+		{
+			"id": "223e089c0748407e296de7ef502c4ae379421bbb18d19bbb8196b82a7be69204",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "223e089c0748407e296de7ef502c4ae379421bbb18d19bbb8196b82a7be69204",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "SQL Server Alert Email Disabled",
+			"message": "SQL Server alert email should be enabled",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mssql_server_security_alert_policy#email_account_admins"
+				}
+			],
+			"location": {
+				"file": "azure/sql.tf",
+				"start_line": 31,
+				"end_line": 31
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "55975007-f6e7-4134-83c3-298f1fe4b519"
+				}
+			]
+		},
+		{
+			"id": "f878dfd9ecfb0bcffc361fab76bf701959bb50442b16d31ddcbca75e1abd94c1",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "f878dfd9ecfb0bcffc361fab76bf701959bb50442b16d31ddcbca75e1abd94c1",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Security Group Rules Without Description",
+			"message": "It's considered a best practice for all rules in AWS Security Group to have a description",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group#description"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 90,
+				"end_line": 90
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "68eb4bf3-f9bf-463d-b5cf-e029bb446d2e"
+				}
+			]
+		},
+		{
+			"id": "ff0f91389c887eecfa85353f3db69a7afa154089d3ed14dce9db3e88e881172a",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "ff0f91389c887eecfa85353f3db69a7afa154089d3ed14dce9db3e88e881172a",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Security Group Rules Without Description",
+			"message": "It's considered a best practice for all rules in AWS Security Group to have a description",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group#description"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 83,
+				"end_line": 83
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "68eb4bf3-f9bf-463d-b5cf-e029bb446d2e"
+				}
+			]
+		},
+		{
+			"id": "74162301447ec6da0d7595a463abaefe703131a980f20d78b1e9bfb828888d8c",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "74162301447ec6da0d7595a463abaefe703131a980f20d78b1e9bfb828888d8c",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Security Group Rules Without Description",
+			"message": "It's considered a best practice for all rules in AWS Security Group to have a description",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group#description"
+				}
+			],
+			"location": {
+				"file": "aws/ec2.tf",
+				"start_line": 97,
+				"end_line": 97
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "68eb4bf3-f9bf-463d-b5cf-e029bb446d2e"
+				}
+			]
+		},
+		{
+			"id": "d99132e072d2b52bc4c86b14f36552beb6c4b25b8a2084a95a2e71ed6b54dc40",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "d99132e072d2b52bc4c86b14f36552beb6c4b25b8a2084a95a2e71ed6b54dc40",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Security Group Without Description",
+			"message": "It's considered a best practice for AWS Security Group to have a description",
+			"links": [
+				{
+					"url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group#description"
+				}
+			],
+			"location": {
+				"file": "aws/db-app.tf",
+				"start_line": 116,
+				"end_line": 116
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "cb3f5ed6-0d18-40de-a93d-b3538db31e8c"
+				}
+			]
+		},
+		{
+			"id": "1505fa524b4422000f4ffe9eda03a57646efab246d82b4c1a627d0271cedaa7e",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "1505fa524b4422000f4ffe9eda03a57646efab246d82b4c1a627d0271cedaa7e",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Variable Without Description",
+			"message": "All variables should contain a valid description.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation"
+				}
+			],
+			"location": {
+				"file": "gcp/variables.tf",
+				"start_line": 11,
+				"end_line": 11
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "2a153952-2544-4687-bcc9-cc8fea814a9b"
+				}
+			]
+		},
+		{
+			"id": "c649f3ccdad15813905e12fb8a8a012253a8a6422250aa4b160e71f805c81e28",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "c649f3ccdad15813905e12fb8a8a012253a8a6422250aa4b160e71f805c81e28",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Variable Without Description",
+			"message": "All variables should contain a valid description.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation"
+				}
+			],
+			"location": {
+				"file": "aws/consts.tf",
+				"start_line": 4,
+				"end_line": 4
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "2a153952-2544-4687-bcc9-cc8fea814a9b"
+				}
+			]
+		},
+		{
+			"id": "97c3874ae3f87de0f13662c790dac8dc7ef514e2e9fdfc9bdc2a6d0dbaac9255",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "97c3874ae3f87de0f13662c790dac8dc7ef514e2e9fdfc9bdc2a6d0dbaac9255",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Variable Without Description",
+			"message": "All variables should contain a valid description.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation"
+				}
+			],
+			"location": {
+				"file": "aws/consts.tf",
+				"start_line": 28,
+				"end_line": 28
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "2a153952-2544-4687-bcc9-cc8fea814a9b"
+				}
+			]
+		},
+		{
+			"id": "adf463d01422cd766881393a8d0684c330cdcb9d2971700919cc5afb91ad74af",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "adf463d01422cd766881393a8d0684c330cdcb9d2971700919cc5afb91ad74af",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Variable Without Description",
+			"message": "All variables should contain a valid description.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation"
+				}
+			],
+			"location": {
+				"file": "aws/consts.tf",
+				"start_line": 20,
+				"end_line": 20
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "2a153952-2544-4687-bcc9-cc8fea814a9b"
+				}
+			]
+		},
+		{
+			"id": "38836ce179bac419c5855db7b713ca70c14fb9b7da7eec3c3aa13c975d7faf69",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "38836ce179bac419c5855db7b713ca70c14fb9b7da7eec3c3aa13c975d7faf69",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Variable Without Description",
+			"message": "All variables should contain a valid description.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation"
+				}
+			],
+			"location": {
+				"file": "aws/consts.tf",
+				"start_line": 8,
+				"end_line": 8
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "2a153952-2544-4687-bcc9-cc8fea814a9b"
+				}
+			]
+		},
+		{
+			"id": "8c471b1e6264b36615440e77e278c39d4a0d467f456e677e7a1a5d4e8d27df57",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "8c471b1e6264b36615440e77e278c39d4a0d467f456e677e7a1a5d4e8d27df57",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Variable Without Description",
+			"message": "All variables should contain a valid description.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation"
+				}
+			],
+			"location": {
+				"file": "aws/consts.tf",
+				"start_line": 24,
+				"end_line": 24
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "2a153952-2544-4687-bcc9-cc8fea814a9b"
+				}
+			]
+		},
+		{
+			"id": "1c1540324a90109e8d8646d33fc81b4cf3fe0d52a51d2856cca01ec0a93be39c",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "1c1540324a90109e8d8646d33fc81b4cf3fe0d52a51d2856cca01ec0a93be39c",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Variable Without Description",
+			"message": "All variables should contain a valid description.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation"
+				}
+			],
+			"location": {
+				"file": "azure/variables.tf",
+				"start_line": 7,
+				"end_line": 7
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "2a153952-2544-4687-bcc9-cc8fea814a9b"
+				}
+			]
+		},
+		{
+			"id": "bed17720129be0fd0fda9cac164dd9e8f37ff7a79080f0deb7afda2cdb0619ec",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "bed17720129be0fd0fda9cac164dd9e8f37ff7a79080f0deb7afda2cdb0619ec",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Variable Without Type",
+			"message": "All variables should contain a valid type.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation"
+				}
+			],
+			"location": {
+				"file": "azure/variables.tf",
+				"start_line": 12,
+				"end_line": 12
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "fc5109bf-01fd-49fb-8bde-4492b543c34a"
+				}
+			]
+		},
+		{
+			"id": "408c957c0f7ade65a05f74bc3299b30633b612c5a352007f2207a3b33023a2a2",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "408c957c0f7ade65a05f74bc3299b30633b612c5a352007f2207a3b33023a2a2",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Variable Without Type",
+			"message": "All variables should contain a valid type.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation"
+				}
+			],
+			"location": {
+				"file": "aws/consts.tf",
+				"start_line": 24,
+				"end_line": 24
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "fc5109bf-01fd-49fb-8bde-4492b543c34a"
+				}
+			]
+		},
+		{
+			"id": "c45a60ffa481bbd8eb4bd9b5bf9472c0078a4c3c389c96f82dfb6111b778b06c",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "c45a60ffa481bbd8eb4bd9b5bf9472c0078a4c3c389c96f82dfb6111b778b06c",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Variable Without Type",
+			"message": "All variables should contain a valid type.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation"
+				}
+			],
+			"location": {
+				"file": "aws/consts.tf",
+				"start_line": 8,
+				"end_line": 8
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "fc5109bf-01fd-49fb-8bde-4492b543c34a"
+				}
+			]
+		},
+		{
+			"id": "ae403f5e07b6048d8c0d8bb191ea67709d1433c7fc4be790ed66d9e47290474e",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "ae403f5e07b6048d8c0d8bb191ea67709d1433c7fc4be790ed66d9e47290474e",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Variable Without Type",
+			"message": "All variables should contain a valid type.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation"
+				}
+			],
+			"location": {
+				"file": "aws/consts.tf",
+				"start_line": 4,
+				"end_line": 4
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "fc5109bf-01fd-49fb-8bde-4492b543c34a"
+				}
+			]
+		},
+		{
+			"id": "49989c68f3b6c37111bc7e6af4b8367ef93af255c19dcd420d7a70199ca29561",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "49989c68f3b6c37111bc7e6af4b8367ef93af255c19dcd420d7a70199ca29561",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Variable Without Type",
+			"message": "All variables should contain a valid type.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation"
+				}
+			],
+			"location": {
+				"file": "gcp/variables.tf",
+				"start_line": 16,
+				"end_line": 16
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "fc5109bf-01fd-49fb-8bde-4492b543c34a"
+				}
+			]
+		},
+		{
+			"id": "967b4f613a3832abdafcb5311b9aadb4fe717e01993acb348db6dc92e4b38afc",
+			"category": "sast",
+			"severity": "Info",
+			"cve": "967b4f613a3832abdafcb5311b9aadb4fe717e01993acb348db6dc92e4b38afc",
+			"scanner": {
+				"id": "keeping_infrastructure_as_code_secure",
+				"name": "Keeping Infrastructure as Code Secure"
+			},
+			"name": "Variable Without Type",
+			"message": "All variables should contain a valid type.",
+			"links": [
+				{
+					"url": "https://www.terraform.io/docs/language/values/variables.html#input-variable-documentation"
+				}
+			],
+			"location": {
+				"file": "aws/consts.tf",
+				"start_line": 20,
+				"end_line": 20
+			},
+			"identifiers": [
+				{
+					"type": "kics",
+					"name": "Keeping Infrastructure as Code Secure",
+					"url": "https://docs.kics.io/latest/queries/terraform-queries",
+					"value": "fc5109bf-01fd-49fb-8bde-4492b543c34a"
+				}
+			]
+		}
+	]
+}

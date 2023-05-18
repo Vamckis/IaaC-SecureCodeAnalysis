@@ -1,0 +1,2466 @@
+[
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Multi-Factor Authentication (MFA) adds an extra layer of authentication assurance beyond traditional credentials. With MFA enabled, when a user signs in to the AWS Console, they will be prompted for their user name and password as well as for an authentication code from their physical or virtual MFA token. It is recommended that MFA be enabled for all accounts that have a console password.\nEnabling MFA provides increased security for console access as it requires the authenticating principal to possess a device that displays a time-sensitive key and have knowledge of a credential.",
+		"GeneratorId": "3ddfa124-6407-4845-a501-179f90c65097",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/4d5f6a20a8c5f1dd85638933961b4724117e1c87968d62a021a63aae9d812a33",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 29 of file aws/iam.tf, a result was found. The attribute(s) 'policy.Statement.Condition' or/and 'policy.Statement.Condition.BoolIfExists' or/and 'policy.Statement.Condition.BoolIfExists.aws:MultiFactorAuthPresent' is/are undefined or null, but The attributes 'policy.Statement.Condition', 'policy.Statement.Condition.BoolIfExists', and 'policy.Statement.Condition.BoolIfExists.aws:MultiFactorAuthPresent' are defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "3ddfa124-6407-4845-a501-179f90c65097",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "Authentication Without MFA",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "AWS Key Management Service (KMS) allows customers to rotate the backing key which is key material stored within the KMS which is tied to the key ID of the Customer Created customer master key (CMK). It is the backing key that is used to perform cryptographic operations such as encryption and decryption. Automated key rotation currently retains all prior backing keys so that decryption of encrypted data can take place transparently. It is recommended that CMK key rotation be enabled.\nRotating encryption keys helps reduce the potential impact of a compromised key as data encrypted with a new key cannot be accessed with a previous key that may have been exposed.",
+		"GeneratorId": "22fbfeac-7b5a-421a-8a27-7a2178bb910b",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/6ff3c4ad4dfad1d926a0aeee6a3ae3d3d33b5572dc823b2480e6c77041a4f057",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/kms.tf, a result was found. aws_kms_key[logs_key].enable_key_rotation is undefined, but aws_kms_key[logs_key].enable_key_rotation is set to true"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "22fbfeac-7b5a-421a-8a27-7a2178bb910b",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "CMK Rotation Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "The field 'publicly_accessible' should not be set to 'true' (default is 'false').",
+		"GeneratorId": "35113e6f-2c6b-414d-beec-7a9482d3b2d1",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/e6dc9861fc4076b5aae13a3c2161c9c757c7c2d5dda3aca87847923dba6f52b0",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 21 of file aws/db-app.tf, a result was found. 'publicly_accessible' is set to true, but 'publicly_accessible' is set to false or undefined"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "35113e6f-2c6b-414d-beec-7a9482d3b2d1",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "DB Instance Publicly Accessible",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "The parameter storage_encrypted in aws_db_instance must be set to 'true' (the default is 'false').",
+		"GeneratorId": "08bd0760-8752-44e1-9779-7bb369b2b4e4",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/296b51e6a17fcefea9f6af5b26e22171fdb7a3ca33eb532e3517d9df23ee38e2",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 18 of file aws/db-app.tf, a result was found. 'storage_encrypted' is set to false, but 'storage_encrypted' is set to true"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "08bd0760-8752-44e1-9779-7bb369b2b4e4",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "DB Instance Storage Not Encrypted",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "The value on AWS EBS Volume Snapshot Encryptation must be true",
+		"GeneratorId": "e6b4b943-6883-47a9-9739-7ada9568f8ca",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/7d807dac6b95b20da83e28e951180ac11e5923cbea1423a3b045ef10d5d86868",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 53 of file aws/ec2.tf, a result was found. 'aws_ebs_volume[web_host_storage].encrypted' associated with aws_ebs_snapshot[example_snapshot] is undefined, but 'aws_ebs_volume[web_host_storage].encrypted' associated with aws_ebs_snapshot[example_snapshot] is set"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "e6b4b943-6883-47a9-9739-7ada9568f8ca",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "EBS Volume Snapshot Not Encrypted",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "EC2 Instance should not have a public IP address.",
+		"GeneratorId": "5a2486aa-facf-477d-a5c1-b010789459ce",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/2eda40bfe4404b2f2267af7cf8d8d5213ab581155382af9ac6daf8e2cfae997e",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/ec2.tf, a result was found. 'associate_public_ip_address' is undefined or null, but 'associate_public_ip_address' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "5a2486aa-facf-477d-a5c1-b010789459ce",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "EC2 Instance Has Public IP",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "EC2 Instance should not have a public IP address.",
+		"GeneratorId": "5a2486aa-facf-477d-a5c1-b010789459ce",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/44b31b1a83538fca76f0a8dcb0dbeb8db6dc75cb4070889c7f873bd92d3902f1",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 242 of file aws/db-app.tf, a result was found. 'associate_public_ip_address' is undefined or null, but 'associate_public_ip_address' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "5a2486aa-facf-477d-a5c1-b010789459ce",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "EC2 Instance Has Public IP",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "EKS Cluster should be encrypted",
+		"GeneratorId": "63ebcb19-2739-4d3f-aa5c-e8bbb9b85281",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/3b2a1c49d17df5f6e11b9f67bdcc1211181aeafecf9543242ccf830dafaf7051",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 117 of file aws/eks.tf, a result was found. 'encryption_config' is undefined or null, but 'encryption_config' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "63ebcb19-2739-4d3f-aa5c-e8bbb9b85281",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "EKS Cluster Encryption Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "The security group ingress rules provide filtering of ingress network traffic to AWS resources. It is recommended that no security group ingress rule allows unrestricted ingress access to remote server HTTP port 80.\nPublic access to remote server ports, such as 80, increases the resource attack surface and unnecessarily raises the risk of resource compromise.",
+		"GeneratorId": "ffac8a12-322e-42c1-b9b9-81ff85c39ef7",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/5cc3ed8fcdf2d61ee661f36d37bb314cda4fd1e2b662c7991e551237d54e34cf",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 77 of file aws/ec2.tf, a result was found. aws_security_group.ingress opens the HTTP port (80), but aws_security_group.ingress doesn't open the HTTP port (80)"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "ffac8a12-322e-42c1-b9b9-81ff85c39ef7",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "HTTP Port Open",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "IAM Database Auth Enabled must be configured to true",
+		"GeneratorId": "88fd05e0-ac0e-43d2-ba6d-fc0ba60ae1a6",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/2e347e12d1fc4d005725378e325549c81aff9f62ed9e87971fffdb741131d0f9",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/db-app.tf, a result was found. 'iam_database_authentication_enabled' is undefined or null, but 'iam_database_authentication_enabled' is set to true"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "88fd05e0-ac0e-43d2-ba6d-fc0ba60ae1a6",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "IAM Database Auth Not Enabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "S3 bucket with public READ/WRITE access",
+		"GeneratorId": "38c5ee0d-7f22-4260-ab72-5073048df100",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/fcc1b9737f41a0db886a6e0ed0f2fb6f8121c89b6a7f8868c51a009d27ad3655",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 7 of file aws/s3.tf, a result was found. 'acl' is equal 'public-read', but 'acl' is equal 'private'"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "38c5ee0d-7f22-4260-ab72-5073048df100",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "S3 Bucket ACL Allows Read Or Write to All Users",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Amazon S3 provides a variety of no, or low, cost encryption options to protect data at rest.\nEncrypting data at rest reduces the likelihood that it is unintentionally exposed and can nullify the impact of disclosure if the encryption remains unbroken.",
+		"GeneratorId": "5fb49a69-8d46-4495-a2f8-9c8c622b2b6e",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/3d1075b36959f76e42e5d1d51aaa526771b8440f03b1355ee34222b626c10975",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 24 of file aws/s3.tf, a result was found. aws_s3_bucket_object.server_side_encryption is undefined or null, but aws_s3_bucket_object.server_side_encryption is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "5fb49a69-8d46-4495-a2f8-9c8c622b2b6e",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "S3 Bucket Object Not Encrypted",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+		"GeneratorId": "6726dcc0-5ff5-459d-b473-a780bef7665c",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/d602e9165c5a0a2ec3f83ffa82eee4dfc05480242e1c3bfc57c0e154f96e5f1f",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 66 of file aws/s3.tf, a result was found. 'server_side_encryption_configuration' is undefined or null, but 'server_side_encryption_configuration' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "6726dcc0-5ff5-459d-b473-a780bef7665c",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "S3 Bucket SSE Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+		"GeneratorId": "6726dcc0-5ff5-459d-b473-a780bef7665c",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/72a2d50867d07ec4246fa256249dca88c8ede0e766cc74a62cf1014d5bdde460",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 271 of file aws/ec2.tf, a result was found. 'server_side_encryption_configuration' is undefined or null, but 'server_side_encryption_configuration' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "6726dcc0-5ff5-459d-b473-a780bef7665c",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "S3 Bucket SSE Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+		"GeneratorId": "6726dcc0-5ff5-459d-b473-a780bef7665c",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/5705b9e10a8df0687e4346d261fd8ef79710bda8a17500d57c6356933b0d01c8",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 91 of file aws/s3.tf, a result was found. 'server_side_encryption_configuration' is undefined or null, but 'server_side_encryption_configuration' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "6726dcc0-5ff5-459d-b473-a780bef7665c",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "S3 Bucket SSE Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+		"GeneratorId": "6726dcc0-5ff5-459d-b473-a780bef7665c",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/f6ecaa68f29598ebdde3a36aa5f91e0660587dac338815f42e84aa7e34383046",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/s3.tf, a result was found. 'server_side_encryption_configuration' is undefined or null, but 'server_side_encryption_configuration' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "6726dcc0-5ff5-459d-b473-a780bef7665c",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "S3 Bucket SSE Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "If algorithm is AES256 then the master key is null, empty or undefined, otherwise the master key is required",
+		"GeneratorId": "6726dcc0-5ff5-459d-b473-a780bef7665c",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/0cef8be3c95f313e0254d9ef1160d12ee58886a7a32df247288b7c06b4d68663",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 43 of file aws/s3.tf, a result was found. 'server_side_encryption_configuration' is undefined or null, but 'server_side_encryption_configuration' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "6726dcc0-5ff5-459d-b473-a780bef7665c",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "S3 Bucket SSE Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.\nAdding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.",
+		"GeneratorId": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/ddd1a778c89c17cdb00f2abbbd590354ceb8337c25767b62af9b5b143073106c",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 271 of file aws/ec2.tf, a result was found. aws_s3_bucket[flowbucket].versioning is undefined or null, but aws_s3_bucket[flowbucket].versioning is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "S3 Bucket Without Enabled MFA Delete",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.\nAdding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.",
+		"GeneratorId": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/5b9356c8c0fb083f1ca6493ec8368db88307f40bc3ff375a5b36ce78fb7263fc",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 71 of file aws/s3.tf, a result was found. 'mfa_delete' is undefined or null, but 'mfa_delete' is set to true"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "S3 Bucket Without Enabled MFA Delete",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.\nAdding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.",
+		"GeneratorId": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/05f7f8e471b7328b6a016167c96fc270d2b1b1ba01d8ff31514bc1a7c575e7c9",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 43 of file aws/s3.tf, a result was found. aws_s3_bucket[financials].versioning is undefined or null, but aws_s3_bucket[financials].versioning is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "S3 Bucket Without Enabled MFA Delete",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.\nAdding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.",
+		"GeneratorId": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/3c4f72015c7107e7627ac1a063a502dad024a0795eedd67ed571345fc833d921",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 118 of file aws/s3.tf, a result was found. 'mfa_delete' is undefined or null, but 'mfa_delete' is set to true"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "S3 Bucket Without Enabled MFA Delete",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.\nAdding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.",
+		"GeneratorId": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/2faeb06b84f7159cd592d8e0c7388c3796e395e4264b572b92e9848cf31f38ff",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 95 of file aws/s3.tf, a result was found. 'mfa_delete' is undefined or null, but 'mfa_delete' is set to true"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "S3 Bucket Without Enabled MFA Delete",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Once MFA Delete is enabled on your sensitive and classified S3 bucket it requires the user to have two forms of authentication.\nAdding MFA delete to an S3 bucket, requires additional authentication when you change the version state of your bucket or you delete and object version adding another layer of security in the event your security credentials are compromised or unauthorized access is granted.",
+		"GeneratorId": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/759091b9a4c562623e8c00d8d90219f5d56bcbba64085c3395e5096e90af09f3",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/s3.tf, a result was found. aws_s3_bucket[data].versioning is undefined or null, but aws_s3_bucket[data].versioning is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "c5b31ab9-0f26-4a49-b8aa-4cc064392f4d",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "S3 Bucket Without Enabled MFA Delete",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "'SSH' (TCP:22) should not be public in AWS Security Group",
+		"GeneratorId": "65905cec-d691-4320-b320-2000436cb696",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/46416690763be107cda96bec2f89e70d7218a5b0141c93e6f2e0825d1b8e74b0",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 87 of file aws/ec2.tf, a result was found. aws_security_group[web-node] 'SSH' (Port:22) is public, but aws_security_group[web-node] 'SSH' (Port:22) is not public"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "65905cec-d691-4320-b320-2000436cb696",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "Security Group With Unrestricted Access To SSH",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "AWS Security Group should not have an unknown port exposed to the entire Internet",
+		"GeneratorId": "590d878b-abdc-428f-895a-e2b68a0e1998",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/edb1b7aea212d85d3b47791b1446df518fdd3d6e79b5f731d1bc6edc81c7bbfc",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 87 of file aws/ec2.tf, a result was found. aws_security_group[web-node].ingress.from_port is unknown and is exposed to the entire Internet, but aws_security_group[web-node].ingress.from_port is known"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "590d878b-abdc-428f-895a-e2b68a0e1998",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "Unknown Port Exposed To Internet",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Security groups should restrict ingress only to well-known and allowed origins: IP addresses or ranges. Unrestricted access may expose security groups associated resources to the Internet, allowing, for example, access to remote server open ports.\nPublic access to remote servers increases the resource attack surface and unnecessarily raises the risk of resource compromise.",
+		"GeneratorId": "4728cd65-a20c-49da-8b31-9c08b423e4db",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/62e77a746b16bdbc57fb596f961f1213251edd2d4b0a7c0501c87e5ab687e671",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 88 of file aws/ec2.tf, a result was found. One of 'ingress.cidr_blocks' equal '0.0.0.0/0', but One of 'ingress.cidr_blocks' not equal '0.0.0.0/0'"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "4728cd65-a20c-49da-8b31-9c08b423e4db",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "Unrestricted Security Group Ingress",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Security groups should restrict ingress only to well-known and allowed origins: IP addresses or ranges. Unrestricted access may expose security groups associated resources to the Internet, allowing, for example, access to remote server open ports.\nPublic access to remote servers increases the resource attack surface and unnecessarily raises the risk of resource compromise.",
+		"GeneratorId": "4728cd65-a20c-49da-8b31-9c08b423e4db",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/a2bfae3e0f507ede2b8e1b304efb6828856eead38d3d7e8ac945d767237152a7",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 95 of file aws/ec2.tf, a result was found. One of 'ingress.cidr_blocks' equal '0.0.0.0/0', but One of 'ingress.cidr_blocks' not equal '0.0.0.0/0'"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "4728cd65-a20c-49da-8b31-9c08b423e4db",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "HIGH",
+			"Label": "HIGH"
+		},
+		"Title": "Unrestricted Security Group Ingress",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Elastic Compute Cloud (EC2) supports encryption at rest when using the Elastic Block Store (EBS) service. While disabled by default, forcing encryption at EBS volume creation is supported.\nEncrypting data at rest reduces the likelihood that it is unintentionally exposed and can nullify the impact of disclosure if the encryption remains unbroken.",
+		"GeneratorId": "cc997676-481b-4e93-aa81-d19f8c5e9b12",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/a29bcd6c7174b6ebe463db78365fecd35f8225b7d35de884a6f4e3e2280f84d4",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 34 of file aws/ec2.tf, a result was found. One of 'aws_ebs_volume.encrypted' is undefined, but One of 'aws_ebs_volume.encrypted' is defined"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "cc997676-481b-4e93-aa81-d19f8c5e9b12",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "EBS Volume Encryption Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "ECR should have an image tag be immutable",
+		"GeneratorId": "d1846b12-20c5-4d45-8798-fc35b79268eb",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/5eb9bd8b1b98072589755d6872789c2f524eef207d574cc4210252f308e04d53",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 3 of file aws/ecr.tf, a result was found. aws_ecr_repository.repository.image_tag_mutability is 'MUTABLE', but aws_ecr_repository.repository.image_tag_mutability is 'IMMUTABLE'"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "d1846b12-20c5-4d45-8798-fc35b79268eb",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "ECR Image Tag Not Immutable",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "ECR (Elastic Container Registry) Repository encryption should be set",
+		"GeneratorId": "0e32d561-4b5a-4664-a6e3-a3fa85649157",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/bbdf5d14f29a03e39e1285821eced1e030d974a423c2ee45da3da07122162e1e",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/ecr.tf, a result was found. The attribute 'encryption_configuration' is undefined or null, but The attribute 'encryption_configuration' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "0e32d561-4b5a-4664-a6e3-a3fa85649157",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "ECR Repository Not Encrypted",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Check if ElasticSearch encryption is disabled at Rest",
+		"GeneratorId": "24e16922-4330-4e9d-be8a-caa90299466a",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/f4301e7efc70de1241d025958917609372ee5347cf0b611db683348660c02be3",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/es.tf, a result was found. 'encrypt_at_rest' is undefined, but 'encrypt_at_rest' is set and enabled"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "24e16922-4330-4e9d-be8a-caa90299466a",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "ElasticSearch Not Encrypted At Rest",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Elasticsearch Domain encryption should be enabled node to node",
+		"GeneratorId": "967eb3e6-26fc-497d-8895-6428beb6e8e2",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/1e60fb7907d0d8e890b9eb61397970c354f1c9e75de102c2621f14e9e787e73f",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/es.tf, a result was found. The attribute 'node_to_node_encryption' is undefined, but The attribute 'node_to_node_encryption' is set to true"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "967eb3e6-26fc-497d-8895-6428beb6e8e2",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "Elasticsearch Domain Not Encrypted Node To Node",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Elasticsearch Domain policy should avoid wildcard in 'Action' and 'Principal'.",
+		"GeneratorId": "16c4216a-50d3-4785-bfb2-4adb5144a8ba",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/94986872b9941efe6d6075385d98b59d3a55958d791293c5455aae6d2b9838cf",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 42 of file aws/es.tf, a result was found. aws_elasticsearch_domain_policy[monitoring-framework-policy].access_policies has wildcard in 'Action' or 'Principal', but aws_elasticsearch_domain_policy[monitoring-framework-policy].access_policies does not have wildcard in 'Action' and 'Principal'"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "16c4216a-50d3-4785-bfb2-4adb5144a8ba",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "Elasticsearch Domain With Vulnerable Policy",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "AWS Elasticsearch should have logs enabled",
+		"GeneratorId": "acb6b4e2-a086-4f35-aefd-4db6ea51ada2",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/5db7af48599e19dea7d03b0c514df47001b4629647d27583a880834b233e3d23",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/es.tf, a result was found. 'log_publishing_options' is undefined or null, but 'log_publishing_options' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "acb6b4e2-a086-4f35-aefd-4db6ea51ada2",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "Elasticsearch Log is disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "IAM Access Analyzer should be defined to identify unintentional access",
+		"GeneratorId": "e592a0c5-5bdb-414c-9066-5dba7cdea370",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/ace5e9484758c4154581bdf934f8a2c671f0257e4585ae8c821e9bba3893dad2",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/db-app.tf, a result was found. 'aws_accessanalyzer_analyzer' is undefined, but 'aws_accessanalyzer_analyzer' is set"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "e592a0c5-5bdb-414c-9066-5dba7cdea370",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "IAM Access Analyzer Undefined",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "AWS console defaults to no check boxes selected when creating a new IAM user. When cerating the IAM User credentials you have to determine what type of access they require. Programmatic access: The IAM user might need to make API calls, use the AWS CLI, or use the Tools for Windows PowerShell. In that case, create an access key (access key ID and a secret access key) for that user. AWS Management Console access: If the user needs to access the AWS Management Console, create a password for the user.\nRequiring the additional steps be taken by the user for programmatic access after their profile has been created will give a stronger indication of intent that access keys are [a] necessary for their work and [b] once the access key is established on an account that the keys may be in use somewhere in the organization. Note : Even if it is known the user will need access keys, require them to create the keys themselves or put in a support ticket to have them created as a separate step from user creation.",
+		"GeneratorId": "7081f85c-b94d-40fd-8b45-a4f1cac75e46",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/2766026ca9bd6e5b18add117bb8998b7648549cf68ea4bd69d7069440ddc7d67",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 21 of file aws/iam.tf, a result was found. 'aws_iam_access_key[user].user' is '${aws_iam_user.user.name}' for an active access key, but 'aws_iam_access_key[user].user' is 'root' for an active access key"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "7081f85c-b94d-40fd-8b45-a4f1cac75e46",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "IAM Access Key Is Exposed",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "IAM policies allow all ('*') in a statement action",
+		"GeneratorId": "575a2155-6af1-4026-b1af-d5bc8fe2a904",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/567795fc95260bea21f9451cd2167b69aa021d37c047bfb4f737fb13ddaf5f88",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 29 of file aws/iam.tf, a result was found. 'policy.Statement.Resource' equal '*', but 'policy.Statement.Resource' not equal '*'"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "575a2155-6af1-4026-b1af-d5bc8fe2a904",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "IAM Policy Grants Full Permissions",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "IAM policies allow all ('*') in a statement action",
+		"GeneratorId": "575a2155-6af1-4026-b1af-d5bc8fe2a904",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/89cbb1653600a511305abb1ee5d546437ee7086eeda0699ed05ef63673f37d7b",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 209 of file aws/db-app.tf, a result was found. 'policy.Statement.Resource' equal '*', but 'policy.Statement.Resource' not equal '*'"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "575a2155-6af1-4026-b1af-d5bc8fe2a904",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "IAM Policy Grants Full Permissions",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Neptune Cluster should have IAM Database Authentication enabled",
+		"GeneratorId": "c91d7ea0-d4d1-403b-8fe1-c9961ac082c5",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/a7cbaec955fb1d03bac85936ff8003458cab54479e4dd4fd87fd5aae464c15db",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 7 of file aws/neptune.tf, a result was found. 'iam_database_authentication_enabled' is set to false, but 'iam_database_authentication_enabled' is set to true"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "c91d7ea0-d4d1-403b-8fe1-c9961ac082c5",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "Neptune Cluster With IAM Database Authentication Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Check if Neptune Cluster Storage is securely encrypted",
+		"GeneratorId": "98d59056-f745-4ef5-8613-32bca8d40b7e",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/7737c75d201ed04639c8e84db2fa8405324eecb2c05a12289bbf975548224d1c",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 9 of file aws/neptune.tf, a result was found. 'storage_encrypted' is false, but 'storage_encrypted' should be true"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "98d59056-f745-4ef5-8613-32bca8d40b7e",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "Neptune Database Cluster Encryption Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "RDS configured without backup",
+		"GeneratorId": "1dc73fb4-5b51-430c-8c5f-25dcf9090b02",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/566394fcab3c7354de4404ff54325de5d26be82cc41941be92c6879a13397744",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 17 of file aws/db-app.tf, a result was found. 'backup_retention_period' is equal '0', but 'backup_retention_period' is not equal '0'"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "1dc73fb4-5b51-430c-8c5f-25dcf9090b02",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "RDS With Backup Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "S3 bucket should have versioning enabled",
+		"GeneratorId": "568a4d22-3517-44a6-a7ad-6a7eed88722c",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/50e894606a4bac4bac6cf312a4816457a68945435ad8d04c7c040398e7b17841",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/s3.tf, a result was found. 'versioning' is undefined or null, but 'versioning' is set to true"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "568a4d22-3517-44a6-a7ad-6a7eed88722c",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "S3 Bucket Without Versioning",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "S3 bucket should have versioning enabled",
+		"GeneratorId": "568a4d22-3517-44a6-a7ad-6a7eed88722c",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/c1a9cd1a76bd2ffe06c9d53030f5f9f5f698c2dc342f59c68f6191d19505db3b",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 43 of file aws/s3.tf, a result was found. 'versioning' is undefined or null, but 'versioning' is set to true"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "568a4d22-3517-44a6-a7ad-6a7eed88722c",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "S3 Bucket Without Versioning",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "S3 bucket should have versioning enabled",
+		"GeneratorId": "568a4d22-3517-44a6-a7ad-6a7eed88722c",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/3412ec259e9c177dce048dc526874119e93295f49c090fd9bd58df562675dacd",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 271 of file aws/ec2.tf, a result was found. 'versioning' is undefined or null, but 'versioning' is set to true"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "568a4d22-3517-44a6-a7ad-6a7eed88722c",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "S3 Bucket Without Versioning",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Checks if the ECR Image has been scanned",
+		"GeneratorId": "9630336b-3fed-4096-8173-b9afdfe346a7",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/10703aefbc1ee7f7d6c138c16e3f2bbaba6bdd8d3019b671229aab155e2ab488",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/ecr.tf, a result was found. aws_ecr_repository[repository].image_scanning_configuration is undefined, but aws_ecr_repository[repository].image_scanning_configuration is defined"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "9630336b-3fed-4096-8173-b9afdfe346a7",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "Unscanned ECR Image",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "VPC hasn't got any FlowLog associated",
+		"GeneratorId": "f83121ea-03da-434f-9277-9cd247ab3047",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/71d3d17f12dbdb8be1c4476587d15f06af8f47beac206cf995a20263431cf05d",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 43 of file aws/eks.tf, a result was found. aws_vpc[eks_vpc] is not the same as Flow Logs VPC id, but aws_vpc[eks_vpc] is the same as Flow Logs VPC id"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "f83121ea-03da-434f-9277-9cd247ab3047",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "VPC FlowLogs Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "VPC Subnet should not assign public IP",
+		"GeneratorId": "52f04a44-6bfa-4c41-b1d3-4ae99a2de05c",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/ca7f5620cb669fff30d6bdb8219ce5f6db200ad89b417010159deb6a7ff2009a",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 93 of file aws/eks.tf, a result was found. aws_subnet[eks_subnet2].map_public_ip_on_launch is set to true, but aws_subnet[eks_subnet2].map_public_ip_on_launch is set to false or undefined"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "52f04a44-6bfa-4c41-b1d3-4ae99a2de05c",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "VPC Subnet Assigns Public IP",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "VPC Subnet should not assign public IP",
+		"GeneratorId": "52f04a44-6bfa-4c41-b1d3-4ae99a2de05c",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/4c0ae2e9ad1ff1b46d934105da2e9d707cb741f8ecea774edc6096f5386b40b3",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 139 of file aws/ec2.tf, a result was found. aws_subnet[web_subnet].map_public_ip_on_launch is set to true, but aws_subnet[web_subnet].map_public_ip_on_launch is set to false or undefined"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "52f04a44-6bfa-4c41-b1d3-4ae99a2de05c",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "VPC Subnet Assigns Public IP",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "VPC Subnet should not assign public IP",
+		"GeneratorId": "52f04a44-6bfa-4c41-b1d3-4ae99a2de05c",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/b5afbb2f7a22314228a0e93ed5f73d9696e2ef0da4bf9a1e9a8971c05bfc35fb",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 159 of file aws/ec2.tf, a result was found. aws_subnet[web_subnet2].map_public_ip_on_launch is set to true, but aws_subnet[web_subnet2].map_public_ip_on_launch is set to false or undefined"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "52f04a44-6bfa-4c41-b1d3-4ae99a2de05c",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "VPC Subnet Assigns Public IP",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "VPC Subnet should not assign public IP",
+		"GeneratorId": "52f04a44-6bfa-4c41-b1d3-4ae99a2de05c",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/ac121b95fb52e306b344a7113e8e3d3d877fee35812599a72787a14856693d46",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 65 of file aws/eks.tf, a result was found. aws_subnet[eks_subnet1].map_public_ip_on_launch is set to true, but aws_subnet[eks_subnet1].map_public_ip_on_launch is set to false or undefined"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "52f04a44-6bfa-4c41-b1d3-4ae99a2de05c",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "VPC Subnet Assigns Public IP",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "VPC should have a Network Firewall associated",
+		"GeneratorId": "fd632aaf-b8a1-424d-a4d1-0de22fd3247a",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/801c7028e7f2bcc22d7a85107b5695ecf71953097db217ca9345ffff5e0313ef",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 117 of file aws/ec2.tf, a result was found. aws_vpc[web_vpc] does not have an 'aws_networkfirewall_firewall' associated, but aws_vpc[web_vpc] has an 'aws_networkfirewall_firewall' associated"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "fd632aaf-b8a1-424d-a4d1-0de22fd3247a",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "VPC Without Network Firewall",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "VPC should have a Network Firewall associated",
+		"GeneratorId": "fd632aaf-b8a1-424d-a4d1-0de22fd3247a",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/efa31bd4ced02d8b23ed2a7293dc8905def66d863b2238cf010489d04ab76fe2",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 43 of file aws/eks.tf, a result was found. aws_vpc[eks_vpc] does not have an 'aws_networkfirewall_firewall' associated, but aws_vpc[eks_vpc] has an 'aws_networkfirewall_firewall' associated"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "fd632aaf-b8a1-424d-a4d1-0de22fd3247a",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "MEDIUM",
+			"Label": "MEDIUM"
+		},
+		"Title": "VPC Without Network Firewall",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "EC2 instances should use roles to be granted access to other AWS services",
+		"GeneratorId": "0b93729a-d882-4803-bdc3-ac429a21f158",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/89f34afe0e3742867f08011ec1c089014689f562b36d7994819880528dbb1fcb",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 242 of file aws/db-app.tf, a result was found. aws_instance[db_app].user_data is being used to configure AWS API keys, but aws_instance[db_app] should be using iam_instance_profile to assign a role with permissions"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "0b93729a-d882-4803-bdc3-ac429a21f158",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "LOW",
+			"Label": "LOW"
+		},
+		"Title": "EC2 Instance Using API Keys",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "EC2 instances should use roles to be granted access to other AWS services",
+		"GeneratorId": "0b93729a-d882-4803-bdc3-ac429a21f158",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/7aa4aeddceef01bdb81ee0504ec1a70f90f5ab0578f155f1279e516ca41dd5ab",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/ec2.tf, a result was found. aws_instance[web_host].user_data is being used to configure AWS API keys, but aws_instance[web_host] should be using iam_instance_profile to assign a role with permissions"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "0b93729a-d882-4803-bdc3-ac429a21f158",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "LOW",
+			"Label": "LOW"
+		},
+		"Title": "EC2 Instance Using API Keys",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "ECR Repository should have Policies attached to it",
+		"GeneratorId": "69e7c320-b65d-41bb-be02-d63ecc0bcc9d",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/a454712a8a0a7b97f34a27e7f64407b64cc9f5b5a0ef97d5c6f542b37de6c264",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/ecr.tf, a result was found. aws_ecr_repository[repository] doesn't have policies attached, but aws_ecr_repository[repository] has policies attached"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "69e7c320-b65d-41bb-be02-d63ecc0bcc9d",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "LOW",
+			"Label": "LOW"
+		},
+		"Title": "ECR Repository Without Policy",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Amazon EKS control plane logging is not enabled",
+		"GeneratorId": "37304d3f-f852-40b8-ae3f-725e87a7cedf",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/2d15ad26a177af943ffb9fdd1291560f0ff7326fa82446d61fbe005df0b450b0",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 117 of file aws/eks.tf, a result was found. 'enabled_cluster_log_types' is undefined or null, but 'enabled_cluster_log_types' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "37304d3f-f852-40b8-ae3f-725e87a7cedf",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "LOW",
+			"Label": "LOW"
+		},
+		"Title": "EKS cluster logging is not enabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Hard-coded AWS access key / secret key exists in EC2 user data",
+		"GeneratorId": "d7b9d850-3e06-4a75-852f-c46c2e92240b",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/bc2637edfc5cd16d676be8929fac25e1d53d88217ab4b1b93ada33ba05e97b93",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 9 of file aws/ec2.tf, a result was found. 'user_data' contains hardcoded access key, but 'user_data' doesn't contain hardcoded access key"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "d7b9d850-3e06-4a75-852f-c46c2e92240b",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "LOW",
+			"Label": "LOW"
+		},
+		"Title": "Hardcoded AWS Access Key",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "IAM policies should be attached only to groups or roles",
+		"GeneratorId": "b4378389-a9aa-44ee-91e7-ef183f11079e",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/56e43688118a98f7413ac43e70714fa62308e41daa460962594aeb14bddc0989",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 27 of file aws/iam.tf, a result was found. 'user' exists, but 'user' is redundant"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "b4378389-a9aa-44ee-91e7-ef183f11079e",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "LOW",
+			"Label": "LOW"
+		},
+		"Title": "IAM Policies Attached To User",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "AWS Lambda functions should have TracingConfig enabled. For this, property 'tracing_Config.mode' should have the value 'Active'",
+		"GeneratorId": "8152e0cf-d2f0-47ad-96d5-d003a76eabd1",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/39300c7f227698e88e18ce16b46aba66ccd56eac64fa0f71ee65f42270f930df",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 31 of file aws/lambda.tf, a result was found. aws_lambda_function[analysis_lambda].tracing_config is undefined or null, but aws_lambda_function[analysis_lambda].tracing_config is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "8152e0cf-d2f0-47ad-96d5-d003a76eabd1",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "LOW",
+			"Label": "LOW"
+		},
+		"Title": "Lambda Functions Without X-Ray Tracing",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "S3 bucket without logging",
+		"GeneratorId": "f861041c-8c9f-4156-acfc-5e6e524f5884",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/893731d62f2077576319163132f521c285b9ae2ddb20de19921315d3cb815b16",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 115 of file aws/s3.tf, a result was found. 'logging' is undefined or null, but 'logging' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "f861041c-8c9f-4156-acfc-5e6e524f5884",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "LOW",
+			"Label": "LOW"
+		},
+		"Title": "S3 Bucket Logging Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "S3 bucket without logging",
+		"GeneratorId": "f861041c-8c9f-4156-acfc-5e6e524f5884",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/395f96a15d7cbf2a6c7a1f269700fbaacd793f58a571af0fc8d124ea779eb41c",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 43 of file aws/s3.tf, a result was found. 'logging' is undefined or null, but 'logging' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "f861041c-8c9f-4156-acfc-5e6e524f5884",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "LOW",
+			"Label": "LOW"
+		},
+		"Title": "S3 Bucket Logging Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "S3 bucket without logging",
+		"GeneratorId": "f861041c-8c9f-4156-acfc-5e6e524f5884",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/cea7b16e829fa8e42ad73ba8f4c7abdaa104d834805f75b1c5939a6ef45d1ca8",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/s3.tf, a result was found. 'logging' is undefined or null, but 'logging' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "f861041c-8c9f-4156-acfc-5e6e524f5884",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "LOW",
+			"Label": "LOW"
+		},
+		"Title": "S3 Bucket Logging Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "S3 bucket without logging",
+		"GeneratorId": "f861041c-8c9f-4156-acfc-5e6e524f5884",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/e9805d178fbb921ac8ec795eacf3d9521c8ac003aace1522aff912bc64a988b9",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 66 of file aws/s3.tf, a result was found. 'logging' is undefined or null, but 'logging' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "f861041c-8c9f-4156-acfc-5e6e524f5884",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "LOW",
+			"Label": "LOW"
+		},
+		"Title": "S3 Bucket Logging Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "S3 bucket without logging",
+		"GeneratorId": "f861041c-8c9f-4156-acfc-5e6e524f5884",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/3c59a4ad4b40d164266db5da188ada48126ba567811134d29f19b5f618c8bd74",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 271 of file aws/ec2.tf, a result was found. 'logging' is undefined or null, but 'logging' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "f861041c-8c9f-4156-acfc-5e6e524f5884",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "LOW",
+			"Label": "LOW"
+		},
+		"Title": "S3 Bucket Logging Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "EC2 Instance should have detailed monitoring enabled. With detailed monitoring enabled data is available in 1-minute periods",
+		"GeneratorId": "23b70e32-032e-4fa6-ba5c-82f56b9980e6",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/cde57c151744b2065015646e019518fb082a286399675fd56290d79f485ab75a",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/ec2.tf, a result was found. 'monitoring' is undefined or null%!(EXTRA string=web_host), but 'monitoring' is defined and not null%!(EXTRA string=web_host)"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "23b70e32-032e-4fa6-ba5c-82f56b9980e6",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "INFO",
+			"Label": "INFORMATIONAL"
+		},
+		"Title": "EC2 Instance Monitoring Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "EC2 Instance should have detailed monitoring enabled. With detailed monitoring enabled data is available in 1-minute periods",
+		"GeneratorId": "23b70e32-032e-4fa6-ba5c-82f56b9980e6",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/e2844cf5ba75a21c197a3ed6241be373a8170a6749d4144b838b746b265f195b",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 242 of file aws/db-app.tf, a result was found. 'monitoring' is undefined or null%!(EXTRA string=db_app), but 'monitoring' is defined and not null%!(EXTRA string=db_app)"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "23b70e32-032e-4fa6-ba5c-82f56b9980e6",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "INFO",
+			"Label": "INFORMATIONAL"
+		},
+		"Title": "EC2 Instance Monitoring Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "It's considered a best practice for an EC2 instance to use an EBS optimized instance. This provides the best performance for your EBS volumes by minimizing contention between Amazon EBS I/O and other traffic from your instance",
+		"GeneratorId": "60224630-175a-472a-9e23-133827040766",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/157cf62c29a10b511c2c488404e03cc41f864f2e6a18f091da211c2b133a1ba5",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 242 of file aws/db-app.tf, a result was found. 'ebs_optimized' is undefined or null, but 'ebs_optimized' is set to true"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "60224630-175a-472a-9e23-133827040766",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "INFO",
+			"Label": "INFORMATIONAL"
+		},
+		"Title": "EC2 Not EBS Optimized",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "It's considered a best practice for an EC2 instance to use an EBS optimized instance. This provides the best performance for your EBS volumes by minimizing contention between Amazon EBS I/O and other traffic from your instance",
+		"GeneratorId": "60224630-175a-472a-9e23-133827040766",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/24c179347f3535dc1d79b6b4dd680759812f05df102d022ffe3f63aac4d6398a",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/ec2.tf, a result was found. 'ebs_optimized' is undefined or null, but 'ebs_optimized' is set to true"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "60224630-175a-472a-9e23-133827040766",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "INFO",
+			"Label": "INFORMATIONAL"
+		},
+		"Title": "EC2 Not EBS Optimized",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "ELB should have logging enabled to help on error investigation",
+		"GeneratorId": "20018359-6fd7-4d05-ab26-d4dffccbdf79",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/f3b41da1731b77d837f9432c31a6cc71f7e150a99485719959990e875705ff38",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 2 of file aws/elb.tf, a result was found. 'aws_elb[{{weblb}}].access_logs' is undefined or null, but 'aws_elb[{{weblb}}].access_logs' is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "20018359-6fd7-4d05-ab26-d4dffccbdf79",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "INFO",
+			"Label": "INFORMATIONAL"
+		},
+		"Title": "ELB Access Logging Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "Neptune logging should be enabled",
+		"GeneratorId": "45cff7b6-3b80-40c1-ba7b-2cf480678bb8",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/5bcb8f9503d969e4a7f1dfb585ceb0e85fc1d4e6a5e598fbb248f3de205c1e59",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/neptune.tf, a result was found. aws_neptune_cluster.enable_cloudwatch_logs_exports is undefined, but aws_neptune_cluster.enable_cloudwatch_logs_exports is defined"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "45cff7b6-3b80-40c1-ba7b-2cf480678bb8",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "INFO",
+			"Label": "INFORMATIONAL"
+		},
+		"Title": "Neptune Logging Is Disabled",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "RDS does not have any kind of logger",
+		"GeneratorId": "8d7f7b8c-6c7c-40f8-baa6-62006c6c7b56",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/369eaf40c28aff41e0799bd9fb7c6266fc8af2f2e2a47769ea9f885cb93dcc1a",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 1 of file aws/db-app.tf, a result was found. 'enabled_cloudwatch_logs_exports' is undefined, but 'enabled_cloudwatch_logs_exports' is defined"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "8d7f7b8c-6c7c-40f8-baa6-62006c6c7b56",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "INFO",
+			"Label": "INFORMATIONAL"
+		},
+		"Title": "RDS Without Logging",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "AWS services resource tags are an essential part of managing components",
+		"GeneratorId": "e38a8e0a-b88b-4902-b3fe-b0fcb17d5c10",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/10c52274c171c61abc054351fde4d74bd586b633c1d1dbb7f6428945707a649e",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 66 of file aws/eks.tf, a result was found. aws_subnet[{{eks_subnet1}}].tags has no tags defined, but aws_subnet[{{eks_subnet1}}].tags has tags defined other than 'Name'"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "e38a8e0a-b88b-4902-b3fe-b0fcb17d5c10",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "INFO",
+			"Label": "INFORMATIONAL"
+		},
+		"Title": "Resource Not Using Tags",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "AWS services resource tags are an essential part of managing components",
+		"GeneratorId": "e38a8e0a-b88b-4902-b3fe-b0fcb17d5c10",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/a418dca3d96ac79ce9cf4b2b30d06097893ef9ec80c04cddbf321e028126050e",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 94 of file aws/eks.tf, a result was found. aws_subnet[{{eks_subnet2}}].tags has no tags defined, but aws_subnet[{{eks_subnet2}}].tags has tags defined other than 'Name'"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "e38a8e0a-b88b-4902-b3fe-b0fcb17d5c10",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "INFO",
+			"Label": "INFORMATIONAL"
+		},
+		"Title": "Resource Not Using Tags",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "It's considered a best practice for all rules in AWS Security Group to have a description",
+		"GeneratorId": "68eb4bf3-f9bf-463d-b5cf-e029bb446d2e",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/f878dfd9ecfb0bcffc361fab76bf701959bb50442b16d31ddcbca75e1abd94c1",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 90 of file aws/ec2.tf, a result was found. aws_security_group[{{web-node}}].ingress description is undefined or null, but aws_security_group[{{web-node}}].ingress description is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "68eb4bf3-f9bf-463d-b5cf-e029bb446d2e",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "INFO",
+			"Label": "INFORMATIONAL"
+		},
+		"Title": "Security Group Rules Without Description",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "It's considered a best practice for all rules in AWS Security Group to have a description",
+		"GeneratorId": "68eb4bf3-f9bf-463d-b5cf-e029bb446d2e",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/ff0f91389c887eecfa85353f3db69a7afa154089d3ed14dce9db3e88e881172a",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 83 of file aws/ec2.tf, a result was found. aws_security_group[{{web-node}}].ingress description is undefined or null, but aws_security_group[{{web-node}}].ingress description is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "68eb4bf3-f9bf-463d-b5cf-e029bb446d2e",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "INFO",
+			"Label": "INFORMATIONAL"
+		},
+		"Title": "Security Group Rules Without Description",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "It's considered a best practice for all rules in AWS Security Group to have a description",
+		"GeneratorId": "68eb4bf3-f9bf-463d-b5cf-e029bb446d2e",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/74162301447ec6da0d7595a463abaefe703131a980f20d78b1e9bfb828888d8c",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 97 of file aws/ec2.tf, a result was found. aws_security_group[{{web-node}}].egress description is undefined or null, but aws_security_group[{{web-node}}].egress description is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "68eb4bf3-f9bf-463d-b5cf-e029bb446d2e",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "INFO",
+			"Label": "INFORMATIONAL"
+		},
+		"Title": "Security Group Rules Without Description",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	},
+	{
+		"AwsAccountId": "AWS_ACCOUNT_ID",
+		"Compliance": {
+			"Status": "FAILED"
+		},
+		"CreatedAt": "2022-11-01T12:37:17+05:30",
+		"Description": "It's considered a best practice for AWS Security Group to have a description",
+		"GeneratorId": "cb3f5ed6-0d18-40de-a93d-b3538db31e8c",
+		"Id": "AWS_REGION/AWS_ACCOUNT_ID/d99132e072d2b52bc4c86b14f36552beb6c4b25b8a2084a95a2e71ed6b54dc40",
+		"ProductArn": "arn:aws:securityhub:AWS_REGION:AWS_ACCOUNT_ID:product/AWS_ACCOUNT_ID/default",
+		"Remediation": {
+			"Recommendation": {
+				"Text": "In line 116 of file aws/db-app.tf, a result was found. aws_security_group[{{default}}] description is undefined or null, but aws_security_group[{{default}}] description is defined and not null"
+			}
+		},
+		"Resources": [
+			{
+				"Id": "cb3f5ed6-0d18-40de-a93d-b3538db31e8c",
+				"Type": "Other"
+			}
+		],
+		"SchemaVersion": "2018-10-08",
+		"Severity": {
+			"Original": "INFO",
+			"Label": "INFORMATIONAL"
+		},
+		"Title": "Security Group Without Description",
+		"Types": [
+			"Software and Configuration Checks/Vulnerabilities/KICS"
+		],
+		"UpdatedAt": "2022-11-01T12:37:17+05:30"
+	}
+]
